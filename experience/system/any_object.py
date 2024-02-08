@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Type, TypeVar
+from typing import TYPE_CHECKING, Type, TypeVar, Union
 from experience.base_interfaces.experience import Experience
 
 if TYPE_CHECKING:
@@ -17,7 +17,10 @@ class AnyObject(Experience):
         from experience.inf_interfaces.application import Application
         return  Application(self._com.Application)
 
-    def name(self) -> str:
+    def name(self, value: str = None) -> Union['Application', str]:
+        if value is not None:
+            self._com.Name = value
+            return self
         return self._com.Name
 
     def parent(self) -> 'AnyObject':
