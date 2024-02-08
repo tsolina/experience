@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\experience",
+    "\\experience\\base_interfaces",
+    "\\experience\\cat_annotation_interfaces",
+    "\\experience\\enumeration",
+    "\\experience\\inf_interfaces",
+    "\\experience\\system",
+    "\\experience\\types"
+  ],
+  "SelectedNode": "\\experience\\inf_interfaces\\viewer_3d.py",
+  "PreviewInSolutionExplorer": false
+}
