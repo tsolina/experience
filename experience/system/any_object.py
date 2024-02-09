@@ -28,6 +28,15 @@ class AnyObject(Experience):
 
     def get_item(self, id_name: str) -> 'AnyObject':
         return AnyObject(self._com.GetItem(id_name))
+    
+    def vba_type(self) -> str:
+        vba_function_name = "vba_type"
+        vba_code = f"""
+        Public Function {vba_function_name}(obj As AnyObject) as String
+            {vba_function_name} = typename(obj)
+        End Function
+        """
+        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [self._com])
 
     def _vba_cast(self, com_object, vba_class_name):
         vba_function_name = 'generalizedCastToVBA'

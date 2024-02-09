@@ -59,15 +59,12 @@ try:
     # app = exp.application()
     app = exp
     sel = app.active_editor().selection()
-    sel.clear().add(p.hybrid_bodies().item(1)).copy().clear().add(p.hybrid_bodies()).paste().clear()
-    shape = sel.item(1).value(Spline2D)
-    print("cp:", shape.get_number_of_control_points())
-    print("shape", shape.get_control_points())
+
+    shape = sel.item(1).value()
+    print("shape", shape.vba_type())
+    print("type", exp.active_editor().active_object().vba_type())
 
 except Exception as e:
-    #print(f"Error: {e}")
-    # traceback.print_exc()
-
     traceback_str = traceback.format_exc()
     print("traceback", traceback_str)
 

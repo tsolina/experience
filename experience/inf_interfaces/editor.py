@@ -21,7 +21,7 @@ class Editor(AnyObject):
         self.editor = com
 
 
-    def active_object(self, value: Optional[Type[T]]) -> T:
+    def active_object(self, value: Optional[Type[T]] = None) -> T:
         if value is not None:
             return value(self.editor.ActiveObject)
         return AnyObject(self.editor.ActiveObject)

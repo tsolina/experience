@@ -21,7 +21,7 @@ class SelectedElement(AnyObject):
     # def value(self) -> AnyObject:
     #     return AnyObject(self.selected_element.Value)
     
-    def value(self, value: Optional[Type[T]]) -> T:
+    def value(self, value: Optional[Type[T]] = None) -> T:
         if value is not None:
             return value(self.selected_element.Value)
         return AnyObject(self.selected_element.Value)
