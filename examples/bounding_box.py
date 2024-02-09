@@ -1,7 +1,7 @@
 # example to create bounding box around selected shape
 # part must be open and shape selected to run this example
 from experience import *
-
+import traceback
 # accessing application
 app = experience_application()
 
@@ -69,8 +69,7 @@ face4 = hsf.add_new_blend().set_curve(1,line6).set_curve(2, line8).compute()
 face5 = hsf.add_new_blend().set_curve(1,line1).set_curve(2, line3).compute()
 face6 = hsf.add_new_blend().set_curve(1,line2).set_curve(2, line4).compute()
 
-bounding_box = hsf.add_new_join(face1, face2).add_element(face3).add_element(face4).add_element(face5).add_element(face6).compute().name("Bounding box")
-result.append_hybrid_shape(bounding_box)
+bounding_box = hsf.add_new_join(face1, face2).add_element(face3).add_element(face4).add_element(face5).add_element(face6).compute().append_to(result).name("Bounding box")
 
 sel.clear().add(bounding_box).vis_properties().set_real_opacity(127, 0).parent().clear()
 

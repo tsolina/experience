@@ -71,3 +71,9 @@ from .pad import Pad # Prism
 from .pocket import Pocket # Prism
 
 from .shape_factory import ShapeFactory #- Factory
+
+#BooleanShape, Add, Assemble, Intersect, Remove, Trim, DressUpShape, AutoDraft, AutoFillet, Chamfer, Defeaturing, Draft, Fillet, RemoveFace, Scaling, Shell, Thickness, Thread
+#DefeaturingFilter, DefeaturingFilters, DraftDomain, DraftDomains, Limit, Repartition, AngularRepartition, LinearRepartition
+#SurfaceBasedShape, CloseSurface, ReplaceFace, SewSurface, Split, ThickSurface, TransformationShape, Mirror, Pattern, CircPattern, RectPattern, UserPattern
+#EdgeFillet, FaceFillet, TritangentFillet, ConstRadEdgeFillet, VarRadEdgeFillet, SketchBasedShape, Revolution, Hole, Prism, Sweep, SolidCombine, Stiffener
+#Groove, Shaft, Rib, Slot, Pad, Pocket, ShapeFactory

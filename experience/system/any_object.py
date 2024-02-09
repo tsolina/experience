@@ -1,10 +1,11 @@
-from typing import TYPE_CHECKING, Type, TypeVar, Union
+from typing import TYPE_CHECKING, Type, TypeVar, Union, Optional
 from experience.base_interfaces.experience import Experience
 
 if TYPE_CHECKING:
     from experience.inf_interfaces import Application
 
 T = TypeVar('T')
+U = TypeVar('U')
 
 class AnyObject(Experience):
     """docstring for AnyObject."""
@@ -23,12 +24,17 @@ class AnyObject(Experience):
             return self
         return self._com.Name
 
-    def parent(self) -> 'AnyObject':
+    # def parent(self) -> 'AnyObject':
+    #     return AnyObject(self._com.Parent)
+
+    def parent(self, value: Optional[Type[U]] = None) -> U:
+        if value is not None:
+            return value(self._com.Parent)
         return AnyObject(self._com.Parent)
 
     def get_item(self, id_name: str) -> 'AnyObject':
         return AnyObject(self._com.GetItem(id_name))
-    
+
     def com_type(self) -> str:
         vba_function_name = "com_type"
         vba_code = f"""
@@ -63,8 +69,8 @@ class AnyObject(Experience):
 
     def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: float or int = None) -> tuple:
         """
-            _get_safe_array(self._com, "Method", 2) 
-            _get_safe_array(self._com, "Method", 2, .5) 
+            _get_safe_array(self._com, "Method", 2)
+            _get_safe_array(self._com, "Method", 2, .5)
         """
         if i_pos is not None:
             i_pos = str(i_pos) + ", "
@@ -80,7 +86,7 @@ class AnyObject(Experience):
         """
         #print(vba_code)
         return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_obj])
-    
+
     def _get_multi(self, params, ins, outs) -> tuple:
         ### _get_multi((shape, 1),("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference")) ###
         com_type = ins[0]
@@ -97,7 +103,7 @@ class AnyObject(Experience):
             args = ", ".join((args_in, args_out))
             dim_in = ", " + dim_in
         vba_function_name = "func"
-        vba_code = f""" 
+        vba_code = f"""
             Public Function {vba_function_name}(obj As {com_type}{dim_in}) As Variant
                 Dim {dim_out}
                 obj.{method} {args}

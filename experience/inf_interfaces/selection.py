@@ -3,7 +3,7 @@ from experience.system import AnyObject
 from experience.inf_interfaces import SelectedElement#, VisPropertySet
 
 if TYPE_CHECKING:
-    from experience.inf_interfaces import VisPropertySet
+    from experience.inf_interfaces import VisPropertySet, Editor
 
 class Selection(AnyObject):
     """
@@ -29,7 +29,7 @@ class Selection(AnyObject):
 
     def vis_properties(self) -> 'VisPropertySet':
         from experience.inf_interfaces import VisPropertySet
-        return VisPropertySet(self.selection.VisProperties)
+        return VisPropertySet(self.selection.VisProperties).set_parent(self)
 
     def add(self, i_object: AnyObject) -> 'Selection':
         self.selection.Add(i_object._com)
@@ -101,6 +101,7 @@ class Selection(AnyObject):
         return SelectedElement(self.selection.Item(i_index))
 
     def items(self) -> tuple:
+        items_list = []
         for i in range(self._com.Count):
             item = self._child(self._com.Item(i + 1))
             items_list.append(item)
@@ -142,10 +143,8 @@ class Selection(AnyObject):
         # check_type(i_filter_type, tuple)
         return self.selection.SelectElement3(i_filter_type, i_message, i_object_selection_before_command_use_possibility, i_multi_selection_mode, i_tooltip)
 
-    def select_element_other_editor(i_filterType: tuple, i_active_editor_message: str, i_non_active_editor_message: str, i_tooltip: bool, oEditor: 'Editor') -> str:
+    def select_element_other_editor(self, i_filter_type: tuple, i_active_editor_message: str, i_non_active_editor_message: str, i_tooltip: bool, oEditor: 'Editor') -> str:
         return self.selection.SelectElementOtherEditor(i_filter_type, i_active_editor_message, i_non_active_editor_message, i_tooltip, oEditor)
-
-        # aaa
 
     def __len__(self):
         return self.count

@@ -1,9 +1,15 @@
+from typing import TYPE_CHECKING
+
 from experience.system import AnyObject
+
+if TYPE_CHECKING:
+    from experience.inf_interfaces import Selection
 
 class VisPropertySet(AnyObject):
     def __init__(self, com):
         super().__init__(com)
         self.vis_property_set = com
+        self._parent = None
 
     def get_layer(self) -> tuple:
         """
@@ -92,6 +98,13 @@ class VisPropertySet(AnyObject):
     def set_symbol_type(self, i_symbol_type: int) -> 'VisPropertySet':
         self.vis_property_set.SetSymbolType(i_symbol_type)
         return self
+    
+    def set_parent(self, value: "Selection") -> 'VisPropertySet':
+        self._parent = value
+        return self
+    
+    def parent(self) -> 'Selection':
+        return self._parent
 
     def __repr__(self):
         return f'VisPropertySet(name="{self.name}")'

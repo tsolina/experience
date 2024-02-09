@@ -1,4 +1,10 @@
+from typing import TYPE_CHECKING
+
 from experience.system import AnyObject
+
+if TYPE_CHECKING:
+    from experience.mecmod_interfaces import HybridBody
+
 
 class HybridShape(AnyObject):
     """
@@ -23,6 +29,10 @@ class HybridShape(AnyObject):
 
     def compute(self) -> 'HybridShape':
         self.hybrid_shape.Compute()
+        return self
+    
+    def append_to(self, i_set: 'HybridBody') -> 'HybridShape':
+        i_set.append_hybrid_shape(self)
         return self
 
     def __repr__(self):
