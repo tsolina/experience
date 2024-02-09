@@ -133,7 +133,7 @@ class HybridShapeBlend(HybridShape):
         return self
 
     def set_curve(self, i_blend_limit: int, i_curve: Reference) -> 'HybridShapeBlend':
-        self.hybrid_shape_blend.SetCurve(i_blend_limit, i_curve.com)
+        self.hybrid_shape_blend.SetCurve(i_blend_limit, i_curve._com)
         return self
 
     def set_orientation(self, i_blend_limit: int, i_orientation: int) -> 'HybridShapeBlend':

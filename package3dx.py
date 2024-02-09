@@ -61,8 +61,8 @@ try:
     sel = app.active_editor().selection()
 
     shape = sel.item(1).value()
-    print("shape", shape.vba_type())
-    print("type", exp.active_editor().active_object().vba_type())
+    print("shape", shape.com_type())
+    print("type", exp.active_editor().active_object().com_type())
 
 except Exception as e:
     traceback_str = traceback.format_exc()

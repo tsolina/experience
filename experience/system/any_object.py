@@ -29,8 +29,8 @@ class AnyObject(Experience):
     def get_item(self, id_name: str) -> 'AnyObject':
         return AnyObject(self._com.GetItem(id_name))
     
-    def vba_type(self) -> str:
-        vba_function_name = "vba_type"
+    def com_type(self) -> str:
+        vba_function_name = "com_type"
         vba_code = f"""
         Public Function {vba_function_name}(obj As AnyObject) as String
             {vba_function_name} = typename(obj)
