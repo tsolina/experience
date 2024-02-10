@@ -20,6 +20,9 @@ from .cat_gsm_interfaces import HybridShapeFactory
 from .mecmod_interfaces import AxisSystem, AxisSystems, Boundary, Constraint, Constraints, HybridShape,HybridShapeInstance, HybridShapes, OriginElements, PartServices, Shape, ShapeInstance, Shapes, Solid, Sketches, Factory, InstanceFactory, GeometricElements, HybridBody, HybridBodies, OrderedGeometricalSet, OrderedGeometricalSets, Body, Bodies, Part
 from .types import cat_variant, list_str, any_parameter
 
+from .plm_modeler_base_interfaces import PLMEntity, PLMEntities, PLMOccurrence, PLMOccurrences
+from .product_structure_client_interfaces import Shape3D, Shape3Ds, VPMRepOccurrence, VPMRepOccurrences, ParentVPMRepInstances, VPMRepReference, VPMRootOccurrence, VPMReference, VPMRepInstance, VPMRepInstances
+from .product_structure_client_interfaces import VPMPublication, VPMPublications, VPMInstance, VPMInstances, VPMOccurrence, VPMOccurrences
 
 # from cat_logger import create_logger
 # except Exception as e:

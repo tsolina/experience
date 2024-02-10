@@ -46,11 +46,13 @@ class AnyObject(Experience):
 
     def _vba_cast(self, com_object, vba_class_name):
         vba_function_name = 'generalizedCastToVBA'
-        vba_code = """
+        vba_code = f"""
         Public Function generalizedCastToVBA(obj as AnyObject) as {vba_class_name}
             set generalizedCastToVBA = obj
+            MsgBox(typename(generalizedCastToVBA))
         End Function
         """
+        print(vba_code)
         return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_object])
 
     def as_pyclass(self, target_class: Type[T], vba_class_name: str = None) -> T:
@@ -58,7 +60,7 @@ class AnyObject(Experience):
             vba_class_name = target_class.__name__
 
         vba_function_name = 'generalizedCastToVBA'
-        vba_code = """
+        vba_code = f"""
         Public Function generalizedCastToVBA(obj as AnyObject) as {vba_class_name}
             set generalizedCastToVBA = obj
         End Function
