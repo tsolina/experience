@@ -37,4 +37,4 @@ class Editor(AnyObject):
         #Set DrawingService  = CATIA.ActiveEditor.GetService("CATDrawingService")
 
     def __repr__(self):
-        return f'Editor(name="{self.name}")'
+        return f'Editor(name="{self.name()}")'

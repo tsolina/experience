@@ -1,7 +1,7 @@
 # try:
 from .enumeration import enumeration_types
 from .exceptions import CATIAApplicationException
-from .base_interfaces import experience_application, Experience
+from .base_interfaces import experience_application, Experience, PartReady, ProductReady
 from .system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService
 from .cat_annotation_interfaces import DrawingArrow, DrawingArrows, DrawingCoordDim, DrawingCoordDims, DrawingDimension, DrawingDimensions, DrawingDimExtLine, DrawingDimLine, DrawingDimValue, DrawingGDT, DrawingGDTs, DrawingLeader, DrawingLeaders, DrawingTable, DrawingTables, DrawingText, DrawingTextProperties, DrawingTextRange, DrawingTexts,DrawingWelding,DrawingWeldings
 from .inf_interfaces import Application, Camera, Editor, Editors, LightSource, LightSources, PageSetup, Printer, Printers, Selection, Service

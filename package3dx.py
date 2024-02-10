@@ -51,25 +51,29 @@ def test():
 
     p.shape_factory().add_new_auto_fillet(5)
 
+    # from experience.base_interfaces.base_application import experience_application as exp3d
+    #from experience import *
+
 try:
-    from experience.base_interfaces.base_application import experience_application as exp3d
-    from experience import *
+    from experience import PartReady
 
-    exp = exp3d()
-    # app = exp.application()
-    app = exp
-    sel = app.active_editor().selection()
+    with PartReady() as cat:
+        print("part is ready")      
+        app = cat.app()
 
-    shape = sel.item(1).value()
-    print("shape", shape.com_type())
-    print("type", exp.active_editor().active_object().com_type())
+        print(app.name(), cat.part().main_body().name())
 
+        sel = app.active_editor().selection()
+        print("sel", sel.count())
+        
 except Exception as e:
     traceback_str = traceback.format_exc()
     print("traceback", traceback_str)
 
 def start():
     print("OK")
+
+
 
 start()
 input("Done")
