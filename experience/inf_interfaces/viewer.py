@@ -1,10 +1,9 @@
 from typing import TYPE_CHECKING
 
-from experience.inf_interfaces import Camera
 from experience.system import AnyObject
 
 if TYPE_CHECKING:
-    from experience.inf_interfaces import Viewer2D, Viewer3D
+    from experience.inf_interfaces import Viewer2D, Viewer3D, Camera
 
 class Viewer(AnyObject):
     def __init__(self, com):
@@ -34,7 +33,7 @@ class Viewer(AnyObject):
         return self
 
     def capture_to_file(self, i_format: int, i_file: str) -> 'Viewer':
-        return self.viewer.CaptureToFile(i_format, i_file)
+        self.viewer.CaptureToFile(i_format, i_file)
         return self
 
     def get_background_color(self) -> tuple:
@@ -42,7 +41,6 @@ class Viewer(AnyObject):
 
     def create_viewer_2d(self) -> 'Viewer2D':
         from experience.inf_interfaces.viewer_2d import Viewer2D
-
         return Viewer2D(self._vba_cast(self.viewer, "Viewer2D"))
 
     def create_viewer_3d(self) -> 'Viewer3D':
@@ -51,8 +49,8 @@ class Viewer(AnyObject):
         # return Viewer3D(self._vba_cast(self.viewer, "Viewer3D"))
         return self.as_pyclass(Viewer3D)
 
-    @property
-    def new_camera(self) -> Camera:
+    def new_camera(self) -> 'Camera':
+        from experience.inf_interfaces import Camera
         return Camera(self.viewer.NewCamera())
 
     def put_background_color(self, color: tuple) -> 'Viewer':
@@ -76,4 +74,4 @@ class Viewer(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Viewer(name="{self.name}")'
+        return f'Viewer(name="{self.name()}")'

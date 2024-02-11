@@ -4,6 +4,7 @@ from experience.system.any_object import AnyObject
 if TYPE_CHECKING:
     from experience.plm_access_interfaces import PLMScriptService, PLMSearch, SearchService
     from experience.plm_session_builder_interfaces import PLMNewService, PLMOpenService, PLMPropagateService
+    from experience.vpm_editor_context_interfaces import PLMProductService, ProductSessionService
 
 class Services():
     def __init__(self, com):
@@ -22,9 +23,6 @@ class Services():
         from experience.plm_access_interfaces import SearchService
         return SearchService(self.services.Application.GetSessionService("Search"))
     
-    # def product_service(self) -> 'PLMProductService':
-    #     from experience.plm_session_builder_interfaces import PLMProductService
-    #     return PLMProductService(self.services.Application.GetSessionService("PLMProductService"))
 
     def open_service(self) -> 'PLMNewService':
         from experience.plm_session_builder_interfaces import PLMNewService
@@ -36,6 +34,15 @@ class Services():
 
     def propagate_service(self) -> 'PLMPropagateService':
         from experience.plm_session_builder_interfaces import PLMPropagateService
-        return PLMPropagateService(self.services.Application.GetSessionService("PLMPropagateService"))      
+        return PLMPropagateService(self.services.Application.GetSessionService("PLMPropagateService"))  
+      
+    
+    # def product_service(self) -> 'PLMProductService':
+    #     from experience.vpm_editor_context_interfaces import PLMProductService
+    #     return PLMProductService(self.services.Application.GetSessionService("PLMProductService"))
+
+    def product_session_service(self) -> 'ProductSessionService':
+        from experience.vpm_editor_context_interfaces import ProductSessionService
+        return ProductSessionService(self.services.Application.GetSessionService("ProductSessionService"))    
     
 # return Service(self._com.GetSessionService("IDService"))

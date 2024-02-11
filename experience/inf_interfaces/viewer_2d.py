@@ -1,5 +1,8 @@
-from experience.inf_interfaces.viewer import Viewer
-from experience.inf_interfaces.viewpoint_2d import Viewpoint2D
+from typing import TYPE_CHECKING, Union
+from experience.inf_interfaces import Viewer
+
+if TYPE_CHECKING:
+    from experience.inf_interfaces import Viewpoint2D
 
 class Viewer2D(Viewer):
     """
@@ -16,11 +19,12 @@ class Viewer2D(Viewer):
         super().__init__(com)
         self.viewer_2d = com
 
-    def viewpoint_2d(self, value: Viewpoint2D = None) -> Viewpoint2D:
+    def viewpoint_2d(self, value: 'Viewpoint2D' = None) -> Union['Viewer2D', 'Viewpoint2D']:
         if value is not None:
             self.viewer_2d.Viewpoint2D = value
             return self
+        from experience.inf_interfaces import Viewpoint2D
         return Viewpoint2D(self.viewer_2d.Viewpoint2D)
 
     def __repr__(self):
-        return f'Viewer2D(name="{self.name}")'
+        return f'Viewer2D(name="{self.name()}")'

@@ -1,16 +1,17 @@
-from typing import TYPE_CHECKING
-from typing import Iterator
+from typing import TYPE_CHECKING, Iterator
 
 from experience.inf_interfaces import Reference
 from experience.system import Collection
-from experience.types.general import cat_variant
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class References(Collection):
     def __init__(self, com):
         super().__init__(com, _child=Reference)
         self.references = com
 
-    def item(self, i_index: cat_variant) -> Reference:
+    def item(self, i_index: 'cat_variant') -> Reference:
         return Reference(self.references.Item(i_index))
 
     def __getitem__(self, n: int) -> Reference:
@@ -24,4 +25,4 @@ class References(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'References(name="{self.name}")'
+        return f'References(name="{self.name()}")'

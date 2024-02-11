@@ -30,11 +30,12 @@ class Editor(AnyObject):
         from experience.inf_interfaces import Selection
         return Selection(self.editor.Selection)
 
-    def GetService(self, i_service: str):
+    def get_service(self, i_service: str) -> 'Service':
         from experience.inf_interfaces import Service
         return Service(self.editor.GetService(i_service))
         #Set Service1 = CATIA.ActiveEditor.GetService("VisuServices")
         #Set DrawingService  = CATIA.ActiveEditor.GetService("CATDrawingService")
+        #Set PLMProductService  = CATIA.ActiveEditor.GetService("PLMProductService")
 
     def __repr__(self):
         return f'Editor(name="{self.name()}")'

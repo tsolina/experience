@@ -2,10 +2,10 @@ from typing import Iterator
 from typing import TYPE_CHECKING
 
 from experience.base_interfaces.experience import Experience
-from experience.system.any_object import AnyObject
+from experience.system import AnyObject
 
 if TYPE_CHECKING:
-    from experience.inf_interfaces.application import Application
+    from experience.inf_interfaces import Application
 
 class Collection(Experience):
     """
@@ -78,4 +78,4 @@ class Collection(Experience):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Collection(name="{self.name}")'
+        return f'Collection(name="{self.name()}")'

@@ -14,11 +14,12 @@ class LightSource(AnyObject):
         super().__init__(com)
         self.light_source = com
 
-    def get_direction(self, o_direction: tuple) -> tuple:
-        return self.light_source.GetDirection(o_direction)
+    def get_direction(self) -> tuple[float, float, float]:
+        return self._get_safe_array(self.light_source, "GetDirection", 2)
 
-    def put_direction(self, o_direction: tuple) -> tuple:
-        return self.light_source.PutDirection(o_direction)
+    def put_direction(self, i_direction: tuple[float, float, float]) -> 'LightSource':
+        self.light_source.PutDirection(i_direction)
+        return self
 
     def __repr__(self):
-        return f'LightSource(name="{ self.name }")'
+        return f'LightSource(name="{ self.name()}")'

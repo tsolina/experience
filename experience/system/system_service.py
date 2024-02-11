@@ -1,5 +1,8 @@
-from experience.system.any_object import AnyObject
-from experience.types.general import cat_variant
+from typing import TYPE_CHECKING
+from experience.system import AnyObject
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class SystemService(AnyObject):
     """
@@ -27,9 +30,6 @@ class SystemService(AnyObject):
     def execute_processus(self, i_executable_path) -> int:
         return int(self.system_service.ExecuteProcessus(i_executable_path))
 
-    # def execute_script(self, i_library_name: str, i_type: int, i_program_name: str, i_function_name: str, i_parameters: list):
-    #     return self.system_service.ExecuteScript(i_library_name, i_type, i_program_name, i_function_name, i_parameters)
-
 # TODO: check if all is correct
     def get_message(self, i_catalog_name: str, i_message_key: str, i_msg_parameters: tuple, i_default_msg: str) -> str:
         return str(self.system_service.GetMessage(i_catalog_name, i_message_key, i_msg_parameters, i_default_msg))
@@ -44,4 +44,4 @@ class SystemService(AnyObject):
         return self
 
     def __repr__(self):
-        return f'SystemService(name="{self.name}")'
+        return f'SystemService(name="{self.name()}")'

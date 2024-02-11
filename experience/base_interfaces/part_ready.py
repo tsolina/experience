@@ -33,3 +33,6 @@ class PartReady():
 
     def __exit__(self, exc_type, exc_value, traceback):
         pass
+
+    def __repr__(self):
+        return 'PartReady'

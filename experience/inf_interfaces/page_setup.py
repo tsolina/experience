@@ -204,4 +204,4 @@ class PageSetup(AnyObject):
         return self.page_setup.Zoom
 
     def __repr__(self):
-        return f'PageSetup(name="{ self.name }")'
+        return f'PageSetup(name="{ self.name()}")'

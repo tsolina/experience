@@ -1,8 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
-from experience.inf_interfaces.window import Window
-from experience.system.collection import Collection
-from experience.types.general import cat_variant
+from experience.inf_interfaces import Window
+from experience.system import Collection
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class Windows(Collection):
     def __init__(self, com):
@@ -12,7 +14,7 @@ class Windows(Collection):
     def arrange(self, i_style: int) -> None:
         return self.windows.Arrange(i_style)
 
-    def item(self, i_index: cat_variant) -> Window:
+    def item(self, i_index: 'cat_variant') -> Window:
         return Window(self.windows.Item(i_index))
 
     def __getitem__(self, n: int) -> Window:
@@ -26,4 +28,4 @@ class Windows(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Windows(name="{self.name}")'
+        return f'Windows(name="{self.name()}")'

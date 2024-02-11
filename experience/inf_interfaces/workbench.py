@@ -1,9 +1,9 @@
 from experience.system import AnyObject
 
-class Service(AnyObject):
+class Workbench(AnyObject):
     def __init__(self, com):
         super().__init__(com)
-        self.service = com
+        self.workbench = com
 
     def __repr__(self):
-        return f'Service(name="{self.name()}")'
+        return f'Workbench(name="{self.name()}")'

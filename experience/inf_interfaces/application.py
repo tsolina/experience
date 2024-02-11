@@ -1,11 +1,9 @@
 from typing import Union, TYPE_CHECKING
 from experience.system import AnyObject, SystemService
-from experience.inf_interfaces.editor import Editor
-from experience.inf_interfaces import Editors, Printer, Printers, Service, Window, Windows
-from experience.inf_os_idl_interfaces import FileSystem, SystemConfiguration
-# from experience.types import DocumentType
 
 if TYPE_CHECKING:
+    from experience.inf_interfaces import Editor, Editors, Printer, Printers, Service, Window, Windows
+    from experience.inf_os_idl_interfaces import FileSystem, SystemConfiguration
     from experience.inf_interfaces import Services
 
 class Application(AnyObject):
@@ -23,15 +21,17 @@ class Application(AnyObject):
             raise CATIAApplicationException('Is there an active document?')
     '''
 
-    def active_editor(self) -> Editor:
+    def active_editor(self) -> 'Editor':
+        from experience.inf_interfaces import Editor
         return Editor(self._com.ActiveEditor)
 
 
-    def active_printer(self) -> Printer:
+    def active_printer(self) -> 'Printer':
+        from experience.inf_interfaces import Printer
         return Printer(self._com.ActivePrinter)
 
-
-    def active_window(self) -> Window:
+    def active_window(self) -> 'Window':
+        from experience.inf_interfaces import Window
         return Window(self._com.ActiveWindow)
 
     def cache_size(self, value: int = None) -> Union['Application', int]:
@@ -57,10 +57,12 @@ class Application(AnyObject):
 
 
     def editors(self) -> 'Editors':
+        from experience.inf_interfaces import Editors
         return Editors(self._com.Editors)
 
 
     def file_system(self) -> 'FileSystem':
+        from experience.inf_os_idl_interfaces import FileSystem
         return FileSystem(self._com.FileSystem)
 
     def full_name(self) -> str:
@@ -100,7 +102,8 @@ class Application(AnyObject):
         return self._com.Path
 
 
-    def printers(self) -> Printers:
+    def printers(self) -> 'Printers':
+        from experience.inf_interfaces import Printers
         return Printers(self._com.Printers)
 
     def refresh_display(self, value: bool = None) -> Union['Application', bool]:
@@ -122,7 +125,8 @@ class Application(AnyObject):
         return self._com.StatusBar
 
 
-    def system_configuration(self) -> SystemConfiguration:
+    def system_configuration(self) -> 'SystemConfiguration':
+        from experience.inf_os_idl_interfaces import SystemConfiguration
         return SystemConfiguration(self._com.SystemConfiguration)
 
 
@@ -157,7 +161,8 @@ class Application(AnyObject):
         return self._com.Width
 
 
-    def windows(self) -> Windows:
+    def windows(self) -> 'Windows':
+        from experience.inf_interfaces import Windows
         return Windows(self._com.Windows)
 
 
@@ -173,7 +178,8 @@ class Application(AnyObject):
     def folder_selection_box(self, i_title: str) -> str:
         return self._com.FolderSelectionBox(i_title)
 
-    def get_session_service(self, i_service: str) -> Service:
+    def get_session_service(self, i_service: str) -> 'Service':
+        from experience.inf_interfaces import Service
         return Service(self._com.GetSessionService(i_service))
 
     def services(self) -> 'Services':
@@ -196,4 +202,4 @@ class Application(AnyObject):
         return self._com.StartWorkbench(iworkbench_id)
 
     def __repr__(self):
-        return f'Application(name="{self.name}")'
+        return f'Application(name="{self.name()}")'

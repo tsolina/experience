@@ -1,4 +1,8 @@
-from experience.inf_interfaces import LightSources, Viewer, Viewpoint3D
+from typing import TYPE_CHECKING, Union
+from experience.inf_interfaces import Viewer
+
+if TYPE_CHECKING:
+    from experience.inf_interfaces import LightSources, Viewpoint3D
 
 class Viewer3D(Viewer):
     """
@@ -15,67 +19,69 @@ class Viewer3D(Viewer):
         super().__init__(com)
         self.viewer_3d = com
 
-    def clipping_mode(self, value: int = None) -> int:
+    def clipping_mode(self, value: int = None) -> Union['Viewer3D', int]:
         if value is not None:
             self.viewer_3d.ClippingMode = value
             return self
         return self.viewer_3d.ClippingMode
 
-    def far_limit(self, value: float = None) -> float:
+    def far_limit(self, value: float = None) -> Union['Viewer3D', float]:
         if value is not None:
             self.viewer_3d.FarLimit = value
             return self
         return self.viewer_3d.FarLimit
 
-    def foggy(self, value: bool = None) -> bool:
+    def foggy(self, value: bool = None) -> Union['Viewer3D', bool]:
         if value is not None:
             self.viewer_3d.Foggy = value
             return self
         return self.viewer_3d.Foggy
 
-    def ground(self, value: bool = None) -> bool:
+    def ground(self, value: bool = None) -> Union['Viewer3D', bool]:
         if value is not None:
             self.viewer_3d.Ground = value
             return self
         return self.viewer_3d.Ground
 
-    def light_sources(self) -> LightSources:
+    def light_sources(self) -> 'LightSources':
+        from experience.inf_interfaces import LightSources
         return LightSources(self.viewer_3d.LightSources)
 
-    def lighting_intensity(self, value: float = None) -> float:
+    def lighting_intensity(self, value: float = None) -> Union['Viewer3D', float]:
         if value is not None:
             self.viewer_3d.LightingIntensity = value
             return self
         return self.viewer_3d.LightingIntensity
 
-    def lighting_mode(self, value: int = None) -> int:
+    def lighting_mode(self, value: int = None) -> Union['Viewer3D', int]:
         if value is not None:
             self.viewer_3d.LightingMode = value
             return self
         return self.viewer_3d.LightingMode
 
-    def navigation_style(self, value: int = None) -> int:
+    def navigation_style(self, value: int = None) -> Union['Viewer3D', int]:
         if value is not None:
             self.viewer_3d.NavigationStyle = value
             return self
         return self.viewer_3d.NavigationStyle
 
-    def near_limit(self, value: float = None) -> float:
+    def near_limit(self, value: float = None) -> Union['Viewer3D', float]:
         if value is not None:
             self.viewer_3d.NearLimit = value
             return self
         return self.viewer_3d.NearLimit
 
-    def rendering_mode(self, value: int = None) -> int:
+    def rendering_mode(self, value: int = None) -> Union['Viewer3D', int]:
         if value is not None:
             self.viewer_3d.RenderingMode = value
             return self
         return self.viewer_3d.RenderingMode
 
-    def viewpoint_3d(self, value: Viewpoint3D = None) -> Viewpoint3D:
+    def viewpoint_3d(self, value: 'Viewpoint3D' = None) -> Union['Viewer3D', 'Viewpoint3D']:
         if value is not None:
             self.viewer_3d.Viewpoint3D = value
             return self
+        from experience.inf_interfaces import Viewpoint3D
         return Viewpoint3D(self.viewer_3d.Viewpoint3D)
 
     def rotate(self, i_axis: tuple, i_angle: float) -> 'Viewer3D':
@@ -87,4 +93,4 @@ class Viewer3D(Viewer):
         return self
 
     def __repr__(self):
-        return f'Viewer3D(name="{self.name}")'
+        return f'Viewer3D(name="{self.name()}")'

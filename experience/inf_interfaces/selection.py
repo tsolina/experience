@@ -1,6 +1,6 @@
 from typing import Iterator, TYPE_CHECKING
 from experience.system import AnyObject
-from experience.inf_interfaces import SelectedElement#, VisPropertySet
+from experience.inf_interfaces import SelectedElement
 
 if TYPE_CHECKING:
     from experience.inf_interfaces import VisPropertySet, Editor
@@ -82,7 +82,7 @@ class Selection(AnyObject):
                                          vba_function_name,
                                          [
                                              self.selection,
-                                             i_planar_geometric_object.com_object,
+                                             i_planar_geometric_object._com,
                                              i_message, i_filter_type,
                                              i_object_selection_before_command_use_possibility,
                                              i_tooltip,
@@ -144,7 +144,7 @@ class Selection(AnyObject):
         return self.selection.SelectElement3(i_filter_type, i_message, i_object_selection_before_command_use_possibility, i_multi_selection_mode, i_tooltip)
 
     def select_element_other_editor(self, i_filter_type: tuple, i_active_editor_message: str, i_non_active_editor_message: str, i_tooltip: bool, oEditor: 'Editor') -> str:
-        return self.selection.SelectElementOtherEditor(i_filter_type, i_active_editor_message, i_non_active_editor_message, i_tooltip, oEditor)
+        return self.selection.SelectElementOtherEditor(i_filter_type, i_active_editor_message, i_non_active_editor_message, i_tooltip, oEditor._com)
 
     def __len__(self):
         return self.count
@@ -160,4 +160,4 @@ class Selection(AnyObject):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Selection(name="{self.name}")'
+        return f'Selection(name="{self.name()}")'

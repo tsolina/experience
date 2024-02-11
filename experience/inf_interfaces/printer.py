@@ -1,4 +1,4 @@
-from experience.system.any_object import AnyObject
+from experience.system import AnyObject
 
 class Printer(AnyObject):
     """
@@ -30,4 +30,4 @@ class Printer(AnyObject):
         return self.printer.PaperWidth
 
     def __repr__(self):
-        return f'Printer(name="{self.name}")'
+        return f'Printer(name="{self.name()}")'

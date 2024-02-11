@@ -107,4 +107,4 @@ class VisPropertySet(AnyObject):
         return self._parent
 
     def __repr__(self):
-        return f'VisPropertySet(name="{self.name}")'
+        return f'VisPropertySet(name="{self.name()}")'

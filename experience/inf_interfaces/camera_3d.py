@@ -1,5 +1,9 @@
-from experience.inf_interfaces import Camera#, ViewPoint3D
+from typing import TYPE_CHECKING
 
+from experience.inf_interfaces import Camera
+
+if TYPE_CHECKING:
+    from experience.inf_interfaces import Viewpoint3D
 
 class Camera3D(Camera):
     """
@@ -16,12 +20,12 @@ class Camera3D(Camera):
         super().__init__(com)
         self.camera_3d = com
 
-    def viewpoint_3d(self, value: 'ViewPoint3D' = None) -> 'ViewPoint3D':
-        from experience.inf_interfaces import ViewPoint3D
+    def viewpoint_3d(self, value: 'Viewpoint3D' = None) -> 'Viewpoint3D':
         if value is not None:
             self.camera_3d.Viewpoint3D = value
             return self
-        return ViewPoint3D(self.camera_3d.Viewpoint3D)
+        from experience.inf_interfaces import Viewpoint3D
+        return Viewpoint3D(self.camera_3d.Viewpoint3D)
 
     def __repr__(self):
-        return f'Camera3D(name="{self.name}")'
+        return f'Camera3D(name="{self.name()}")'

@@ -12,4 +12,4 @@ class Reference(AnyObject):
         return Reference(self.reference.ComposeWith(i_reference._com))
 
     def __repr__(self):
-        return f'Reference(name="{self.name}")'
+        return f'Reference(name="{self.name()}")'

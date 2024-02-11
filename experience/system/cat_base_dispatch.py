@@ -1,4 +1,4 @@
-from experience.system.cat_base_unknown import CATBaseUnknown
+from experience.system import CATBaseUnknown
 
 class CATBaseDispatch(CATBaseUnknown):
     """

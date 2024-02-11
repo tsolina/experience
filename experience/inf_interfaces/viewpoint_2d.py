@@ -20,11 +20,12 @@ class Viewpoint2D(AnyObject):
             return self
         return self.viewpoint_2d.Zoom
 
-    def get_origin(self, o_origin: tuple) -> tuple:
-        return self.viewpoint_2d.GetOrigin(o_origin)
+    def get_origin(self) -> tuple[float, float]:
+        return self._get_safe_array(self.viewpoint_2d, "GetOrigin", 1)
 
-    def put_origin(self, o_origin: tuple) -> tuple:
-        return self.viewpoint_2d.PutOrigin(o_origin)
+    def put_origin(self, o_origin: tuple[float, float]) -> 'Viewpoint2D':
+        self.viewpoint_2d.PutOrigin(o_origin)
+        return self
 
     def __repr__(self):
-        return f'Viewpoint2D(name="{self.name}")'
+        return f'Viewpoint2D(name="{self.name()}")'
