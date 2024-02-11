@@ -36,4 +36,4 @@ class PLMEntity(AnyObject):
         return self.get_attribute_value("Name")
 
     def __repr__(self):
-        return f'PLMEntity(name="{self.name}")'
+        return f'PLMEntity(name="{self.name()}")'

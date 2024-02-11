@@ -1,7 +1,6 @@
 # example to modify properties of product and access part
 # product must be open and one part attached to it
 from experience import *
-import traceback
 
 # accessing application
 app = experience_application()

@@ -1,9 +1,12 @@
-from typing import Union
+from typing import Union, TYPE_CHECKING
 from experience.system import AnyObject, SystemService
 from experience.inf_interfaces.editor import Editor
 from experience.inf_interfaces import Editors, Printer, Printers, Service, Window, Windows
 from experience.inf_os_idl_interfaces import FileSystem, SystemConfiguration
 # from experience.types import DocumentType
+
+if TYPE_CHECKING:
+    from experience.inf_interfaces import Services
 
 class Application(AnyObject):
     def __init__(self, com):
@@ -172,7 +175,10 @@ class Application(AnyObject):
 
     def get_session_service(self, i_service: str) -> Service:
         return Service(self._com.GetSessionService(i_service))
-        # return Service(self._com.GetSessionService("IDService"))
+
+    def services(self) -> 'Services':
+        from experience.inf_interfaces import Services
+        return Services(self._com)
 
     def get_workbench_id(self) -> str:
         return self._com.GetWorkbenchId()

@@ -33,4 +33,4 @@ class PLMEntities(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'PLMEntity(name="{self.name}")'
+        return f'PLMEntity(name="{self.name()}")'

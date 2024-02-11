@@ -90,7 +90,7 @@ class AnyObject(Experience):
         return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_obj])
 
     def _get_multi(self, params, ins, outs) -> tuple:
-        ### _get_multi((shape, 1),("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference")) ###
+        ### _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference")) ###
         com_type = ins[0]
         method = ins[1]
         str_ins = ins[2:]
@@ -112,8 +112,8 @@ class AnyObject(Experience):
                 {vba_function_name} = Array({args_out})
             End Function
         """
-        #print(vba_code)
+        # print(vba_code)
         return self.application().system_service().evaluate(vba_code, 1, vba_function_name, params)
 
     def __repr__(self):
-        return f'AnyObject(name="{self.name}")'
+        return f'AnyObject(name="{self.name()}")'

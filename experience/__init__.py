@@ -24,6 +24,11 @@ from .plm_modeler_base_interfaces import PLMEntity, PLMEntities, PLMOccurrence, 
 from .product_structure_client_interfaces import Shape3D, Shape3Ds, VPMRepOccurrence, VPMRepOccurrences, ParentVPMRepInstances, VPMRepReference, VPMRootOccurrence, VPMReference, VPMRepInstance, VPMRepInstances
 from .product_structure_client_interfaces import VPMPublication, VPMPublications, VPMInstance, VPMInstances, VPMOccurrence, VPMOccurrences
 
+from .plm_access_interfaces import DatabaseSearch, IndexedSearch, PLMPlay, PLMScriptService, PLMSearch, PLMSearches, PLMSearchService, SearchService
+from .plm_session_builder_interfaces import PLMNewService, PLMOpenService, PLMPropagateService
+
+from .plm_application_context_interfaces import PLMAppContext # incomplete
+
 # from cat_logger import create_logger
 # except Exception as e:
 #     print(f"Top: {e}" )
