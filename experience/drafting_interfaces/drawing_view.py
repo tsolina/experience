@@ -1,14 +1,13 @@
 from typing import TYPE_CHECKING, Tuple
 
+from experience.system import AnyObject
 from experience.drafting_interfaces import DrawingAreaFills, DrawingComponents, DrawingPictures, DrawingThreads
 from experience.cat_annotation_interfaces import DrawingArrows, DrawingCoordDims, DrawingDimensions, DrawingTables, DrawingText, DrawingTexts, DrawingWeldings, DrawingGDTs
-from experience.mecmod_interfaces import GeometricElements
-
-from experience.system import AnyObject
 
 if TYPE_CHECKING:
     from experience.cat_sketcher_interfaces import Factory2D
     from experience.cat_annotation_interfaces import DrawingText
+    from experience.mecmod_interfaces import GeometricElements
 
 class DrawingView(AnyObject):
     """
@@ -78,7 +77,8 @@ class DrawingView(AnyObject):
         return self.drawing_view.GDTs
 
 
-    def geometric_elements(self) -> GeometricElements:
+    def geometric_elements(self) -> 'GeometricElements':
+        from experience.mecmod_interfaces import GeometricElements
         return GeometricElements(self.drawing_view.GeometricElements)
 
     def is_relation_activated(self) -> bool:
@@ -166,12 +166,15 @@ class DrawingView(AnyObject):
         self.drawing_view.AlignedWithReferenceView()
         return self
 
-    def get_projection_plane(o_x_1: float, o_y_1: float, o_z_1: float, o_x_2: float, o_y_2: float, o_z_2: float) -> tuple:
-        return self.drawing_view.GetProjectionPlane(o_x_1, o_y_1, o_z_1, o_x_2, o_y_2, o_z_2)
-
-    def get_view_name(self, i_view_name_prefix: str, i_view_name_ident: str, i_view_name_suffix: str) -> tuple:
-        return self.drawing_view.GetViewName(i_view_name_prefix, i_view_name_ident, i_view_name_suffix)
-
+    # def get_projection_plane(self, o_x_1: float, o_y_1: float, o_z_1: float, o_x_2: float, o_y_2: float, o_z_2: float) -> tuple:
+    #     return self.drawing_view.GetProjectionPlane(o_x_1, o_y_1, o_z_1, o_x_2, o_y_2, o_z_2)
+    def get_projection_plane(self) -> tuple[float, float, float, float, float, float]:
+        return self._get_multi([self.drawing_view], ('DrawingView', 'GetProjectionPlane'), ('Double', 'Double', 'Double', 'Double', 'Double', 'Double'))
+    
+    # def get_view_name(self, i_view_name_prefix: str, i_view_name_ident: str, i_view_name_suffix: str) -> tuple:
+    #     return self.drawing_view.GetViewName(i_view_name_prefix, i_view_name_ident, i_view_name_suffix)
+    def get_view_name(self) -> tuple[str, str, str]:
+        return self._get_multi([self.drawing_view], ('DrawingView', 'GetViewName'), ('str', 'str', 'str'))
 
     def get_view_text(self) -> 'DrawingText':
         return DrawingText(self.drawing_view.DravingText())
@@ -201,7 +204,7 @@ class DrawingView(AnyObject):
         self.drawing_view.SetViewName(i_view_name_prefix, i_view_name_ident, i_view_name_suffix)
         return self
 
-    def size(self) -> Tuple[float, float, float, float]:
+    def size(self) -> tuple[float, float, float, float]:
 
         vba_function_name = "size"
         vba_code = """

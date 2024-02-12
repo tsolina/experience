@@ -1,3 +1,4 @@
+from typing import Union
 from experience.system import AnyObject
 
 class DrawingArrow(AnyObject):
@@ -14,13 +15,13 @@ class DrawingArrow(AnyObject):
         super().__init__(com)
         self.drawing_arrow = com
 
-    def head_symbol(self, value: int = None) -> int:
+    def head_symbol(self, value: int = None) -> Union['DrawingArrow', int]:
         if value is not None:
             self.drawing_arrow.HeadSymbol = value
             return self
         return self.drawing_arrow.HeadSymbol
 
-    def head_target(self, value: AnyObject = None) -> AnyObject:
+    def head_target(self, value: AnyObject = None) -> Union['DrawingArrow', AnyObject]:
         if value is not None:
             self.drawing_arrow.HeadTarget = value
             return self
@@ -32,13 +33,13 @@ class DrawingArrow(AnyObject):
     def nb_point(self) -> int:
         return self.drawing_arrow.NbPoint
 
-    def tail_symbol(self, value: int = None) -> int:
+    def tail_symbol(self, value: int = None) -> Union['DrawingArrow', int]:
         if value is not None:
             self.drawing_arrow.TailSymbol = value
             return self
         return self.drawing_arrow.TailSymbol
 
-    def tail_target(self, value: AnyObject = None) -> AnyObject:
+    def tail_target(self, value: AnyObject = None) -> Union['DrawingArrow', AnyObject]:
         if value is not None:
             self.drawing_arrow.TailTarget = value
             return self
@@ -74,4 +75,4 @@ class DrawingArrow(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingArrow(name="{self.name}")'
+        return f'DrawingArrow(name="{self.name()}")'

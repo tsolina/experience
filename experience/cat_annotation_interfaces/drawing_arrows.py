@@ -38,4 +38,4 @@ class DrawingArrows(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingArrows(name="{self.name}")'
+        return f'DrawingArrows(name="{self.name()}")'

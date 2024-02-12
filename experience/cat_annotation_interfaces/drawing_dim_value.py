@@ -1,3 +1,4 @@
+from typing import Union
 from experience.system import AnyObject
 
 class DrawingDimValue(AnyObject):
@@ -14,13 +15,13 @@ class DrawingDimValue(AnyObject):
         super().__init__(com)
         self.drawing_dim_value = com
 
-    def fake_dim_type(self, value: int = None) -> int:
+    def fake_dim_type(self, value: int = None) -> Union['DrawingDimValue', int]:
         if value is not None:
             self.drawing_dim_value.FakeDimType = value
             return self
         return self.drawing_dim_value.FakeDimType
 
-    def scoring_mode(self, value: int = None) -> int:
+    def scoring_mode(self, value: int = None) -> Union['DrawingDimValue', int]:
         if value is not None:
             self.drawing_dim_value.ScoringMode = value
             return self
@@ -29,20 +30,20 @@ class DrawingDimValue(AnyObject):
     def value(self) -> float:
         return self.drawing_dim_value.Value
 
-    def value_framed_element(self, value: int = None) -> int:
+    def value_framed_element(self, value: int = None) -> Union['DrawingDimValue', int]:
         if value is not None:
             self.drawing_dim_value.ValueFramedElement = value
             return self
         return self.drawing_dim_value.ValueFramedElement
 
-    def value_framed_group(self, value: int = None) -> int:
+    def value_framed_group(self, value: int = None) -> Union['DrawingDimValue', int]:
         if value is not None:
             self.drawing_dim_value.ValueFramedGroup = value
             return self
         return self.drawing_dim_value.ValueFramedGroup
 
-    def get_bault_text(self, i_index: int, o_before: str, o_after: str, o_upper: str, o_lower: str) -> tuple:
-        return self.drawing_dim_value.GetBaultText(i_index, o_before, o_after, o_upper, o_lower)
+    def get_bault_text(self, i_index: int) -> tuple[str, str, str, str]:
+        return self._get_multi([self.drawing_dim_value, i_index], ('DrawingDimValue', 'GetBaultText', 'Long'), ('String', 'String', 'String', 'String'))
 
     def get_display_unit(self, i_index: int) -> int:
         return self.drawing_dim_value.GetDisplayUnit(i_index)
@@ -65,8 +66,8 @@ class DrawingDimValue(AnyObject):
     def get_format_unit(self, i_index: int) -> int:
         return self.drawing_dim_value.GetFormatUnit(i_index)
 
-    def get_ps_text(self, i_index: int, o_prefix: str, o_suffix: str) -> tuple: # to test
-        return self.drawing_dim_value.GetPSText(i_index, o_prefix, o_suffix)
+    def get_ps_text(self, i_index: int) -> tuple[str, str]: # to test
+        return self._get_multi([self.drawing_dim_value, i_index], ('DrawingDimValue', 'GetPSText', 'Long'), ('String', 'String'))
 
     def get_scored_element(self, i_index: int) -> bool:
         return self.drawing_dim_value.GetScoredElement(i_index)
@@ -107,4 +108,4 @@ class DrawingDimValue(AnyObject):
         return self.drawing_dim_value.SetScoredElement(i_index, i_scored_element)
 
     def __repr__(self):
-        return f'DrawingDimValue(name="{self.name}")'
+        return f'DrawingDimValue(name="{self.name()}")'

@@ -1,3 +1,5 @@
+from typing import TYPE_CHECKING, Union
+
 from experience.cat_annotation_interfaces import DrawingDimExtLine, DrawingDimLine, DrawingDimValue
 from experience.knowledge_interfaces import Parameters
 from experience.system import AnyObject
@@ -19,7 +21,7 @@ class DrawingDimension(AnyObject):
     def cumulate_mode(self) -> bool:
         return self.drawing_dimension.CumulateMode
 
-    def dim_status(self, value: int = None) -> int:
+    def dim_status(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.DimStatus = value
             return self
@@ -28,19 +30,19 @@ class DrawingDimension(AnyObject):
     def dim_type(self) -> int:
         return self.drawing_dimension.DimType
 
-    def dual_value(self, value: int = None) -> int:
+    def dual_value(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.DualValue = value
             return self
         return self.drawing_dimension.DualValue
 
-    def forshortened(self, value: bool = None) -> bool:
+    def forshortened(self, value: bool = None) -> Union['DrawingDimension', bool]:
         if value is not None:
             self.drawing_dimension.Forshortened = value
             return self
         return self.drawing_dimension.Forshortened
 
-    def half_dim_mode(self, value: bool = None) -> bool:
+    def half_dim_mode(self, value: bool = None) -> Union['DrawingDimension', bool]:
         if value is not None:
             self.drawing_dimension.HalfDimMode = value
             return self
@@ -58,7 +60,7 @@ class DrawingDimension(AnyObject):
     def parameters(self) -> Parameters:
         return Parameters(self.drawing_dimension.Parameters)
 
-    def symbols_side(self, value: int = None) -> int:
+    def symbols_side(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.SymbolsSide = value
             return self
@@ -67,37 +69,37 @@ class DrawingDimension(AnyObject):
     def true_dim_mode(self) -> bool:
         return self.drawing_dimension.TrueDimMode
 
-    def value_angle(self, value: float = None) -> float:
+    def value_angle(self, value: float = None) -> Union['DrawingDimension', float]:
         if value is not None:
             self.drawing_dimension.ValueAngle = value
             return self
         return self.drawing_dimension.ValueAngle
 
-    def value_auto_mode(self, value: int = None) -> int:
+    def value_auto_mode(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.ValueAutoMode = value
             return self
         return self.drawing_dimension.ValueAutoMode
 
-    def value_display(self) -> int:
+    def value_display(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.ValueDisplay = value
             return self
         return self.drawing_dimension.ValueDisplay
 
-    def value_frame(self, value: int = None) -> int:
+    def value_frame(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.ValueFrame = value
             return self
         return self.drawing_dimension.ValueFrame
 
-    def value_in_out(self, value: int = None) -> int:
+    def value_in_out(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.ValueInOut = value
             return self
         return self.drawing_dimension.ValueInOut
 
-    def value_orientation(self, value: int = None) -> int:
+    def value_orientation(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
             self.drawing_dimension.ValueOrientation = value
             return self

@@ -14,7 +14,7 @@ class DrawingTexts(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingText)
+        super().__init__(com, child=DrawingText)
         self.drawing_texts = com
         self._child = DrawingText
 

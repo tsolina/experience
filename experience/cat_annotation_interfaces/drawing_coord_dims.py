@@ -1,7 +1,6 @@
 from typing import Iterator
 
 from experience.cat_annotation_interfaces import DrawingCoordDim
-from experience.cat_annotation_interfaces.drawing_leader import DrawingLeader
 from experience.system import Collection
 
 
@@ -16,11 +15,8 @@ class DrawingCoordDims(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingLeader)
+        super().__init__(com, _child=DrawingCoordDim)
         self.drawing_coord_dims = com
-
-    # def add(self, i_head_point_x: float, i_head_point_y: float) -> DrawingCoordDim:
-    #     return DrawingCoordDim(self.drawing_coord_dims.Add(i_head_point_x, i_head_point_y))
 
     def item(self, i_index: int) -> DrawingCoordDim:
         return DrawingCoordDim(self.drawing_coord_dims.Item(i_index))
@@ -35,9 +31,9 @@ class DrawingCoordDims(Collection):
 
         return DrawingCoordDim(self.drawing_coord_dims.item(n + 1))
 
-    def __iter__(self) -> Iterator[DrawingLeader]:
+    def __iter__(self) -> Iterator[DrawingCoordDim]:
         for i in range(self.count):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingCoordDims(name="{self.name}")'
+        return f'DrawingCoordDims(name="{self.name()}")'

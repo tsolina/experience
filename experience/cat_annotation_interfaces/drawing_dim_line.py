@@ -1,3 +1,4 @@
+from typing import Union
 from experience.system import AnyObject
 
 class DrawingDimLine(AnyObject):
@@ -14,25 +15,25 @@ class DrawingDimLine(AnyObject):
         super().__init__(com)
         self.drawing_dim_line = com
 
-    def color(self, value: int = None) -> int:
+    def color(self, value: int = None) -> Union['DrawingDimLine', int]:
         if value is not None:
             self.drawing_dim_line.Color = value
             return self
         return self.drawing_dim_line.Color
 
-    def dim_line_graph_rep(self, value: int = None) -> int:
+    def dim_line_graph_rep(self, value: int = None) -> Union['DrawingDimLine', int]:
         if value is not None:
             self.drawing_dim_line.DimLineGraphRep = value
             return self
         return self.drawing_dim_line.DimLineGraphRep
 
-    def dim_line_orientation(self, value: int = None) -> int:
+    def dim_line_orientation(self, value: int = None) -> Union['DrawingDimLine', int]:
         if value is not None:
             self.drawing_dim_line.DimLineOrientation = value
             return self
         return self.drawing_dim_line.DimLineOrientation
 
-    def dim_line_reference(self):
+    def dim_line_reference(self, value: int = None) -> Union['DrawingDimLine', int]:
         if value is not None:
             self.drawing_dim_line.DimLineReference = value
             return self
@@ -44,17 +45,20 @@ class DrawingDimLine(AnyObject):
     def dim_line_type(self) -> int:
         return self.drawing_dim_line.DimLineType
 
-    def thickness(self, value: float = None) -> float:
+    def thickness(self, value: float = None) -> Union['DrawingDimLine', float]:
         if value is not None:
             self.drawing_dim_line.Thickness = value
             return self
         return self.drawing_dim_line.Thickness
 
     def get_dim_line_dir(self, o_dir_x: float, o_dir_y: float) -> float:
+        return self._get_multi([self.drawing_dim_line], ('DrawingDimLine', 'GetDimLineDir'), ('Double', 'Double'))
         return self.drawing_dim_line.GetDimLineDir(o_dir_x, o_dir_y)
 
-    def get_geom_info(self, o_geom_infos: tuple) -> tuple:
-        return self.drawing_dim_line.GetGeomInfo(o_geom_infos)
+    def get_geom_info(self) -> tuple: #, o_geom_infos: tuple
+        """ - returning tuple with 6 undocumented items - """
+        return self._get_safe_array(self.drawing_dim_line, "GetGeomInfo", 5)
+        return self.drawing_dim_line.GetGeomInfo()
 
     def get_symb_color(self, index: int) -> int:
         return self.drawing_dim_line.GetSymbColor(index)
@@ -78,4 +82,4 @@ class DrawingDimLine(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingDimLine(name="{self.name}")'
+        return f'DrawingDimLine(name="{self.name()}")'

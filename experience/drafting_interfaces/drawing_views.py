@@ -15,7 +15,7 @@ class DrawingViews(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingView)
+        super().__init__(com, child=DrawingView)
         self.drawing_views = com
 
 

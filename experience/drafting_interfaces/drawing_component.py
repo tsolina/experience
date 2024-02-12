@@ -44,7 +44,7 @@ class DrawingComponent(AnyObject):
             return self
         return self.drawing_component.x
 
-    def y(self) -> float:
+    def y(self, value: float = None) -> float:
         if value is not None:
             self.drawing_component.y = value
             return self

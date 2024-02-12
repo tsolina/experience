@@ -1,9 +1,11 @@
 import os
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from experience.drafting_interfaces import DrawingPageSetup, DrawingViews, PrintArea
 from experience.system import AnyObject
 
+if TYPE_CHECKING:
+    from experience.drafting_interfaces import DrawingPageSetup, DrawingView, DrawingViews, PrintArea
 
 class DrawingSheet(AnyObject):
     """
@@ -19,20 +21,21 @@ class DrawingSheet(AnyObject):
         super().__init__(com)
         self.drawing_sheet = com
 
-    def gen_views_pos_mode(self, value:int = None) -> int:
+    def gen_views_pos_mode(self, value: int = None) -> int:
         if value is not None:
             self.drawing_sheet.GenViewsPosMode = value
             return self
         return self.drawing_sheet.GenViewsPosMode
 
-    def orientation(self) -> int:
+    def orientation(self, value: int = None) -> int:
         if value is not None:
             self.drawing_sheet.Orientation = value
             return self
         return self.drawing_sheet.Orientation
 
 
-    def page_setup(self) -> DrawingPageSetup:
+    def page_setup(self) -> 'DrawingPageSetup':
+        from experience.drafting_interfaces import DrawingPageSetup
         return DrawingPageSetup(self.drawing_sheet.PageSetup)
 
     def paper_size(self, value: int = None) -> int:
@@ -42,7 +45,8 @@ class DrawingSheet(AnyObject):
         return self.drawing_sheet.PaperSize
 
 
-    def print_area(self) -> PrintArea:
+    def print_area(self) -> 'PrintArea':
+        from experience.drafting_interfaces import PrintArea
         return PrintArea(self.drawing_sheet.PrintArea)
 
     def projection_method(self, value: int = None) -> int:
@@ -57,7 +61,7 @@ class DrawingSheet(AnyObject):
             return self
         return self.drawing_sheet.Scale
 
-    def scale2(self) -> float:
+    def scale2(self, value: float = None) -> float:
         if value is not None:
             self.drawing_sheet.Scale2 = value
             return self
@@ -68,8 +72,13 @@ class DrawingSheet(AnyObject):
         return self
 
 
-    def views(self) -> DrawingViews:
+    def views(self) -> 'DrawingViews':
+        from experience.drafting_interfaces import DrawingViews
         return DrawingViews(self.drawing_sheet.Views)
+    
+    def active_view(self) -> 'DrawingView':
+        from experience.drafting_interfaces import DrawingView
+        return self.views().active_view()
 
     def activate(self) -> 'DrawingSheet':
         self.drawing_sheet.Activate()
@@ -126,11 +135,13 @@ class DrawingSheet(AnyObject):
         self.drawing_sheet.SetAsDetail()
         return self
 
-    def set_paper_height(self, o_paper_height: float) -> tuple:
-        return self.drawing_sheet.SetPaperHeight(o_paper_height)
+    def set_paper_height(self, o_paper_height: float) -> 'DrawingSheet':
+        self.drawing_sheet.SetPaperHeight(o_paper_height)
+        return self
 
-    def set_paper_width(self, o_paper_width: float) -> tuple:
-        return self.drawing_sheet.SetPaperWidth(o_paper_width)
+    def set_paper_width(self, o_paper_width: float) -> 'DrawingSheet':
+        self.drawing_sheet.SetPaperWidth(o_paper_width)
+        return self
 
     def update(self) -> 'DrawingSheet':
         self.drawing_sheet.Update()

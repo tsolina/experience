@@ -69,10 +69,11 @@ class AnyObject(Experience):
         # TODO: at least verify that target_class is instance of AnyObject
         return target_class(self._com.Application.SystemService.Evaluate(vba_code, 1, vba_function_name, [self._com]))
 
-    def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: float or int = None) -> tuple:
+    def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: float or int or bool = None) -> tuple:
         """
             _get_safe_array(self._com, "Method", 2)
             _get_safe_array(self._com, "Method", 2, .5)
+            _get_safe_array(self._com, "Method", 2, True)
         """
         if i_pos is not None:
             i_pos = str(i_pos) + ", "

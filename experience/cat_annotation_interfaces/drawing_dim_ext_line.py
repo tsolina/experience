@@ -1,3 +1,4 @@
+from typing import Union
 from experience.system import AnyObject
 
 class DrawingDimExtLine(AnyObject):
@@ -14,13 +15,13 @@ class DrawingDimExtLine(AnyObject):
         super().__init__(com)
         self.drawing_dim_ext_line = com
 
-    def color(self, value: int = None) -> int:
+    def color(self, value: int = None) -> Union['DrawingDimExtLine', int]:
         if value is not None:
             self.drawing_dim_ext_line.Color = value
             return self
         return self.drawing_dim_ext_line.Color
 
-    def ext_line_slant(self, value: float = None) -> float:
+    def ext_line_slant(self, value: float = None) -> Union['DrawingDimExtLine', float]:
         if value is not None:
             self.drawing_dim_ext_line.ExtLineSlant = value
             return self
@@ -29,7 +30,7 @@ class DrawingDimExtLine(AnyObject):
     def ext_line_type(self) -> int:
         return self.drawing_dim_ext_line.ExtLineType
 
-    def thickness(self, value: float = None) -> float:
+    def thickness(self, value: float = None) -> Union['DrawingDimExtLine', float]:
         if value is not None:
             self.drawing_dim_ext_line.Thickness = value
             return self
@@ -39,14 +40,14 @@ class DrawingDimExtLine(AnyObject):
         self.drawing_dim_ext_line.AddInterrupt(i_index, i_two_points)
         return self
 
-    def get_funnel(self, i_index: int, o_mode: int, o_angle: float, o_height: float, o_width: float) -> tuple:
-        return self.drawing_dim_ext_line.GetFunnel(i_index, o_mode, o_angle, o_height, o_width)
+    def get_funnel(self, i_index: int) -> tuple[int, float, float, float]:
+        return self._get_multi([self.drawing_dim_ext_line, i_index],("DrawingDimExtLine", "GetFunnel", "Long"),("Long", "Double", "Double", "Double"))
 
     def get_gap(self, i_index: int) -> float:
         return self.drawing_dim_ext_line.GetGap(i_index)
 
-    def get_geom_info(self, i_index: int, o_geom_infos: tuple) -> tuple:
-        return self.drawing_dim_ext_line.GetGeomInfo(i_index, o_geom_infos)
+    def get_geom_info(self, i_index: int) -> tuple[float, float, float, float, float, float]:
+        return self._get_safe_array(self.drawing_dim_ext_line, "GetGeomInfo", 5, i_index)
 
     def get_interrupt(self, i_index: int) -> int:
         return self.drawing_dim_ext_line.GetInterrupt(i_index)
@@ -78,4 +79,4 @@ class DrawingDimExtLine(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingDimExtLine(name="{self.name}")'
+        return f'DrawingDimExtLine(name="{self.name()}")'
