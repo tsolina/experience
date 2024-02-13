@@ -1,6 +1,7 @@
-from experience.system import CATBaseDispatch
+from experience.system import AnyObject
+from typing import Union
 
-class DrawingTextRange(CATBaseDispatch):
+class DrawingTextRange(AnyObject):
     """
                 | System.IUnknown
                 |     System.IDispatch
@@ -19,7 +20,7 @@ class DrawingTextRange(CATBaseDispatch):
     def start(self) -> int:
         return self.drawing_text_range.Start
 
-    def text(self, value: str = None) -> str:
+    def text(self, value: str = None) -> Union['DrawingTextRange', str]:
         if value is not None:
             self.drawing_text_range.Text = value
             return self
@@ -37,4 +38,4 @@ class DrawingTextRange(CATBaseDispatch):
         return self
 
     def __repr__(self):
-        return f'DrawingTextRange()'
+        return f'DrawingTextRange(name="{self.name()}")'

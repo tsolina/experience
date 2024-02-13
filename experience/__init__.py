@@ -6,11 +6,13 @@ from .base_interfaces import experience_application, Experience, PartReady, Prod
 
 from .system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService
 
-from .cat_annotation_interfaces import DrawingArrow, DrawingArrows, DrawingCoordDim, DrawingCoordDims, DrawingDimension, DrawingDimensions, DrawingDimExtLine, DrawingDimLine, DrawingDimValue, DrawingGDT, DrawingGDTs, DrawingLeader, DrawingLeaders, DrawingTable, DrawingTables, DrawingText, DrawingTextProperties, DrawingTextRange, DrawingTexts,DrawingWelding,DrawingWeldings
-
 from .drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 from .drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
 from .drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot
+
+from .cat_annotation_interfaces import DrawingArrow, DrawingArrows, DrawingCoordDim, DrawingCoordDims, DrawingDimExtLine, DrawingDimLine, DrawingDimValue
+from .cat_annotation_interfaces import DrawingDimension, DrawingDimensions, DrawingLeader, DrawingLeaders, DrawingGDT, DrawingGDTs, DrawingTable, DrawingTables
+from .cat_annotation_interfaces import DrawingTextProperties, DrawingTextRange, DrawingText, DrawingTexts, DrawingWelding, DrawingWeldings
 
 from .inf_interfaces import Application, Camera, Cameras, Camera3D, Editor, Editors, LightSource, LightSources, PageSetup, Printer, Printers, Reference, References
 from .inf_interfaces import SelectedElement, Selection, Service, Viewer, Viewpoint2D, Viewer2D, Viewpoint3D, Viewer3D, Viewers, VisPropertySet, Window, Windows, Workbench

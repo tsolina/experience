@@ -1,6 +1,8 @@
-from experience.cat_annotation_interfaces import DrawingLeaders, DrawingTextProperties
+from typing import Union, TYPE_CHECKING
 from experience.system import AnyObject#, CATBaseDispatch
 
+if TYPE_CHECKING:
+    from experience.cat_annotation_interfaces import DrawingLeaders, DrawingTextProperties
 
 class DrawingText(AnyObject):
     """
@@ -16,34 +18,35 @@ class DrawingText(AnyObject):
         super().__init__(com)
         self.drawing_text = com
 
-    def anchor_position(self, value: int = None) -> int:
+    def anchor_position(self, value: int = None) -> Union['DrawingText', int]:
         if value is not None:
             self.drawing_text.AnchorPosition = value
             return self
         return self.drawing_text.AnchorPosition
 
-    def angle(self, value: float = None) -> float:
+    def angle(self, value: float = None) -> Union['DrawingText', float]:
         if value is not None:
             self.drawing_text.Angle = value
             return self
         return self.drawing_text.Angle
 
-    def associative_element(self, value:AnyObject = None) -> AnyObject:
+    def associative_element(self, value:AnyObject = None) -> Union['DrawingText', AnyObject]:
         if value is not None:
-            self.drawing_text.AssociativeElement = value
+            self.drawing_text.AssociativeElement = value._com
             return self
         return AnyObject(self.drawing_text.AssociativeElement)
 
-    def frame_type(self, value: int = None) -> int:
+    def frame_type(self, value: int = None) -> Union['DrawingText', int]:
         if value is not None:
             self.drawing_text.FrameType = value
             return self
         return self.drawing_text.FrameType
 
-    def leaders(self):
+    def leaders(self) -> 'DrawingLeaders':
+        from experience.cat_annotation_interfaces import DrawingLeaders
         return DrawingLeaders(self.drawing_text.Leaders)
 
-    def lock_edition(self, value: bool = None) -> bool:
+    def lock_edition(self, value: bool = None) -> Union['DrawingText', bool]:
         if value is not None:
             self.drawing_text.LockEdition = value
             return self
@@ -52,34 +55,35 @@ class DrawingText(AnyObject):
     def nb_link(self) -> int:
         return self.drawing_text.NbLink
 
-    def orientation_reference(self, value: int = None) -> int:
+    def orientation_reference(self, value: int = None) -> Union['DrawingText', int]:
         if value is not None:
             self.drawing_text.OrientationReference = value
             return self
         return self.drawing_text.OrientationReference
 
-    def text(self, value: str = None) -> str:
+    def text(self, value: str = None) -> Union['DrawingText', str]:
         if value is not None:
             self.drawing_text.Text = value
             return self
         return self.drawing_text.Text
 
-    def text_properties(self) -> DrawingTextProperties:
+    def text_properties(self) -> 'DrawingTextProperties':
+        from experience.cat_annotation_interfaces import DrawingTextProperties
         return DrawingTextProperties(self.drawing_text.TextProperties)
 
-    def wrapping_width(self, value: float = None) -> float:
+    def wrapping_width(self, value: float = None) -> Union['DrawingText', float]:
         if value is not None:
             self.drawing_text.WrappingWidth = value
             return self
         return self.drawing_text.WrappingWidth
 
-    def x(self, value: float = None) -> float:
+    def x(self, value: float = None) -> Union['DrawingText', float]:
         if value is not None:
             self.drawing_text.x = value
             return self
         return self.drawing_text.x
 
-    def y(self, value: float = None) -> float:
+    def y(self, value: float = None) -> Union['DrawingText', float]:
         if value is not None:
             self.drawing_text.y = value
             return self
@@ -133,4 +137,4 @@ class DrawingText(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingText(name="{self.name}")'
+        return f'DrawingText(name="{self.name()}")'

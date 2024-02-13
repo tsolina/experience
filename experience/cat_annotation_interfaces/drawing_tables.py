@@ -14,7 +14,7 @@ class DrawingTables(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingTable)
+        super().__init__(com, child=DrawingTable)
         self.drawing_tables = com
 
     def add(self, i_position_x: float, i_position_y: float, i_number_of_row: int, i_number_of_column: int, i_row_height: float, i_column_width: float) -> DrawingTable:
@@ -37,4 +37,4 @@ class DrawingTables(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingTables(name="{self.name}")'
+        return f'DrawingTables(name="{self.name()}")'

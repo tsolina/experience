@@ -1,7 +1,7 @@
 from experience.system import AnyObject
 # from experience.cat_annotation_interfaces import DrawingTextRange
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Union
 if TYPE_CHECKING:
     from experience.cat_annotation_interfaces import DrawingLeaders, DrawingTextProperties, DrawingTextRange
 
@@ -18,30 +18,30 @@ class DrawingGDT(AnyObject):
         super().__init__(com)
         self.drawing_gdt = com
 
-    def angle(self, value: float = None) -> float:
+    def angle(self, value: float = None) -> Union['DrawingTextRange', float]:
         if value is not None:
             self.drawing_gdt.Angle = value
             return self
         return self.drawing_gdt.Angle
 
-    def drawing_leaders(self) -> 'DrawingGDT':
+    def drawing_leaders(self) -> 'DrawingLeaders':
         from experience.cat_annotation_interfaces import DrawingLeaders
         return DrawingLeaders(self.drawing_gdt.DrawingLeaders())
 
     def row_number(self) -> int:
         return self.drawing_gdt.RowNumber
 
-    def text_properties(self) -> 'DrawingGDT':
+    def text_properties(self) -> 'DrawingTextProperties':
         from experience.cat_annotation_interfaces import DrawingTextProperties
         return DrawingTextProperties(self.drawing_gdt.DrawingTextProperties())
 
-    def x(self, value: float = None) -> float:
+    def x(self, value: float = None) -> Union['DrawingTextRange', float]:
         if value is not None:
             self.drawing_gdt.x = value
             return self
         return self.drawing_gdt.x
 
-    def y(self, value: float = None) -> float:
+    def y(self, value: float = None) -> Union['DrawingTextRange', float]:
         if value is not None:
             self.drawing_gdt.y = value
             return self
@@ -62,4 +62,4 @@ class DrawingGDT(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingGDT()'
+        return f'DrawingGDT(name="{self.name()}")'

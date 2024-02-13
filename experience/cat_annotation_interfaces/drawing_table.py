@@ -1,6 +1,6 @@
 from experience.system import AnyObject
+from typing import TYPE_CHECKING, Union
 
-from typing import TYPE_CHECKING 
 if TYPE_CHECKING:
     from experience.cat_annotation_interfaces import DrawingText, DrawingLeaders, DrawingTextProperties
 
@@ -18,19 +18,19 @@ class DrawingTable(AnyObject):
         super().__init__(com)
         self.drawing_table = com
 
-    def anchor_point(self, value: int = None) -> int:
+    def anchor_point(self, value: int = None) -> Union['DrawingTable', int]:
         if value is not None:
             self.drawing_table.AnchorPoint = value
             return self
         return self.drawing_table.AnchorPoint
 
-    def angle(self, value: float = None) -> float:
+    def angle(self, value: float = None) -> Union['DrawingTable', float]:
         if value is not None:
             self.drawing_table.Angle = value
             return self
         return self.drawing_table.Angle
 
-    def compute_mode(self, value: int = None) -> int:
+    def compute_mode(self, value: int = None) -> Union['DrawingTable', int]:
         if value is not None:
             self.drawing_table.ComputeMode = value
             return self
@@ -46,7 +46,7 @@ class DrawingTable(AnyObject):
     def number_of_rows(self) -> int:
         return self.drawing_table.NumberOfRows
 
-    def orientation_reference(self, value: int = None) -> int:
+    def orientation_reference(self, value: int = None) -> Union['DrawingTable', int]:
         if value is not None:
             self.drawing_table.OrientationReference = value
             return self
@@ -56,13 +56,13 @@ class DrawingTable(AnyObject):
         from experience.cat_annotation_interfaces import DrawingTextProperties
         return DrawingTextProperties(self.drawing_table.TextProperties)
 
-    def x(self, value: float = None) -> float:
+    def x(self, value: float = None) -> Union['DrawingTable', float]:
         if value is not None:
             self.drawing_table.x = value
             return self
         return self.drawing_table.x
 
-    def y(self, value: float = None) -> float:
+    def y(self, value: float = None) -> Union['DrawingTable', float]:
         if value is not None:
             self.drawing_table.y = value
             return self
@@ -92,14 +92,15 @@ class DrawingTable(AnyObject):
     def get_cell_string(self, i_row: int, i_col: int) -> str:
         return self.drawing_table.GetCellString(i_row, i_col)
 
-    def get_cells_merge(self, o_list_of_merge_cells: tuple) -> tuple:
-        return self.drawing_table.GetCellsMerge(o_list_of_merge_cells)
+    def get_cells_merge(self) -> tuple:
+        return self._get_safe_array(self.drawing_table, "GetCellsMerge", self.number_of_columns() * self.number_of_rows() -1)
+        #return self.drawing_table.GetCellsMerge()
 
     def get_column_size(self, i_col: int) -> float:
         return self.drawing_table.GetColumnSize(i_col)
 
-    def get_merge_infos(self, i_row: int, i_col: int, o_first_row: int, o_first_col: int, o_nb_row: int, o_nb_col: int) -> tuple:
-        return self.drawing_table.GetMergeInfos(i_row, i_col, o_first_row, o_first_col, o_nb_row, o_nb_col)
+    def get_merge_infos(self, i_row: int, i_col: int) -> tuple[int, int, int, int]:
+        return self.drawing_table.GetMergeInfos(i_row, i_col)
 
     def get_row_size(self, i_row: int) -> float:
         return self.drawing_table.GetRowSize(i_row)
@@ -165,4 +166,4 @@ class DrawingTable(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingTable(name="{self.name}")'
+        return f'DrawingTable(name="{self.name()}")'

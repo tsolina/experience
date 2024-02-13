@@ -39,4 +39,4 @@ class DrawingTexts(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingTexts(name="{self.name}")'
+        return f'DrawingTexts(name="{self.name()}")'

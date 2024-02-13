@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Union
 
 from experience.system import AnyObject
 
@@ -19,33 +19,33 @@ class DrawingLeader(AnyObject):
         super().__init__(com)
         self.drawing_leader = com
 
-    def all_around(self, value: bool = None) -> bool:
+    def all_around(self, value: bool = None) -> Union['DrawingLeader', bool]:
         if value is not None:
             self.drawing_leader.AllAround = value
             return self
         return self.drawing_leader.AllAround
 
-    def anchor_point(self, value: int = None) -> int:
+    def anchor_point(self, value: int = None) -> Union['DrawingLeader', int]:
         if value is not None:
             self.drawing_leader.AnchorPoint = value
             return self
         return self.drawing_leader.AnchorPoint
 
-    def anchor_symbol(self, value: int = None) -> int:
+    def anchor_symbol(self, value: int = None) -> Union['DrawingLeader', int]:
         if value is not None:
             self.drawing_leader.AnchorSymbol = value
             return self
         return self.drawing_leader.AnchorSymbol
 
-    def head_symbol(self, value: int = None) -> int:
+    def head_symbol(self, value: int = None) -> Union['DrawingLeader', int]:
         if value is not None:
             self.drawing_leader.HeadSymbol = value
             return self
         return self.drawing_leader.HeadSymbol
 
-    def head_target(self, value: int = None) -> AnyObject: #CATBaseDispatch
+    def head_target(self, value: AnyObject = None) -> Union['DrawingLeader', AnyObject]:
         if value is not None:
-            self.drawing_leader.HeadTarget = value
+            self.drawing_leader.HeadTarget = value._com
             return self
         return AnyObject(self.drawing_leader.HeadTarget)
 
@@ -70,7 +70,7 @@ class DrawingLeader(AnyObject):
     def get_interruptions(self) -> tuple: #, o_interruptions: tuple
         return self.drawing_leader.GetInterruptions()
 
-    def get_point(self, i_num: int) -> tuple: #, o_x: float, o_y: float
+    def get_point(self, i_num: int) -> tuple[float, float]:
         return self.drawing_leader.GetPoint(i_num)
 
     def get_points(self) -> tuple: #, o_points: tuple
@@ -89,4 +89,4 @@ class DrawingLeader(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingLeader(name="{self.name}")'
+        return f'DrawingLeader(name="{self.name()}")'

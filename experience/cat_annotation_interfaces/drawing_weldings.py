@@ -14,7 +14,7 @@ class DrawingWeldings(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingWelding)
+        super().__init__(com, child=DrawingWelding)
         self.drawing_weldings = com
 
     def add(self, i_symbol: int, i_position_x: float, i_position_y: float) -> DrawingWelding:
@@ -38,4 +38,4 @@ class DrawingWeldings(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingWeldings(name="{self.name}")'
+        return f'DrawingWeldings(name="{self.name()}")'

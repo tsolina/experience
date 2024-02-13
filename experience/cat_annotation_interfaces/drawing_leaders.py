@@ -15,7 +15,7 @@ class DrawingLeaders(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingLeader)
+        super().__init__(com, child=DrawingLeader)
         self.drawing_leaders = com
 
     def add(self, i_head_point_x: float, i_head_point_y: float) -> DrawingLeader:
@@ -39,4 +39,4 @@ class DrawingLeaders(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingLeaders(name="{self.name}")'
+        return f'DrawingLeaders(name="{self.name()}")'

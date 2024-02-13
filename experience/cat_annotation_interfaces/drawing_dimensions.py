@@ -1,9 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.cat_annotation_interfaces import DrawingDimension
 from experience.system import Collection
-from experience.types import cat_variant
 
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class DrawingDimensions(Collection):
     """
@@ -22,13 +23,13 @@ class DrawingDimensions(Collection):
     def add(self, i_type_dim: int, i_geom_elem: tuple, i_pt_coord_elem: tuple, i_line_rep: int) -> DrawingDimension:
         return DrawingDimension(self.drawing_dimensions.Add(i_type_dim, i_geom_elem, i_pt_coord_elem, i_line_rep))
 
-    def add2(self, i_type_dim: int, i_geom_elem: tuple, i_pt_coord_elem: tuple, i_ldc_ref_elem: cat_variant, i_ldc_ref_angle: int) -> DrawingDimension:
+    def add2(self, i_type_dim: int, i_geom_elem: tuple, i_pt_coord_elem: tuple, i_ldc_ref_elem: 'cat_variant', i_ldc_ref_angle: int) -> DrawingDimension:
         return DrawingDimension(self.drawing_dimensions.Add2(i_type_dim, i_geom_elem, i_pt_coord_elem, i_ldc_ref_elem, i_ldc_ref_angle))
 
-    def item(self, i_index: cat_variant) -> DrawingDimension:
+    def item(self, i_index: 'cat_variant') -> DrawingDimension:
         return DrawingDimension(self.drawing_dimensions.Item(i_index))
 
-    def remove(self, i_index: cat_variant) -> 'DrawingDimensions':
+    def remove(self, i_index: 'cat_variant') -> 'DrawingDimensions':
         self.drawing_dimensions.Remove(i_index)
         return self
 

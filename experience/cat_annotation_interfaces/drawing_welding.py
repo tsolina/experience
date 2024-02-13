@@ -1,5 +1,8 @@
-from experience.cat_annotation_interfaces import DrawingLeaders, DrawingTextProperties, DrawingTextRange
+from typing import Union, TYPE_CHECKING
 from experience.system import AnyObject
+
+if TYPE_CHECKING:
+    from experience.cat_annotation_interfaces import DrawingLeaders, DrawingTextProperties, DrawingTextRange
 
 class DrawingWelding(AnyObject):
     """
@@ -15,43 +18,45 @@ class DrawingWelding(AnyObject):
         super().__init__(com_object)
         self.drawing_welding = com_object
 
-    def angle(self, value: float = None) -> float:
+    def angle(self, value: float = None) -> Union['DrawingWelding', float]:
         if value is not None:
             self.drawing_welding.Angle = value
             return self
         return self.drawing_welding.Angle
 
-    def identification_line_side(self, value: int = None) -> int:
+    def identification_line_side(self, value: int = None) -> Union['DrawingWelding', int]:
         if value is not None:
             self.drawing_welding.IdentificationLineSide = value
             return self
         return self.drawing_welding.IdentificationLineSide
 
-    def leaders(self) -> DrawingLeaders:
+    def leaders(self) -> 'DrawingLeaders':
+        from experience.cat_annotation_interfaces import DrawingLeaders
         return DrawingLeaders(self.drawing_welding.Leaders)
 
-    def text_properties(self) -> DrawingTextProperties:
+    def text_properties(self) -> 'DrawingTextProperties':
+        from experience.cat_annotation_interfaces import DrawingTextProperties
         return DrawingTextProperties(self.drawing_welding.TextProperties)
 
-    def welding_side(self, value: int = None) -> int:
+    def welding_side(self, value: int = None) -> Union['DrawingWelding', int]:
         if value is not None:
             self.drawing_welding.WeldingSide = value
             return self
         return self.drawing_welding.WeldingSide
 
-    def welding_tail(self, value: int = None) -> int:
+    def welding_tail(self, value: int = None) -> Union['DrawingWelding', int]:
         if value is not None:
             self.drawing_welding.WeldingTail = value
             return self
         return self.drawing_welding.WeldingTail
 
-    def x(self, value: float = None) -> float:
+    def x(self, value: float = None) -> Union['DrawingWelding', float]:
         if value is not None:
             self.drawing_welding.x = value
             return self
         return self.drawing_welding.x
 
-    def y(self, value: float = None) -> float:
+    def y(self, value: float = None) -> Union['DrawingWelding', float]:
         if value is not None:
             self.drawing_welding.y = value
             return self
@@ -66,7 +71,8 @@ class DrawingWelding(AnyObject):
     def get_symbol(self, i_weld: int) -> int:
         return self.drawing_welding.GetSymbol(i_weld)
 
-    def get_text_range(self, i_field: int) -> DrawingTextRange:
+    def get_text_range(self, i_field: int) -> 'DrawingTextRange':
+        from experience.cat_annotation_interfaces import DrawingTextRange
         return DrawingTextRange(self.drawing_welding.GetTextRange(i_field))
 
     def set_additional_symbol(self, i_symbol: int, i_weld: int) -> 'DrawingWelding':
@@ -82,4 +88,4 @@ class DrawingWelding(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingWelding(name="{self.name}")'
+        return f'DrawingWelding(name="{self.name()}")'

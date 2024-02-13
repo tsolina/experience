@@ -14,7 +14,7 @@ class DrawingGDTs(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingGDT)
+        super().__init__(com, child=DrawingGDT)
         self.drawing_gdts = com
 
     def add(self, i_position_leader_x: float, i_position_leader_y: float, i_position_x: float, i_position_y: float, i_gdts_symbol: int, i_text: str) -> DrawingGDT:
@@ -37,4 +37,4 @@ class DrawingGDTs(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingGDTs(name="{self.name}")'
+        return f'DrawingGDTs(name="{self.name()}")'

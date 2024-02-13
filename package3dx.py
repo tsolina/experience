@@ -55,8 +55,8 @@ def test():
     #from experience import *
 
 try:
-    from experience import PartReady
-
+    from experience import *
+    """
     with PartReady() as cat:
         print("part is ready")      
         app = cat.app()
@@ -65,6 +65,13 @@ try:
 
         sel = app.active_editor().selection()
         print("sel", sel.count())
+    """
+    with DrawingReady() as dr:
+        sel = dr.app.active_editor().selection()
+        
+        ddim = sel.item(1).value(DrawingText)
+
+        print(ddim.name(), ddim.text_properties)
         
 except Exception as e:
     traceback_str = traceback.format_exc()
