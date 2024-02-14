@@ -1,7 +1,7 @@
 # experience is 3DExperience wrapper for Catvba/CATScript API
 
 # beta software:
-currently only part infrastructure is fully supported 
+currently part infrastructure, assembly structrue, drawing, measure are fully supported 
 
 # requirements:
 3DExperience installed and running on the system
