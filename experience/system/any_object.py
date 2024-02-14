@@ -69,7 +69,7 @@ class AnyObject(Experience):
         # TODO: at least verify that target_class is instance of AnyObject
         return target_class(self._com.Application.SystemService.Evaluate(vba_code, 1, vba_function_name, [self._com]))
 
-    def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: float or int or bool = None) -> tuple:
+    def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: Union[float, int, bool, str] = None) -> tuple:
         """
             _get_safe_array(self._com, "Method", 2)
             _get_safe_array(self._com, "Method", 2, .5)
@@ -89,8 +89,35 @@ class AnyObject(Experience):
         """
         #print(vba_code)
         return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_obj])
+    
+    def _get_safe_array_multi(self, com_obj: 'AnyObject', method: str, lengths: tuple, i_pos: any = None) -> tuple:
+        if isinstance(lengths, int):
+            return self._get_safe_array(com_obj, method, lengths, i_pos)
+
+        if i_pos is not None:
+            i_pos = str(i_pos) + ", "
+        else:
+            i_pos = ""       
+
+        # if isinstance(lengths, int):
+        #     dim_out = f"out({lengths})"
+        #     args_out = f"out"
+        # else:
+        dim_out = ", ".join([f"out{i}({value})" for i, value in enumerate(lengths)])
+        args_out = ", ".join([f"out{i}" for i, _ in enumerate(lengths)])
+
+        vba_function_name = 'get_safe_array'
+        vba_code = f"""
+        Public Function {vba_function_name}({com_obj.__class__.__name__})
+            Dim {dim_out}
+            {com_obj.__class__.__name__}.{method} {i_pos}{args_out}
+            {vba_function_name} = Array({args_out})
+        End Function
+        """   
+        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_obj])
 
     def _get_multi(self, params, ins, outs) -> tuple:
+        # print(params)
         ### _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference")) ###
         com_type = ins[0]
         method = ins[1]
@@ -114,6 +141,7 @@ class AnyObject(Experience):
             End Function
         """
         # print(vba_code)
+        # print(dir(self))
         return self.application().system_service().evaluate(vba_code, 1, vba_function_name, params)
 
     def __repr__(self):

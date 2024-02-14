@@ -4,7 +4,7 @@ from experience.system import AnyObject
 T = TypeVar('T', bound=AnyObject)
 
 if TYPE_CHECKING:
-    from experience.inf_interfaces import Selection, Service
+    from experience.inf_interfaces import Selection, Service, EditorServices
 
 class Editor(AnyObject):
     """
@@ -33,9 +33,10 @@ class Editor(AnyObject):
     def get_service(self, i_service: str) -> 'Service':
         from experience.inf_interfaces import Service
         return Service(self.editor.GetService(i_service))
-        #Set Service1 = CATIA.ActiveEditor.GetService("VisuServices")
-        #Set DrawingService  = CATIA.ActiveEditor.GetService("CATDrawingService")
-        #Set PLMProductService  = CATIA.ActiveEditor.GetService("PLMProductService")
+    
+    def services(self) -> 'EditorServices':
+        from experience.inf_interfaces import EditorServices
+        return EditorServices(self.editor) 
 
     def __repr__(self):
         return f'Editor(name="{self.name()}")'

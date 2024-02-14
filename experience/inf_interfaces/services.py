@@ -44,6 +44,9 @@ class Services():
     def product_session_service(self) -> 'ProductSessionService':
         from experience.vpm_editor_context_interfaces import ProductSessionService
         return ProductSessionService(self.services.Application.GetSessionService("ProductSessionService")) 
+    
+    def __repr__(self):
+        return f'Services()'
 
     #set myDrawService = CATIA.GetSessionService("CATDrawingService")   
     

@@ -7,5 +7,6 @@ from .any_object import AnyObject
 from .collection import Collection # AnyObject
 
 from .system_service import SystemService # AnyObject
+from .setting_controller import SettingController # AnyObject
 
-# from system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService
+# from system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService, SettingController

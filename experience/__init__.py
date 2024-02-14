@@ -4,7 +4,7 @@ from .exceptions import CATIAApplicationException
 
 from .base_interfaces import experience_application, Experience, PartReady, ProductReady, DrawingReady
 
-from .system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService
+from .system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService, SettingController
 
 from .drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 from .drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
@@ -14,9 +14,13 @@ from .cat_annotation_interfaces import DrawingArrow, DrawingArrows, DrawingCoord
 from .cat_annotation_interfaces import DrawingDimension, DrawingDimensions, DrawingLeader, DrawingLeaders, DrawingGDT, DrawingGDTs, DrawingTable, DrawingTables
 from .cat_annotation_interfaces import DrawingTextProperties, DrawingTextRange, DrawingText, DrawingTexts, DrawingWelding, DrawingWeldings
 
+from .cat_opns_measure_interfaces import MeasurableInContext, MeasurableService, MeasurableAxisSystem, MeasurableBetween, MeasurableCurve, MeasurablePoint, MeasurableSurface
+from .cat_opns_measure_interfaces import MeasurableVolume, MeasurableCircle, MeasurableLine, MeasurableCone, MeasurableCylinder, MeasurablePlane, MeasurableSphere
+from .cat_opns_measure_interfaces import Measure, Measures, MeasureService, MeasureBetween, MeasureItem, MeasureSettingAtt
+
 from .inf_interfaces import Application, Camera, Cameras, Camera3D, Editor, Editors, LightSource, LightSources, PageSetup, Printer, Printers, Reference, References
 from .inf_interfaces import SelectedElement, Selection, Service, Viewer, Viewpoint2D, Viewer2D, Viewpoint3D, Viewer3D, Viewers, VisPropertySet, Window, Windows, Workbench
-from .inf_interfaces import Move, Position, Services, VisuServices
+from .inf_interfaces import Move, Position, Services, VisuServices, EditorServices
 
 from .inf_os_idl_interfaces import FileComponent, FileSystem, File, Files, Folder, Folders, SystemConfiguration, TextStream
 from .knowledge_interfaces import BoolParam, EnumParam, IntParam, KnowledgeActivateObject, KnowledgeObject, Parameter, RealParam, Relation, StrParam, Relations

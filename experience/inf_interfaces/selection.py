@@ -15,10 +15,10 @@ class Selection(AnyObject):
                 |                     Selection
     """
 
-    def __init__(self, com, _child=SelectedElement):
+    def __init__(self, com, child=SelectedElement):
         super().__init__(com)
         self.selection = com
-        self._child = _child
+        self._child = child
 
     def count(self) -> int:
         return self.selection.Count
