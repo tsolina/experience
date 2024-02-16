@@ -35,4 +35,4 @@ class UserPattern(Pattern):
         return self
 
     def __repr__(self):
-        return f'UserPattern(name="{ self.name }")'
+        return f'UserPattern(name="{ self.name() }")'

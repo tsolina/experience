@@ -48,4 +48,4 @@ class SolidCombine(SketchBasedShape):
         return Reference(self.solid_combine.SecondComponentProfile)
 
     def __repr__(self):
-        return f'SolidCombine(name="{ self.name }")'
+        return f'SolidCombine(name="{ self.name() }")'

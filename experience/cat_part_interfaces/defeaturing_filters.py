@@ -32,14 +32,14 @@ class DefeaturingFilters(Collection):
         return self
 
     def __getitem__(self, n: int) -> DefeaturingFilter:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DefeaturingFilter(self.defeaturing_filters.item(n + 1))
 
     def __iter__(self) -> Iterator[DefeaturingFilter]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DefeaturingFilters(name="{self.name}")'
+        return f'DefeaturingFilters(name="{self.name()}")'

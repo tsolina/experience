@@ -16,4 +16,4 @@ class DressUpShape(Shape):
         self.dress_up_shape = com
 
     def __repr__(self):
-        return f'DressUpShape(name="{self.name}")'
+        return f'DressUpShape(name="{self.name()}")'

@@ -17,4 +17,4 @@ class Intersect(BooleanShape):
         self.intersect = com
 
     def __repr__(self):
-        return f'Intersect(name="{self.name}")'
+        return f'Intersect(name="{self.name()}")'

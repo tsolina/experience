@@ -28,4 +28,4 @@ class ShiftedProfileTolerance(AnyObject):
         return self.shifted_profile_tolerance.GetShiftSide(op_point)
 
     def __repr__(self):
-        return f'ShiftedProfileTolerance(name="{ self.name }")'
+        return f'ShiftedProfileTolerance(name="{ self.name() }")'

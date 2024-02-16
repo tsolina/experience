@@ -29,13 +29,13 @@ class DrawingLeaders(Collection):
         return self
 
     def __getitem__(self, n: int) -> DrawingLeader:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingLeader(self.drawing_leaders.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingLeader]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

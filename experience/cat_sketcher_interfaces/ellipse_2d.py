@@ -48,4 +48,4 @@ class Ellipse2D(Curve2D):
         return self
 
     def __repr__(self):
-        return f'Ellipse2D(name="{self.name}")'
+        return f'Ellipse2D(name="{self.name()}")'

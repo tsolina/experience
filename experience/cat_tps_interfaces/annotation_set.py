@@ -123,4 +123,4 @@ class AnnotationSet(AnyObject):
         return self
 
     def __repr__(self):
-        return f'AnnotationSet(name="{self.name}")'
+        return f'AnnotationSet(name="{self.name()}")'

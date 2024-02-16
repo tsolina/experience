@@ -18,4 +18,4 @@ class MedianFeature(AnyObject):
         return self.median_feature.Modifier()
 
     def __repr__(self):
-        return f'MedianFeature(name="{self.name}")'
+        return f'MedianFeature(name="{self.name()}")'

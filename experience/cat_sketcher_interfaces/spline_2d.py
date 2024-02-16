@@ -33,4 +33,4 @@ class Spline2D(Curve2D):
         return self
 
     def __repr__(self):
-        return f'Spline2D(name="{self.name}")'
+        return f'Spline2D(name="{self.name()}")'

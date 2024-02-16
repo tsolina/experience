@@ -77,4 +77,4 @@ class AutoFillet(DressUpShape):
         return Reference(self.auto_fillet.SupportSurface)
 
     def __repr__(self):
-        return f'AutoFillet(name="{self.name}")'
+        return f'AutoFillet(name="{self.name()}")'

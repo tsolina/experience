@@ -16,4 +16,4 @@ class DefeaturingFilter(AnyObject):
         self.defeaturing_filter = com
 
     def __repr__(self):
-        return f'DefeaturingFilter(name="{self.name}")'
+        return f'DefeaturingFilter(name="{self.name()}")'

@@ -27,13 +27,13 @@ class Measures(Collection):
         return self.light_sources.Remove(i_index)
 
     def __getitem__(self, n: int) -> Measure:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return Measure(self.light_sources.item(n + 1))
 
     def __iter__(self) -> Iterator[Measure]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

@@ -21,4 +21,4 @@ class Text(AnyObject):
         return TPSParallelOnScreen(self.text_com.TPSParallelOnScreen())
 
     def __repr__(self):
-        return f'Text(name="{self.name}")'
+        return f'Text(name="{self.name()}")'

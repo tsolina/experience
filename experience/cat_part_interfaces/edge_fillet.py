@@ -39,4 +39,4 @@ class EdgeFillet(Fillet):
         return self
 
     def __repr__(self):
-        return f'EdgeFillet(name="{self.name}")'
+        return f'EdgeFillet(name="{self.name()}")'

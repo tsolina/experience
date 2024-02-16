@@ -29,4 +29,4 @@ class AngularRepartition(Repartition):
         return Angle(self.angular_repartition.InstanceSpacing)
 
     def __repr__(self):
-        return f'AngularRepartition(name="{ self.name }")'
+        return f'AngularRepartition(name="{ self.name()}")'

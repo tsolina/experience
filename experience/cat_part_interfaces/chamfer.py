@@ -67,4 +67,4 @@ class Chamfer(DressUpShape):
         return self
 
     def __repr__(self):
-        return f'Chamfer(name="{self.name}")'
+        return f'Chamfer(name="{self.name()}")'

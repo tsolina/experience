@@ -33,4 +33,4 @@ class Fillet(DressUpShape):
         return self.fillet.FilletTrimSupport
 
     def __repr__(self):
-        return f'Fillet(name="{self.name}")'
+        return f'Fillet(name="{self.name()}")'

@@ -58,4 +58,4 @@ class HybridShapeInstance(HybridShape):
         return self
 
     def __repr__(self):
-        return f'HybridShapeInstance(name="{ self.name }")'
+        return f'HybridShapeInstance(name="{ self.name() }")'

@@ -52,4 +52,4 @@ class Trim(BooleanShape):
         return self
 
     def __repr__(self):
-        return f'Trim(name="{self.name}")'
+        return f'Trim(name="{self.name()}")'

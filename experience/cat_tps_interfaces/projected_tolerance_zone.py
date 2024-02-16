@@ -25,4 +25,4 @@ class ProjectedToleranceZone(AnyObject):
         return self.projected_tolerance_zone.GetProjectedTolZoneReference(op_reference)
 
     def __repr__(self):
-        return f'ProjectedToleranceZone(name="{self.name}")'
+        return f'ProjectedToleranceZone(name="{self.name()}")'

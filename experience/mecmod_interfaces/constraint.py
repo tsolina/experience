@@ -108,4 +108,4 @@ class Constraint(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Constraint(name="{self.name}")'
+        return f'Constraint(name="{self.name()}")'

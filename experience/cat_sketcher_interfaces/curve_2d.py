@@ -72,4 +72,4 @@ class Curve2D(Geometry2D):
         return self.curve_2d.IsPeriodic()
 
     def __repr__(self):
-        return f'Curve2D(name="{self.name}")'
+        return f'Curve2D(name="{self.name()}")'

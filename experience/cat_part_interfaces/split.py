@@ -26,4 +26,4 @@ class Split(SurfaceBasedShape):
         return self.split.SplittingSide
 
     def __repr__(self):
-        return f'Split(name="{self.name}")'
+        return f'Split(name="{self.name()}")'

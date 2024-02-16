@@ -189,7 +189,7 @@ class Annotation(AnyObject):
     def roughness(self) -> Roughness:
         return Roughness(self.annotation.Roughness())
 
-    def set_geometrical_component_name(i_index: float, i_new_name: str, i_check_name_unicity_option: bool) -> 'Annotation':
+    def set_geometrical_component_name(self, i_index: float, i_new_name: str, i_check_name_unicity_option: bool) -> 'Annotation':
         self.annotation.SetGeometricalComponentName(i_index, i_new_name, i_check_name_unicity_option)
         return self
 
@@ -226,4 +226,4 @@ class Annotation(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Annotation(name="{self.name}")'
+        return f'Annotation(name="{self.name()}")'

@@ -14,4 +14,4 @@ class TPSParallelOnScreen(AnyObject):
         return self.tps_paralel_on_screen.Zoomable
 
     def __repr__(self):
-        return f'TPSParallelOnScreen(name="{self.name}")'
+        return f'TPSParallelOnScreen(name="{self.name()}")'

@@ -58,4 +58,4 @@ class AutoDraft(DressUpShape):
         return Reference(self.auto_draft.PullingDirection)
 
     def __repr__(self):
-        return f'AutoDraft(name="{self.name}")'
+        return f'AutoDraft(name="{self.name()}")'

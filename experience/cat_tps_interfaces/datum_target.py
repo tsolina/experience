@@ -52,4 +52,4 @@ class DatumTarget(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DatumTarget(name="{self.name}")'
+        return f'DatumTarget(name="{self.name()}")'

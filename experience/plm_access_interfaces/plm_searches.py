@@ -33,12 +33,12 @@ class PLMSearches(Collection):
         return PLMSearch(self.plm_searches.Item(i_index))
 
     def __getitem__(self, n: int) -> PLMSearch:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
         return PLMSearch(self.plm_searches.item(n + 1))
 
     def __iter__(self) -> Iterator[PLMSearch]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

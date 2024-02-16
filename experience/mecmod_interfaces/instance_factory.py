@@ -50,4 +50,4 @@ class InstanceFactory(Factory):
         return self
 
     def __repr__(self):
-        return f'InstanceFactory(name="{self.name}")'
+        return f'InstanceFactory(name="{self.name()}")'

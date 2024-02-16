@@ -32,4 +32,4 @@ class DatumSimple(AnyObject):
         return Annotations(self.datum_simple.Targets)
 
     def __repr__(self):
-        return f'DatumSimple(name="{self.name}")'
+        return f'DatumSimple(name="{self.name()}")'

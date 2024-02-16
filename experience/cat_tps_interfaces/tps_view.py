@@ -57,4 +57,4 @@ class TPSView(AnyObject):
         return TPSHyperLinkManager(self.tps_view.TPSHyperLinkManager())
 
     def __repr__(self):
-        return f'TPSView(name="{ self.name }")'
+        return f'TPSView(name="{ self.name() }")'

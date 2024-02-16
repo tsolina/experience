@@ -38,4 +38,4 @@ class Mirror(TransformationShape):
         return Reference(self.mirror.MirroringPlane)
 
     def __repr__(self):
-        return f'Mirror(name="{ self.name }")'
+        return f'Mirror(name="{ self.name() }")'

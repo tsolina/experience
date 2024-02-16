@@ -24,4 +24,4 @@ class Point2D(Geometry2D):
         return self
 
     def __repr__(self):
-        return f'Point2D(name="{self.name}")'
+        return f'Point2D(name="{self.name()}")'

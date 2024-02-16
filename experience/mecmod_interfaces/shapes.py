@@ -15,7 +15,7 @@ class Shapes(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Shape)
+        super().__init__(com, child=Shape)
         self.shapes = com
 
     def get_boundary(self, i_label: str) -> Boundary:
@@ -25,14 +25,14 @@ class Shapes(Collection):
         return Shape(self.shapes.Item(i_index))
 
     def __getitem__(self, n: int) -> Shape:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return Shape(self.shapes.item(n + 1))
 
     def __iter__(self) -> Iterator[Shape]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Shapes(name="{self.name}")'
+        return f'Shapes(name="{self.name()}")'

@@ -87,4 +87,4 @@ class Prism(SketchBasedShape):
         return self
 
     def __repr__(self):
-        return f'Prism(name="{self.name}")'
+        return f'Prism(name="{self.name()}")'

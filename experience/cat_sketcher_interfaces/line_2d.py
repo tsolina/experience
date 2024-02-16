@@ -28,4 +28,4 @@ class Line2D(Curve2D):
         return self
 
     def __repr__(self):
-        return f'Line2D(name="{self.name}")'
+        return f'Line2D(name="{self.name()}")'

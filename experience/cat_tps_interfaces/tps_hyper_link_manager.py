@@ -13,4 +13,4 @@ class TPSHyperLinkManager(AnyObject):
         return self.tps_manager.URL(i_index)
 
     def __repr__(self):
-        return f'TPSHyperLinkManager(name="{self.name}")'
+        return f'TPSHyperLinkManager(name="{self.name()}")'

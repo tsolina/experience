@@ -16,4 +16,4 @@ class Boundary(Reference):
         self.boundary = com
 
     def __repr__(self):
-        return f'Boundary(name="{self.name}")'
+        return f'Boundary(name="{self.name()}")'

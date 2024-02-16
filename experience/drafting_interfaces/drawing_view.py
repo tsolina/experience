@@ -236,4 +236,4 @@ class DrawingView(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingView(name="{self.name}")'
+        return f'DrawingView(name="{self.name()}")'

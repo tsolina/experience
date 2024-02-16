@@ -39,4 +39,4 @@ class Limit(AnyObject):
         return Reference(self.limit.LimitingElement)
 
     def __repr__(self):
-        return f'Limit(name="{self.name}")'
+        return f'Limit(name="{self.name()}")'

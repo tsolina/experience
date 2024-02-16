@@ -18,4 +18,4 @@ class ControledRadius(AnyObject):
         return self.controled_radius.Modifier
 
     def __repr__(self):
-        return f'ControlledRadius(name="{self.name}")'
+        return f'ControlledRadius(name="{self.name()}")'

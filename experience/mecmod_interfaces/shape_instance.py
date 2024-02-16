@@ -61,4 +61,4 @@ class ShapeInstance(Shape):
         return self
 
     def __repr__(self):
-        return f'ShapeInstance(name="{ self.name }")'
+        return f'ShapeInstance(name="{ self.name() }")'

@@ -41,4 +41,4 @@ class Draft(DressUpShape):
         return Reference(self.draft.PartingElement)
 
     def __repr__(self):
-        return f'Draft(name="{self.name}")'
+        return f'Draft(name="{self.name()}")'

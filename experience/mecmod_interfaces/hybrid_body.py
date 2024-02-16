@@ -44,4 +44,4 @@ class HybridBody(AnyObject):
         return self
 
     def __repr__(self):
-        return f'HybridBody(name="{self.name}")'
+        return f'HybridBody(name="{self.name()}")'

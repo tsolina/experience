@@ -88,4 +88,4 @@ class CircPattern(Pattern):
         return self
 
     def __repr__(self):
-        return f'CircPattern(name="{self.name}")'
+        return f'CircPattern(name="{self.name()}")'

@@ -25,4 +25,4 @@ class Weld(AnyObject):
         return TPSParallelOnScreen(self.weld.TPSParallelOnScreen())
 
     def __repr__(self):
-        return f'Weld(name="{self.name}")'
+        return f'Weld(name="{self.name()}")'

@@ -30,4 +30,4 @@ class Geometry2D(GeometricElement):
         return self.geometry_2d.ReportName
 
     def __repr__(self):
-        return f'Geometry2D(name="{self.name}")'
+        return f'Geometry2D(name="{self.name()}")'

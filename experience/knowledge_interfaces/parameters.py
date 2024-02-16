@@ -135,13 +135,13 @@ class Parameters(Collection):
         return Parameters(self.parameters.SubList(i_object._com, i_recursively))
 
     def __getitem__(self, n: int) -> Parameter:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return Parameter(self.parameters.item(n + 1))
 
     def __iter__(self) -> Iterator[Parameter]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

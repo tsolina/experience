@@ -44,4 +44,4 @@ class ConstRadEdgeFillet(EdgeFillet):
         return self
 
     def __repr__(self):
-        return f'ConstRadEdgeFillet(name="{self.name}")'
+        return f'ConstRadEdgeFillet(name="{self.name()}")'

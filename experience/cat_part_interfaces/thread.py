@@ -85,4 +85,4 @@ class Thread(DressUpShape):
         return self
 
     def __repr__(self):
-        return f'Thread(name="{self.name}")'
+        return f'Thread(name="{self.name()}")'

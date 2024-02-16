@@ -39,4 +39,4 @@ class OrderedGeometricalSet(AnyObject):
         return self
 
     def __repr__(self):
-        return f'OrderedGeometricalSet(name="{self.name}")'
+        return f'OrderedGeometricalSet(name="{self.name()}")'

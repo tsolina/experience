@@ -42,4 +42,4 @@ class ReplaceFace(SurfaceBasedShape):
         return self
 
     def __repr__(self):
-        return f'ReplaceFace(name="{self.name}")'
+        return f'ReplaceFace(name="{self.name()}")'

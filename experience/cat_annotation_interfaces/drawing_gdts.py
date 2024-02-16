@@ -27,13 +27,13 @@ class DrawingGDTs(Collection):
         return self.drawing_gdts.Remove(i_index)
 
     def __getitem__(self, n: int) -> DrawingGDT:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingGDT(self.drawing_gdts.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingGDT]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

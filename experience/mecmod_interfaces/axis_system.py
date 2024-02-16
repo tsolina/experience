@@ -208,4 +208,4 @@ class AxisSystem(AnyObject):
         return self
 
     def __repr__(self):
-        return f'AxisSystem(name="{self.name}")'
+        return f'AxisSystem(name="{self.name()}")'

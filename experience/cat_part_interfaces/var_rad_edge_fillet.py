@@ -82,4 +82,4 @@ class VarRadEdgeFillet(EdgeFillet):
         return self
 
     def __repr__(self):
-        return f'VarRadEdgeFillet(name="{self.name}")'
+        return f'VarRadEdgeFillet(name="{self.name()}")'

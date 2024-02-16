@@ -37,4 +37,4 @@ class ThickSurface(SurfaceBasedShape):
         return self
 
     def __repr__(self):
-        return f'ThickSurface(name="{ self.name }")'
+        return f'ThickSurface(name="{ self.name() }")'

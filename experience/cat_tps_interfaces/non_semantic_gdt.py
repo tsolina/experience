@@ -25,4 +25,4 @@ class NonSemanticGDT(AnyObject):
         return self.non_semantic_gdt.TPSParallelOnScreen()
 
     def __repr__(self):
-        return f'NonSemanticGDT(name="{self.name}")'
+        return f'NonSemanticGDT(name="{self.name()}")'

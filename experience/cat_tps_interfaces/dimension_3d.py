@@ -56,4 +56,4 @@ class Dimension3D(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Dimension3D(name="{self.name}")'
+        return f'Dimension3D(name="{self.name()}")'

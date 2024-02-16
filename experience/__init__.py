@@ -32,6 +32,14 @@ from .cat_part_interfaces import SurfaceBasedShape, CloseSurface, ReplaceFace, S
 from .cat_part_interfaces import EdgeFillet, FaceFillet, TritangentFillet, ConstRadEdgeFillet, VarRadEdgeFillet, SketchBasedShape, Revolution, Hole, Prism, Sweep, SolidCombine, Stiffener
 from .cat_part_interfaces import Groove, Shaft, Rib, Slot, Pad, Pocket, ShapeFactory
 
+from .cat_tps_interfaces import AnnotationFactory2, AssociatedRefFrame, CompositeTolerance, ControledRadius, CoordDim, DatumSimple, DefaultAnnotation, DimensionLimit
+from .cat_tps_interfaces import DimensionPattern, EnvelopCondition, FreeState, MaterialCondition, MedianFeature, NonSemanticDatumTarget, NonSemanticDatum
+from .cat_tps_interfaces import NumericalDisplayFormat, ParticularTolElem, ProjectedToleranceZone, ReferenceFrame, SemanticGDTFrameExtension, ShiftedProfileTolerance
+from .cat_tps_interfaces import TangentPlane, TolerancePerUnitBasisRestrictiveValue, ToleranceUnitBasisValue, ToleranceZone, TPSHyperLinkManager, TPSParallelOnScreen
+from .cat_tps_interfaces import UserSurface, SemanticGDTNxDisplay, SemanticGDTCommonZone, DatumTarget, NonSemanticDimension, FlagNote, Noa, NonSemanticGDT
+from .cat_tps_interfaces import Roughness, Text, Weld, AnnotationFactory, Dimension3D, SemanticGDT, TPSView, TPSViewFactory, TPSViews, Capture, CaptureFactory
+from .cat_tps_interfaces import Captures, Annotation2, Annotation, Annotations, AnnotationSet, AnnotationSets
+
 from .cat_gsm_interfaces import HybridShapeFactory
 from .mecmod_interfaces import AxisSystem, AxisSystems, Boundary, Constraint, Constraints, HybridShape,HybridShapeInstance, HybridShapes, OriginElements, PartServices, Shape, ShapeInstance, Shapes, Solid, Sketches, Factory, InstanceFactory, GeometricElements, HybridBody, HybridBodies, OrderedGeometricalSet, OrderedGeometricalSets, Body, Bodies, Part
 from .types import cat_variant, list_str, any_parameter

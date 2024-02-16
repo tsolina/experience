@@ -20,4 +20,4 @@ class CloseSurface(SurfaceBasedShape):
         self.close_surface = com_object
 
     def __repr__(self):
-        return f'CloseSurface(name="{self.name}")'
+        return f'CloseSurface(name="{self.name()}")'

@@ -16,7 +16,7 @@ class Bodies(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Body)
+        super().__init__(com, child=Body)
         self.bodies = com
 
     def add(self) -> Body:
@@ -26,14 +26,14 @@ class Bodies(Collection):
         return Body(self.bodies.Item(i_index))
 
     def __getitem__(self, n: int) -> Body:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return Body(self.bodies.item(n + 1))
 
     def __iter__(self) -> Iterator[Body]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Bodies(name="{self.name}")'
+        return f'Bodies(name="{self.name()}")'

@@ -34,4 +34,4 @@ class BooleanShape(Shape):
         return self
 
     def __repr__(self):
-        return f'BooleanShape(name="{self.name}")'
+        return f'BooleanShape(name="{self.name()}")'

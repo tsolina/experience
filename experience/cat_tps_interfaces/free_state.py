@@ -18,4 +18,4 @@ class FreeState(AnyObject):
         return self.free_state.Modifier
 
     def __repr__(self):
-        return f'FreeState(name="{ self.name }")'
+        return f'FreeState(name="{ self.name() }")'

@@ -139,4 +139,4 @@ class Hole(SketchBasedShape):
         return self
 
     def __repr__(self):
-        return f'Hole(name="{self.name}")'
+        return f'Hole(name="{self.name()}")'

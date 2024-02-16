@@ -45,4 +45,4 @@ class RemoveFace(DressUpShape):
         return self
 
     def __repr__(self):
-        return f'RemoveFace(name="{self.name}")'
+        return f'RemoveFace(name="{self.name()}")'

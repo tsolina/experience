@@ -18,4 +18,4 @@ class Slot(Sweep):
         self.slot = com
 
     def __repr__(self):
-        return f'Slot(name="{self.name}")'
+        return f'Slot(name="{self.name()}")'

@@ -38,4 +38,4 @@ class Body(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Body(name="{self.name}")'
+        return f'Body(name="{self.name()}")'

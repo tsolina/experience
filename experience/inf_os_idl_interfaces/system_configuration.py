@@ -27,4 +27,4 @@ class SystemConfiguration(AnyObject):
         return self.system_configuration.IsProductAuthorized(i_product_name)
 
     def __repr__(self):
-        return f'SystemConfiguration(name="{self.name}")'
+        return f'SystemConfiguration(name="{self.name()}")'

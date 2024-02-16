@@ -34,4 +34,4 @@ class Hyperbola2D(Curve2D):
         return self
 
     def __repr__(self):
-        return f'Hyperbola2D(name="{self.name}")'
+        return f'Hyperbola2D(name="{self.name()}")'

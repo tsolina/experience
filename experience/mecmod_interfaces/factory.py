@@ -15,4 +15,4 @@ class Factory(AnyObject):
         self.factory = com
 
     def __repr__(self):
-        return f'Factory(name="{self.name}")'
+        return f'Factory(name="{self.name()}")'

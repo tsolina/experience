@@ -36,4 +36,4 @@ class HybridShape(AnyObject):
         return self
 
     def __repr__(self):
-        return f'HybridShape(name="{self.name}")'
+        return f'HybridShape(name="{self.name()}")'

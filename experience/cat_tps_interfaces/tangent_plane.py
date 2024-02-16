@@ -18,4 +18,4 @@ class TangentPlane(AnyObject):
         return self.tangent_plane.Modifier
 
     def __repr__(self):
-        return f'TangentPlane(name="{ self.name }")'
+        return f'TangentPlane(name="{ self.name() }")'

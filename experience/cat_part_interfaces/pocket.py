@@ -18,4 +18,4 @@ class Pocket(Prism):
         self.pocket = com
 
     def __repr__(self):
-        return f'Pocket(name="{self.name}")'
+        return f'Pocket(name="{self.name()}")'

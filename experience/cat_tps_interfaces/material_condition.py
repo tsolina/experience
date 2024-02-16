@@ -18,4 +18,4 @@ class MaterialCondition(AnyObject):
         return self.material_condition.Modifier
 
     def __repr__(self):
-        return f'MaterialCondition(name="{ self.name }")'
+        return f'MaterialCondition(name="{ self.name() }")'

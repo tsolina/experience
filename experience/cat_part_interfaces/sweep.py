@@ -101,4 +101,4 @@ class Sweep(SketchBasedShape):
         return self
 
     def __repr__(self):
-        return f'Sweep(name="{self.name}")'
+        return f'Sweep(name="{self.name()}")'

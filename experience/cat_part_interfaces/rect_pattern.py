@@ -91,4 +91,4 @@ class RectPattern(Pattern):
         return self
 
     def __repr__(self):
-        return f'RectPattern(name="{self.name}")'
+        return f'RectPattern(name="{self.name()}")'

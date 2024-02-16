@@ -18,4 +18,4 @@ class GeometricElement(AnyObject):
         return self.geometric_element.GeometricType
 
     def __repr__(self):
-        return f'GeometricElement(name="{self.name}")'
+        return f'GeometricElement(name="{self.name()}")'

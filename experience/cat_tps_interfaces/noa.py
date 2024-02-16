@@ -1,7 +1,10 @@
-from experience.drafting_interfaces import DrawingComponent
+from typing import TYPE_CHECKING
 from experience.system import AnyObject
-from experience.cat_tps_interfaces import TPSParallelOnScreen
-from experience.types import cat_variant
+
+if TYPE_CHECKING:
+    from experience.drafting_interfaces import DrawingComponent
+    from experience.cat_tps_interfaces import TPSParallelOnScreen
+    from experience.types import cat_variant
 
 
 class Noa(AnyObject):
@@ -35,11 +38,12 @@ class Noa(AnyObject):
         return self
 
 
-    def get_ditto(self) -> DrawingComponent:
+    def get_ditto(self) -> 'DrawingComponent':
+        from experience.drafting_interfaces import DrawingComponent
         return DrawingComponent(self.noa.GetDitto())
 
 
-    def get_modifiable_text(self, i_index: cat_variant) -> AnyObject:
+    def get_modifiable_text(self, i_index: 'cat_variant') -> AnyObject:
         return AnyObject(self.noa.GetModifiableText(i_index))
 
     def get_modifiable_texts_count(self) -> int:
@@ -48,20 +52,21 @@ class Noa(AnyObject):
     def get_nbr_url_2(self) -> int:
         return self.noa.GetNbrURL2()
 
-    def modify_url(self, i_url: str, i_index: cat_variant) -> 'Noa':
+    def modify_url(self, i_url: str, i_index: 'cat_variant') -> 'Noa':
         self.noa.ModifyURL(i_url, i_index)
         return self
 
-    def remove_url(self, i_index: cat_variant) -> 'Noa':
+    def remove_url(self, i_index: 'cat_variant') -> 'Noa':
         self.noa.RemoveURL(i_index)
         return self
 
 
-    def tps_parallel_on_screen(self) -> TPSParallelOnScreen:
+    def tps_parallel_on_screen(self) -> 'TPSParallelOnScreen':
+        from experience.cat_tps_interfaces import TPSParallelOnScreen
         return TPSParallelOnScreen(self.noa.TPSParallelOnScreen())
 
-    def url(self, i_index: cat_variant) -> str:
+    def url(self, i_index: 'cat_variant') -> str:
         return self.noa.URL(i_index)
 
     def __repr__(self):
-        return f'Noa(name="{self.name}")'
+        return f'Noa(name="{self.name()}")'

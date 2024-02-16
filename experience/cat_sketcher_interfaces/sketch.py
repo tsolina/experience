@@ -68,4 +68,4 @@ class Sketch(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Sketch(name="{self.name}")'
+        return f'Sketch(name="{self.name()}")'

@@ -75,4 +75,4 @@ class DraftDomain(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DraftDomain(name="{self.name}")'
+        return f'DraftDomain(name="{self.name()}")'

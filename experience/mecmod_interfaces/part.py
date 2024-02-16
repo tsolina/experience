@@ -156,4 +156,4 @@ class Part(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Part(name="{self.name}")'
+        return f'Part(name="{self.name()}")'

@@ -56,4 +56,4 @@ class FlagNote(AnyObject):
         return self.flag_note.URL(i_index)
 
     def __repr__(self):
-        return f'FlagNote(name="{self.name}")'
+        return f'FlagNote(name="{self.name()}")'

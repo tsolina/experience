@@ -24,4 +24,4 @@ class UserSurface(AnyObject):
         return self
 
     def __repr__(self):
-        return f'UserSurface(name="{self.name}")'
+        return f'UserSurface(name="{self.name()}")'

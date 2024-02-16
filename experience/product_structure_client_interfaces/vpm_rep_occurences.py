@@ -24,12 +24,12 @@ class VPMRepOccurrences(Collection):
         return VPMRepOccurrence(self.vpm_rep_occurrences.Item(i_index))
 
     def __getitem__(self, n: int) -> VPMRepOccurrence:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
         return VPMRepOccurrence(self.vpm_rep_occurrences.item(n + 1))
 
     def __iter__(self) -> Iterator[VPMRepOccurrence]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

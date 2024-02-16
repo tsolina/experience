@@ -26,13 +26,13 @@ class DrawingCoordDims(Collection):
         return self
 
     def __getitem__(self, n: int) -> DrawingCoordDim:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingCoordDim(self.drawing_coord_dims.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingCoordDim]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

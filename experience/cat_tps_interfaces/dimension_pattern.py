@@ -10,12 +10,12 @@ class DimensionPattern(AnyObject):
                 |                     DimensionPattern
     """
 
-    def __init__(self, com_object):
-        super().__init__(com_object)
-        self.dimension_pattern = com_object
+    def __init__(self, com):
+        super().__init__(com)
+        self.dimension_pattern = com
 
     def instance_count(self) -> float:
         return self.dimension_pattern.InstanceCount
 
     def __repr__(self):
-        return f'DimensionPattern(name="{ self.name }")'
+        return f'DimensionPattern(name="{ self.name() }")'

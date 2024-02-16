@@ -28,6 +28,7 @@ from .tps_hyper_link_manager import TPSHyperLinkManager #
 from .tps_parallel_on_screen import TPSParallelOnScreen #
 from .user_surface import UserSurface #
 from .semantic_gdt_nx_display import SemanticGDTNxDisplay # - 
+from .semantic_gdt_common_zone import SemanticGDTCommonZone # -
 
 from .datum_target import DatumTarget # UserSurface
 from .non_semantic_dimension import NonSemanticDimension # DimensionLimit
@@ -59,3 +60,10 @@ from .annotations import Annotations # Annotation
 from .annotation_set import AnnotationSet # AnnotationFactory, AnnotationFactory2, CaptureFactory, Captures, TPSView, TPSViewFactory, Annotations, TPSViews
 from .annotation_sets import AnnotationSets # AnnotationSet
 
+# from cat_tps_interfaces import AnnotationFactory2, AssociatedRefFrame, CompositeTolerance, ControledRadius, CoordDim, DatumSimple, DefaultAnnotation, DimensionLimit
+# from cat_tps_interfaces import DimensionPattern, EnvelopCondition, FreeState, MaterialCondition, MedianFeature, NonSemanticDatumTarget, NonSemanticDatum
+# from cat_tps_interfaces import NumericalDisplayFormat, ParticularTolElem, ProjectedToleranceZone, ReferenceFrame, SemanticGDTFrameExtension, ShiftedProfileTolerance
+# from cat_tps_interfaces import TangentPlane, TolerancePerUnitBasisRestrictiveValue, ToleranceUnitBasisValue, ToleranceZone, TPSHyperLinkManager, TPSParallelOnScreen
+# from cat_tps_interfaces import UserSurface, SemanticGDTNxDisplay, SemanticGDTCommonZone, DatumTarget, NonSemanticDimension, FlagNote, Noa, NonSemanticGDT
+# from cat_tps_interfaces import Roughness, Text, Weld, AnnotationFactory, Dimension3D, SemanticGDT, TPSView, TPSViewFactory, TPSViews, Capture, CaptureFactory
+# from cat_tps_interfaces import Captures, Annotation2, Annotation, Annotations, AnnotationSet, AnnotationSets

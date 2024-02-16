@@ -50,4 +50,4 @@ class Thickness(DressUpShape):
         return self
 
     def __repr__(self):
-        return f'Thickness(name="{self.name}")'
+        return f'Thickness(name="{self.name()}")'

@@ -487,4 +487,4 @@ class ShapeFactory(Factory):
                                                   i_multiselection_mode, i_type, i_volume_support._com))
 
     def __repr__(self):
-        return f'ShapeFactory(name="{self.name}")'
+        return f'ShapeFactory(name="{self.name()}")'

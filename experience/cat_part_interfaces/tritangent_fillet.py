@@ -42,4 +42,4 @@ class TritangentFillet(Fillet):
         return Reference(self.tritangent_fillet.SecondFace)
 
     def __repr__(self):
-        return f'TritangentFillet(name="{ self.name }")'
+        return f'TritangentFillet(name="{ self.name() }")'

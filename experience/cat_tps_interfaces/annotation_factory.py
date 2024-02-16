@@ -102,4 +102,4 @@ class AnnotationFactory(Factory):
         return Annotation(self.annotation_factory.InstanciateNOA(i_noa._com, i_surf._com))
 
     def __repr__(self):
-        return f'AnnotationFactory(name="{self.name}")'
+        return f'AnnotationFactory(name="{self.name()}")'

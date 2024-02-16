@@ -18,4 +18,4 @@ class Rib(Sweep):
         self.rib = com
 
     def __repr__(self):
-        return f'Rib(name="{self.name}")'
+        return f'Rib(name="{self.name()}")'

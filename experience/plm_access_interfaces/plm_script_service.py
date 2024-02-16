@@ -34,4 +34,4 @@ class PLMScriptService(Service):
         return self.plm_script_service.ExecuteScriptV6(i_plm_entity, i_type, i_program_name, i_function_name, i_parameters)  
 
     def __repr__(self):
-        return f'PLMPlay(name="{self.name}")'
+        return f'PLMPlay(name="{self.name()}")'

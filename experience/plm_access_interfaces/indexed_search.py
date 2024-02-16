@@ -59,4 +59,4 @@ class IndexedSearch(AnyObject):
         return self     
 
     def __repr__(self):
-        return f'IndexedSearch(name="{self.name}")'
+        return f'IndexedSearch(name="{self.name()}")'

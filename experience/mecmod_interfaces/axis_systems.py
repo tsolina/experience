@@ -26,14 +26,14 @@ class AxisSystems(Collection):
         return AxisSystem(self.axis_systems.Item(i_index))
 
     def __getitem__(self, n: int) -> AxisSystem:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return AxisSystem(self.axis_systems.item(n + 1))
 
     def __iter__(self) -> Iterator[AxisSystem]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'AxisSystems(name="{self.name}")'
+        return f'AxisSystems(name="{self.name()}")'

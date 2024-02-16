@@ -29,14 +29,14 @@ class Annotations(Collection):
         return AnyObject(self.annotations.Item2(i_index))
 
     def __getitem__(self, n: int) -> Annotation:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return Annotation(self.annotations.item(n + 1))
 
     def __iter__(self) -> Iterator[Annotation]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Annotations(name="{self.name}")'
+        return f'Annotations(name="{self.name()}")'

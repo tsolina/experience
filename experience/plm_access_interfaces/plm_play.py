@@ -23,4 +23,4 @@ class PLMPlay(AnyObject):
         return self 
 
     def __repr__(self):
-        return f'PLMPlay(name="{self.name}")'
+        return f'PLMPlay(name="{self.name()}")'

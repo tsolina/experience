@@ -49,4 +49,4 @@ class ReferenceFrame(AnyObject):
         return self
 
     def __repr__(self):
-        return f'ReferenceFrame(name="{self.name}")'
+        return f'ReferenceFrame(name="{self.name()}")'

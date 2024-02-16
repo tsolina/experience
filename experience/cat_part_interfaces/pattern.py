@@ -42,4 +42,4 @@ class Pattern(TransformationShape):
         return self
 
     def __repr__(self):
-        return f'Pattern(name="{ self.name }")'
+        return f'Pattern(name="{ self.name() }")'

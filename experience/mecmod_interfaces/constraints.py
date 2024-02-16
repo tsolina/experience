@@ -16,7 +16,7 @@ class Constraints(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Constraint)
+        super().__init__(com, child=Constraint)
         self.constraints = com
 
     def broken_constraints_count(self) -> int:
@@ -42,14 +42,14 @@ class Constraints(Collection):
         return self
 
     def __getitem__(self, n: int) -> Constraint:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return Constraint(self.constraints.item(n + 1))
 
     def __iter__(self) -> Iterator[Constraint]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Constraints(name="{self.name}")'
+        return f'Constraints(name="{self.name()}")'

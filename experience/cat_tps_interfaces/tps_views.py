@@ -23,14 +23,14 @@ class TPSViews(Collection):
         return TPSView(self.tps_views.Item(i_index))
 
     def __getitem__(self, n: int) -> TPSView:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return TPSView(self.tps_views.item(n + 1))
 
     def __iter__(self) -> Iterator[TPSView]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'TpsViews(name="{self.name}")'
+        return f'TpsViews(name="{self.name()}")'

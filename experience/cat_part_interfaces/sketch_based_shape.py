@@ -30,4 +30,4 @@ class SketchBasedShape(Shape):
         return self
 
     def __repr__(self):
-        return f'SketchBasedShape(name="{self.name}")'
+        return f'SketchBasedShape(name="{self.name()}")'

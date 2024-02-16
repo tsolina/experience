@@ -57,4 +57,4 @@ class NumericalDisplayFormat(AnyObject):
         return self.numerical_display_format.Separator
 
     def __repr__(self):
-        return f'NumericalDisplayFormat(name="{self.name}")'
+        return f'NumericalDisplayFormat(name="{self.name()}")'

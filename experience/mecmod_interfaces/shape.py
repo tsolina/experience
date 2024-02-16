@@ -15,4 +15,4 @@ class Shape(AnyObject):
         self.shape = com
 
     def __repr__(self):
-        return f'Shape(name="{self.name}")'
+        return f'Shape(name="{self.name()}")'
