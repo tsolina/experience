@@ -20,4 +20,4 @@ class Shape3D(AnyObject):
         return AnyObject(self.shape_3d.Part)
 
     def __repr__(self):
-        return f'Shape3D(name="{self.name}")'
+        return f'Shape3D(name="{self.name()}")'

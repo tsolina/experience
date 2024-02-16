@@ -33,4 +33,4 @@ class Shape3Ds(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Shape3Ds(name="{self.name}")'
+        return f'Shape3Ds(name="{self.name()}")'

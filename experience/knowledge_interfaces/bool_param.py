@@ -12,4 +12,4 @@ class BoolParam(EnumParam):
         return self.bool_param.Value
 
     def __repr__(self):
-        return f'BoolParam(name="{self.name}")'
+        return f'BoolParam(name="{self.name()}")'

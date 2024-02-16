@@ -14,7 +14,7 @@ class DrawingAreaFills(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingThread)
+        super().__init__(com, child=DrawingAreaFill)
         self.drawing_area_fills = com
 
     def add(self, i_number_of_points_per_contour: tuple, i_points_coordinates: tuple) -> DrawingAreaFill:
@@ -28,14 +28,14 @@ class DrawingAreaFills(Collection):
         return self
 
     def __getitem__(self, n: int) -> DrawingAreaFill:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingAreaFill(self.drawing_area_fills.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingAreaFill]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingAreaFills(name="{self.name}")'
+        return f'DrawingAreaFills(name="{self.name()}")'

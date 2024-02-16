@@ -19,7 +19,8 @@ from .drawing_gen_view_properties import DrawingGenViewProperties
 from .drawing_define_gen_view import DrawingDefineGenView
 from .drawing_service import DrawingService
 from .drawing_root import DrawingRoot
+from .drawing_gen_view import DrawingGenView
 
 # from drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 # from drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
-# from drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot
+# from drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot, DrawingGenView

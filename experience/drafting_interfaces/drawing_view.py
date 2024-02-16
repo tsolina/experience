@@ -8,6 +8,8 @@ if TYPE_CHECKING:
     from experience.cat_sketcher_interfaces import Factory2D
     from experience.cat_annotation_interfaces import DrawingText
     from experience.mecmod_interfaces import GeometricElements
+    from experience.product_structure_client_interfaces import VPMReference
+    from experience.drafting_interfaces import DrawingGenView
 
 class DrawingView(AnyObject):
     """
@@ -50,9 +52,15 @@ class DrawingView(AnyObject):
         return DrawingDimensions(self.drawing_view.Dimensions)
 
 
-    def drawing_gen_view(self) -> AnyObject:
-        return AnyObject(self.drawing_view.DrawingGenView)
+    def drawing_gen_view(self) -> 'DrawingGenView':
+        from experience.drafting_interfaces import DrawingGenView
+        return AnyObject(self.drawing_view.DrawingGenView).as_pyclass(DrawingGenView)
 
+#vpm_ref = VPMReference(sheet.views().item(3).drawing_gen_view()._com.GetAssociatedRootProduct())
+    # def get_associated_root_product(self) -> 'VPMReference':
+    #     from experience.product_structure_client_interfaces import VPMReference
+    #     return VPMReference(self.drawing_gen_view()._com.GetAssociatedRootProduct())
+    #     #return VPMReference(self.drawing_view.DrawingGenView.GetAssociatedRootProduct())
 
     def factory_2d(self) -> 'Factory2D':
         from experience.cat_sketcher_interfaces import Factory2D

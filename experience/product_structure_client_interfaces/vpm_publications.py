@@ -21,4 +21,4 @@ class VPMPublications(PLMEntities):
         self.vpm_publications = com
 
     def __repr__(self):
-        return f'VPMPublications(name="{self.name}")'
+        return f'VPMPublications(name="{self.name()}")'

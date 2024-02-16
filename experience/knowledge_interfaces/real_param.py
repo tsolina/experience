@@ -1,4 +1,4 @@
-from experience.knowledge_interfaces.parameter import Parameter
+from experience.knowledge_interfaces import Parameter
 
 class RealParam(Parameter):
     def __init__(self, com):
@@ -65,4 +65,4 @@ class RealParam(Parameter):
         return self
 
     def __repr__(self):
-        return f'RealParam(name="{ self.name }")'
+        return f'RealParam(name="{ self.name()}")'

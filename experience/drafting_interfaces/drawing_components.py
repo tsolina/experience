@@ -18,7 +18,7 @@ class DrawingComponents(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingComponent)
+        super().__init__(com, child=DrawingComponent)
         self.drawing_components = com
 
     def add(self, i_drawing_component_ref: 'DrawingView', i_position_x: float, i_position_y: float) -> DrawingComponent:
@@ -31,13 +31,13 @@ class DrawingComponents(Collection):
         return self.drawing_components.Remove(i_index)
 
     def __getitem__(self, n: int) -> DrawingComponent:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingComponent(self.drawing_components.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingComponent]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):

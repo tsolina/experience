@@ -36,4 +36,4 @@ class VPMReference(PLMEntity):
         return self.get_attribute_value("PLM_ExternalID") # its settable too
 
     def __repr__(self):
-        return f'VPMReference(name="{self.name}")'
+        return f'VPMReference(name="{self.name()}")'

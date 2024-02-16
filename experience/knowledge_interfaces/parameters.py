@@ -3,12 +3,13 @@ from typing import Iterator, TYPE_CHECKING, Optional
 from pywintypes import com_error
 
 from experience.exceptions import CATIAApplicationException
-# from experience.types import cat_variant, any_parameter
-from experience.knowledge_interfaces import Parameter #BoolParam, Dimension, IntParam, ListParameter, RealParam, StrParam, Units,
+from experience.knowledge_interfaces import Parameter
 from experience.system import AnyObject, Collection
 
 if TYPE_CHECKING:
     from experience.knowledge_interfaces import ParameterSet
+    from experience.knowledge_interfaces import BoolParam, Dimension, IntParam, ListParameter, RealParam, StrParam, Units
+    from experience.types import cat_variant, any_parameter
 
 class Parameters(Collection):
     """
@@ -21,7 +22,7 @@ class Parameters(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Parameter)
+        super().__init__(com, child=Parameter)
         self.parameters = com
 
     def root_parameter_set(self) -> 'ParameterSet':
@@ -144,4 +145,4 @@ class Parameters(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Parameters(name="{self.name}")'
+        return f'Parameters(name="{self.name()}")'

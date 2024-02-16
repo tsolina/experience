@@ -20,7 +20,7 @@ class PrintArea(AnyObject):
             return self
         return self.print_area.ActivationState
 
-    def area_height(self) -> float:
+    def area_height(self, value: float = None) -> float:
         if value is not None:
             self.print_area.AreaHeight = value
             return self
@@ -52,4 +52,4 @@ class PrintArea(AnyObject):
         return self
         
     def __repr__(self):
-        return f'PrintArea(name="{ self.name }")'
+        return f'PrintArea(name="{ self.name()}")'

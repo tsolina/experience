@@ -1,7 +1,8 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.system import AnyObject, Collection
-# from experience.types import cat_variant
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class List(Collection):
     """
@@ -51,4 +52,4 @@ class List(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'List(name="{self.name}")'
+        return f'List(name="{self.name()}")'

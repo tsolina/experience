@@ -25,4 +25,4 @@ class DrawingThread(AnyObject):
         return self.drawing_thread.IsLinkedTo()
 
     def __repr__(self):
-        return f'DrawingThread(name="{self.name}")'
+        return f'DrawingThread(name="{self.name()}")'

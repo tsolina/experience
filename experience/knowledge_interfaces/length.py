@@ -18,4 +18,4 @@ class Length(Dimension):
         self.length = com
 
     def __repr__(self):
-        return f'Length(name="{ self.name }")'
+        return f'Length(name="{ self.name()}")'

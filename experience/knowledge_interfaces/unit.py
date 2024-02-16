@@ -33,4 +33,4 @@ class Unit(AnyObject):
         return self.unit.ConvertToStorageUnit(i_value_in_this_unit)
 
     def __repr__(self):
-        return f'Unit(name="{ self.name }")'
+        return f'Unit(name="{ self.name()}")'

@@ -17,11 +17,11 @@ class DrawingSheets(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingSheet)
+        super().__init__(com, child=DrawingSheet)
         self.drawing_sheets = com
 
     def active_sheet(self) -> DrawingSheet:
-        return self.drawing_sheets.ActiveSheet
+        return  DrawingSheet(self.drawing_sheets.ActiveSheet)
 
     def add(self, i_drawing_sheet_name: str) -> DrawingSheet:
         return DrawingSheet(self.drawing_sheets.Add(i_drawing_sheet_name))
@@ -37,14 +37,14 @@ class DrawingSheets(Collection):
         return self
 
     def __getitem__(self, n: int) -> DrawingSheet:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingSheet(self.drawing_sheets.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingSheet]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingSheets(name="{self.name}")'
+        return f'DrawingSheets(name="{self.name()}")'

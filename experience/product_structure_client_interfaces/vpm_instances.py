@@ -22,4 +22,4 @@ class VPMInstances(PLMEntities):
         self.vpm_publications = com
 
     def __repr__(self):
-        return f'VPMInstances(name="{self.name}")'
+        return f'VPMInstances(name="{self.name()}")'

@@ -17,4 +17,4 @@ class KnowledgeActivateObject(KnowledgeObject):
         return self
 
     def __repr__(self):
-        return f'KnowledgeActivateObject(name="{ self.name }")'
+        return f'KnowledgeActivateObject(name="{ self.name()}")'

@@ -48,7 +48,8 @@ class Selection(AnyObject):
         return self
 
     def delete(self) -> 'Selection':
-        self.selection.Delete()
+        if self.count() != 0:
+            self.selection.Delete()
         return self
 
     def filter_correspondence(self, i_filter_type: tuple) -> bool:

@@ -16,7 +16,7 @@ class Units(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Unit)
+        super().__init__(com, child=Unit)
         self.units = com
 
     def item(self, i_index: cat_variant) -> Unit:
@@ -33,4 +33,4 @@ class Units(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Units(name="{self.name}")'
+        return f'Units(name="{self.name()}")'

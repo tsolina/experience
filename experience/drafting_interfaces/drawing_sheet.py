@@ -28,6 +28,13 @@ class DrawingSheet(AnyObject):
         return self.drawing_sheet.GenViewsPosMode
 
     def orientation(self, value: int = None) -> int:
+        """
+        enum CatPaperOrientation {
+        catPaperPortrait,
+        catPaperLandscape,
+        catPaperBestFit
+        } 
+        """
         if value is not None:
             self.drawing_sheet.Orientation = value
             return self
@@ -39,6 +46,24 @@ class DrawingSheet(AnyObject):
         return DrawingPageSetup(self.drawing_sheet.PageSetup)
 
     def paper_size(self, value: int = None) -> int:
+        """
+        enum CatPaperSize {
+        catPaperLetter,
+        catPaperLegal,
+        catPaperA0,
+        catPaperA1,
+        catPaperA2,
+        catPaperA3,
+        catPaperA4,
+        catPaperA,
+        catPaperB,
+        catPaperC,
+        catPaperD,
+        catPaperE,
+        catPaperF,
+        catPaperUser
+        } 
+        """
         if value is not None:
             self.drawing_sheet.PaperSize = value
             return self
@@ -50,6 +75,12 @@ class DrawingSheet(AnyObject):
         return PrintArea(self.drawing_sheet.PrintArea)
 
     def projection_method(self, value: int = None) -> int:
+        """
+        enum CatSheetProjectionMethod {
+        catFirstAngle,
+        catThirdAngle
+        } 
+        """
         if value is not None:
             self.drawing_sheet.ProjectionMethod = value
             return self
@@ -152,4 +183,4 @@ class DrawingSheet(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingSheet(name="{self.name}")'
+        return f'DrawingSheet(name="{self.name()}")'

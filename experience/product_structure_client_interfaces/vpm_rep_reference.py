@@ -34,4 +34,4 @@ class VPMRepReference(PLMEntity):
         return Part(self.vpm_rep_reference.getItem("Part"))
 
     def __repr__(self):
-        return f'VPMRepReference(name="{self.name}")'
+        return f'VPMRepReference(name="{self.name()}")'

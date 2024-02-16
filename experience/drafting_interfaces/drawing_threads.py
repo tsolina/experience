@@ -14,7 +14,7 @@ class DrawingThreads(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=DrawingThread)
+        super().__init__(com, child=DrawingThread)
         self.drawing_threads = com
 
     def add(self, i_geom_elem: AnyObject) -> DrawingThread:
@@ -28,14 +28,14 @@ class DrawingThreads(Collection):
         return self
 
     def __getitem__(self, n: int) -> DrawingThread:
-        if (n + 1) > self.count:
+        if (n + 1) > self.count():
             raise StopIteration
 
         return DrawingThread(self.drawing_threads.item(n + 1))
 
     def __iter__(self) -> Iterator[DrawingThread]:
-        for i in range(self.count):
+        for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingThreads(name="{self.name}")'
+        return f'DrawingThreads(name="{self.name()}")'

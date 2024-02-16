@@ -24,7 +24,7 @@ class DrawingPicture(AnyObject):
         return self.drawing_picture.PictureType
 
     #top, right, bottom, left
-    def crop(sel, value: tuple[float, float, float, float] = None) -> 'DrawingPicture':
+    def crop(self, value: tuple[float, float, float, float] = None) -> 'DrawingPicture':
         if value is not None:
             self.crop_top(value[0]).crop_right(value[1]).crop_bottom(value[2]).crop_left(value[3])
             return self
@@ -48,7 +48,7 @@ class DrawingPicture(AnyObject):
             return self
         return self.drawing_picture.cropRight
 
-    def crop_top(self) -> float:
+    def crop_top(self, value: float = None) -> float:
         if value is not None:
             self.drawing_picture.cropTop = value
             return self
@@ -84,7 +84,7 @@ class DrawingPicture(AnyObject):
             return self
         return self.drawing_picture.x
 
-    def y(self) -> float:
+    def y(self, value: float = None) -> float:
         if value is not None:
             self.drawing_picture.y = value
             return self
@@ -97,4 +97,4 @@ class DrawingPicture(AnyObject):
         return self.drawing_picture.GetOriginalWidth()
 
     def __repr__(self):
-        return f'DrawingPicture(name="{self.name}")'
+        return f'DrawingPicture(name="{self.name()}")'

@@ -8,7 +8,7 @@ from .system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDis
 
 from .drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 from .drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
-from .drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot
+from .drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot, DrawingGenView
 
 from .cat_annotation_interfaces import DrawingArrow, DrawingArrows, DrawingCoordDim, DrawingCoordDims, DrawingDimExtLine, DrawingDimLine, DrawingDimValue
 from .cat_annotation_interfaces import DrawingDimension, DrawingDimensions, DrawingLeader, DrawingLeaders, DrawingGDT, DrawingGDTs, DrawingTable, DrawingTables

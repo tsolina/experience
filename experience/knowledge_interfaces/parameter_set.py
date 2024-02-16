@@ -1,10 +1,10 @@
 from typing import TYPE_CHECKING
 
-# from experience.knowledge_interfaces import Parameters
 from experience.system import AnyObject
 
 if TYPE_CHECKING:
     from experience.knowledge_interfaces import ParameterSets
+    from experience.knowledge_interfaces import Parameters
 
 class ParameterSet(AnyObject):
     """
@@ -36,4 +36,4 @@ class ParameterSet(AnyObject):
         return ParameterSets(self.parameter_set.ParameterSets)
 
     def __repr__(self):
-        return f'ParameterSet(name="{self.name}")'
+        return f'ParameterSet(name="{self.name()}")'

@@ -20,7 +20,17 @@ class PLMEntity(AnyObject):
         self.plm_entity = com
 
     def get_attribute_value(self, i_attr_name: str) -> 'cat_variant':
-        return self.plm_entity.GetAttributeValue(i_attr_name)
+        try:
+            return self.plm_entity.GetAttributeValue(i_attr_name)
+        except Exception as e:
+            return i_attr_name + " not found!"
+
+    def has_attribute_value(self, i_attr_name: str) -> bool:
+        try:
+            val = self.plm_entity.GetAttributeValue(i_attr_name)
+            return True
+        except Exception as e:
+            return False
 
     def get_custom_type(self) -> str:
         return self.plm_entity.GetCustomType()

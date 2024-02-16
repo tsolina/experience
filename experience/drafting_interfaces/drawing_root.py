@@ -33,7 +33,7 @@ class DrawingRoot(AnyObject):
     
     def sheets(self) -> 'DrawingSheets':
         from experience.drafting_interfaces import DrawingSheets
-        return DrawingSheets(self.drawing_root.DrawingSheets)
+        return DrawingSheets(self.drawing_root.Sheets)
 
     def standard(self, value: str = None) -> Union['DrawingRoot', str]:
         if value is not None:

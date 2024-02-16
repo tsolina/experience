@@ -19,6 +19,30 @@ class DrawingText(AnyObject):
         self.drawing_text = com
 
     def anchor_position(self, value: int = None) -> Union['DrawingText', int]:
+        """
+        enum CatTextAnchorPosition {
+        catUnsusedValue1 = 0,
+        catTopLeft = 1,
+        catMiddleLeft = 2,
+        catBottomLeft = 3,
+        catTopCenter = 4,
+        catMiddleCenter = 5,
+        catBottomCenter = 6,
+        catTopRight = 7,
+        catMiddleRight = 8,
+        catBottomRight = 9,
+        catUnsusedValue2 = 10,
+        catCapLeft = 11,
+        catHalfLeft = 12,
+        catBaseLeft = 13,
+        catCapCenter = 14,
+        catHalfCenter = 15,
+        catBaseCenter = 16,
+        catCapRight = 17,
+        catHalfRight = 18,
+        catBaseRight = 19
+        } 
+        """
         if value is not None:
             self.drawing_text.AnchorPosition = value
             return self
@@ -103,17 +127,17 @@ class DrawingText(AnyObject):
         return self.drawing_text.GetModifiableIn2DComponentInstances()
 
     def get_parameter_link(self, i_index: int) -> AnyObject:
-        return self.drawing_text.GetParameterLink(i_index)
+        return AnyObject(self.drawing_text.GetParameterLink(i_index))
 
     def get_parameter_on_sub_string(self, i_param: int, i_first: int, inb_character: int) -> int:
         return self.drawing_text.GetParameterOnSubString(i_param, i_first, inb_character)
 
     def insert_attribute_link(self, i_first: int, inb_character: int, i_owner_att: AnyObject, i_type_internal_name: str, i_att_internal_name: str) -> 'DrawingText':
-        self.drawing_text.InserAttributeLink(i_first, inb_character, i_owner_att, i_type_internal_name, i_att_internal_name)
+        self.drawing_text.InsertAttributeLink(i_first, inb_character, i_owner_att._com, i_type_internal_name, i_att_internal_name)
         return self
 
-    def insert_variable(self, i_first: int, inb_character: int, ibase: AnyObject) -> None:
-        self.drawing_text.InsertVariable(i_first, inb_character, ibase.com_object)
+    def insert_variable(self, i_first: int, inb_character: int, ibase: AnyObject) -> 'DrawingText':
+        self.drawing_text.InsertVariable(i_first, inb_character, ibase._com)
         return self
 
     def set_font_name(self, i_first: int, inb_character: int, i_font_name: str) -> 'DrawingText':
@@ -133,7 +157,7 @@ class DrawingText(AnyObject):
         return self
 
     def solve_link(self, ip_obj: AnyObject) -> 'DrawingText':
-        self.drawing_text.SolveLink(ip_obj)
+        self.drawing_text.SolveLink(ip_obj._com)
         return self
 
     def __repr__(self):

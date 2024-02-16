@@ -30,4 +30,4 @@ class VPMInstance(PLMEntity):
         return VPMReference(self.vpm_instance.ReferenceInstanceOf)
 
     def __repr__(self):
-        return f'VPMInstance(name="{self.name}")'
+        return f'VPMInstance(name="{self.name()}")'

@@ -33,4 +33,4 @@ class VPMOccurrences(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'VPMOccurrences(name="{self.name}")'
+        return f'VPMOccurrences(name="{self.name()}")'

@@ -1,5 +1,4 @@
 from typing import TYPE_CHECKING
-# from experience.knowledge_interfaces.relation import Relation
 from experience.system.any_object import AnyObject
 
 if TYPE_CHECKING:
@@ -56,4 +55,4 @@ class Parameter(AnyObject):
         return self.parameter.ValueAsString()
 
     def __repr__(self):
-        return f'Parameter(name="{self.name}")'
+        return f'Parameter(name="{self.name()}")'

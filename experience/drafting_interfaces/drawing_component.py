@@ -87,4 +87,4 @@ class DrawingComponent(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingComponent(name="{self.name}")'
+        return f'DrawingComponent(name="{self.name()}")'

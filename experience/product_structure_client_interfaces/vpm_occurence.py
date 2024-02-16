@@ -34,4 +34,4 @@ class VPMOccurrence(PLMOccurrence):
         return Position(self.vpm_occurrence.Position)
 
     def __repr__(self):
-        return f'VPMOccurrence(name="{self.name}")'
+        return f'VPMOccurrence(name="{self.name()}")'

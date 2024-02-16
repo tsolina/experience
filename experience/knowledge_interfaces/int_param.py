@@ -50,4 +50,4 @@ class IntParam(Parameter):
         return self
 
     def __repr__(self):
-        return f'IntParam(name="{ self.name }")'
+        return f'IntParam(name="{self.name()}")'

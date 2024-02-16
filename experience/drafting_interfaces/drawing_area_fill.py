@@ -45,4 +45,4 @@ class DrawingAreaFill(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingAreaFill(name="{self.name}")'
+        return f'DrawingAreaFill(name="{self.name()}")'

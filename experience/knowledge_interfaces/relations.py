@@ -27,7 +27,7 @@ class Relations(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Relation)
+        super().__init__(com, child=Relation)
         self.relations = com
 
     # def optimizations(self) -> Optimizations:
@@ -90,4 +90,4 @@ class Relations(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Relations(name="{self.name}")'
+        return f'Relations(name="{self.name()}")'

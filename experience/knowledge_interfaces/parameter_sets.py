@@ -1,8 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.knowledge_interfaces import ParameterSet
 from experience.system import Collection
-# from experience.types import cat_variant
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class ParameterSets(Collection):
     """
@@ -15,7 +17,7 @@ class ParameterSets(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com_object, _child=ParameterSet)
+        super().__init__(com, child=ParameterSet)
         self.parameter_sets = com
 
     def create_set(self, i_name: str) -> ParameterSet:
@@ -36,4 +38,4 @@ class ParameterSets(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'ParameterSets(name="{self.name}")'
+        return f'ParameterSets(name="{self.name()}")'
