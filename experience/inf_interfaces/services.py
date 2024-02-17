@@ -5,6 +5,7 @@ if TYPE_CHECKING:
     from experience.plm_access_interfaces import PLMScriptService, PLMSearch, SearchService
     from experience.plm_session_builder_interfaces import PLMNewService, PLMOpenService, PLMPropagateService
     from experience.vpm_editor_context_interfaces import PLMProductService, ProductSessionService
+    from experience.knowledge_interfaces import KnowledgeServices
 
 class Services():
     def __init__(self, com):
@@ -44,6 +45,10 @@ class Services():
     def product_session_service(self) -> 'ProductSessionService':
         from experience.vpm_editor_context_interfaces import ProductSessionService
         return ProductSessionService(self.services.Application.GetSessionService("ProductSessionService")) 
+    
+    def knowledge_services(self) -> 'KnowledgeServices':
+        from experience.knowledge_interfaces import KnowledgeServices
+        return KnowledgeServices(self.services.Application.GetSessionService("KnowledgeServices")) 
     
     def __repr__(self):
         return f'Services()'

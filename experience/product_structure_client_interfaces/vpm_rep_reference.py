@@ -3,8 +3,9 @@ from typing import Union, Optional, TYPE_CHECKING
 from experience.plm_modeler_base_interfaces import PLMEntity
 
 if TYPE_CHECKING:
-    from experience.product_structure_client_interfaces import VPMReference, ParentVPMRepInstances 
+    from experience.product_structure_client_interfaces import VPMReference, ParentVPMRepInstances
     from experience.mecmod_interfaces import Part
+    from experience.knowledge_interfaces import KnowledgeObjects
 
 class VPMRepReference(PLMEntity):
     """
@@ -27,11 +28,15 @@ class VPMRepReference(PLMEntity):
 
     def parent_rep_instances(self) -> 'ParentVPMRepInstances':
         from experience.product_structure_client_interfaces import ParentVPMRepInstances
-        return VPMReference(self.vpm_root_occurrence.ParentRepInstances)
+        return VPMReference(self.vpm_rep_reference.ParentRepInstances)
     
     def part(self) -> 'Part':
         from experience.mecmod_interfaces import Part
         return Part(self.vpm_rep_reference.getItem("Part"))
+    
+    def knowledge_objects(self) -> 'KnowledgeObjects':
+        from experience.knowledge_interfaces import KnowledgeObjects
+        return KnowledgeObjects(self.vpm_rep_reference.GetItem("KnowledgeObjects"))
 
     def __repr__(self):
-        return f'VPMRepReference(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

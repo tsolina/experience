@@ -265,7 +265,7 @@ try:
 
             # - display sheet scale -
             param = cat.drawing.parameters().item("Drawing\\" + sheet.name() + "\\Scale")
-            texts.get_item("TitleBlock_Text_Scale_1").text("").insert_variable(0, 0, param)
+            texts.get_item("TitleBlock_Text_Scale_1", DrawingText).text("").insert_variable(0, 0, param)
 
             # - display sheet format -
             disp_format = get_display_format()

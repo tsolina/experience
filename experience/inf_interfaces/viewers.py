@@ -14,7 +14,7 @@ class Viewers(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=Viewer)
+        super().__init__(com, child=Viewer)
         self.viewers = com
 
     def item(self, i_index: int) -> Viewer:

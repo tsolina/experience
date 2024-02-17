@@ -23,6 +23,10 @@ try:
 
         sel = app.active_editor().selection()
         print("sel", sel.count())
+        if sel.count():
+            law = sel.item(1).value(Law)
+            print("law: ", law)
+            print("part", cat.part)
         
 except Exception as e:
     traceback_str = traceback.format_exc()

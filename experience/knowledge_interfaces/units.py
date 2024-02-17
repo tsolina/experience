@@ -1,8 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.knowledge_interfaces import Unit
 from experience.system import Collection
-from experience.types import cat_variant
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 
 class Units(Collection):
@@ -19,7 +21,7 @@ class Units(Collection):
         super().__init__(com, child=Unit)
         self.units = com
 
-    def item(self, i_index: cat_variant) -> Unit:
+    def item(self, i_index: 'cat_variant') -> Unit:
         return Unit(self.units.Item(i_index))
 
     def __getitem__(self, n: int) -> Unit:

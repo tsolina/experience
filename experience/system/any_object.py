@@ -3,6 +3,9 @@ from experience.base_interfaces.experience import Experience
 
 if TYPE_CHECKING:
     from experience.inf_interfaces import Application
+    from experience.cat_gsm_interfaces.hybrid_shape_factory import HybridShapeFactory
+    from experience.mecmod_interfaces.part import Part
+    from experience.product_structure_client_interfaces.vpm_reference import VPMReference
 
 T = TypeVar('T')
 U = TypeVar('U')
@@ -27,12 +30,19 @@ class AnyObject(Experience):
     # def parent(self) -> 'AnyObject':
     #     return AnyObject(self._com.Parent)
 
-    def parent(self, value: Optional[Type[U]] = None) -> U:
+    def parent(self, value: Optional[Type[U]] = None) -> Union[U, 'AnyObject']:
         if value is not None:
             return value(self._com.Parent)
         return AnyObject(self._com.Parent)
+    
+    # def testF(self) -> Type[T]:
+    #     rVal = AnyObject(self._com.Parent)
+    #     T = globals()[rVal.com_type()]
+    #     return T(rVal._com)
 
-    def get_item(self, id_name: str) -> 'AnyObject':
+    def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+        if as_type is not None:
+            return as_type(self._com.GetItem(id_name))
         return AnyObject(self._com.GetItem(id_name))
 
     def com_type(self) -> str:

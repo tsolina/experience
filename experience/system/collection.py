@@ -1,5 +1,5 @@
-from typing import Iterator
-from typing import TYPE_CHECKING
+from typing import Iterator, TYPE_CHECKING, Type, TypeVar, Union, Optional
+T = TypeVar('T')
 
 from experience.base_interfaces.experience import Experience
 from experience.system import AnyObject
@@ -34,7 +34,9 @@ class Collection(Experience):
     def parent(self) -> AnyObject:
         return AnyObject(self._com.Parent)
 
-    def get_item(self, id_name: str) -> AnyObject:
+    def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'Collection']:
+        if as_type is not None:
+            return as_type(self._com.GetItem(id_name))
         return self._child(self._com.GetItem(id_name))
 
     def get_item_by_index(self, index):
