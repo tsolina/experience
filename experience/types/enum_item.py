@@ -10,3 +10,6 @@ class EnumItem(Enum):
             if en.value == i_index:
                 return en
         raise ValueError(f"No enum member with value {i_index}")
+    
+    def __int__(self):
+        return self.value

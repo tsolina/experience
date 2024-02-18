@@ -4,7 +4,8 @@ from .exceptions import CATIAApplicationException
 
 from .base_interfaces import experience_application, Experience, PartReady, ProductReady, DrawingReady
 
-from .system import AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService, SettingController
+from .system import CATScriptLanguage, CatScriptLibraryType, AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService, SettingController
+from .system import DLNameSettingAtt, DynLicenseSettingAtt, SettingRepository, LicenseSettingAtt
 
 from .drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 from .drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
@@ -22,12 +23,12 @@ from .inf_interfaces import Application, Camera, Cameras, Camera3D, Editor, Edit
 from .inf_interfaces import SelectedElement, Selection, Service, Viewer, Viewpoint2D, Viewer2D, Viewpoint3D, Viewer3D, Viewers, VisPropertySet, Window, Windows, Workbench
 from .inf_interfaces import Move, Position, Services, VisuServices, EditorServices
 
-from .inf_os_idl_interfaces import FileComponent, FileSystem, File, Files, Folder, Folders, SystemConfiguration, TextStream
+from .inf_os_idl_interfaces import CatFileSelectionMode, FileComponent, FileSystem, File, Files, Folder, Folders, SystemConfiguration, TextStream
 
 from .knowledge_interfaces import BoolParam, EnumParam, IntParam, KnowledgeActivateObject, KnowledgeObject, ParameterSet, ParameterSets, Parameter, RealParam, Relation
 from .knowledge_interfaces import StrParam, Unit, Units, Dimension, List, ListParameter, Parameters, Relations, Angle, Length, Check, DesignTable, Law, Formula, Rule
 from .knowledge_interfaces import SetOfEquation, KnowledgeFactory, KnowledgeCollection, KnowledgeServices, KnowledgeSet, KnowledgeObjects, KWECorrectFunction
-from .knowledge_interfaces import ParmsSet, RelsSet, ParametersFactory
+from .knowledge_interfaces import ParmsSet, RelsSet, ParametersFactory, KnowledgeObjectType, KnowledgeSetType, KnowledgeSeverityType
 
 from .cat_sketcher_interfaces import GeometricElement, Axis2D, Geometry2D, Point2D, Curve2D, Hyperbola2D, ControlPoint2D, Ellipse2D, Circle2D, Parabola2D, Line2D, Spline2D, Factory2D, Sketch
 

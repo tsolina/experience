@@ -41,7 +41,9 @@ from .parms_set import ParmsSet # KnowledgeSet
 from .rels_set import RelsSet # KnowledgeSet
 from .parameters_factory import ParametersFactory # KnowledgeFactory
 
+from .knowledge_types import KnowledgeObjectType, KnowledgeSetType, KnowledgeSeverityType
+
 # from knowledge_interfaces import BoolParam, EnumParam, IntParam, KnowledgeActivateObject, KnowledgeObject, ParameterSet, ParameterSets, Parameter, RealParam, Relation
 # from knowledge_interfaces import StrParam, Unit, Units, Dimension, List, ListParameter, Parameters, Relations, Angle, Length, Check, DesignTable, Law, Formula, Rule
 # from knowledge_interfaces import SetOfEquation, KnowledgeFactory, KnowledgeCollection, KnowledgeServices, KnowledgeSet, KnowledgeObjects, KWECorrectFunction
-# from knowledge_interfaces import ParmsSet, RelsSet, ParametersFactory
+# from knowledge_interfaces import ParmsSet, RelsSet, ParametersFactory, KnowledgeObjectType, KnowledgeSetType, KnowledgeSeverityType

@@ -1,7 +1,8 @@
 from typing import TYPE_CHECKING, Type, TypeVar, Union, Optional
 from experience.base_interfaces.experience import Experience
+from experience.system.system_types import CATScriptLanguage
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:    
     from experience.inf_interfaces import Application
     from experience.cat_gsm_interfaces.hybrid_shape_factory import HybridShapeFactory
     from experience.mecmod_interfaces.part import Part
@@ -63,7 +64,7 @@ class AnyObject(Experience):
         End Function
         """
         print(vba_code)
-        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_object])
+        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_object])
 
     def as_pyclass(self, target_class: Type[T], vba_class_name: str = None) -> T:
         if vba_class_name is None:
@@ -77,7 +78,7 @@ class AnyObject(Experience):
         """
 
         # TODO: at least verify that target_class is instance of AnyObject
-        return target_class(self._com.Application.SystemService.Evaluate(vba_code, 1, vba_function_name, [self._com]))
+        return target_class(self._com.Application.SystemService.Evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [self._com]))
 
     def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: Union[float, int, bool, str] = None) -> tuple:
         """
@@ -98,7 +99,7 @@ class AnyObject(Experience):
         End Function
         """
         #print(vba_code)
-        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_obj])
+        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_obj])
     
     def _get_safe_array_multi(self, com_obj: 'AnyObject', method: str, lengths: tuple, i_pos: any = None) -> tuple:
         if isinstance(lengths, int):
@@ -124,7 +125,7 @@ class AnyObject(Experience):
             {vba_function_name} = Array({args_out})
         End Function
         """   
-        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [com_obj])
+        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_obj])
 
     def _get_multi(self, params, ins, outs) -> tuple:
         # print(params)
@@ -152,7 +153,7 @@ class AnyObject(Experience):
         """
         # print(vba_code)
         # print(dir(self))
-        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, params)
+        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
 
     def __repr__(self):
         return f'AnyObject(name="{self.name()}")'

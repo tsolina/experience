@@ -1,3 +1,5 @@
+from .inf_os_types import CatFileSelectionMode
+
 from .file_component import FileComponent
 from .file_system import FileSystem
 from .file import File

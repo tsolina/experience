@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING
+from experience.system import CATScriptLanguage
 from experience.system import AnyObject
 
 if TYPE_CHECKING:
@@ -21,8 +22,8 @@ class SystemService(AnyObject):
     def environ(self, i_env_string) -> str:
         return str(self.system_service.Environ(i_env_string))
 
-    def evaluate(self, i_script_text: str, i_language: int, i_function_name: str, i_parameters: list) -> 'cat_variant':
-        return self.system_service.Evaluate(i_script_text, i_language, i_function_name, i_parameters)
+    def evaluate(self, i_script_text: str, i_language: CATScriptLanguage, i_function_name: str, i_parameters: list) -> 'cat_variant':
+        return self.system_service.Evaluate(i_script_text, int(i_language), i_function_name, i_parameters)
 
     def execute_background_processus(self, i_executable_path) -> int:
         return int(self.system_service.ExecuteBackgroundProcessus(i_executable_path))
