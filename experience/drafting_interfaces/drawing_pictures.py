@@ -1,10 +1,12 @@
 from pathlib import Path
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.exceptions import CATIAApplicationException
 from experience.drafting_interfaces import DrawingPicture
 from experience.system import Collection
-from experience.types import cat_variant
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class DrawingPictures(Collection):
     """
@@ -26,10 +28,10 @@ class DrawingPictures(Collection):
             raise CATIAApplicationException(f'Could not find image file: "{absolute_path}".')
         return DrawingPicture(self.drawing_pictures.Add(absolute_path, i_position_x, i_position_y))
 
-    def item(self, i_index: cat_variant) -> DrawingPicture:
+    def item(self, i_index: 'cat_variant') -> DrawingPicture:
         return DrawingPicture(self.drawing_pictures.Item(i_index))
 
-    def remove(self, i_index: cat_variant) -> 'DrawingPictures':
+    def remove(self, i_index: 'cat_variant') -> 'DrawingPictures':
         self.drawing_pictures.Remove(i_index)
         return self
 
@@ -44,4 +46,4 @@ class DrawingPictures(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingPictures(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

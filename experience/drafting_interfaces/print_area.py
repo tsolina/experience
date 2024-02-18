@@ -44,12 +44,12 @@ class PrintArea(AnyObject):
             return self
         return self.print_area.AreaWidth
 
-    def get_area(self, o_x: float, o_y: float, o_width: float, o_height: float, o_activated: bool) -> tuple:
-        return self.print_area.GetArea(o_x, o_y, o_width, o_height, o_activated)
+    def get_area(self) -> tuple[float, float, float, float, bool]:
+        return self.print_area.GetArea()
 
     def set_area(self, i_x: float, i_y: float, i_width: float, i_height: float) -> 'PrintArea':
         self.print_area.SetArea(i_x, i_y, i_width, i_height)
         return self
         
     def __repr__(self):
-        return f'PrintArea(name="{ self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

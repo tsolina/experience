@@ -1,3 +1,5 @@
+from .inf_types import *
+
 from .application import Application
 from .camera import Camera
 from .cameras import Cameras # Camera
@@ -33,6 +35,7 @@ from .services import Services #
 from .visu_services import VisuServices
 from .editor_services import EditorServices
 
+#from inf_interfaces import CatPaperOrientation, CatPaperSize
 #from inf_interfaces import Application, Camera, Cameras, Camera3D, Editor, Editors, LightSource, LightSources, PageSetup, Printer, Printers, Reference, References
 #from inf_interfaces import SelectedElement, Selection, Service, Viewer, Viewpoint2D, Viewer2D, Viewpoint3D, Viewer3D, Viewers, VisPropertySet, Window, Windows, Workbench
 #from inf_interfaces import Move, Position, Services, VisuServices, EditorServices

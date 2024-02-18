@@ -1,11 +1,10 @@
 from typing import TYPE_CHECKING
 
 from experience.system import AnyObject
-from experience.types import cat_variant
 
 if TYPE_CHECKING:
+    from experience.types import cat_variant
     from experience.drafting_interfaces import DrawingView, DrawingSheet
-
 
 class DrawingComponent(AnyObject):
     """
@@ -26,7 +25,6 @@ class DrawingComponent(AnyObject):
             self.drawing_component.Angle = value
             return self
         return self.drawing_component.Angle
-
 
     def comp_ref(self) -> 'DrawingView':
         from experience.drafting_interfaces import DrawingView
@@ -73,18 +71,19 @@ class DrawingComponent(AnyObject):
     def get_flip(self) -> bool:
         return self.drawing_component.GetFlip()
 
-    def get_matrix(self, io_matrix: tuple) -> tuple:
-        return self.drawing_component.GetMatrix(io_matrix)
+    def get_matrix(self) -> tuple[float, float, float, float, float, float]:
+        """ - v1.x, v1.y, v2.x, v2.y, distance.x, distance.y - """
+        return self._get_safe_array(self.drawing_component, "GetMatrix", 5)
 
-    def get_modifiable_object(self, i_index: cat_variant) -> AnyObject:
+    def get_modifiable_object(self, i_index: 'cat_variant') -> AnyObject:
         return AnyObject(self.drawing_component.GetModifiableObject(i_index))
 
     def get_modifiable_objects_count(self) -> int:
         return self.drawing_component.GetModifiableObjectsCount()
 
-    def set_matrix(self, i_matrix: tuple) -> 'DrawingComponent':
+    def set_matrix(self, i_matrix: list) -> 'DrawingComponent':
         self.drawing_component.SetMatrix(i_matrix)
         return self
 
     def __repr__(self):
-        return f'DrawingComponent(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -34,4 +34,4 @@ class DrawingPageSetup(PageSetup):
         return self.drawing_page_setup.FitToSheetFormat
 
     def __repr__(self):
-        return f'DrawingPageSetup(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

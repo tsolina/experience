@@ -2,22 +2,22 @@ from experience.types.enum_item import EnumItem
 from typing import Union
 
 class KnowledgeObjectType(EnumItem):
-    kweParametersSetObjectType = 1
-    kweRelationsSetObjectType = 2
-    kweOptimizationsSetObjectType = 3
-    kweParameterObjectType = 4
-    kweRelationObjectType = 5
-    kweOptimizationObjectType = 6
-    kweExpertRulebasesSetObjectType = 7
-    kweExpertRulebaseObjectType = 8
+    kweParametersSetObjectType = 0
+    kweRelationsSetObjectType = 1
+    kweOptimizationsSetObjectType = 2
+    kweParameterObjectType = 3
+    kweRelationObjectType = 4
+    kweOptimizationObjectType = 5
+    kweExpertRulebasesSetObjectType = 6
+    kweExpertRulebaseObjectType = 7
 
 class KnowledgeSetType(EnumItem):
-    kweParametersType = 1
-    kweRelationsType = 2
-    kweOptimizationsType = 3
-    kweRuleBasesType = 4
+    kweParametersType = 0
+    kweRelationsType = 1
+    kweOptimizationsType = 2
+    kweRuleBasesType = 3
 
 class KnowledgeSeverityType(EnumItem):
-    Silent = 1
-    Information = 2
-    Warning = 3
+    Silent = 0
+    Information = 1
+    Warning = 2

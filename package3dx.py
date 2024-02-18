@@ -27,25 +27,26 @@ class Status(Enum):
 try:
     from experience import *
 
-    with PartReady() as cat:
-        print("part is ready")      
+    with DrawingReady() as cat:
+        print("ready")      
         app = cat.app
-
-        print(app.name(), cat.part.main_body().name())
 
         sel = app.active_editor().selection()
         print("sel", sel.count())
         if sel.count():
-            law = sel.item(1).value(Law)
-            print("law: ", law)
-            print("part", cat.part)
+            obj = sel.item(1).value(DrawingComponent)
+            #print(obj.drawing_component.GetMatrix())
+            #print(obj.get_matrix())
+            # return f'{self.__class__.__name__}(name="{self.name()}")'
+            print(cat.drawing.active_sheet().print_area().get_area())
 
-        def some_func(i_type: Status):
-            print(i_type, type(i_type))
-            print(int(i_type) + 3)
 
-        some_func(Status.IN_PROGRESS)
-        some_func(1)
+        # def some_func(i_type: Status):
+        #     print(i_type, type(i_type))
+        #     print(int(i_type) + 3)
+
+        # some_func(Status.IN_PROGRESS)
+        # some_func(1)
         
 except Exception as e:
     traceback_str = traceback.format_exc()

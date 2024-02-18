@@ -1,3 +1,5 @@
+from .drafting_types import *
+
 from .drawing_area_fill import DrawingAreaFill #
 from .drawing_area_fills import DrawingAreaFills # DrawingAreaFill
 from .drawing_component import DrawingComponent #
@@ -20,7 +22,12 @@ from .drawing_define_gen_view import DrawingDefineGenView
 from .drawing_service import DrawingService
 from .drawing_root import DrawingRoot
 from .drawing_gen_view import DrawingGenView
+from .drawing_gen_service import DrawingGenService
 
+
+# from drafting_interfaces import Cat3DColorInheritanceMode, CatAreaFillType, CatDftGenRepresentationPolicy, CatDrawingViewType, CatFilletRepresentation, CatGenRepresentationMode 
+# from drafting_interfaces import CatGenViewRasterMode, CatHiddenLineMode, CatImageViewMode, CatPictureFormat, CatPictureType, CatPointsProjectionMode, CatProjViewType 
+# from drafting_interfaces import CatRepresentationMode, CatSheetGenViewsPosMode, CatSheetProjectionMethod, CatThreadLinkedTo, CatThreadType, CatWireframeMode, RasterLevelOfDetail 
 # from drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 # from drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
-# from drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot, DrawingGenView
+# from drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot, DrawingGenView, DrawingGenService

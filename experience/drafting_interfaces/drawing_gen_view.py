@@ -46,27 +46,27 @@ class DrawingGenView(AnyObject):
         from experience.drafting_interfaces import DrawingView
         return DrawingView(self.drawing_gen_view.ParentView)
     
-    def add_breakout(self, i_profil: tuple, i_plane1: tuple, i_plane2: tuple) -> 'DrawingGenView':
+    def add_breakout(self, i_profil: list, i_plane1: list, i_plane2: list) -> 'DrawingGenView':
         self.drawing_gen_view.AddBreakout(i_profil, i_plane1, i_plane2)
         return self
     
-    def add_broken_view(self, i_broken_lines_extremities: tuple, ix_direction: float, iy_direction: float) -> 'DrawingGenView':
+    def add_broken_view(self, i_broken_lines_extremities: list, ix_direction: float, iy_direction: float) -> 'DrawingGenView':
         self.drawing_gen_view.AddBrokenView(i_broken_lines_extremities, ix_direction, iy_direction)
         return self
     
-    def add_clipping_box(self, i_box_definition: tuple) -> 'DrawingGenView':
-        self.drawing_gen_view.AddClippingBox()
+    def add_clipping_box(self, i_box_definition: list) -> 'DrawingGenView':
+        self.drawing_gen_view.AddClippingBox(i_box_definition)
         return self
     
     def add_clipping_with_circle(self, x_center: float, y_center: float, radius: float, compute_mode: bool) -> 'DrawingGenView':
         self.drawing_gen_view.AddClippingWithCircle(x_center, y_center, radius, compute_mode)
         return self
     
-    def add_clipping_with_profile(self, profil: tuple, compute_mode: bool) -> 'DrawingGenView':
+    def add_clipping_with_profile(self, profil: list, compute_mode: bool) -> 'DrawingGenView':
         self.drawing_gen_view.AddClippingWithProfile(profil, compute_mode)
         return self
     
-    def add_link(self, i_info_on_view_link: tuple) -> 'DrawingGenView':
+    def add_link(self, i_info_on_view_link: list) -> 'DrawingGenView':
         """
         Dim ViewLink1 (2) as CATSafeArrayVariant
         ViewLink1 (0)= myPartBody
@@ -108,12 +108,12 @@ class DrawingGenView(AnyObject):
     def is_clipped(self) -> bool:
         return self.drawing_gen_view.IsClipped()
     
-    def modify_projection_plane(self, i_proj_plane: tuple) -> 'DrawingGenView':
+    def modify_projection_plane(self, i_proj_plane: list) -> 'DrawingGenView':
         self.drawing_gen_view.ModifyProjectionPlane(i_proj_plane)
         return self 
     
     def put_links(self, i_nb_link: int) -> tuple:
-        return self._get_safe_array(self.drawing_gen_view, "PutLinks", 3)
+        return self._get_safe_array(self.drawing_gen_view, "PutLinks", 3, i_nb_link)
     
     def remove_gvs(self) -> 'DrawingGenView':
         self.drawing_gen_view.RemoveGVS()
@@ -144,4 +144,4 @@ class DrawingGenView(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingGenView(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

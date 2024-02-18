@@ -7,9 +7,12 @@ from .base_interfaces import experience_application, Experience, PartReady, Prod
 from .system import CATScriptLanguage, CatScriptLibraryType, AnyObject, CATBaseDispatch, CATBaseUnknown, Collection, IDispatch, IUnknown, SystemService, SettingController
 from .system import DLNameSettingAtt, DynLicenseSettingAtt, SettingRepository, LicenseSettingAtt
 
+from .drafting_interfaces import Cat3DColorInheritanceMode, CatAreaFillType, CatDftGenRepresentationPolicy, CatDrawingViewType, CatFilletRepresentation, CatGenRepresentationMode 
+from .drafting_interfaces import CatGenViewRasterMode, CatHiddenLineMode, CatImageViewMode, CatPictureFormat, CatPictureType, CatPointsProjectionMode, CatProjViewType 
+from .drafting_interfaces import CatRepresentationMode, CatSheetGenViewsPosMode, CatSheetProjectionMethod, CatThreadLinkedTo, CatThreadType, CatWireframeMode, RasterLevelOfDetail 
 from .drafting_interfaces import DrawingAreaFill, DrawingAreaFills, DrawingComponent, DrawingComponents, DrawingPageSetup, DrawingPicture, DrawingPictures
 from .drafting_interfaces import DrawingThread, DrawingThreads, DrawingView, DrawingViews, PrintArea, DrawingSheet, DrawingSheets
-from .drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot, DrawingGenView
+from .drafting_interfaces import DrawingGenViewProperties, DrawingDefineGenView, DrawingService, DrawingRoot, DrawingGenView, DrawingGenService
 
 from .cat_annotation_interfaces import DrawingArrow, DrawingArrows, DrawingCoordDim, DrawingCoordDims, DrawingDimExtLine, DrawingDimLine, DrawingDimValue
 from .cat_annotation_interfaces import DrawingDimension, DrawingDimensions, DrawingLeader, DrawingLeaders, DrawingGDT, DrawingGDTs, DrawingTable, DrawingTables
@@ -19,6 +22,7 @@ from .cat_opns_measure_interfaces import MeasurableInContext, MeasurableService,
 from .cat_opns_measure_interfaces import MeasurableVolume, MeasurableCircle, MeasurableLine, MeasurableCone, MeasurableCylinder, MeasurablePlane, MeasurableSphere
 from .cat_opns_measure_interfaces import Measure, Measures, MeasureService, MeasureBetween, MeasureItem, MeasureSettingAtt
 
+from .inf_interfaces import CatPaperOrientation, CatPaperSize
 from .inf_interfaces import Application, Camera, Cameras, Camera3D, Editor, Editors, LightSource, LightSources, PageSetup, Printer, Printers, Reference, References
 from .inf_interfaces import SelectedElement, Selection, Service, Viewer, Viewpoint2D, Viewer2D, Viewpoint3D, Viewer3D, Viewers, VisPropertySet, Window, Windows, Workbench
 from .inf_interfaces import Move, Position, Services, VisuServices, EditorServices

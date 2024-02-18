@@ -6,6 +6,7 @@ if TYPE_CHECKING:
     from experience.plm_session_builder_interfaces import PLMNewService, PLMOpenService, PLMPropagateService
     from experience.vpm_editor_context_interfaces import PLMProductService, ProductSessionService
     from experience.knowledge_interfaces import KnowledgeServices
+    from experience.drafting_interfaces import DrawingGenService
 
 class Services():
     def __init__(self, com):
@@ -50,6 +51,10 @@ class Services():
         from experience.knowledge_interfaces import KnowledgeServices
         return KnowledgeServices(self.services.Application.GetSessionService("KnowledgeServices")) 
     
+    def drawing_gen_service(self) -> 'DrawingGenService':
+        from experience.drafting_interfaces import DrawingGenService
+        return DrawingGenService(self.services.Application.GetSessionService("CATDrawingGenService")) 
+
     def __repr__(self):
         return f'Services()'
 

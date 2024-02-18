@@ -53,10 +53,10 @@ class DrawingRoot(AnyObject):
         self.drawing_root.Update()
         return self
     
-    def reorder_sheets(self, i_ordered_sheets: tuple) -> 'DrawingRoot':
+    def reorder_sheets(self, i_ordered_sheets: list) -> 'DrawingRoot':
         """ - array of sheets in new order - """
         self.drawing_root.reorder_Sheets(i_ordered_sheets)
         return self
 
     def __repr__(self):
-        return f'DrawingRoot(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

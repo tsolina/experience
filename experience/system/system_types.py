@@ -1,16 +1,16 @@
 from experience.types.enum_item import EnumItem
 
 class CATScriptLanguage(EnumItem):
-    CATVBScriptLanguage = 1
-    CATVBALanguage = 2
-    CATBasicScriptLanguage = 3
-    CATJavaLanguage = 4
-    CATJScriptLanguage = 5
-    CATCSharpLanguage = 6
-    CATVBNetLanguage = 7
+    CATVBScriptLanguage = 0
+    CATVBALanguage = 1
+    CATBasicScriptLanguage = 2
+    CATJavaLanguage = 3
+    CATJScriptLanguage = 4
+    CATCSharpLanguage = 5
+    CATVBNetLanguage = 6
 
 class CatScriptLibraryType(EnumItem):
-    catScriptLibraryTypeDocument = 1
-    catScriptLibraryTypeDirectory = 2
-    catScriptLibraryTypeVBAProject = 3
-    catScriptLibraryTypeVSTAProject = 4
+    catScriptLibraryTypeDocument = 0
+    catScriptLibraryTypeDirectory = 1
+    catScriptLibraryTypeVBAProject = 2
+    catScriptLibraryTypeVSTAProject = 3

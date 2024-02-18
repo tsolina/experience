@@ -1,6 +1,7 @@
-from typing import TYPE_CHECKING, Tuple
+from typing import TYPE_CHECKING
 
 from experience.system import AnyObject
+from experience.drafting_interfaces.drafting_types import *
 from experience.drafting_interfaces import DrawingAreaFills, DrawingComponents, DrawingPictures, DrawingThreads
 from experience.cat_annotation_interfaces import DrawingArrows, DrawingCoordDims, DrawingDimensions, DrawingTables, DrawingText, DrawingTexts, DrawingWeldings, DrawingGDTs
 
@@ -132,8 +133,8 @@ class DrawingView(AnyObject):
     def threads(self) -> DrawingThreads:
         return DrawingThreads(self.drawing_view.Threads)
 
-    def view_type(self) -> int:
-        return self.drawing_view.ViewType
+    def view_type(self) -> CatDrawingViewType:
+        return CatDrawingViewType.item(self.drawing_view.ViewType)
 
 
     def weldings(self) -> DrawingWeldings:
@@ -236,4 +237,4 @@ class DrawingView(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingView(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -16,6 +16,9 @@ try:
 
         # - print 3DExperience name -
         print(app.name())
+
+        sel = cat.app.active_editor().selection()
+        print(sel.vis_properties().get_pick())
         
 except Exception as e:
     # - throws the error in case that part was not active -

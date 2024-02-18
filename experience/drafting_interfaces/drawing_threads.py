@@ -1,7 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.drafting_interfaces import DrawingThread
-from experience.system import CATBaseDispatch, Collection, AnyObject
+from experience.system import Collection, AnyObject
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class DrawingThreads(Collection):
     """
@@ -20,7 +23,7 @@ class DrawingThreads(Collection):
     def add(self, i_geom_elem: AnyObject) -> DrawingThread:
         return DrawingThread(self.drawing_threads.Add(i_geom_elem._com))
 
-    def item(self, i_index: int) -> DrawingThread:
+    def item(self, i_index: 'cat_variant') -> DrawingThread:
         return DrawingThread(self.drawing_threads.Item(i_index))
 
     def remove(self, i_index: int) -> 'DrawingThreads':
@@ -38,4 +41,4 @@ class DrawingThreads(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingThreads(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

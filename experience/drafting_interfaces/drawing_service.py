@@ -28,4 +28,4 @@ class DrawingService(Service):
         return self._get_safe_array(self.drawing_service, "StandardNamesList", self.number_of_standards())
 
     def __repr__(self):
-        return f'DrawingService(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

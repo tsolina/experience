@@ -1,11 +1,13 @@
 import os
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Union
 
 from experience.system import AnyObject
+from experience.drafting_interfaces.drafting_types import *
 
 if TYPE_CHECKING:
     from experience.drafting_interfaces import DrawingPageSetup, DrawingView, DrawingViews, PrintArea
+    from experience.inf_interfaces.inf_types import *
 
 class DrawingSheet(AnyObject):
     """
@@ -21,70 +23,41 @@ class DrawingSheet(AnyObject):
         super().__init__(com)
         self.drawing_sheet = com
 
-    def gen_views_pos_mode(self, value: int = None) -> int:
+    def gen_views_pos_mode(self, value: CatSheetGenViewsPosMode = None) -> Union['DrawingSheet', CatSheetGenViewsPosMode]:
         if value is not None:
-            self.drawing_sheet.GenViewsPosMode = value
+            self.drawing_sheet.GenViewsPosMode = int(value)
             return self
-        return self.drawing_sheet.GenViewsPosMode
+        return CatSheetGenViewsPosMode.item(self.drawing_sheet.GenViewsPosMode)
 
-    def orientation(self, value: int = None) -> int:
-        """
-        enum CatPaperOrientation {
-        catPaperPortrait,
-        catPaperLandscape,
-        catPaperBestFit
-        } 
-        """
+    def orientation(self, value: 'CatPaperOrientation' = None) -> Union['DrawingSheet', 'CatPaperOrientation']:
         if value is not None:
-            self.drawing_sheet.Orientation = value
+            self.drawing_sheet.Orientation = int(value)
             return self
-        return self.drawing_sheet.Orientation
+        from experience.inf_interfaces.inf_types import CatPaperOrientation
+        return CatPaperOrientation.item(self.drawing_sheet.Orientation)
 
 
     def page_setup(self) -> 'DrawingPageSetup':
         from experience.drafting_interfaces import DrawingPageSetup
         return DrawingPageSetup(self.drawing_sheet.PageSetup)
 
-    def paper_size(self, value: int = None) -> int:
-        """
-        enum CatPaperSize {
-        catPaperLetter,
-        catPaperLegal,
-        catPaperA0,
-        catPaperA1,
-        catPaperA2,
-        catPaperA3,
-        catPaperA4,
-        catPaperA,
-        catPaperB,
-        catPaperC,
-        catPaperD,
-        catPaperE,
-        catPaperF,
-        catPaperUser
-        } 
-        """
+    def paper_size(self, value: 'CatPaperSize' = None) -> Union['DrawingSheet', 'CatPaperSize']:
         if value is not None:
-            self.drawing_sheet.PaperSize = value
+            self.drawing_sheet.PaperSize = int(value)
             return self
-        return self.drawing_sheet.PaperSize
+        from experience.inf_interfaces.inf_types import CatPaperSize
+        return CatPaperSize.item(self.drawing_sheet.PaperSize)
 
 
     def print_area(self) -> 'PrintArea':
         from experience.drafting_interfaces import PrintArea
         return PrintArea(self.drawing_sheet.PrintArea)
 
-    def projection_method(self, value: int = None) -> int:
-        """
-        enum CatSheetProjectionMethod {
-        catFirstAngle,
-        catThirdAngle
-        } 
-        """
+    def projection_method(self, value: CatSheetProjectionMethod = None) -> Union['DrawingSheet', CatSheetProjectionMethod]:
         if value is not None:
-            self.drawing_sheet.ProjectionMethod = value
+            self.drawing_sheet.ProjectionMethod = int(value)
             return self
-        return self.drawing_sheet.ProjectionMethod
+        return CatSheetProjectionMethod.item(self.drawing_sheet.ProjectionMethod)
 
     def scale(self, value: float = None) -> float:
         if value is not None:
@@ -108,7 +81,6 @@ class DrawingSheet(AnyObject):
         return DrawingViews(self.drawing_sheet.Views)
     
     def active_view(self) -> 'DrawingView':
-        from experience.drafting_interfaces import DrawingView
         return self.views().active_view()
 
     def activate(self) -> 'DrawingSheet':
@@ -178,9 +150,9 @@ class DrawingSheet(AnyObject):
         self.drawing_sheet.Update()
         return self
 
-    def reorder_views(self, i_ordered_views: tuple) -> 'DrawingSheet':
+    def reorder_views(self, i_ordered_views: list) -> 'DrawingSheet':
         self.drawing_sheet.reorder_Views(i_ordered_views)
         return self
 
     def __repr__(self):
-        return f'DrawingSheet(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'
