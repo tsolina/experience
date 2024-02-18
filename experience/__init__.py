@@ -23,7 +23,7 @@ from .inf_interfaces import Application, Camera, Cameras, Camera3D, Editor, Edit
 from .inf_interfaces import SelectedElement, Selection, Service, Viewer, Viewpoint2D, Viewer2D, Viewpoint3D, Viewer3D, Viewers, VisPropertySet, Window, Windows, Workbench
 from .inf_interfaces import Move, Position, Services, VisuServices, EditorServices
 
-from .inf_os_idl_interfaces import CatFileSelectionMode, FileComponent, FileSystem, File, Files, Folder, Folders, SystemConfiguration, TextStream
+from .inf_os_idl_interfaces import CatFileSelectionMode, FileComponent, FileSystem, File, Files, Folder, Folders, SystemConfiguration, TextStream, MacrosSettingAtt
 
 from .knowledge_interfaces import BoolParam, EnumParam, IntParam, KnowledgeActivateObject, KnowledgeObject, ParameterSet, ParameterSets, Parameter, RealParam, Relation
 from .knowledge_interfaces import StrParam, Unit, Units, Dimension, List, ListParameter, Parameters, Relations, Angle, Length, Check, DesignTable, Law, Formula, Rule
