@@ -1,6 +1,7 @@
 import traceback
 
 try:
+    # import experience as exp
     from experience import * # DrawingReady
 
     with DrawingReady() as cat:
@@ -46,7 +47,7 @@ try:
             return sheet.get_paper_height()
         
         def get_offset() -> float:
-            if sheet.paper_size() == 2 or sheet.paper_size() == 3 or sheet.paper_size() == 13 and (get_width() > 594 or get_height() > 594):
+            if (sheet.paper_size()) == 2 or sheet.paper_size() == 3 or sheet.paper_size() == 13 and (get_width() > 594 or get_height() > 594):
                 return 20
             else:
                 return 10
@@ -91,7 +92,7 @@ try:
             text = texts.add("", get_width() - get_offset(), get_offset()).name("Reference_" + get_macro_id())
 
         def get_display_format() -> str:
-            return ["Letter","Legal","A0","A1","A2","A3","A4","A","B","C","D","E","F","User"][sheet.paper_size()]
+            return ["Letter","Legal","A0","A1","A2","A3","A4","A","B","C","D","E","F","User"][int(sheet.paper_size())]
 
         def get_col_rev(idx: int) -> int:
             cols = [-190, -175, -140, -20]
@@ -233,13 +234,13 @@ try:
             y[4] = y[1] + 5.5
             y[5] = y[1] - r1
             y[6] = y[1] - r2
-            y[7] = 2 * y[1] - y[4]     
+            y[7] = 2 * y[1] - y[4]  
 
             if sheet.projection_method() != 0:
-                x_tmp = x[1]
-                x[1] = x[0] + x[4] - x[2]
-                x[2] = x[0] + x[4] - x_tmp
-                x[3] = x[0] + x[4] - x[3]
+                x_tmp = x[2]
+                x[2] = x[1] + x[5] - x[3]
+                x[3] = x[1] + x[5] - x_tmp
+                x[4] = x[1] + x[5] - x[4]
 
             fact.create_line(x[1], y[1], x[5], y[1]).name("TitleBlock_Standard_Line_Axis_1")
             fact.create_line(x[4], y[7], x[4], y[4]).name("TitleBlock_Standard_Line_Axis_2")

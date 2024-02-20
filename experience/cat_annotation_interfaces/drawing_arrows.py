@@ -1,7 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.cat_annotation_interfaces import DrawingArrow
 from experience.system import Collection
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class DrawingArrows(Collection):
     """
@@ -20,7 +23,7 @@ class DrawingArrows(Collection):
     def add(self, i_head_point_x: float, i_head_point_y: float, i_tail_point_x: float, i_tail_point_y: float) -> DrawingArrow:
         return DrawingArrow(self.drawing_arrows.Add(i_head_point_x, i_head_point_y, i_tail_point_x, i_tail_point_y))
 
-    def item(self, i_index: int) -> DrawingArrow:
+    def item(self, i_index: 'cat_variant') -> DrawingArrow:
         return DrawingArrow(self.drawing_arrows.Item(i_index))
 
     def remove(self, i_index: int) -> 'DrawingArrows':
@@ -38,4 +41,4 @@ class DrawingArrows(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingArrows(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

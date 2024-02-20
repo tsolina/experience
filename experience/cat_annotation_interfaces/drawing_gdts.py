@@ -1,5 +1,6 @@
 from typing import Iterator
 
+from experience.cat_annotation_interfaces.annotation_types import *
 from experience.cat_annotation_interfaces import DrawingGDT
 from experience.system import Collection
 
@@ -17,8 +18,8 @@ class DrawingGDTs(Collection):
         super().__init__(com, child=DrawingGDT)
         self.drawing_gdts = com
 
-    def add(self, i_position_leader_x: float, i_position_leader_y: float, i_position_x: float, i_position_y: float, i_gdts_symbol: int, i_text: str) -> DrawingGDT:
-        return DrawingGDT(self.drawing_gdts.Add(i_position_leader_x, i_position_leader_y, i_position_x, i_position_y, i_gdts_symbol, i_text))
+    def add(self, i_position_leader_x: float, i_position_leader_y: float, i_position_x: float, i_position_y: float, i_gdts_symbol: AnnotationToleranceType, i_text: str) -> DrawingGDT:
+        return DrawingGDT(self.drawing_gdts.Add(i_position_leader_x, i_position_leader_y, i_position_x, i_position_y, int(i_gdts_symbol), i_text))
 
     def item(self, i_index: int) -> DrawingGDT:
         return DrawingGDT(self.drawing_gdts.Item(i_index))
@@ -37,4 +38,4 @@ class DrawingGDTs(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingGDTs(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

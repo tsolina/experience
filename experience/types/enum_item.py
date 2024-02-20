@@ -13,3 +13,7 @@ class EnumItem(Enum):
     
     def __int__(self):
         return self.value
+    
+    # - seems that automatic conversion does correct job -
+    # def __eq__(self, value: 'EnumItem') -> bool:
+    #     return self.value == int(value)

@@ -21,21 +21,6 @@ class CatPaperSize(EnumItem):
     catPaperF = 12
     catPaperUser = 13
 
-# class CatDrawingViewType(EnumItem):
-#     catViewBackground = 0
-#     catViewFront = 1
-#     catViewLeft = 2
-#     catViewRight = 3
-#     catViewTop = 4
-#     catViewBottom = 5
-#     catViewRear = 6
-#     catViewAuxiliary = 7
-#     catViewIsom = 8
-#     catViewSection = 9
-#     catViewSectionCut = 10
-#     catViewDetail = 11
-#     catViewUntyped = 12
-#     catViewMain = 13
-#     catViewPure_Sketch = 14
-#     catViewUnfolded = 15
-#     catViewAxonometric = 16
+if __name__ == "__main__":
+    val = CatPaperSize.catPaperA0
+    print(val, val == CatPaperSize.catPaperA1, val != CatPaperSize.catPaperA1)

@@ -23,6 +23,12 @@ class Status(Enum):
 
     def __int__(self):
         return self.value
+    
+    def name(self):
+        return self.__class__.__name__
+    
+    def __repr__(self):
+        return f'{self.__class__.__name__}(name="{self.name()}")'
 
 try:
     from experience import *
@@ -34,11 +40,24 @@ try:
         sel = app.active_editor().selection()
         print("sel", sel.count())
         if sel.count():
-            obj = sel.item(1).value(DrawingComponent)
-            #print(obj.drawing_component.GetMatrix())
-            #print(obj.get_matrix())
-            # return f'{self.__class__.__name__}(name="{self.name()}")'
-            print(cat.drawing.active_sheet().print_area().get_area())
+            obj = sel.item(1).value(DrawingTable)
+            print(obj.get_cell_border_type(1,1))
+            border = obj.get_cell_border(1, 3).backslash(False).slash(False)
+            print(border, border.col(), border.row())
+            obj.set_cell_border(border)
+
+            border1 = DrawingCellBorder(0, 2, 3).backslash(True).slash(True)
+            obj.set_cell_border(border1)
+
+            border2 = DrawingCellBorder().col(5).row(2).backslash(True).slash(True)
+            obj.set_cell_border(border2)
+
+            obj.set_cell_border(DrawingCellBorder(0, 2, 1).top(True).bottom(True).slash(True).backslash(True))
+            obj.set_cell_border(DrawingCellBorder(0, 1, 1).activate_all().backslash(False))
+            #print(obj.get_bault_text(AnnotationValueIndex.main_value))
+            #print(obj.drawing_dim_line.GetDimLineDir())
+
+            #print(cat.drawing.active_sheet().print_area().get_area())
 
 
         # def some_func(i_type: Status):

@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING, Union
 
 from experience.system import AnyObject
+from experience.cat_annotation_interfaces.annotation_types import *
 
 if TYPE_CHECKING:
     from experience.cat_annotation_interfaces import DrawingLeaders
@@ -31,17 +32,17 @@ class DrawingLeader(AnyObject):
             return self
         return self.drawing_leader.AnchorPoint
 
-    def anchor_symbol(self, value: int = None) -> Union['DrawingLeader', int]:
+    def anchor_symbol(self, value: AnnotationAnchorType = None) -> Union['DrawingLeader', AnnotationAnchorType]:
         if value is not None:
-            self.drawing_leader.AnchorSymbol = value
+            self.drawing_leader.AnchorSymbol = int(value)
             return self
-        return self.drawing_leader.AnchorSymbol
+        return AnnotationAnchorType.item(self.drawing_leader.AnchorSymbol)
 
-    def head_symbol(self, value: int = None) -> Union['DrawingLeader', int]:
+    def head_symbol(self, value: CatSymbolType = None) -> Union['DrawingLeader', CatSymbolType]:
         if value is not None:
-            self.drawing_leader.HeadSymbol = value
+            self.drawing_leader.HeadSymbol = int(value)
             return self
-        return self.drawing_leader.HeadSymbol
+        return CatSymbolType.item(self.drawing_leader.HeadSymbol)
 
     def head_target(self, value: AnyObject = None) -> Union['DrawingLeader', AnyObject]:
         if value is not None:
@@ -89,4 +90,4 @@ class DrawingLeader(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingLeader(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

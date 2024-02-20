@@ -1,6 +1,6 @@
 from typing import Union
 from experience.system import AnyObject
-
+from experience.cat_annotation_interfaces.annotation_types import *
 
 class DrawingTextProperties(AnyObject):
     """
@@ -15,17 +15,17 @@ class DrawingTextProperties(AnyObject):
         super().__init__()
         self.drawing_text_properties = com
 
-    def anchor_point(self, value: int = None) -> Union['DrawingTextProperties', int]:
+    def anchor_point(self, value: CatTextAnchorPosition = None) -> Union['DrawingTextProperties', CatTextAnchorPosition]:
         if value is not None:
-            self.drawing_text_properties.AnchorPoint = value
+            self.drawing_text_properties.AnchorPoint = int(value)
             return self
-        return self.drawing_text_properties.AnchorPoint
+        return CatTextAnchorPosition.item(self.drawing_text_properties.AnchorPoint)
 
-    def blanking(self, value: int = None) ->  Union['DrawingTextProperties', int]:
+    def blanking(self, value: CatBlankingMode = None) ->  Union['DrawingTextProperties', CatBlankingMode]:
         if value is not None:
-            self.drawing_text_properties.Blanking = value
+            self.drawing_text_properties.Blanking = int(value)
             return self
-        return self.drawing_text_properties.Blanking
+        return CatBlankingMode.item(self.drawing_text_properties.Blanking)
 
     def bold(self, value: int = None) ->  Union['DrawingTextProperties', int]:
         if value is not None:
@@ -51,11 +51,11 @@ class DrawingTextProperties(AnyObject):
             return self
         return self.drawing_text_properties.FontSize
 
-    def frame_type(self, value: int = None) ->  Union['DrawingTextProperties', int]:
+    def frame_type(self, value: CatTextFrameType = None) ->  Union['DrawingTextProperties', CatTextFrameType]:
         if value is not None:
-            self.drawing_text_properties.FrameType = value
+            self.drawing_text_properties.FrameType = int(value)
             return self
-        return self.drawing_text_properties.FrameType
+        return CatTextFrameType.item(self.drawing_text_properties.FrameType)
 
     def italic(self, value: int = None) ->  Union['DrawingTextProperties', int]:
         if value is not None:
@@ -63,11 +63,11 @@ class DrawingTextProperties(AnyObject):
             return self
         return self.drawing_text_properties.Italic
 
-    def justification(self, value: int = None) ->  Union['DrawingTextProperties', int]:
+    def justification(self, value: CatJustification = None) ->  Union['DrawingTextProperties', CatJustification]:
         if value is not None:
-            self.drawing_text_properties.Justification = value
+            self.drawing_text_properties.Justification = int(value)
             return self
-        return self.drawing_text_properties.Justification
+        return CatJustification.item(self.drawing_text_properties.Justification)
 
     def kerning(self, value: int = None) ->  Union['DrawingTextProperties', int]:
         if value is not None:
@@ -75,11 +75,11 @@ class DrawingTextProperties(AnyObject):
             return self
         return self.drawing_text_properties.Kerning
 
-    def mirror(self, value: int = None) ->  Union['DrawingTextProperties', int]:
+    def mirror(self, value: CatTextFlipMode = None) ->  Union['DrawingTextProperties', CatTextFlipMode]:
         if value is not None:
-            self.drawing_text_properties.Mirror = value
+            self.drawing_text_properties.Mirror = int(value)
             return self
-        return self.drawing_text_properties.Mirror
+        return CatTextFlipMode.item(self.drawing_text_properties.Mirror)
 
     def overline(self, value: int = None) ->  Union['DrawingTextProperties', int]:
         if value is not None:
@@ -111,8 +111,8 @@ class DrawingTextProperties(AnyObject):
             return self
         return self.drawing_text_properties.Underline
 
-    def activate_frame(self, i_type: int) -> 'DrawingTextProperties':
-        self.drawing_text_properties.ActivateFrame(i_type)
+    def activate_frame(self, i_type: CatTextFrameType) -> 'DrawingTextProperties':
+        self.drawing_text_properties.ActivateFrame(int(i_type))
         return self
 
     def update(self) -> 'DrawingTextProperties':
@@ -120,4 +120,4 @@ class DrawingTextProperties(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingTextProperties(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -40,8 +40,9 @@ class DrawingCoordDim(AnyObject):
             return self
         return self.drawing_coord_dim.y
 
-    def get_coord_values(self, o_type: int, o_x: float, o_y: float, o_z: float) -> tuple:
-        return self.drawing_coord_dim.GetCoordValues(o_type, o_x, o_y, o_z)
+    def get_coord_values(self) -> tuple[int, float, float, float]: #, o_type: int, o_x: float, o_y: float, o_z: float
+        """" - r values: o_type(0: 2D coordinate dimension, 1: 3D coordinate dimension), o_x, o_y, o_z """
+        return self.drawing_coord_dim.GetCoordValues()
 
     def __repr__(self):
-        return f'DrawingCoordDim(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

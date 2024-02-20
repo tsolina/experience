@@ -1,5 +1,6 @@
 from typing import Union, TYPE_CHECKING
 from experience.system import AnyObject#, CATBaseDispatch
+from experience.cat_annotation_interfaces.annotation_types import *
 
 if TYPE_CHECKING:
     from experience.cat_annotation_interfaces import DrawingLeaders, DrawingTextProperties
@@ -18,35 +19,11 @@ class DrawingText(AnyObject):
         super().__init__(com)
         self.drawing_text = com
 
-    def anchor_position(self, value: int = None) -> Union['DrawingText', int]:
-        """
-        enum CatTextAnchorPosition {
-        catUnsusedValue1 = 0,
-        catTopLeft = 1,
-        catMiddleLeft = 2,
-        catBottomLeft = 3,
-        catTopCenter = 4,
-        catMiddleCenter = 5,
-        catBottomCenter = 6,
-        catTopRight = 7,
-        catMiddleRight = 8,
-        catBottomRight = 9,
-        catUnsusedValue2 = 10,
-        catCapLeft = 11,
-        catHalfLeft = 12,
-        catBaseLeft = 13,
-        catCapCenter = 14,
-        catHalfCenter = 15,
-        catBaseCenter = 16,
-        catCapRight = 17,
-        catHalfRight = 18,
-        catBaseRight = 19
-        } 
-        """
+    def anchor_position(self, value: CatTextAnchorPosition = None) -> Union['DrawingText', CatTextAnchorPosition]:
         if value is not None:
-            self.drawing_text.AnchorPosition = value
+            self.drawing_text.AnchorPosition = int(value)
             return self
-        return self.drawing_text.AnchorPosition
+        return CatTextAnchorPosition.item(self.drawing_text.AnchorPosition)
 
     def angle(self, value: float = None) -> Union['DrawingText', float]:
         if value is not None:
@@ -54,17 +31,17 @@ class DrawingText(AnyObject):
             return self
         return self.drawing_text.Angle
 
-    def associative_element(self, value:AnyObject = None) -> Union['DrawingText', AnyObject]:
+    def associative_element(self, value: AnyObject = None) -> Union['DrawingText', AnyObject]:
         if value is not None:
             self.drawing_text.AssociativeElement = value._com
             return self
         return AnyObject(self.drawing_text.AssociativeElement)
 
-    def frame_type(self, value: int = None) -> Union['DrawingText', int]:
+    def frame_type(self, value: CatTextFrameType = None) -> Union['DrawingText', CatTextFrameType]:
         if value is not None:
-            self.drawing_text.FrameType = value
+            self.drawing_text.FrameType = int(value)
             return self
-        return self.drawing_text.FrameType
+        return CatTextFrameType.item(self.drawing_text.FrameType)
 
     def leaders(self) -> 'DrawingLeaders':
         from experience.cat_annotation_interfaces import DrawingLeaders
@@ -113,8 +90,8 @@ class DrawingText(AnyObject):
             return self
         return self.drawing_text.y
 
-    def activate_frame(self, itype: int) -> 'DrawingText':
-        self.drawing_text.ActivateFrame(itype)
+    def activate_frame(self, itype: CatTextFrameType) -> 'DrawingText':
+        self.drawing_text.ActivateFrame(int(itype))
         return self
 
     def get_font_name(self, i_first, inb_character) -> str:
@@ -152,8 +129,8 @@ class DrawingText(AnyObject):
         self.drawing_text.SetModifiableIn2DComponentInstances()
         return self
 
-    def set_parameter_on_sub_string(self, i_param: int, i_first: int, inb_character: int, i_val: int) -> 'DrawingText':
-        self.drawing_text.SetParameterOnSubString(i_param, i_first, inb_character, i_val)
+    def set_parameter_on_sub_string(self, i_param: CatTextProperty, i_first: int, inb_character: int, i_val: int) -> 'DrawingText':
+        self.drawing_text.SetParameterOnSubString(int(i_param), i_first, inb_character, i_val)
         return self
 
     def solve_link(self, ip_obj: AnyObject) -> 'DrawingText':
@@ -161,4 +138,4 @@ class DrawingText(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingText(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -1,5 +1,6 @@
 from typing import Iterator, TYPE_CHECKING
 
+from experience.cat_annotation_interfaces.annotation_types import *
 from experience.cat_annotation_interfaces import DrawingDimension
 from experience.system import Collection
 
@@ -20,10 +21,10 @@ class DrawingDimensions(Collection):
         super().__init__(com, _child=DrawingDimension)
         self.drawing_dimensions = com
 
-    def add(self, i_type_dim: int, i_geom_elem: tuple, i_pt_coord_elem: tuple, i_line_rep: int) -> DrawingDimension:
-        return DrawingDimension(self.drawing_dimensions.Add(i_type_dim, i_geom_elem, i_pt_coord_elem, i_line_rep))
+    def add(self, i_type_dim: int, i_geom_elem: list, i_pt_coord_elem: list, i_line_rep: CatDimLineRep) -> DrawingDimension:
+        return DrawingDimension(self.drawing_dimensions.Add(i_type_dim, i_geom_elem, i_pt_coord_elem, int(i_line_rep)))
 
-    def add2(self, i_type_dim: int, i_geom_elem: tuple, i_pt_coord_elem: tuple, i_ldc_ref_elem: 'cat_variant', i_ldc_ref_angle: int) -> DrawingDimension:
+    def add2(self, i_type_dim: int, i_geom_elem: list, i_pt_coord_elem: list, i_ldc_ref_elem: 'cat_variant', i_ldc_ref_angle: int) -> DrawingDimension:
         return DrawingDimension(self.drawing_dimensions.Add2(i_type_dim, i_geom_elem, i_pt_coord_elem, i_ldc_ref_elem, i_ldc_ref_angle))
 
     def item(self, i_index: 'cat_variant') -> DrawingDimension:
@@ -44,4 +45,4 @@ class DrawingDimensions(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingDimensions(name="{self.name}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

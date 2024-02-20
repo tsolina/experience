@@ -36,7 +36,7 @@ class DrawingDimExtLine(AnyObject):
             return self
         return self.drawing_dim_ext_line.Thickness
 
-    def add_interrupt(self, i_index: int, i_two_points: tuple) -> 'DrawingDimExtLine':
+    def add_interrupt(self, i_index: int, i_two_points: list) -> 'DrawingDimExtLine':
         self.drawing_dim_ext_line.AddInterrupt(i_index, i_two_points)
         return self
 
@@ -79,4 +79,4 @@ class DrawingDimExtLine(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingDimExtLine(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

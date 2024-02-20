@@ -1,8 +1,10 @@
 from experience.system import AnyObject
 from typing import TYPE_CHECKING, Union
+from experience.cat_annotation_interfaces.annotation_types import *
 
 if TYPE_CHECKING:
     from experience.cat_annotation_interfaces import DrawingText, DrawingLeaders, DrawingTextProperties
+    from experience.cat_annotation_interfaces import DrawingCellBorder
 
 class DrawingTable(AnyObject):
     """
@@ -18,11 +20,11 @@ class DrawingTable(AnyObject):
         super().__init__(com)
         self.drawing_table = com
 
-    def anchor_point(self, value: int = None) -> Union['DrawingTable', int]:
+    def anchor_point(self, value: CatTablePosition = None) -> Union['DrawingTable', CatTablePosition]:
         if value is not None:
-            self.drawing_table.AnchorPoint = value
+            self.drawing_table.AnchorPoint = int(value)
             return self
-        return self.drawing_table.AnchorPoint
+        return CatTablePosition.item(self.drawing_table.AnchorPoint)
 
     def angle(self, value: float = None) -> Union['DrawingTable', float]:
         if value is not None:
@@ -30,11 +32,11 @@ class DrawingTable(AnyObject):
             return self
         return self.drawing_table.Angle
 
-    def compute_mode(self, value: int = None) -> Union['DrawingTable', int]:
+    def compute_mode(self, value: CatTableComputeMode = None) -> Union['DrawingTable', CatTableComputeMode]:
         if value is not None:
-            self.drawing_table.ComputeMode = value
+            self.drawing_table.ComputeMode = int(value)
             return self
-        return self.drawing_table.ComputeMode
+        return CatTableComputeMode.item(self.drawing_table.ComputeMode)
 
     def leaders(self) -> 'DrawingLeaders':
         from experience.cat_annotation_interfaces import DrawingLeaders
@@ -76,11 +78,15 @@ class DrawingTable(AnyObject):
         self.drawing_table.AddRow(i_row)
         return self
 
-    def get_cell_alignment(self, i_row: int, i_col: int) -> int:
-        return self.drawing_table.GetCellAlignment(i_row, i_col)
+    def get_cell_alignment(self, i_row: int, i_col: int) -> CatTablePosition:
+        return CatTablePosition.item(self.drawing_table.GetCellAlignment(i_row, i_col))
 
     def get_cell_border_type(self, i_row: int, i_col: int) -> int:
         return self.drawing_table.GetCellBorderType(i_row, i_col)
+    
+    def get_cell_border(self, i_row: int, i_col: int) -> 'DrawingCellBorder':
+        from experience.cat_annotation_interfaces import DrawingCellBorder
+        return DrawingCellBorder(self.get_cell_border_type(i_row, i_col), i_row, i_col)
 
     def get_cell_name(self, i_row: int, i_col: int) -> str:
         return self.drawing_table.GetCellName(i_row, i_col)
@@ -105,8 +111,8 @@ class DrawingTable(AnyObject):
     def get_row_size(self, i_row: int) -> float:
         return self.drawing_table.GetRowSize(i_row)
 
-    def invert_mode(self, i_mode: int) -> 'DrawingTable':
-        self.drawing_table.InvertMode(i_mode)
+    def invert_mode(self, i_mode: CatTableInvertMode) -> 'DrawingTable':
+        self.drawing_table.InvertMode(int(i_mode))
         return self
 
     def merge_cells(self, i_first_row, i_first_col, i_nb_row_merge, i_nb_col_merge) -> 'DrawingTable':
@@ -129,13 +135,16 @@ class DrawingTable(AnyObject):
         self.drawing_table.Rotate(i_delta_angle)
         return self
 
-    def set_cell_alignment(self, i_row: int, i_col: int, i_align: int) -> 'DrawingTable':
-        self.drawing_table.SetCellAlignment(i_row, i_col, i_align)
+    def set_cell_alignment(self, i_row: int, i_col: int, i_align: CatTablePosition) -> 'DrawingTable':
+        self.drawing_table.SetCellAlignment(i_row, i_col, int(i_align))
         return self
 
     def set_cell_border_type(self, i_row: int, i_col: int, i_type: int) -> 'DrawingTable':
         self.drawing_table.SetCellBorderType(i_row, i_col, i_type)
         return self
+    
+    def set_cell_border(self, i_border: 'DrawingCellBorder'):
+        self.set_cell_border_type(i_border.row(), i_border.col(), i_border.value())
 
     def set_cell_image(self, i_row: int, i_col: int, i_path: str) -> 'DrawingTable':
         self.drawing_table.SetCellImage(i_row, i_col, i_path)
@@ -166,4 +175,4 @@ class DrawingTable(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingTable(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

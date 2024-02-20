@@ -1,8 +1,16 @@
 from typing import TYPE_CHECKING, Union
-
+from experience.cat_annotation_interfaces.annotation_types import *
 from experience.cat_annotation_interfaces import DrawingDimExtLine, DrawingDimLine, DrawingDimValue
 from experience.knowledge_interfaces import Parameters
 from experience.system import AnyObject
+
+from experience.types.enum_item import EnumItem
+class AnnotationSymbolsSideType(EnumItem):
+    automatic_positioning = 0
+    inside = 1
+    outside = 2
+    first_in_second_out = 3
+    first_out_second_in = 4
 
 class DrawingDimension(AnyObject):
     """
@@ -21,20 +29,17 @@ class DrawingDimension(AnyObject):
     def cumulate_mode(self) -> bool:
         return self.drawing_dimension.CumulateMode
 
-    def dim_status(self, value: int = None) -> Union['DrawingDimension', int]:
-        if value is not None:
-            self.drawing_dimension.DimStatus = value
-            return self
-        return self.drawing_dimension.DimStatus
+    def dim_status(self) -> CatDimAnalyse:
+        return CatDimAnalyse.item(self.drawing_dimension.DimStatus)
 
-    def dim_type(self) -> int:
-        return self.drawing_dimension.DimType
+    def dim_type(self) -> CatDimType:
+        return CatDimType.item(self.drawing_dimension.DimType)
 
-    def dual_value(self, value: int = None) -> Union['DrawingDimension', int]:
+    def dual_value(self, value: CatDimDualDisplay = None) -> Union['DrawingDimension', CatDimDualDisplay]:
         if value is not None:
-            self.drawing_dimension.DualValue = value
+            self.drawing_dimension.DualValue = int(value)
             return self
-        return self.drawing_dimension.DualValue
+        return CatDimDualDisplay.item(self.drawing_dimension.DualValue)
 
     def forshortened(self, value: bool = None) -> Union['DrawingDimension', bool]:
         if value is not None:
@@ -60,11 +65,11 @@ class DrawingDimension(AnyObject):
     def parameters(self) -> Parameters:
         return Parameters(self.drawing_dimension.Parameters)
 
-    def symbols_side(self, value: int = None) -> Union['DrawingDimension', int]:
+    def symbols_side(self, value: AnnotationSymbolsSideType = None) -> Union['DrawingDimension', AnnotationSymbolsSideType]:
         if value is not None:
-            self.drawing_dimension.SymbolsSide = value
+            self.drawing_dimension.SymbolsSide = int(value)
             return self
-        return self.drawing_dimension.SymbolsSide
+        return AnnotationSymbolsSideType.item(self.drawing_dimension.SymbolsSide)
 
     def true_dim_mode(self) -> bool:
         return self.drawing_dimension.TrueDimMode
@@ -87,11 +92,11 @@ class DrawingDimension(AnyObject):
             return self
         return self.drawing_dimension.ValueDisplay
 
-    def value_frame(self, value: int = None) -> Union['DrawingDimension', int]:
+    def value_frame(self, value: CatDimFrame = None) -> Union['DrawingDimension', CatDimFrame]:
         if value is not None:
-            self.drawing_dimension.ValueFrame = value
+            self.drawing_dimension.ValueFrame = int(value)
             return self
-        return self.drawing_dimension.ValueFrame
+        return CatDimFrame.item(self.drawing_dimension.ValueFrame)
 
     def value_in_out(self, value: int = None) -> Union['DrawingDimension', int]:
         if value is not None:
@@ -99,17 +104,17 @@ class DrawingDimension(AnyObject):
             return self
         return self.drawing_dimension.ValueInOut
 
-    def value_orientation(self, value: int = None) -> Union['DrawingDimension', int]:
+    def value_orientation(self, value: CatDimOrientation = None) -> Union['DrawingDimension', CatDimOrientation]:
         if value is not None:
-            self.drawing_dimension.ValueOrientation = value
+            self.drawing_dimension.ValueOrientation = int(value)
             return self
-        return self.drawing_dimension.ValueOrientation
+        return CatDimOrientation.item(self.drawing_dimension.ValueOrientation)
 
-    def value_reference(self, value: int = None) -> int:
+    def value_reference(self, value: CatDimReference = None) -> CatDimReference:
         if value is not None:
-            self.drawing_dimension.ValueReference = value
+            self.drawing_dimension.ValueReference = int(value)
             return self
-        return self.drawing_dimension.ValueReference
+        return CatDimReference.item(self.drawing_dimension.ValueReference)
 
     def get_boundary_box(self) -> tuple: #CATSafeArrayVariant oValues
         return self.drawing_dimension.GetBoundaryBox()
@@ -150,4 +155,4 @@ class DrawingDimension(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DrawingDimension(name="{self.name}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

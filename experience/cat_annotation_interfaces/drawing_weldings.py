@@ -1,7 +1,11 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
+from experience.cat_annotation_interfaces.annotation_types import *
 from experience.cat_annotation_interfaces import DrawingWelding
 from experience.system import Collection
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class DrawingWeldings(Collection):
     """
@@ -17,13 +21,13 @@ class DrawingWeldings(Collection):
         super().__init__(com, child=DrawingWelding)
         self.drawing_weldings = com
 
-    def add(self, i_symbol: int, i_position_x: float, i_position_y: float) -> DrawingWelding:
-        return DrawingWelding(self.drawing_weldings.Add(i_symbol, i_position_x, i_position_y))
+    def add(self, i_symbol: CatWeldingSymbol, i_position_x: float, i_position_y: float) -> DrawingWelding:
+        return DrawingWelding(self.drawing_weldings.Add(int(i_symbol), i_position_x, i_position_y))
 
-    def item(self, i_index: int) -> DrawingWelding:
+    def item(self, i_index: 'cat_variant') -> DrawingWelding:
         return DrawingWelding(self.drawing_weldings.Item(i_index))
 
-    def remove(self, i_index: int) -> 'DrawingWeldings':
+    def remove(self, i_index: 'cat_variant') -> 'DrawingWeldings':
         self.drawing_weldings.Remove(i_index)
         return self
 
@@ -38,4 +42,4 @@ class DrawingWeldings(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingWeldings(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

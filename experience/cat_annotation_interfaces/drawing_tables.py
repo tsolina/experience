@@ -1,7 +1,10 @@
-from typing import Iterator
+from typing import Iterator, TYPE_CHECKING
 
 from experience.cat_annotation_interfaces import DrawingTable
 from experience.system import Collection
+
+if TYPE_CHECKING:
+    from experience.types import cat_variant
 
 class DrawingTables(Collection):
     """
@@ -20,10 +23,10 @@ class DrawingTables(Collection):
     def add(self, i_position_x: float, i_position_y: float, i_number_of_row: int, i_number_of_column: int, i_row_height: float, i_column_width: float) -> DrawingTable:
         return DrawingTable(self.drawing_tables.Add(i_position_x, i_position_y, i_number_of_row, i_number_of_column, i_row_height, i_column_width))
 
-    def item(self, i_index: int) -> DrawingTable:
+    def item(self, i_index: 'cat_variant') -> DrawingTable:
         return DrawingTable(self.drawing_tables.Item(i_index))
 
-    def remove(self, i_index: int) -> 'DrawingTables':
+    def remove(self, i_index: 'cat_variant') -> 'DrawingTables':
         return self.drawing_tables.Remove(i_index)
 
     def __getitem__(self, n: int) -> DrawingTable:
@@ -37,4 +40,4 @@ class DrawingTables(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'DrawingTables(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

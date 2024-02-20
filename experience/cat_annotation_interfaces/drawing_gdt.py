@@ -1,5 +1,5 @@
 from experience.system import AnyObject
-# from experience.cat_annotation_interfaces import DrawingTextRange
+from experience.cat_annotation_interfaces.annotation_types import *
 
 from typing import TYPE_CHECKING, Union
 if TYPE_CHECKING:
@@ -54,12 +54,12 @@ class DrawingGDT(AnyObject):
         from experience.cat_annotation_interfaces import DrawingTextRange
         return DrawingTextRange(self.drawing_gdt.GetTextRange(i_row_number, i_number))
 
-    def get_tolerance_type(self, i_row_number: int) -> int:
-        return self.drawing_gdt.GetToleranceType(i_row_number)
+    def get_tolerance_type(self, i_row_number: int) -> AnnotationToleranceType:
+        return AnnotationToleranceType.item(self.drawing_gdt.GetToleranceType(i_row_number))
 
-    def set_tolerance_type(self, i_row_number: int, i_gdt_symbol: int) -> 'DrawingGDT':
-        self.drawing_gdt.SetToleranceType(i_row_number, i_gdt_symbol)
+    def set_tolerance_type(self, i_row_number: int, i_gdt_symbol: AnnotationToleranceType) -> 'DrawingGDT':
+        self.drawing_gdt.SetToleranceType(i_row_number, int(i_gdt_symbol))
         return self
 
     def __repr__(self):
-        return f'DrawingGDT(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'
