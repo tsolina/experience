@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Union
 
 from experience.system import AnyObject
 from experience.drafting_interfaces.drafting_types import *
@@ -26,7 +26,7 @@ class DrawingView(AnyObject):
         super().__init__(com)
         self.drawing_view = com
 
-    def angle(self, value: float = None) -> float:
+    def angle(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.Angle = value
             return self
@@ -67,7 +67,7 @@ class DrawingView(AnyObject):
         from experience.cat_sketcher_interfaces import Factory2D
         return Factory2D(self.drawing_view.Factory2D)
 
-    def frame_visualization(self, value: bool = None) -> bool:
+    def frame_visualization(self, value: bool = None) -> Union['DrawingView', bool]:
         if value is not None:
             self.drawing_view.FrameVisualization = value
             return self
@@ -93,7 +93,7 @@ class DrawingView(AnyObject):
     def is_relation_activated(self) -> bool:
         return self.drawing_view.IsRelationActivated
 
-    def lock_status(self, value: bool = None) -> bool:
+    def lock_status(self, value: bool = None) -> Union['DrawingView', bool]:
         if value is not None:
             self.drawing_view.LockStatus = value
             return self
@@ -109,13 +109,13 @@ class DrawingView(AnyObject):
             return self
         return DrawingView(self.drawing_view.ReferenceView)
 
-    def scale(self, value: float = None) -> float:
+    def scale(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.Scale = value
             return self
         return self.drawing_view.Scale
 
-    def scale2(self, value: float = None) -> float:
+    def scale2(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.Scale2 = value
             return self
@@ -140,25 +140,25 @@ class DrawingView(AnyObject):
     def weldings(self) -> DrawingWeldings:
         return DrawingWeldings(self.drawing_view.Weldings)
 
-    def x(self, value: float = None) -> float:
+    def x(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.x = value
             return self
         return self.drawing_view.x
 
-    def x_axis_data(self, value: float = None) -> float:
+    def x_axis_data(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.xAxisData = value
             return self
         return self.drawing_view.xAxisData
 
-    def y(self, value: float = None) -> float:
+    def y(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.y = value
             return self
         return self.drawing_view.y
 
-    def y_axis_data(self, value: float = None) -> float:
+    def y_axis_data(self, value: float = None) -> Union['DrawingView', float]:
         if value is not None:
             self.drawing_view.yAxisData = value
             return self

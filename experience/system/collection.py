@@ -31,7 +31,12 @@ class Collection(Experience):
     def name(self) -> str:
         return self._com.Name
 
-    def parent(self) -> AnyObject:
+    # def parent(self) -> AnyObject:
+    #     return AnyObject(self._com.Parent)
+    
+    def parent(self, value: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+        if value is not None:
+            return value(self._com.Parent)
         return AnyObject(self._com.Parent)
 
     def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'Collection']:

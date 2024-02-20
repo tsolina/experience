@@ -26,7 +26,7 @@ class Services():
         return SearchService(self.services.Application.GetSessionService("Search"))
     
 
-    def open_service(self) -> 'PLMNewService':
+    def new_service(self) -> 'PLMNewService':
         from experience.plm_session_builder_interfaces import PLMNewService
         return PLMNewService(self.services.Application.GetSessionService("PLMNewService"))
 
