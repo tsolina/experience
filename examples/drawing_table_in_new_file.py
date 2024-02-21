@@ -53,4 +53,8 @@ apply_outer_edges(table)
 apply_inner_edges(table)
 apply_text(table)
 
+# - access another script as execute if from this one -
+from examples.drawing_titleblock_sample import catmain as dts_catmain
+dts_catmain()
+
 print("done")
