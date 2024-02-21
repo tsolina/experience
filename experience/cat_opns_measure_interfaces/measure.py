@@ -18,4 +18,4 @@ class Measure(AnyObject):
         return self.measure.MinimumDistance()
 
     def __repr__(self):
-        return f'Measure(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

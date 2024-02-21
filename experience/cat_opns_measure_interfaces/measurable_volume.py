@@ -28,4 +28,4 @@ class MeasurableVolume(MeasurableInContext):
         return self.measurable_volume.GetVolume_Area_COfG()
 
     def __repr__(self):
-        return f'MeasurableVolume(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

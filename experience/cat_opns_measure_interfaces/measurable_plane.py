@@ -20,4 +20,4 @@ class MeasurablePlane(MeasurableSurface):
         return self._get_safe_array(self.measurable_plane, "GetPlane", 8)
 
     def __repr__(self):
-        return f'MeasurablePlane(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

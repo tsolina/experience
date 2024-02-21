@@ -40,24 +40,16 @@ try:
         sel = app.active_editor().selection()
         print("sel", sel.count())
         if sel.count():
-            obj = sel.item(1).value(DrawingTable)
-            print(obj.get_cell_border_type(1,1))
-            border = obj.get_cell_border(1, 3).backslash(False).slash(False)
-            print(border, border.col(), border.row())
-            obj.set_cell_border(border)
+            obj = sel.item(1).value(HybridShape)
+            measure = cat.app.active_editor().services().measure_service()
+            meas_item =  measure.get_measure_item([1])
+            meas_item.set_measure_item_type(CATOpnsMeasureItemType.catOpnsEdgeItem)
+            # meas_item.measure_item.Invoke()
+            # meas_item.set_selection([1, obj])
+            print(meas_item.get_computation_mode())
+            print(dir(meas_item._com))
+            print("length", meas_item.get_length())
 
-            border1 = DrawingCellBorder(0, 2, 3).backslash(True).slash(True)
-            obj.set_cell_border(border1)
-
-            border2 = DrawingCellBorder().col(5).row(2).backslash(True).slash(True)
-            obj.set_cell_border(border2)
-
-            obj.set_cell_border(DrawingCellBorder(0, 2, 1).top(True).bottom(True).slash(True).backslash(True))
-            obj.set_cell_border(DrawingCellBorder(0, 1, 1).activate_all().backslash(False))
-            #print(obj.get_bault_text(AnnotationValueIndex.main_value))
-            #print(obj.drawing_dim_line.GetDimLineDir())
-
-            #print(cat.drawing.active_sheet().print_area().get_area())
 
 
         # def some_func(i_type: Status):

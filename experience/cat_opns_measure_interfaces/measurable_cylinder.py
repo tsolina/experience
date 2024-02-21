@@ -29,4 +29,4 @@ class MeasurableCylinder(MeasurableSurface):
         return self.measurable_cylinder.GetRadius()    
 
     def __repr__(self):
-        return f'MeasurableCylinder(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

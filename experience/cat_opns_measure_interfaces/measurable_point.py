@@ -19,4 +19,4 @@ class MeasurablePoint(MeasurableInContext):
         return self.measurable_point.GetPoint()
     
     def __repr__(self):
-        return f'MeasurablePoint(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -1,3 +1,5 @@
+from .opns_measure_types import *
+
 from .measurable_in_context import MeasurableInContext
 from .measurable_service import MeasurableService
 
@@ -23,7 +25,3 @@ from .measure_service import MeasureService
 from .measure_between import MeasureBetween
 from .measure_item import MeasureItem
 from .measure_setting_att import MeasureSettingAtt
-
-# from cat_opns_measure_interfaces import MeasurableInContext, MeasurableService, MeasurableAxisSystem, MeasurableBetween, MeasurableCurve, MeasurablePoint, MeasurableSurface
-# from cat_opns_measure_interfaces import MeasurableVolume, MeasurableCircle, MeasurableLine, MeasurableCone, MeasurableCylinder, MeasurablePlane, MeasurableSphere
-# from cat_opns_measure_interfaces import Measure, Measures, MeasureService, MeasureBetween, MeasureItem, MeasureSettingAtt

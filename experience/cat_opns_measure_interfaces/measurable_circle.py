@@ -29,4 +29,4 @@ class MeasurableCircle(MeasurableCurve):
         return self.measurable_circle.GetRadius()
 
     def __repr__(self):
-        return f'MeasurableCircle(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

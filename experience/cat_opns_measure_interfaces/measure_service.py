@@ -21,13 +21,13 @@ class MeasureService(Service):
         super().__init__(com)
         self.measure_service = com
 
-    def get_measure_between(self, i_first_selection: tuple, i_second_selection: tuple) -> 'MeasureBetween':
+    def get_measure_between(self, i_first_selection: list, i_second_selection: list) -> 'MeasureBetween':
         from experience.cat_opns_measure_interfaces import MeasureBetween
         return MeasureBetween(self.measure_service.GetMeasureBetween(i_first_selection, i_second_selection))
     
-    def get_measure_item(self, i_selections: tuple) -> 'MeasureItem':
+    def get_measure_item(self, i_selections: list) -> 'MeasureItem':
         from experience.cat_opns_measure_interfaces import MeasureItem
         return MeasureItem(self.measure_service.GetMeasureItem(i_selections))
-
+    
     def __repr__(self):
-        return f'MeasureService(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

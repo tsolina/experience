@@ -22,4 +22,4 @@ class MeasurableCurve(MeasurableInContext):
         return self._get_safe_array_multi(self.measurable_curve, "GetPoints", [2, 2, 2])
 
     def __repr__(self):
-        return f'MeasurableCurve(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

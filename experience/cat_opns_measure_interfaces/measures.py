@@ -1,7 +1,9 @@
-from typing import Iterator
+from typing import Iterator, Union
 
 from experience.system.collection import Collection
 from experience.cat_opns_measure_interfaces import Measure
+
+from experience.types import cat_variant
 
 class Measures(Collection):
     """
@@ -20,10 +22,10 @@ class Measures(Collection):
     def add(self) -> Measure:
         return Measure(self.light_sources.Add())
 
-    def item(self, i_index: int) -> Measure:
+    def item(self, i_index: 'cat_variant') -> Measure:
         return Measure(self.light_sources.Item(i_index))
 
-    def remove(self, i_index: int) -> None:
+    def remove(self, i_index: 'cat_variant') -> None:
         return self.light_sources.Remove(i_index)
 
     def __getitem__(self, n: int) -> Measure:
@@ -37,4 +39,4 @@ class Measures(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Measures(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

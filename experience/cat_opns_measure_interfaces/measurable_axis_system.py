@@ -19,4 +19,4 @@ class MeasurableAxisSystem(MeasurableInContext):
         return self._get_safe_array(self.measurable_axis_system, "GetAxis", 11)
 
     def __repr__(self):
-        return f'MeasurableAxisSystem(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'
