@@ -75,4 +75,4 @@ class Factory2D(AnyObject):
         return Spline2D(self.factory_2d.CreateSpline(i_poles))
 
     def __repr__(self):
-        return f'Factory2D(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -36,4 +36,4 @@ class ParameterSet(AnyObject):
         return ParameterSets(self.parameter_set.ParameterSets)
 
     def __repr__(self):
-        return f'ParameterSet(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

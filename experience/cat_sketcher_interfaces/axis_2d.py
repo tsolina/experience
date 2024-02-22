@@ -34,4 +34,4 @@ class Axis2D(Geometry2D):
         return Line2D(self.axis_2d.VerticalReference)
 
     def __repr__(self):
-        return f'Axis2D(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

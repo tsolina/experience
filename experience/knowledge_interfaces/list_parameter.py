@@ -20,4 +20,4 @@ class ListParameter(Parameter):
         return List(self.list_parameter.ValueList)
 
     def __repr__(self):
-        return f'ListParameter(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -1,4 +1,5 @@
 from experience.system import AnyObject
+from experience.cat_sketcher_interfaces.sketcher_types import *
 
 class GeometricElement(AnyObject):
     """
@@ -14,8 +15,8 @@ class GeometricElement(AnyObject):
         super().__init__(com)
         self.geometric_element = com
 
-    def geometric_type(self) -> int:
-        return self.geometric_element.GeometricType
+    def geometric_type(self) -> CatGeometricType:
+        return CatGeometricType.item(self.geometric_element.GeometricType)
 
     def __repr__(self):
-        return f'GeometricElement(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

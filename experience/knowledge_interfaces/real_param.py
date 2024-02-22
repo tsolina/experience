@@ -65,4 +65,4 @@ class RealParam(Parameter):
         return self
 
     def __repr__(self):
-        return f'RealParam(name="{ self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'
