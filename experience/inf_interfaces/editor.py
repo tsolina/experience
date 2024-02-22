@@ -39,4 +39,4 @@ class Editor(AnyObject):
         return EditorServices(self.editor) 
 
     def __repr__(self):
-        return f'Editor(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -28,4 +28,4 @@ class Viewpoint2D(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Viewpoint2D(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

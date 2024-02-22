@@ -3,6 +3,7 @@ from .inf_types import *
 from .application import Application
 from .camera import Camera
 from .cameras import Cameras # Camera
+from .camera_2d import Camera2D
 from .camera_3d import Camera3D # Camera
 from .editor import Editor
 from .editors import Editors # Editor
@@ -27,6 +28,8 @@ from .window import Window
 from .windows import Windows # Window
 from .workbench import Workbench
 
+from .specs_viewer import SpecsViewer # Viewer2D
+from .specs_and_geom_window import SpecsAndGeomWindow # Window
 
 from .move import Move # -
 from .position import Position # -

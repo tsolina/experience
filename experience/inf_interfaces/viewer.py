@@ -1,5 +1,5 @@
 from typing import TYPE_CHECKING
-
+from experience.inf_interfaces.inf_types import *
 from experience.system import AnyObject
 
 if TYPE_CHECKING:
@@ -32,8 +32,8 @@ class Viewer(AnyObject):
         self.viewer.Activate()
         return self
 
-    def capture_to_file(self, i_format: int, i_file: str) -> 'Viewer':
-        self.viewer.CaptureToFile(i_format, i_file)
+    def capture_to_file(self, i_format: CatCaptureFormat, i_file: str) -> 'Viewer':
+        self.viewer.CaptureToFile(int(i_format), i_file)
         return self
 
     def get_background_color(self) -> tuple:
@@ -74,4 +74,4 @@ class Viewer(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Viewer(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

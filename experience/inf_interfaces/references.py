@@ -8,7 +8,7 @@ if TYPE_CHECKING:
 
 class References(Collection):
     def __init__(self, com):
-        super().__init__(com, _child=Reference)
+        super().__init__(com, child=Reference)
         self.references = com
 
     def item(self, i_index: 'cat_variant') -> Reference:
@@ -25,4 +25,4 @@ class References(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'References(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

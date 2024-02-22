@@ -1,5 +1,6 @@
 from typing import Iterator, TYPE_CHECKING
 
+from experience.inf_interfaces.inf_types import *
 from experience.inf_interfaces import Window
 from experience.system import Collection
 
@@ -8,11 +9,11 @@ if TYPE_CHECKING:
 
 class Windows(Collection):
     def __init__(self, com):
-        super().__init__(com, _child=Window)
+        super().__init__(com, child=Window)
         self.windows = com
 
-    def arrange(self, i_style: int) -> None:
-        return self.windows.Arrange(i_style)
+    def arrange(self, i_style: CatArrangeStyle) -> None:
+        return self.windows.Arrange(int(i_style))
 
     def item(self, i_index: 'cat_variant') -> Window:
         return Window(self.windows.Item(i_index))
@@ -28,4 +29,4 @@ class Windows(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Windows(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

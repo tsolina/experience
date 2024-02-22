@@ -1,5 +1,6 @@
 from typing import TYPE_CHECKING, Union
 from experience.system.any_object import AnyObject
+from experience.inf_interfaces.inf_types import *
 
 if TYPE_CHECKING:
     from experience.inf_interfaces import PageSetup, Viewer, Viewers
@@ -63,11 +64,11 @@ class Window(AnyObject):
             return self
         return self.window.Width
 
-    def window_state(self, value: int = None) -> Union['Window', int]:
+    def window_state(self, value: CatWindowState = None) -> Union['Window', CatWindowState]:
         if value is not None:
-            self.window.WindowState = value
+            self.window.WindowState = int(value)
             return self
-        return self.window.WindowState
+        return CatWindowState.item(self.window.WindowState)
 
     def activate(self) -> 'Window':
         self.window.Activate()
@@ -97,4 +98,4 @@ class Window(AnyObject):
         return self
 
     def __repr__(self):
-        return f'Window(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

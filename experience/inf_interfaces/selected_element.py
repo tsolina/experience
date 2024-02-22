@@ -32,4 +32,4 @@ class SelectedElement(AnyObject):
         return self._get_safe_array(self.selected_element, "GetCoordinates", 2)
 
     def __repr__(self):
-        return f'SelectedElement(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

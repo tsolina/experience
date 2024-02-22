@@ -25,4 +25,4 @@ class Editors(Collection):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Editors(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

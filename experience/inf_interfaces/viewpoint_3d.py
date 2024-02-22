@@ -1,4 +1,6 @@
+from typing import Union
 from experience.system import AnyObject
+from experience.inf_interfaces.inf_types import *
 
 class Viewpoint3D(AnyObject):
     """
@@ -14,25 +16,25 @@ class Viewpoint3D(AnyObject):
         super().__init__(com)
         self.viewpoint_3d = com
 
-    def field_of_view(self, value: float = None) -> float:
+    def field_of_view(self, value: float = None) -> Union['Viewpoint3D', float]:
         if value is not None:
             self.viewpoint_3d.FieldOfView = value
             return self
         return self.viewpoint_3d.FieldOfView
 
-    def focus_distance(self, value: float = None) -> float:
+    def focus_distance(self, value: float = None) -> Union['Viewpoint3D', float]:
         if value is not None:
             self.viewpoint_3d.FocusDistance = value
             return self
         return self.viewpoint_3d.FocusDistance
 
-    def projection_mode(self, value: int = None) -> int:
+    def projection_mode(self, value: CatProjectionMode = None) -> Union['Viewpoint3D', CatProjectionMode]:
         if value is not None:
-            self.viewpoint_3d.ProjectionMode = value
+            self.viewpoint_3d.ProjectionMode = int(value)
             return self
-        return self.viewpoint_3d.ProjectionMode
+        return CatProjectionMode.item(self.viewpoint_3d.ProjectionMode)
 
-    def zoom(self, value: float = None) -> float:
+    def zoom(self, value: float = None) -> Union['Viewpoint3D', float]:
         if value is not None:
             self.viewpoint_3d.Zoom = value
             return self
@@ -57,4 +59,4 @@ class Viewpoint3D(AnyObject):
         return self.viewpoint_3d.PutUpDirection(o_up)
 
     def __repr__(self):
-        return f'ViewPoint3D(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -1,10 +1,12 @@
 from typing import Union, TYPE_CHECKING
 from experience.system import AnyObject, SystemService
+from experience.inf_interfaces.inf_types import *
 
 if TYPE_CHECKING:
     from experience.inf_interfaces import Editor, Editors, Printer, Printers, Service, Window, Windows
     from experience.inf_os_idl_interfaces import FileSystem, SystemConfiguration
     from experience.inf_interfaces import Services
+    from experience.inf_os_idl_interfaces.inf_os_types import *
 
 class Application(AnyObject):
     def __init__(self, com):
@@ -112,11 +114,11 @@ class Application(AnyObject):
             return self
         return self._com.RefreshDisplay
 
-    def script_command(self, value: int = None) -> Union['Application', int]:
+    def script_command(self, value: CatScriptCommand = None) -> Union['Application', CatScriptCommand]:
         if value is not None:
-            self._com.ScriptCommand = value
+            self._com.ScriptCommand = int(value)
             return self
-        return self._com.ScriptCommand
+        return CatScriptCommand.item(self._com.ScriptCommand)
 
     def status_bar(self, value: str = None) -> Union['Application', str]:
         if value is not None:
@@ -172,8 +174,8 @@ class Application(AnyObject):
     def enable_new_undo_redo_transaction(self) -> None:
         return self._com.EnableNewUndoRedoTransaction()
 
-    def file_selection_box(self, i_title: str, i_extension: str, i_mode: int) -> str:
-        return self._com.FileSelectionBox(i_title, i_extension, i_mode)
+    def file_selection_box(self, i_title: str, i_extension: str, i_mode: 'CatFileSelectionMode') -> str:
+        return self._com.FileSelectionBox(i_title, i_extension, int(i_mode))
 
     def folder_selection_box(self, i_title: str) -> str:
         return self._com.FolderSelectionBox(i_title)
@@ -202,4 +204,4 @@ class Application(AnyObject):
         return self._com.StartWorkbench(iworkbench_id)
 
     def __repr__(self):
-        return f'Application(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

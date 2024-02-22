@@ -1,5 +1,7 @@
 from experience.system import AnyObject
 
+from experience.inf_interfaces.inf_types import *
+
 class Printer(AnyObject):
     """
                 | System.IUnknown
@@ -17,17 +19,17 @@ class Printer(AnyObject):
     def device_name(self) -> str:
         return self.printer.DeviceName
 
-    def orientation(self) -> int:
-        return self.printer.Orientation
+    def orientation(self) -> CatPaperOrientation:
+        return CatPaperOrientation.item(self.printer.Orientation)
 
     def paper_height(self) -> float:
         return self.printer.PaperHeight
 
-    def paper_size(self) -> int:
-        return self.printer.PaperSize
+    def paper_size(self) -> CatPaperSize:
+        return CatPaperSize.item(self.printer.PaperSize)
 
     def paper_width(self) -> float:
         return self.printer.PaperWidth
 
     def __repr__(self):
-        return f'Printer(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

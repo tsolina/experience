@@ -1,5 +1,6 @@
 from typing import Iterator, TYPE_CHECKING
 from experience.system import AnyObject
+from experience.inf_interfaces.inf_types import *
 from experience.inf_interfaces import SelectedElement
 
 if TYPE_CHECKING:
@@ -112,6 +113,9 @@ class Selection(AnyObject):
     def paste(self) -> 'Selection':
         self.selection.Paste()
         return self
+    
+    def paste_from(self, i_object: tuple) -> 'Selection':
+        self.selection.PasteFrom(i_object)
 
     def paste_special(self, i_format: str) -> 'Selection':
         self.selection.PasteSpecial(i_format)
@@ -147,6 +151,15 @@ class Selection(AnyObject):
     def select_element_other_editor(self, i_filter_type: tuple, i_active_editor_message: str, i_non_active_editor_message: str, i_tooltip: bool, oEditor: 'Editor') -> str:
         return self.selection.SelectElementOtherEditor(i_filter_type, i_active_editor_message, i_non_active_editor_message, i_tooltip, oEditor._com)
 
+    def select_multiple_elements(self, i_filter_type: tuple, i_message: str, i_may_skip_interactive_selection: bool, i_multi_selection_mode: CATMultiSelectionMode, i_tooltip: bool) -> str:
+        return self.selection.SelectMultipleElements(i_filter_type, i_message, i_may_skip_interactive_selection, int(i_multi_selection_mode), i_tooltip)
+
+    def is_visible(self) -> bool:
+        if self.vis_properties().get_show()[1] == CatVisPropertyShow.catVisPropertyShowAttr:
+            return True
+        else:
+            return False
+
     def __len__(self):
         return self.count
 
@@ -161,4 +174,4 @@ class Selection(AnyObject):
             yield self._child(self._com.item(i + 1))
 
     def __repr__(self):
-        return f'Selection(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

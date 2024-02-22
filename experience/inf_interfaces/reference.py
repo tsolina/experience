@@ -1,6 +1,14 @@
 from experience.system import AnyObject
 
 class Reference(AnyObject):
+    """
+                | System.IUnknown
+                |     System.IDispatch
+                |         System.CATBaseUnknown
+                |             System.CATBaseDispatch
+                |                 System.AnyObject
+                |                     Reference
+    """
     def __init__(self, com):
         super().__init__(com)
         self.reference = com
@@ -12,4 +20,4 @@ class Reference(AnyObject):
         return Reference(self.reference.ComposeWith(i_reference._com))
 
     def __repr__(self):
-        return f'Reference(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -27,4 +27,4 @@ class Viewer2D(Viewer):
         return Viewpoint2D(self.viewer_2d.Viewpoint2D)
 
     def __repr__(self):
-        return f'Viewer2D(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

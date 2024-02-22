@@ -32,32 +32,24 @@ class Status(Enum):
 
 try:
     from experience import *
+    app = experience_application()
 
-    with DrawingReady() as cat:
-        print("ready")      
-        app = cat.app
+    sel = app.active_editor().selection()
+    print("sel", sel.count())
+    if sel.count():
+        #obj = sel.item(1).value(HybridShape)f
+        vp = sel.vis_properties()
+        print("test:", vp.get_symbol_type())
+        vp.set_symbol_type(InfSymbolType.two_unfilled_concentric_circles)
 
-        sel = app.active_editor().selection()
-        print("sel", sel.count())
-        if sel.count():
-            obj = sel.item(1).value(HybridShape)
-            measure = cat.app.active_editor().services().measure_service()
-            meas_item =  measure.get_measure_item([1])
-            meas_item.set_measure_item_type(CATOpnsMeasureItemType.catOpnsEdgeItem)
-            # meas_item.measure_item.Invoke()
-            # meas_item.set_selection([1, obj])
-            print(meas_item.get_computation_mode())
-            print(dir(meas_item._com))
-            print("length", meas_item.get_length())
+    app.refresh_display(True)
 
+    # def some_func(i_type: Status):
+    #     print(i_type, type(i_type))
+    #     print(int(i_type) + 3)
 
-
-        # def some_func(i_type: Status):
-        #     print(i_type, type(i_type))
-        #     print(int(i_type) + 3)
-
-        # some_func(Status.IN_PROGRESS)
-        # some_func(1)
+    # some_func(Status.IN_PROGRESS)
+    # some_func(1)
         
 except Exception as e:
     traceback_str = traceback.format_exc()
@@ -69,7 +61,7 @@ def start():
 
 
 start()
-input("Done")
+#input("Done")
 
 class Base():
     def method(self) -> 'Base':
