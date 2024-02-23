@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference, References
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import EdgeFillet
 
 if TYPE_CHECKING:
@@ -24,12 +25,12 @@ class VarRadEdgeFillet(EdgeFillet):
         super().__init__(com)
         self.var_rad_edge_fillet = com
 
-    def bitangency_type(self, value: int = None) -> Union['EdgeFillet', int]:
+    def bitangency_type(self, value: CatFilletBitangencyType = None) -> Union['EdgeFillet', CatFilletBitangencyType]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.var_rad_edge_fillet.BitangencyType = value
+            self.var_rad_edge_fillet.BitangencyType = int(value)
             return self
-        return self.var_rad_edge_fillet.BitangencyType
+        return CatFilletBitangencyType.item(self.var_rad_edge_fillet.BitangencyType)
 
     def edges_to_fillet(self) -> References:
         return References(self.var_rad_edge_fillet.EdgesToFillet)
@@ -41,12 +42,12 @@ class VarRadEdgeFillet(EdgeFillet):
             return self
         return Reference(self.var_rad_edge_fillet.FilletSpine)
 
-    def fillet_variation(self, value: int = None) -> Union['EdgeFillet', int]:
+    def fillet_variation(self, value: CatFilletVariation = None) -> Union['EdgeFillet', CatFilletVariation]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.var_rad_edge_fillet.FilletVariation = value
+            self.var_rad_edge_fillet.FilletVariation = int(value)
             return self
-        return self.var_rad_edge_fillet.FilletVariation
+        return CatFilletVariation.item(self.var_rad_edge_fillet.FilletVariation)
 
     def imposed_vertices(self) -> References:
         return References(self.var_rad_edge_fillet.ImposedVertices)
@@ -82,4 +83,4 @@ class VarRadEdgeFillet(EdgeFillet):
         return self
 
     def __repr__(self):
-        return f'VarRadEdgeFillet(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

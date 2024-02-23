@@ -42,4 +42,4 @@ class FaceFillet(Fillet):
         return Reference(self.face_fillet.SecondFace)
 
     def __repr__(self):
-        return f'FaceFillet(name="{ self.name() }")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

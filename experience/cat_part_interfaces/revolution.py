@@ -59,4 +59,4 @@ class Revolution(SketchBasedShape):
         return Angle(self.revolution.SecondAngle)
 
     def __repr__(self):
-        return f'Revolution(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

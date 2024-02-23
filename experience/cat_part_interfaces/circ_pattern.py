@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import Pattern
 
 if TYPE_CHECKING:
@@ -32,12 +33,12 @@ class CircPattern(Pattern):
         from experience.cat_part_interfaces import AngularRepartition
         return AngularRepartition(self.circ_pattern.AngularRepartition)
 
-    def circular_pattern_parameters(self, value: int = None) -> Union['CircPattern', int]:
+    def circular_pattern_parameters(self, value: CatCircularPatternParameters = None) -> Union['CircPattern', CatCircularPatternParameters]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.circ_pattern.CircularPatternParameters = value
+            self.circ_pattern.CircularPatternParameters = int(value)
             return self
-        return self.circ_pattern.CircularPatternParameters
+        return CatCircularPatternParameters.item(self.circ_pattern.CircularPatternParameters)
 
     def radial_alignment(self, value: bool = None) -> Union['CircPattern', bool]:
         """ set value if provided and return self, otherwise reads the value """
@@ -88,4 +89,4 @@ class CircPattern(Pattern):
         return self
 
     def __repr__(self):
-        return f'CircPattern(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

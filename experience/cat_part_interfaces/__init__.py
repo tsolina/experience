@@ -1,3 +1,5 @@
+from .cat_part_types import *
+
 from .boolean_shape import BooleanShape
 from .add import Add # BooleanShape
 from .assemble import Assemble # BooleanShape
@@ -29,6 +31,7 @@ from .limit import Limit
 from .repartition import Repartition
 from .angular_repartition import AngularRepartition # Repartition
 from .linear_repartition import LinearRepartition # Repartition
+from .user_repartition import UserRepartition # Repartition
 
 
 from .surface_based_shape import SurfaceBasedShape
@@ -37,6 +40,7 @@ from .replace_face import ReplaceFace # SurfaceBasedShape
 from .sew_surface import SewSurface # SurfaceBasedShape
 from .split import Split # SurfaceBasedShape
 from .thick_surface import ThickSurface # SurfaceBasedShape
+from .partition import Partition # SurfaceBasedShape
 
 
 from .transformation_shape import TransformationShape
@@ -71,9 +75,14 @@ from .pad import Pad # Prism
 from .pocket import Pocket # Prism
 
 from .shape_factory import ShapeFactory #- Factory
+from .affinity import Affinity
+from .axis_to_axis import AxisToAxis
+from .loft import Loft
+from .rotate import Rotate
+from .scaling2 import Scaling2
+from .symmetry import Symmetry
+from .translate import Translate
 
-#BooleanShape, Add, Assemble, Intersect, Remove, Trim, DressUpShape, AutoDraft, AutoFillet, Chamfer, Defeaturing, Draft, Fillet, RemoveFace, Scaling, Shell, Thickness, Thread
-#DefeaturingFilter, DefeaturingFilters, DraftDomain, DraftDomains, Limit, Repartition, AngularRepartition, LinearRepartition
-#SurfaceBasedShape, CloseSurface, ReplaceFace, SewSurface, Split, ThickSurface, TransformationShape, Mirror, Pattern, CircPattern, RectPattern, UserPattern
-#EdgeFillet, FaceFillet, TritangentFillet, ConstRadEdgeFillet, VarRadEdgeFillet, SketchBasedShape, Revolution, Hole, Prism, Sweep, SolidCombine, Stiffener
-#Groove, Shaft, Rib, Slot, Pad, Pocket, ShapeFactory
+from .defeaturing_filter_with_range import DefeaturingFilterWithRange # DefeaturingFilter
+from .defeaturing_fillet_filter import DefeaturingFilletFilter # DefeaturingFilterWithRange
+from .defeaturing_hole_filter import DefeaturingHoleFilter # DefeaturingFilterWithRange

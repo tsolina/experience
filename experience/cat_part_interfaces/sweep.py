@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces.reference import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces.sketch_based_shape import SketchBasedShape
 
 if TYPE_CHECKING:
@@ -54,12 +55,12 @@ class Sweep(SketchBasedShape):
             return self
         return self.sweep.MergeEnd
 
-    def merge_mode(self, value: int = None) -> Union['Sweep', int]:
+    def merge_mode(self, value: CatMergeMode = None) -> Union['Sweep', CatMergeMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.sweep.MergeMode = value
+            self.sweep.MergeMode = int(value)
             return self
-        return self.sweep.MergeMode
+        return CatMergeMode.item(self.sweep.MergeMode)
 
     def move_profile_to_path(self, value: bool = None) -> Union['Sweep', bool]:
         """ set value if provided and return self, otherwise reads the value """
@@ -101,4 +102,4 @@ class Sweep(SketchBasedShape):
         return self
 
     def __repr__(self):
-        return f'Sweep(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

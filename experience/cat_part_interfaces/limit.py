@@ -2,6 +2,7 @@ from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
 from experience.system import AnyObject
+from experience.cat_part_interfaces.cat_part_types import *
 
 if TYPE_CHECKING:
     from experience.knowledge_interfaces import Length
@@ -24,12 +25,12 @@ class Limit(AnyObject):
         from experience.knowledge_interfaces import Length
         return Length(self.limit.Dimension)
 
-    def limit_mode(self, value: int = None) -> Union['Limit', int]:
+    def limit_mode(self, value: CatLimitMode = None) -> Union['Limit', CatLimitMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.limit.LimitMode = value
+            self.limit.LimitMode = int(value)
             return self
-        return self.limit.LimitMode
+        return CatLimitMode.item(self.limit.LimitMode)
 
     def limiting_element(self, value: Reference = None) -> Union['Limit', Reference]:
         """ set value if provided and return self, otherwise reads the value """
@@ -39,4 +40,4 @@ class Limit(AnyObject):
         return Reference(self.limit.LimitingElement)
 
     def __repr__(self):
-        return f'Limit(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

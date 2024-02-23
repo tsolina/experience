@@ -1,5 +1,6 @@
 from typing import Union, Optional, TYPE_CHECKING
 
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import DressUpShape
 
 class Fillet(DressUpShape):
@@ -18,19 +19,19 @@ class Fillet(DressUpShape):
         super().__init__(com)
         self.fillet = com
 
-    def fillet_boundary_relimitation(self, value: int = None) -> Union['Fillet', int]:
+    def fillet_boundary_relimitation(self, value: CatFilletBoundaryRelimitation = None) -> Union['Fillet', CatFilletBoundaryRelimitation]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.fillet.FilletBoundaryRelimitation = value
+            self.fillet.FilletBoundaryRelimitation = int(value)
             return self
-        return self.fillet.FilletBoundaryRelimitation
+        return CatFilletBoundaryRelimitation.item(self.fillet.FilletBoundaryRelimitation)
 
-    def fillet_trim_support(self, value: int = None) -> Union['Fillet', int]:
+    def fillet_trim_support(self, value: CatFilletTrimSupport = None) -> Union['Fillet', CatFilletTrimSupport]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.fillet.FilletTrimSupport = value
+            self.fillet.FilletTrimSupport = int(value)
             return self
-        return self.fillet.FilletTrimSupport
+        return CatFilletTrimSupport.item(self.fillet.FilletTrimSupport)
 
     def __repr__(self):
-        return f'Fillet(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

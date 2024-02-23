@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference, References
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import SurfaceBasedShape
 
 class ReplaceFace(SurfaceBasedShape):
@@ -22,12 +23,12 @@ class ReplaceFace(SurfaceBasedShape):
     def remove_face(self) -> References:
         return References(self.replace_face.RemoveFace)
 
-    def splitting_side(self, value: int = None) -> Union['ReplaceFace', int]:
+    def splitting_side(self, value: CatSplitSide = None) -> Union['ReplaceFace', CatSplitSide]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.replace_face.SplittingSide = value
+            self.replace_face.SplittingSide = int(value)
             return self
-        return self.replace_face.SplittingSide
+        return CatSplitSide.item(self.replace_face.SplittingSide)
 
     def add_remove_face(self, i_remove_face: Reference) -> 'ReplaceFace':
         self.replace_face.AddRemoveFace(i_remove_face._com)
@@ -42,4 +43,4 @@ class ReplaceFace(SurfaceBasedShape):
         return self
 
     def __repr__(self):
-        return f'ReplaceFace(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

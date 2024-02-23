@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import SketchBasedShape
 
 if TYPE_CHECKING:
@@ -22,19 +23,19 @@ class Prism(SketchBasedShape):
         super().__init__(com)
         self.prism = com
 
-    def direction_orientation(self, value: int = None) -> Union['Prism', int]:
+    def direction_orientation(self, value: CatPrismOrientation = None) -> Union['Prism', CatPrismOrientation]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.prism.DirectionOrientation = value
+            self.prism.DirectionOrientation = int(value)
             return self
-        return self.prism.DirectionOrientation
+        return CatPrismOrientation.item(self.prism.DirectionOrientation)
 
-    def direction_type(self, value: int = None) -> Union['Prism', int]:
+    def direction_type(self, value: CatPrismExtrusionDirection = None) -> Union['Prism', CatPrismExtrusionDirection]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.prism.DirectionType = value
+            self.prism.DirectionType = int(value)
             return self
-        return self.prism.DirectionType
+        return CatPrismExtrusionDirection.item(self.prism.DirectionType)
 
     def first_limit(self) -> 'Limit':
         from experience.cat_part_interfaces import Limit
@@ -87,4 +88,4 @@ class Prism(SketchBasedShape):
         return self
 
     def __repr__(self):
-        return f'Prism(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

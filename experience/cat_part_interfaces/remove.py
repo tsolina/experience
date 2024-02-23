@@ -17,4 +17,4 @@ class Remove(BooleanShape):
         self.remove = com
 
     def __repr__(self):
-        return f'Remove(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

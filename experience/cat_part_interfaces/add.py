@@ -17,4 +17,4 @@ class Add(BooleanShape):
         self.add = com
 
     def __repr__(self):
-        return f'Add(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

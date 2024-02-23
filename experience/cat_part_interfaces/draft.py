@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import DressUpShape
 
 if TYPE_CHECKING:
@@ -26,12 +27,12 @@ class Draft(DressUpShape):
         from experience.cat_part_interfaces import DraftDomains
         return DraftDomains(self.draft.DraftDomains)
 
-    def mode(self, value: int = None) -> Union['DraftDomains', int]:
+    def mode(self, value: CatDraftMode = None) -> Union['DraftDomains', CatDraftMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.draft.Mode = value
+            self.draft.Mode = int(value)
             return self
-        return self.draft.Mode
+        return CatDraftMode.item(self.draft.Mode)
 
     def parting_element(self, value: Reference = None) -> Union['DraftDomains', Reference]:
         """ set value if provided and return self, otherwise reads the value """
@@ -41,4 +42,4 @@ class Draft(DressUpShape):
         return Reference(self.draft.PartingElement)
 
     def __repr__(self):
-        return f'Draft(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

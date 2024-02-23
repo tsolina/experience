@@ -18,4 +18,4 @@ class Pad(Prism):
         self.pad = com
 
     def __repr__(self):
-        return f'Pad(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -26,4 +26,4 @@ class Defeaturing(DressUpShape):
         return DefeaturingFilters(self.defeaturing.Filters)
 
     def __repr__(self):
-        return f'Defeaturing(name="{ self.name() }")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

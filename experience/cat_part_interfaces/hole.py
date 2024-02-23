@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import SketchBasedShape
 
 if TYPE_CHECKING:
@@ -23,12 +24,12 @@ class Hole(SketchBasedShape):
         super().__init__(com)
         self.hole = com
 
-    def anchor_mode(self, value: int = None) -> Union['Hole', int]:
+    def anchor_mode(self, value: CatHoleAnchorMode = None) -> Union['Hole', CatHoleAnchorMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.AnchorMode = value
+            self.hole.AnchorMode = int(value)
             return self
-        return self.hole.AnchorMode
+        return CatHoleAnchorMode.item(self.hole.AnchorMode)
 
     def bottom_angle(self) -> 'Angle':
         from experience.knowledge_interfaces import Angle
@@ -38,26 +39,26 @@ class Hole(SketchBasedShape):
         from experience.cat_part_interfaces import Limit
         return Limit(self.hole.BottomLimit)
 
-    def bottom_type(self, value: int = None) -> Union['Hole', int]:
+    def bottom_type(self, value: CatHoleBottomType = None) -> Union['Hole', CatHoleBottomType]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.BottomType = value
+            self.hole.BottomType = int(value)
             return self
-        return self.hole.BottomType
+        return CatHoleBottomType.item(self.hole.BottomType)
 
-    def counter_drilled_mode(self, value: int = None) -> Union['Hole', int]:
+    def counter_drilled_mode(self, value: CatCDHoleMode = None) -> Union['Hole', CatCDHoleMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.CounterDrilledMode = value
+            self.hole.CounterDrilledMode = int(value)
             return self
-        return self.hole.CounterDrilledMode
+        return CatCDHoleMode.item(self.hole.CounterDrilledMode)
 
-    def counter_sunk_mode(self, value: int = None) -> Union['Hole', int]:
+    def counter_sunk_mode(self, value: CatCSHoleMode = None) -> Union['Hole', CatCSHoleMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.CounterSunkMode = value
+            self.hole.CounterSunkMode = int(value)
             return self
-        return self.hole.CounterSunkMode
+        return CatCSHoleMode.item(self.hole.CounterSunkMode)
 
     def diameter(self) -> 'Length':
         from experience.knowledge_interfaces import Length
@@ -91,29 +92,29 @@ class Hole(SketchBasedShape):
         from experience.knowledge_interfaces import Length
         return Length(self.hole.ThreadPitch)
 
-    def thread_side(self, value: int = None) -> Union['Hole', int]:
+    def thread_side(self, value: CatHoleThreadSide = None) -> Union['Hole', CatHoleThreadSide]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.ThreadSide = value
+            self.hole.ThreadSide = int(value)
             return self
-        return self.hole.ThreadSide
+        return CatHoleThreadSide.item(self.hole.ThreadSide)
 
-    def threading_mode(self, value: int = None) -> Union['Hole', int]:
+    def threading_mode(self, value: CatHoleThreadingMode = None) -> Union['Hole', CatHoleThreadingMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.ThreadingMode = value
+            self.hole.ThreadingMode = int(value)
             return self
-        return self.hole.ThreadingMode
+        return CatHoleThreadingMode.item(self.hole.ThreadingMode)
 
-    def type(self, value: int = None) -> Union['Hole', int]:
+    def type(self, value: CatHoleType = None) -> Union['Hole', CatHoleType]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hole.Type = value
+            self.hole.Type = int(value)
             return self
-        return self.hole.Type
+        return CatHoleType.item(self.hole.Type)
 
-    def create_standard_thread_design_table(self, i_standard_type: int) -> 'Hole':
-        self.hole.CreateStandardThreadDesignTable(i_standard_type)
+    def create_standard_thread_design_table(self, i_standard_type: CatHoleThreadStandard) -> 'Hole':
+        self.hole.CreateStandardThreadDesignTable(int(i_standard_type))
         return self
 
     def create_user_standard_design_table(self, i_standard_name: str, i_path: str) -> 'Hole':
@@ -139,4 +140,4 @@ class Hole(SketchBasedShape):
         return self
 
     def __repr__(self):
-        return f'Hole(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import DressUpShape
 
 if TYPE_CHECKING:
@@ -57,19 +58,19 @@ class Thread(DressUpShape):
             return self
         return self.thread.Pitch
 
-    def side(self, value: int = None) -> Union['Thread', int]:
+    def side(self, value: CatThreadSide = None) -> Union['Thread', CatThreadSide]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.thread.Side = value
+            self.thread.Side = int(value)
             return self
-        return self.thread.Side
+        return CatThreadSide.item(self.thread.Side)
 
     def thread_description(self) -> 'StrParam':
         from experience.knowledge_interfaces import StrParam
         return StrParam(self.thread.ThreadDescription)
 
-    def create_standard_thread_design_table(self, i_standard_type: int) -> 'Thread':
-        self.thread.CreateStandardThreadDesignTable(i_standard_type)
+    def create_standard_thread_design_table(self, i_standard_type: CatThreadStandard) -> 'Thread':
+        self.thread.CreateStandardThreadDesignTable(int(i_standard_type))
         return self
 
     def create_user_standard_design_table(self, i_standard_name: str, i_path: str) -> 'Thread':
@@ -80,9 +81,9 @@ class Thread(DressUpShape):
         self.thread.ReverseDirection()
         return self
 
-    def set_explicit_polarity(self, i_thread_polarity: int) -> 'Thread':
-        self.thread.SetExplicitPolarity(i_thread_polarity)
+    def set_explicit_polarity(self, i_thread_polarity: CatThreadPolarity) -> 'Thread':
+        self.thread.SetExplicitPolarity(int(i_thread_polarity))
         return self
 
     def __repr__(self):
-        return f'Thread(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

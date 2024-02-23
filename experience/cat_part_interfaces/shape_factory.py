@@ -3,6 +3,7 @@ from typing import Union, Optional, TYPE_CHECKING
 from experience.system import AnyObject
 from experience.inf_interfaces import Reference
 from experience.mecmod_interfaces import Body, Factory
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import Add
 from experience.cat_part_interfaces import Assemble
 from experience.cat_part_interfaces import AutoDraft
@@ -19,6 +20,7 @@ from experience.cat_part_interfaces import Hole
 from experience.cat_part_interfaces import Intersect
 from experience.cat_part_interfaces import Mirror
 from experience.cat_part_interfaces import Pad
+from experience.cat_part_interfaces import Partition
 from experience.cat_part_interfaces import Pocket
 from experience.cat_part_interfaces import RectPattern
 from experience.cat_part_interfaces import Remove
@@ -82,12 +84,12 @@ class ShapeFactory(Factory):
         return AnyObject(self.shape_factory.AddNewBlend())
 
     def add_new_chamfer(
-            self, i_object_to_chamfer: Reference, i_propagation: int, i_mode: int,
-            i_orientation: int, i_length1: float, i_length2_or_angle: float) -> Chamfer:
+            self, i_object_to_chamfer: Reference, i_propagation: CatChamferPropagation, i_mode: CatChamferMode,
+            i_orientation: CatChamferOrientation, i_length1: float, i_length2_or_angle: float) -> Chamfer:
         return Chamfer(
             self.shape_factory.AddNewChamfer(
-                i_object_to_chamfer._com, i_propagation, i_mode,
-                i_orientation, i_length1, i_length2_or_angle))
+                i_object_to_chamfer._com, int(i_propagation), int(i_mode),
+                int(i_orientation), i_length1, i_length2_or_angle))
     
     def add_new_circ_pattern(self, i_shape_to_copy: AnyObject, i_nb_of_copies_in_radial_dir: int,
                              i_nb_of_copies_in_angular_dir: int, i_step_in_radial_dir: float,
@@ -128,39 +130,39 @@ class ShapeFactory(Factory):
             self,
             i_face_to_draft: Reference,
             i_neutral: Reference,
-            i_neutral_mode: int,
+            i_neutral_mode: CatDraftNeutralPropagationMode,
             i_parting: Reference,
             i_dir_x: float,
             i_dir_y: float,
             i_dir_z: float,
-            i_mode: int,
+            i_mode: CatDraftMode,
             i_angle: float,
-            i_multiselection_mode: int) -> Draft:
+            i_multiselection_mode: CatDraftMultiselectionMode) -> Draft:
         return Draft(
             self.shape_factory.AddNewDraft(
                 i_face_to_draft._com,
                 i_neutral._com,
-                i_neutral_mode,
+                int(i_neutral_mode),
                 i_parting._com,
                 i_dir_x,
                 i_dir_y,
                 i_dir_z,
-                i_mode,
+                int(i_mode),
                 i_angle,
-                i_multiselection_mode
+                int(i_multiselection_mode)
             )
         )
 
-    def add_new_edge_fillet_with_constant_radius(self, i_edge_to_fillet: Reference, i_propag_mode: int,
+    def add_new_edge_fillet_with_constant_radius(self, i_edge_to_fillet: Reference, i_propag_mode: CatFilletEdgePropagation,
                                                  i_radius: float) -> ConstRadEdgeFillet:
         return ConstRadEdgeFillet(
-            self.shape_factory.AddNewEdgeFilletWithConstantRadius(i_edge_to_fillet._com, i_propag_mode, i_radius))
+            self.shape_factory.AddNewEdgeFilletWithConstantRadius(i_edge_to_fillet._com, int(i_propag_mode), i_radius))
 
-    def add_new_edge_fillet_with_varying_radius(self, i_edge_to_fillet: Reference, i_propag_mode: int,
-                                                i_variation_mode: int, i_default_radius: float) -> VarRadEdgeFillet:
+    def add_new_edge_fillet_with_varying_radius(self, i_edge_to_fillet: Reference, i_propag_mode: CatFilletEdgePropagation,
+                                                i_variation_mode: CatFilletVariation, i_default_radius: float) -> VarRadEdgeFillet:
         return VarRadEdgeFillet(
-            self.shape_factory.AddNewEdgeFilletWithVaryingRadius(i_edge_to_fillet._com, i_propag_mode,
-                                                                 i_variation_mode, i_default_radius))
+            self.shape_factory.AddNewEdgeFilletWithVaryingRadius(i_edge_to_fillet._com, int(i_propag_mode),
+                                                                 int(i_variation_mode), i_default_radius))
 
     def add_new_face_fillet(self, i_f1: Reference, i_f2: Reference, i_radius: float) -> FaceFillet:
         return FaceFillet(self.shape_factory.AddNewFaceFillet(i_f1._com, i_f2._com, i_radius))
@@ -225,6 +227,11 @@ class ShapeFactory(Factory):
 
     def add_new_loft(self) -> AnyObject:
         return AnyObject(self.shape_factory.AddNewLoft())
+    
+    def add_new_manu_or_auto_partition(self, i_volume_to_be_partitioned: Reference, i_auto_mode: bool,
+                                       i_cutting_element: Reference, i_limit: CatPartitionLimitType) -> Partition:
+        return Partition(self.shape_factory.AddNewManuOrAutoPartition(i_volume_to_be_partitioned._com, i_auto_mode, 
+                                                                      i_cutting_element._com, int(i_limit)))
 
     def add_new_mirror(self, i_mirroring_element: Reference) -> Mirror:
         return Mirror(self.shape_factory.AddNewMirror(i_mirroring_element._com))
@@ -234,6 +241,9 @@ class ShapeFactory(Factory):
 
     def add_new_pad_from_ref(self, i_profile_elt: Reference, i_height: float) -> Pad:
         return Pad(self.shape_factory.AddNewPadFromRef(i_profile_elt._com, i_height))
+    
+    def add_new_partition(self, i_splitting_element: Reference, i_split_side: CatSplitSide) -> Split:
+        return Partition(self.shape_factory.AddNewPartition(i_splitting_element._com, int(i_split_side)))
 
     def add_new_pocket(self, i_sketch: 'Sketch', i_height: float) -> Pocket:
         return Pocket(self.shape_factory.AddNewPocket(i_sketch._com, i_height))
@@ -279,9 +289,9 @@ class ShapeFactory(Factory):
         return AnyObject(self.shape_factory.AddNewRemovedLoft())
 
     def add_new_replace_face(self, i_split_plane: Reference, i_remove_face: Reference,
-                             i_splitting_side: int) -> ReplaceFace:
+                             i_splitting_side: CatSplitSide) -> ReplaceFace:
         return ReplaceFace(
-            self.shape_factory.AddNewReplaceFace(i_split_plane._com, i_remove_face._com, i_splitting_side))
+            self.shape_factory.AddNewReplaceFace(i_split_plane._com, i_remove_face._com, int(i_splitting_side)))
 
     def add_new_rib(self, i_sketch: 'Sketch', i_center_curve: 'Sketch') -> Rib:
         return Rib(self.shape_factory.AddNewRib(i_sketch._com, i_center_curve._com))
@@ -295,8 +305,8 @@ class ShapeFactory(Factory):
     def add_new_rotate2(self, i_axis: Reference, i_angle: float) -> AnyObject:
         return AnyObject(self.shape_factory.AddNewRotate2(i_axis._com, i_angle))
 
-    def add_new_sew_surface(self, i_sewing_element: Reference, i_sewing_side: int) -> SewSurface:
-        return SewSurface(self.shape_factory.AddNewSewSurface(i_sewing_element._com, i_sewing_side))
+    def add_new_sew_surface(self, i_sewing_element: Reference, i_sewing_side: CatSplitSide) -> SewSurface:
+        return SewSurface(self.shape_factory.AddNewSewSurface(i_sewing_element._com, int(i_sewing_side)))
 
     def add_new_shaft(self, i_sketch: 'Sketch') -> Shaft:
         return Shaft(self.shape_factory.AddNewShaft(i_sketch._com))
@@ -318,17 +328,17 @@ class ShapeFactory(Factory):
     def add_new_solid_combine(self, i_profile_elt_first: Reference, i_profile_elt_second: Reference) -> SolidCombine:
         return SolidCombine(self.shape_factory.AddNewSolidCombine(i_profile_elt_first._com, i_profile_elt_second._com))
 
-    def add_new_solid_edge_fillet_with_constant_radius(self, i_edge_to_fillet: Reference, i_propag_mode: int,
+    def add_new_solid_edge_fillet_with_constant_radius(self, i_edge_to_fillet: Reference, i_propag_mode: CatFilletEdgePropagation,
                                                        i_radius: float) -> ConstRadEdgeFillet:
         return ConstRadEdgeFillet(
-            self.shape_factory.AddNewSolidEdgeFilletWithConstantRadius(i_edge_to_fillet._com, i_propag_mode, i_radius))
+            self.shape_factory.AddNewSolidEdgeFilletWithConstantRadius(i_edge_to_fillet._com, int(i_propag_mode), i_radius))
 
-    def add_new_solid_edge_fillet_with_varying_radius(self, i_edge_to_fillet: Reference, i_propag_mode: int,
-                                                      i_variation_mode: int,
+    def add_new_solid_edge_fillet_with_varying_radius(self, i_edge_to_fillet: Reference, i_propag_mode: CatFilletEdgePropagation,
+                                                      i_variation_mode: CatFilletVariation,
                                                       i_default_radius: float) -> VarRadEdgeFillet:
         return VarRadEdgeFillet(
-            self.shape_factory.AddNewSolidEdgeFilletWithVaryingRadius(i_edge_to_fillet._com, i_propag_mode,
-                                                                      i_variation_mode, i_default_radius))
+            self.shape_factory.AddNewSolidEdgeFilletWithVaryingRadius(i_edge_to_fillet._com, int(i_propag_mode),
+                                                                      int(i_variation_mode), i_default_radius))
 
     def add_new_solid_face_fillet(self, i_f1: Reference, i_f2: Reference, i_radius: float) -> FaceFillet:
         return FaceFillet(self.shape_factory.AddNewSolidFaceFillet(i_f1._com, i_f2._com, i_radius))
@@ -338,8 +348,8 @@ class ShapeFactory(Factory):
         return TritangentFillet(
             self.shape_factory.AddNewSolidTritangentFillet(i_f1._com, i_f2._com, i_removed_face._com))
 
-    def add_new_split(self, i_splitting_element: Reference, i_split_side: int) -> Split:
-        return Split(self.shape_factory.AddNewSplit(i_splitting_element._com, i_split_side))
+    def add_new_split(self, i_splitting_element: Reference, i_split_side: CatSplitSide) -> Split:
+        return Split(self.shape_factory.AddNewSplit(i_splitting_element._com, int(i_split_side)))
 
     def add_new_stiffener(self, i_sketch: 'Sketch') -> Stiffener:
         return Stiffener(self.shape_factory.AddNewStiffener(i_sketch._com))
@@ -347,18 +357,18 @@ class ShapeFactory(Factory):
     def add_new_stiffener_from_ref(self, i_profile_elt: Reference) -> Stiffener:
         return Stiffener(self.shape_factory.AddNewStiffenerFromRef(i_profile_elt._com))
 
-    def add_new_surface_edge_fillet_with_constant_radius(self, i_edge_to_fillet: Reference, i_propag_mode: int,
+    def add_new_surface_edge_fillet_with_constant_radius(self, i_edge_to_fillet: Reference, i_propag_mode: CatFilletEdgePropagation,
                                                          i_radius: float) -> ConstRadEdgeFillet:
         return ConstRadEdgeFillet(
-            self.shape_factory.AddNewSurfaceEdgeFilletWithConstantRadius(i_edge_to_fillet._com, i_propag_mode,
+            self.shape_factory.AddNewSurfaceEdgeFilletWithConstantRadius(i_edge_to_fillet._com, int(i_propag_mode),
                                                                          i_radius))
 
-    def add_new_surface_edge_fillet_with_varying_radius(self, i_edge_to_fillet: Reference, i_propag_mode: int,
-                                                        i_variation_mode: int,
+    def add_new_surface_edge_fillet_with_varying_radius(self, i_edge_to_fillet: Reference, i_propag_mode: CatFilletEdgePropagation,
+                                                        i_variation_mode: CatFilletVariation,
                                                         i_default_radius: float) -> VarRadEdgeFillet:
         return VarRadEdgeFillet(
-            self.shape_factory.AddNewSurfaceEdgeFilletWithVaryingRadius(i_edge_to_fillet._com, i_propag_mode,
-                                                                        i_variation_mode, i_default_radius))
+            self.shape_factory.AddNewSurfaceEdgeFilletWithVaryingRadius(i_edge_to_fillet._com, int(i_propag_mode),
+                                                                        int(i_variation_mode), i_default_radius))
 
     def add_new_surface_face_fillet(self, i_f1: Reference, i_f2: Reference, i_radius: float) -> FaceFillet:
         return FaceFillet(self.shape_factory.AddNewSurfaceFaceFillet(i_f1._com, i_f2._com, i_radius))
@@ -403,9 +413,9 @@ class ShapeFactory(Factory):
                                                          i_rotation_angle))
 
     def add_new_surfacic_sew_surface(self, i_type: int, i_support_surface: Reference, i_sewing_element: Reference,
-                                     i_sewing_side: int) -> SewSurface:
+                                     i_sewing_side: CatSplitSide) -> SewSurface:
         return SewSurface(self.shape_factory.AddNewSurfacicSewSurface(i_type, i_support_surface._com,
-                                                                      i_sewing_element._com, i_sewing_side))
+                                                                      i_sewing_element._com, int(i_sewing_side)))
 
     def add_new_surfacic_user_pattern(self, i_shape_to_copy: AnyObject, i_nb_of_copies: int) -> UserPattern:
         return UserPattern(self.shape_factory.AddNewSurfacicUserPattern(i_shape_to_copy._com, i_nb_of_copies))
@@ -455,9 +465,9 @@ class ShapeFactory(Factory):
         return Remove(self.shape_factory.AddNewVolumeRemove(i_body1._com, i_body2._com, i_type))
 
     def add_new_volume_sew_surface(self, i_type: int, i_support_volume: Reference, i_sewing_element: Reference,
-                                   i_sewing_side: int) -> SewSurface:
+                                   i_sewing_side: CatSplitSide) -> SewSurface:
         return SewSurface(
-            self.shape_factory.AddNewVolumeSewSurface(i_type, i_support_volume._com, i_sewing_element._com, i_sewing_side))
+            self.shape_factory.AddNewVolumeSewSurface(i_type, i_support_volume._com, i_sewing_element._com, int(i_sewing_side)))
 
     def add_new_volume_shell(self, i_face_to_remove: Reference, i_internal_thickness: float,
                              i_external_thickness: float, i_volume_support: Reference) -> Shell:
@@ -477,14 +487,14 @@ class ShapeFactory(Factory):
     def add_new_volume_trim(self, i_support_volume: Reference, i_cutting_volume: Reference) -> Trim:
         return Trim(self.shape_factory.AddNewVolumeTrim(i_support_volume._com, i_cutting_volume._com))
 
-    def add_new_volumic_draft(self, i_face_to_draft: Reference, i_neutral: Reference, i_neutral_mode: int,
-                              i_parting: Reference, i_dir_x: float, i_dir_y: float, i_dir_z: float, i_mode: int,
-                              i_angle: float, i_multiselection_mode: int, i_type: int,
+    def add_new_volumic_draft(self, i_face_to_draft: Reference, i_neutral: Reference, i_neutral_mode: CatDraftNeutralPropagationMode,
+                              i_parting: Reference, i_dir_x: float, i_dir_y: float, i_dir_z: float, i_mode: CatDraftMode,
+                              i_angle: float, i_multiselection_mode: CatDraftMultiselectionMode, i_type: int,
                               i_volume_support: Reference) -> Draft:
         return Draft(
-            self.shape_factory.AddNewVolumicDraft(i_face_to_draft._com, i_neutral._com, i_neutral_mode,
-                                                  i_parting._com, i_dir_x, i_dir_y, i_dir_z, i_mode, i_angle,
-                                                  i_multiselection_mode, i_type, i_volume_support._com))
+            self.shape_factory.AddNewVolumicDraft(i_face_to_draft._com, i_neutral._com, int(i_neutral_mode),
+                                                  i_parting._com, i_dir_x, i_dir_y, i_dir_z, int(i_mode), i_angle,
+                                                  int(i_multiselection_mode), i_type, i_volume_support._com))
 
     def __repr__(self):
-        return f'ShapeFactory(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

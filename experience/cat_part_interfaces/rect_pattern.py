@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference
+from experience.cat_part_interfaces.cat_part_types import *
 from experience.cat_part_interfaces import Pattern
 
 if TYPE_CHECKING:
@@ -39,12 +40,12 @@ class RectPattern(Pattern):
             return self
         return self.rect_pattern.FirstOrientation
 
-    def first_rectangular_pattern_parameters(self, value: int = None) -> Union['RectPattern', int]:
+    def first_rectangular_pattern_parameters(self, value: CatRectangularPatternParameters = None) -> Union['RectPattern', CatRectangularPatternParameters]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.rect_pattern.FirstRectangularPatternParameters = value
+            self.rect_pattern.FirstRectangularPatternParameters = int(value)
             return self
-        return self.rect_pattern.FirstRectangularPatternParameters
+        return CatRectangularPatternParameters.item(self.rect_pattern.FirstRectangularPatternParameters)
 
     def second_direction_repartition(self) -> 'LinearRepartition':
         from experience.cat_part_interfaces import LinearRepartition
@@ -61,12 +62,12 @@ class RectPattern(Pattern):
             return self
         return self.rect_pattern.SecondOrientation
 
-    def second_rectangular_pattern_parameters(self, value: int = None) -> Union['RectPattern', int]:
+    def second_rectangular_pattern_parameters(self, value: CatRectangularPatternParameters = None) -> Union['RectPattern', CatRectangularPatternParameters]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.rect_pattern.SecondRectangularPatternParameters = value
+            self.rect_pattern.SecondRectangularPatternParameters = int(value)
             return self
-        return self.rect_pattern.SecondRectangularPatternParameters
+        return CatRectangularPatternParameters.item(self.rect_pattern.SecondRectangularPatternParameters)
 
     def get_first_direction(self, io_first_direction: tuple) -> tuple[float, float, float]:
         return self._get_safe_array(self._com, "GetFirstDirection", 2)
@@ -91,4 +92,4 @@ class RectPattern(Pattern):
         return self
 
     def __repr__(self):
-        return f'RectPattern(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

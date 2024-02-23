@@ -26,4 +26,4 @@ class SurfaceBasedShape(Shape):
         return Reference(self.surface_based_shape.Surface)
 
     def __repr__(self):
-        return f'SurfaceBasedShape(name="{ self.name() }")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

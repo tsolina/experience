@@ -2,6 +2,7 @@ from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference, References
 from experience.cat_part_interfaces import Fillet
+from experience.cat_part_interfaces.cat_part_types import *
 
 class EdgeFillet(Fillet):
     """
@@ -20,12 +21,12 @@ class EdgeFillet(Fillet):
         super().__init__(com)
         self.edge_fillet = com
 
-    def edge_propagation(self, value: int = None) -> Union['EdgeFillet', int]:
+    def edge_propagation(self, value: CatFilletEdgePropagation = None) -> Union['EdgeFillet', CatFilletEdgePropagation]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.edge_fillet.EdgePropagation = value
+            self.edge_fillet.EdgePropagation = int(value)
             return self
-        return self.edge_fillet.EdgePropagation
+        return CatFilletEdgePropagation.item(self.edge_fillet.EdgePropagation)
 
     def edges_to_keep(self) -> References:
         return References(self.edge_fillet.EdgesToKeep)
@@ -39,4 +40,4 @@ class EdgeFillet(Fillet):
         return self
 
     def __repr__(self):
-        return f'EdgeFillet(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

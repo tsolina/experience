@@ -2,6 +2,7 @@ from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Reference, References
 from experience.system import AnyObject
+from experience.cat_part_interfaces.cat_part_types import *
 
 if TYPE_CHECKING:
     from experience.knowledge_interfaces import Angle
@@ -27,12 +28,12 @@ class DraftDomain(AnyObject):
     def faces_to_draft(self) -> References:
         return References(self.draft_domain.FacesToDraft)
 
-    def multiselection_mode(self, value: int = None) -> Union['DraftDomain', int]:
+    def multiselection_mode(self, value: CatDraftMultiselectionMode = None) -> Union['DraftDomain', CatDraftMultiselectionMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.draft_domain.MultiselectionMode = value
+            self.draft_domain.MultiselectionMode = int(value)
             return self
-        return self.draft_domain.MultiselectionMode
+        return CatDraftMultiselectionMode.item(self.draft_domain.MultiselectionMode)
 
     def neutral_element(self, value: Reference = None) -> Union['DraftDomain', Reference]:
         """ set value if provided and return self, otherwise reads the value """
@@ -41,12 +42,12 @@ class DraftDomain(AnyObject):
             return self
         return Reference(self.draft_domain.NeutralElement)
 
-    def neutral_propagation_mode(self, value: int = None) -> Union['DraftDomain', int]:
+    def neutral_propagation_mode(self, value: CatDraftNeutralPropagationMode = None) -> Union['DraftDomain', CatDraftNeutralPropagationMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.draft_domain.NeutralPropagationMode = value
+            self.draft_domain.NeutralPropagationMode = int(value)
             return self
-        return self.draft_domain.NeutralPropagationMode
+        return CatDraftNeutralPropagationMode.item(self.draft_domain.NeutralPropagationMode)
 
     def pulling_direction_element(self, value: Reference = None) -> Union['DraftDomain', Reference]:
         """ set value if provided and return self, otherwise reads the value """
@@ -75,4 +76,4 @@ class DraftDomain(AnyObject):
         return self
 
     def __repr__(self):
-        return f'DraftDomain(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'
