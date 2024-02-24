@@ -43,14 +43,9 @@ try:
     #     vp.set_symbol_type(InfSymbolType.two_unfilled_concentric_circles)
 
     part = app.active_editor().active_object(Part)
-    gset = part.hybrid_bodies().item(1)
-    # pt = part.hybrid_shape_factory().add_new_point_coord(30, 30, 26).compute().append_to(gset)
-    pt = gset.hybrid_shapes().item(1)
+    axis = part.axis_systems().item(1)
 
-    print(pt, pt.com_type())
-    print(pt.as_pyclass(AnyObject), pt.as_pyclass(AnyObject).com_type())
-    print(AnyObject(pt._vba_cast(pt._com, AnyObject)), AnyObject(pt._vba_cast(pt._com, AnyObject)).com_type())
-    print(pt.name())
+    print(axis.name(), axis.get_vectors())
 
     app.refresh_display(True)
         

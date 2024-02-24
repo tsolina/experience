@@ -37,6 +37,3 @@ class HybridShapes(Collection):
     def __iter__(self) -> Iterator[HybridShape]:
         for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
-
-    def __repr__(self):
-        return f'HybridShapes(name="{self.name()}")'

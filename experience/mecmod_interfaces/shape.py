@@ -13,6 +13,3 @@ class Shape(AnyObject):
     def __init__(self, com):
         super().__init__(com)
         self.shape = com
-
-    def __repr__(self):
-        return f'Shape(name="{self.name()}")'

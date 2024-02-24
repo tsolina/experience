@@ -56,6 +56,3 @@ class HybridShapeInstance(HybridShape):
     def put_input_data(self, i_name: str, i_input: AnyObject) -> 'HybridShapeInstance':
         self.hybrid_shape_instance.PutInputData(i_name, i_input._com)
         return self
-
-    def __repr__(self):
-        return f'HybridShapeInstance(name="{ self.name() }")'

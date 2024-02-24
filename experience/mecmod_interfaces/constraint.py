@@ -2,6 +2,7 @@ from typing import Union
 from experience.inf_interfaces import Reference
 from experience.knowledge_interfaces import Dimension
 from experience.system import AnyObject
+from experience.mecmod_interfaces.mecmod_types import *
 
 class Constraint(AnyObject):
     """
@@ -17,70 +18,70 @@ class Constraint(AnyObject):
         super().__init__(com)
         self.constraint = com
 
-    def angle_sector(self, value: int = None) -> Union['Constraint', int]:
+    def angle_sector(self, value: CatConstraintAngleSector = None) -> Union['Constraint', CatConstraintAngleSector]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.AngleSector = value
+            self.constraint.AngleSector = int(value)
             return self        
-        return self.constraint.AngleSector
+        return CatConstraintAngleSector.item(self.constraint.AngleSector)
 
     def dimension(self) -> Dimension:
         return Dimension(self.constraint.Dimension)
 
-    def distance_config(self, value: int = None) -> Union['Constraint', int]:
+    def distance_config(self, value: CatConstraintDistConfig = None) -> Union['Constraint', CatConstraintDistConfig]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.DistanceConfig = value
+            self.constraint.DistanceConfig = int(value)
             return self    
-        return self.constraint.DistanceConfig
+        return CatConstraintDistConfig.item(self.constraint.DistanceConfig)
 
-    def distance_direction(self, value: int = None) -> Union['Constraint', int]:
+    def distance_direction(self, value: CatConstraintDistDirection = None) -> Union['Constraint', CatConstraintDistDirection]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.DistanceDirection = value
+            self.constraint.DistanceDirection = int(value)
             return self    
-        return self.constraint.DistanceDirection
+        return CatConstraintDistDirection.item(self.constraint.DistanceDirection)
 
-    def mode(self, value: int = None) -> Union['Constraint', int]:
+    def mode(self, value: CatConstraintMode = None) -> Union['Constraint', CatConstraintMode]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.Mode = value
+            self.constraint.Mode = int(value)
             return self   
-        return self.constraint.Mode
+        return CatConstraintMode.item(self.constraint.Mode)
 
-    def orientation(self, value: int = None) -> Union['Constraint', int]:
+    def orientation(self, value: CatConstraintOrientation = None) -> Union['Constraint', CatConstraintOrientation]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.Orientation = value
+            self.constraint.Orientation = int(value)
             return self   
-        return self.constraint.Orientation
+        return CatConstraintOrientation.item(self.constraint.Orientation)
 
-    def reference_axis(self, value: int = None) -> Union['Constraint', int]:
+    def reference_axis(self, value: CatConstraintRefAxis = None) -> Union['Constraint', CatConstraintRefAxis]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.ReferenceAxis = value
+            self.constraint.ReferenceAxis = int(value)
             return self
-        return self.constraint.ReferenceAxis
+        return CatConstraintRefAxis.item(self.constraint.ReferenceAxis)
 
-    def reference_type(self, value: int = None) -> Union['Constraint', int]:
+    def reference_type(self, value: CatConstraintRefType = None) -> Union['Constraint', CatConstraintRefType]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.ReferenceType = value
+            self.constraint.ReferenceType = int(value)
             return self
-        return self.constraint.ReferenceType
+        return CatConstraintRefType.item(self.constraint.ReferenceType)
 
-    def side(self, value: int = None) -> Union['Constraint', int]:
+    def side(self, value: CatConstraintSide = None) -> Union['Constraint', CatConstraintSide]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.constraint.Side = value
+            self.constraint.Side = int(value)
             return self
-        return self.constraint.Side
+        return CatConstraintSide.item(self.constraint.Side)
 
-    def status(self) -> int:
-        return self.constraint.Status
+    def status(self) -> CatConstraintStatus:
+        return CatConstraintStatus.item(self.constraint.Status)
 
-    def type(self) -> int:
-        return self.constraint.Type
+    def type(self) -> CatConstraintType:
+        return CatConstraintType.item(self.constraint.Type)
 
     def activate(self) -> 'Constraint':
         self.constraint.Activate()
@@ -93,8 +94,8 @@ class Constraint(AnyObject):
     def get_constraint_element(self, i_element_number: int) -> Reference:
         return Reference(self.constraint.GetConstraintElement(i_element_number))
 
-    def get_constraint_visu_location(self, o_anchor_point: tuple, o_anchor_vector: tuple) -> tuple:
-        return self.constraint.GetConstraintVisuLocation(o_anchor_point, o_anchor_vector)
+    def get_constraint_visu_location(self) -> tuple[tuple[float, float, float], tuple[float, float, float]]:
+        return self._get_safe_array_multi(self.constraint, "GetConstraintVisuLocation", (2, 2))
 
     def is_inactive(self) -> bool:
         return self.constraint.IsInactive()
@@ -106,6 +107,3 @@ class Constraint(AnyObject):
     def set_constraint_visu_location(self, i_new_x: float, i_new_y: float, i_new_z: float) -> 'Constraint':
         self.constraint.SetConstraintVisuLocation(i_new_x, i_new_y, i_new_z)
         return self
-
-    def __repr__(self):
-        return f'Constraint(name="{self.name()}")'

@@ -21,6 +21,3 @@ class PartServices(AnyObject):
     
     def get_sub_elements(self, i_object: AnyObject, i_sub_element_dimension: int, i_duplicates: bool) -> References:
         return References(self.part_services.GetSubElements(i_object._com, i_sub_element_dimension, i_duplicates))
-    
-    def __repr__(self):
-        return f'PartServices(name="{self.name()}")'

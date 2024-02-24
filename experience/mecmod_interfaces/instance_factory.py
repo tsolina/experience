@@ -48,6 +48,3 @@ class InstanceFactory(Factory):
     def put_input_data(self, i_name: str, i_input: AnyObject) -> 'InstanceFactory':
         self.instance_factory.PutInputData(i_name, i_input._com)
         return self
-
-    def __repr__(self):
-        return f'InstanceFactory(name="{self.name()}")'

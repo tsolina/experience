@@ -13,6 +13,3 @@ class Factory(AnyObject):
     def __init__(self, com):
         super().__init__(com)
         self.factory = com
-
-    def __repr__(self):
-        return f'Factory(name="{self.name()}")'

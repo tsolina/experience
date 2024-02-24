@@ -4,7 +4,6 @@ from experience.mecmod_interfaces import AxisSystem
 from experience.system import Collection
 from experience.types import cat_variant
 
-
 class AxisSystems(Collection):
     """
                 | System.IUnknown
@@ -34,6 +33,3 @@ class AxisSystems(Collection):
     def __iter__(self) -> Iterator[AxisSystem]:
         for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
-
-    def __repr__(self):
-        return f'AxisSystems(name="{self.name()}")'

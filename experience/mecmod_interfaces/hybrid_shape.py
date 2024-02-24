@@ -34,6 +34,3 @@ class HybridShape(AnyObject):
     def append_to(self, i_set: 'HybridBody') -> 'HybridShape':
         i_set.append_hybrid_shape(self)
         return self
-
-    # def __repr__(self):
-    #     return f'HybridShape(name="{self.name()}")'

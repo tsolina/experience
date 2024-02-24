@@ -1,6 +1,8 @@
-from experience.inf_interfaces import Move
+from typing import TYPE_CHECKING
 from experience.mecmod_interfaces import Shape
-from experience.system import AnyObject
+
+if TYPE_CHECKING:
+    from experience.inf_interfaces import Move
 
 class Solid(Shape):
     """
@@ -17,14 +19,6 @@ class Solid(Shape):
         super().__init__(com)
         self.solid = com
 
-    def move(self) -> Move:
+    def move(self) -> 'Move':
+        from experience.inf_interfaces import Move
         return Move(self.solid.Move)
-
-    # def source_element(self) -> AnyObject:
-    #     return AnyObject(self.solid.SourceElement)
-
-    # def source_product(self) -> AnyObject:
-    #     return AnyObject(self.solid.SourceProduct)
-
-    def __repr__(self):
-        return f'Solid(name="{ self.name() }")'

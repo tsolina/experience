@@ -14,6 +14,3 @@ class Boundary(Reference):
     def __init__(self, com):
         super().__init__(com)
         self.boundary = com
-
-    def __repr__(self):
-        return f'Boundary(name="{self.name()}")'

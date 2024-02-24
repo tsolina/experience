@@ -40,6 +40,3 @@ class Sketches(Collection):
         for i in range(self.count()):
             from experience.cat_sketcher_interfaces import Sketch  # Import Sketch locally
             yield Sketch(self._com.item(i + 1))
-
-    def __repr__(self):
-        return f'Sketches(name="{self.name()}")'

@@ -15,7 +15,7 @@ class GeometricElements(Collection):
     """
 
     def __init__(self, com):
-        super().__init__(com, _child=GeometricElement)
+        super().__init__(com, child=GeometricElement)
         self.geometric_elements = com
 
     def item(self, i_index: cat_variant) -> GeometricElement:
@@ -30,6 +30,3 @@ class GeometricElements(Collection):
     def __iter__(self) -> Iterator[GeometricElement]:
         for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
-
-    def __repr__(self):
-        return f'GeometricElements(name="{self.name()}")'

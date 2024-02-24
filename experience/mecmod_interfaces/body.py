@@ -36,6 +36,3 @@ class Body(AnyObject):
     def insert_hybrid_shape(self, i_hybrid_shape: HybridShape) -> 'Body':
         self.body.InsertHybridShape(i_hybrid_shape._com)
         return self
-
-    def __repr__(self):
-        return f'Body(name="{self.name()}")'

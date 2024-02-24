@@ -37,6 +37,3 @@ class OrderedGeometricalSet(AnyObject):
     def insert_hybrid_shape(self, i_hybrid_shape: 'HybridShape') -> 'OrderedGeometricalSet':
         self.ordered_geometrical_set.InsertHybridShape(i_hybrid_shape._com)
         return self
-
-    def __repr__(self):
-        return f'OrderedGeometricalSet(name="{self.name()}")'

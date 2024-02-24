@@ -59,6 +59,3 @@ class ShapeInstance(Shape):
     def put_input_data(self, i_name: str, i_input: AnyObject) -> 'ShapeInstance':
         self.shape_instance.PutInputData(i_name, i_input._com)
         return self
-
-    def __repr__(self):
-        return f'ShapeInstance(name="{ self.name() }")'

@@ -1,3 +1,5 @@
+from .mecmod_types import *
+
 from .axis_system import AxisSystem # 
 from .axis_systems import AxisSystems # AxisSystem
 from .boundary import Boundary #
@@ -26,3 +28,23 @@ from .body import Body # HybridBodies, HybridShape, HybridShapes, OrderedGeometr
 from .bodies import Bodies # Body
 
 from .part import Part
+
+from .edge import Edge
+from .bi_dim_feat_edge import BiDimFeatEdge # Edge
+from .rectilinear_bi_dim_feat_edge import RectilinearBiDimFeatEdge # BiDimFeatEdge
+
+from .mono_dim_feat_edge import MonoDimFeatEdge # Edge
+from .rectilinear_mono_dim_feat_edge import RectilinearMonoDimFeatEdge # MonoDimFeatEdge
+
+from .tri_dim_feat_edge import TriDimFeatEdge
+from .rectilinear_tri_dim_feat_edge import  RectilinearTriDimFeatEdge # TriDimFeatEdge
+
+
+from .face import Face
+from .cylindrical_face import CylindricalFace # Face
+from .planar_face import PlanarFace # Face
+
+from .vertex import Vertex
+from .not_wire_boundardy_mono_dim_feat_vertex import NotWireBoundaryMonoDimFeatVertex # Vertex
+from .tri_dim_feat_vertex_or_bi_dim_feat_vertex import TriDimFeatVertexOrBiDimFeatVertex # Vertex
+from .zero_dim_feat_vertex_or_wire_boundary_mono_dim_feat_vertex import ZeroDimFeatVertexOrWireBoundaryMonoDimFeatVertex # Vertex

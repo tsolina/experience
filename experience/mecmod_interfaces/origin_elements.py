@@ -22,6 +22,3 @@ class OriginElements(AnyObject):
 
     def plane_zx(self) -> AnyObject:
         return AnyObject(self.origin_elements.PlaneZX)
-
-    def __repr__(self):
-        return f'OriginElements(name="{ self.name() }")'
