@@ -100,6 +100,3 @@ class AnnotationFactory(Factory):
     def instantiate_noa(self, i_noa: Noa, i_surf: UserSurface) -> 'Annotation': #NOA?
         from experience.cat_tps_interfaces import Annotation
         return Annotation(self.annotation_factory.InstanciateNOA(i_noa._com, i_surf._com))
-
-    def __repr__(self):
-        return f'AnnotationFactory(name="{self.name()}")'

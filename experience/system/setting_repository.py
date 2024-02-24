@@ -40,5 +40,5 @@ class SettingRepository(SettingController):
         self.setting_repository.SetAttrLock(i_attr_name, i_locked)
         return self
 
-    def __repr__(self):
-        return f'{self.__class__.__name__}(name="{self.name()}")'
+    # def __repr__(self):
+    #     return f'{self.__class__.__name__}(name="{self.name()}")'

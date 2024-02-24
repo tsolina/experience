@@ -22,6 +22,3 @@ class CoordDim(AnyObject):
     def get_2d_annot(self) -> 'DrawingCoordDim':
         from experience.cat_annotation_interfaces import DrawingCoordDim
         return DrawingCoordDim(self.coord_dim.Get2dAnnot())
-
-    def __repr__(self):
-        return f'CoordDim(name="{self.name()}")'

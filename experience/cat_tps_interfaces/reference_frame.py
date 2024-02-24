@@ -47,6 +47,3 @@ class ReferenceFrame(AnyObject):
     def set_frame(self, i_first_box: str, i_second_box: str, i_third_box: str) -> 'ReferenceFrame':
         self.reference_frame.SetFrame(i_first_box, i_second_box, i_third_box)
         return self
-
-    def __repr__(self):
-        return f'ReferenceFrame(name="{self.name()}")'

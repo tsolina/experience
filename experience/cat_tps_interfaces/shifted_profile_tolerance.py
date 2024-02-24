@@ -25,7 +25,4 @@ class ShiftedProfileTolerance(AnyObject):
         return self.shifted_profile_tolerance.GetShiftDirection()
 
     def get_shift_side(self) -> tuple: #, op_point: tuple
-        return self.shifted_profile_tolerance.GetShiftSide(op_point)
-
-    def __repr__(self):
-        return f'ShiftedProfileTolerance(name="{ self.name() }")'
+        return self.shifted_profile_tolerance.GetShiftSide()

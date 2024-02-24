@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING
 
 from experience.system import AnyObject
 from experience.cat_tps_interfaces import AnnotationFactory, AnnotationFactory2, CaptureFactory, Captures, TPSHyperLinkManager, TPSView, TPSViewFactory, Annotations, TPSViews
-
+from experience.cat_tps_interfaces.cat_tps_types import *
 if TYPE_CHECKING:
     from experience.mecmod_interfaces import Part
 
@@ -42,13 +42,11 @@ class AnnotationSet(AnyObject):
     def annotation_set_purpose(self) -> str:
         return self.annotation_set.AnnotationSetPurpose
 
-    def annotation_set_type(self) -> int:
-        return self.annotation_set.AnnotationSetType
-
+    def annotation_set_type(self) -> CatAnnotationSetType:
+        return CatAnnotationSetType.item(self.annotation_set.AnnotationSetType)
 
     def annotations(self) -> Annotations:
         return Annotations(self.annotation_set.Annotations)
-
 
     def capture_factory(self) -> CaptureFactory:
         return CaptureFactory(self.annotation_set.CaptureFactory)
@@ -118,9 +116,6 @@ class AnnotationSet(AnyObject):
     def read_iso_default_properties(self, o_iso_defaults: tuple) -> int:
         return self.annotation_set.ReadISODefaultProperties(o_iso_defaults)
 
-    def repair_delete_invalid_fta_features(options_to_repair_delete: int) -> 'AnnotationSet':
+    def repair_delete_invalid_fta_features(self, options_to_repair_delete: int) -> 'AnnotationSet':
         self.annotation_set.RepairDeleteInvalidFTAFeatures(options_to_repair_delete)
         return self
-
-    def __repr__(self):
-        return f'AnnotationSet(name="{self.name()}")'

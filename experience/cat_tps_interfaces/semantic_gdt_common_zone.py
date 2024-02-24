@@ -20,6 +20,3 @@ class SemanticGDTCommonZone(AnyObject):
 
     def modifier(self) -> str:
         return self.semantic_gdt_common_zone.Modifier
-
-    def __repr__(self):
-        return f'SemanticGDTCommonZone(name="{self.name()}")'

@@ -67,6 +67,3 @@ class Noa(AnyObject):
 
     def url(self, i_index: 'cat_variant') -> str:
         return self.noa.URL(i_index)
-
-    def __repr__(self):
-        return f'Noa(name="{self.name()}")'

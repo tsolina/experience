@@ -17,6 +17,3 @@ class EnvelopCondition(AnyObject):
 
     def modifier(self) -> str:
         return self.envelope_condition.Modifier
-
-    def __repr__(self):
-        return f'EnvelopCondition(name="{self.name()}")'

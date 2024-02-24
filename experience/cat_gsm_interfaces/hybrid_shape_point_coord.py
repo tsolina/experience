@@ -48,5 +48,8 @@ class HybridShapePointCoord(Point):
         from experience.knowledge_interfaces import Length
         return Length(self.hybrid_shape_point_coord.Z)
 
-    def __repr__(self):
-        return f'HybridShapePointCoord(name="{self.name}")'
+    # def __repr__(self):
+    #     return f'HybridShapePointCoord(name="{self.name()}")'
+    
+    # def __repr__(self):
+    #     return f'{self.__class__.__name__}(name="{self.name()}")'

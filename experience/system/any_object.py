@@ -60,11 +60,11 @@ class AnyObject(Experience):
         vba_code = f"""
         Public Function generalizedCastToVBA(obj as AnyObject) as {vba_class_name}
             set generalizedCastToVBA = obj
-            MsgBox(typename(generalizedCastToVBA))
+            'MsgBox(typename(generalizedCastToVBA) + " " + typename(x))
         End Function
         """
-        print(vba_code)
-        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_object])
+        # print(vba_code)
+        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [com_object])
 
     def as_pyclass(self, target_class: Type[T], vba_class_name: str = None) -> T:
         if vba_class_name is None:
@@ -155,5 +155,8 @@ class AnyObject(Experience):
         # print(dir(self))
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
 
+    # def __repr__(self):
+    #     return f'AnyObject(name="{self.name()}")'
+    
     def __repr__(self):
-        return f'AnyObject(name="{self.name()}")'
+        return f'{self.__class__.__name__}(name="{self.name()}")'

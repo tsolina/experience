@@ -19,6 +19,3 @@ class TPSViewFactory(AnyObject):
 
     def create_view(self, i_plane: Reference, i_view_type: cat_variant) -> TPSView:
         return TPSView(self.tps_view_factory.CreateView(i_plane, i_view_type))
-
-    def __repr__(self):
-        return f'TPSViewFactory(name="{self.name()}")'

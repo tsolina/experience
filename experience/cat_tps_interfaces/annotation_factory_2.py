@@ -1,7 +1,5 @@
 from typing import TYPE_CHECKING
 
-#from pycatia.mec_mod_interfaces.factory import Factory
-# from experience.cat_tps_interfaces import Annotation2, UserSurface
 from experience.drafting_interfaces import DrawingComponent
 from experience.types import cat_variant
 
@@ -104,6 +102,3 @@ class AnnotationFactory2(Factory):
     def instantiate_noa(self, i_noa: 'Annotation2', i_surf: 'UserSurface') -> 'Annotation2':
         from experience.cat_tps_interfaces import Annotation2
         return Annotation2(self.annotation_factory_2.InstanciateNOA(i_noa._com, i_surf._com))
-
-    def __repr__(self):
-        return f'AnnotationFactory2(name="{self.name()}")'

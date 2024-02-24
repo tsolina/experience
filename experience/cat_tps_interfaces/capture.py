@@ -89,9 +89,5 @@ class Capture(AnyObject):
         self.capture.DisplayCapture2(ib_apply_mirror)
         return self
 
-
     def tps_parallel_on_screen(self) -> TPSParallelOnScreen:
         return TPSParallelOnScreen(self.capture.TPSParallelOnScreen())
-
-    def __repr__(self):
-        return f'Capture(name="{self.name()}")'

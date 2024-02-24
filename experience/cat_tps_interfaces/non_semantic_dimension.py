@@ -26,6 +26,3 @@ class NonSemanticDimension(AnyObject):
 
     def has_dimension_limit(self) -> bool:
         return self.non_semantic_datum.HasDimensionLimit()
-
-    def __repr__(self):
-        return f'NonSemanticDimension(name="{self.name()}")'

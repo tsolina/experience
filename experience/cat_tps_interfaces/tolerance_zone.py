@@ -25,6 +25,3 @@ class ToleranceZone(AnyObject):
 
     def value(self) -> float:
         return self.tolerance_zone.Value
-
-    def __repr__(self):
-        return f'ToleranceZone(name="{ self.name() }")'

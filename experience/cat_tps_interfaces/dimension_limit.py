@@ -48,6 +48,3 @@ class DimensionLimit(AnyObject):
     def put_limits(self, i_bottom: float, i_up: float) -> 'DimensionLimit':
         self.dimension_limit.PutLimits(i_bottom, i_up)
         return self
-
-    def __repr__(self):
-        return f'DimensionLimit(name="{self.name()}")'

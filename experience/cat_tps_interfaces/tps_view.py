@@ -55,6 +55,3 @@ class TPSView(AnyObject):
 
     def hyper_link_manager(self) -> TPSHyperLinkManager:
         return TPSHyperLinkManager(self.tps_view.TPSHyperLinkManager())
-
-    def __repr__(self):
-        return f'TPSView(name="{ self.name() }")'

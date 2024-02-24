@@ -224,6 +224,3 @@ class Annotation(AnyObject):
     def transfert_to_view(self, i_view: TPSView) -> 'Annotation':
         self.annotation.TransfertToView(i_view.com_object)
         return self
-
-    def __repr__(self):
-        return f'Annotation(name="{self.name()}")'

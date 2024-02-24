@@ -21,7 +21,7 @@ class Roughness(AnyObject):
             return self
         return self.roughness.Applicability
 
-    def obtention(self) -> int:
+    def obtention(self, value: int = None) -> int:
         if value is not None:
             self.roughness.Obtention = value
             return self
@@ -37,6 +37,3 @@ class Roughness(AnyObject):
 
     def tps_parallel_on_screen(self) -> TPSParallelOnScreen:
         return TPSParallelOnScreen(self.roughness.TPSParallelOnScreen())
-
-    def __repr__(self):
-        return f'Roughness(name="{self.name()}")'

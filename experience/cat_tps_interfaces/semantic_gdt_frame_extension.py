@@ -25,6 +25,3 @@ class SemanticGDTFrameExtension(AnyObject):
 
     def orientation(self) -> float:
         return self.semantic_gdt_frame_extension.Orientation()
-
-    def __repr__(self):
-        return f'SemanticGDTFrameExtension(name="{self.name()}")'

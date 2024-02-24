@@ -16,6 +16,3 @@ class TolerancePerUnitBasisRestrictiveValue(AnyObject):
 
     def value(self) -> float:
         return self.tolerance_per_unit_basis_restrictive_value.Value
-
-    def __repr__(self):
-        return f'TolerancePerUnitBasisRestrictiveValue(name="{ self.name() }")'

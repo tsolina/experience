@@ -75,5 +75,5 @@ class DLNameSettingAtt(SettingController):
     def set_root_dl_name_creation_right_lock(self, i_locked: bool) -> 'SettingController':
         self.setting_controller.SetRootDLNameCreationRightLock(i_locked)    
 
-    def __repr__(self):
-        return f'{self.__class__.__name__}(name="{self.name()}")'
+    # def __repr__(self):
+    #     return f'{self.__class__.__name__}(name="{self.name()}")'

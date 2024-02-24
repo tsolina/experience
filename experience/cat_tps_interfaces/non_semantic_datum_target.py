@@ -31,6 +31,3 @@ class NonSemanticDatumTarget(AnyObject):
             self.non_semantic_datum.UpLabel = value
             return self
         return self.non_semantic_datum.UpLabel
-
-    def __repr__(self):
-        return f'NonSemanticDatumTarget(name="{self.name()}")'

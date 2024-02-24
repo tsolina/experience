@@ -129,7 +129,6 @@ class Annotation2(AnyObject):
         self.annotation.SetXY(i_x, i_y)
         return self
 
-
     def text(self) -> Text:
         return Text(self.annotation.Text())
 
@@ -137,13 +136,8 @@ class Annotation2(AnyObject):
         self.annotation.TransfertToView(i_view.com_object)
         return self
 
-
     def visualization_dimension(self) -> Dimension3D:
         return Dimension3D(self.annotation.VisualizationDimension())
 
-
     def weld(self) -> Weld:
         return Weld(self.annotation.Weld())
-
-    def __repr__(self):
-        return f'Annotation2(name="{self.name()}")'

@@ -26,10 +26,6 @@ class DatumSimple(AnyObject):
             return self
         return self.datum_simple.Label
 
-
     def targets(self) -> 'Annotations':
         from experience.cat_tps_interfaces import Annotations
         return Annotations(self.datum_simple.Targets)
-
-    def __repr__(self):
-        return f'DatumSimple(name="{self.name()}")'

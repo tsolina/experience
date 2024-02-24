@@ -30,6 +30,3 @@ class SemanticGDTNxDisplay(AnyObject):
     
     def is_a_separate(self) -> bool:
         return self.semantic_gdt_nx_display.IsASeparate()
-
-    def __repr__(self):
-        return f'SemanticGDTNxDisplay(name="{self.name()}")'

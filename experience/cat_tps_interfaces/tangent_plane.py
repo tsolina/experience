@@ -11,11 +11,8 @@ class TangentPlane(AnyObject):
     """
 
     def __init__(self, com):
-        super().__init__(com_)
+        super().__init__(com)
         self.tangent_plane = com
 
     def modifier(self) -> str:
         return self.tangent_plane.Modifier
-
-    def __repr__(self):
-        return f'TangentPlane(name="{ self.name() }")'

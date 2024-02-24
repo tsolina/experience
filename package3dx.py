@@ -34,22 +34,25 @@ try:
     from experience import *
     app = experience_application()
 
-    sel = app.active_editor().selection()
-    print("sel", sel.count())
-    if sel.count():
-        #obj = sel.item(1).value(HybridShape)f
-        vp = sel.vis_properties()
-        print("test:", vp.get_symbol_type())
-        vp.set_symbol_type(InfSymbolType.two_unfilled_concentric_circles)
+    # sel = app.active_editor().selection()
+    # print("sel", sel.count())
+    # if sel.count():
+    #     #obj = sel.item(1).value(HybridShape)f
+    #     vp = sel.vis_properties()
+    #     print("test:", vp.get_symbol_type())
+    #     vp.set_symbol_type(InfSymbolType.two_unfilled_concentric_circles)
+
+    part = app.active_editor().active_object(Part)
+    gset = part.hybrid_bodies().item(1)
+    # pt = part.hybrid_shape_factory().add_new_point_coord(30, 30, 26).compute().append_to(gset)
+    pt = gset.hybrid_shapes().item(1)
+
+    print(pt, pt.com_type())
+    print(pt.as_pyclass(AnyObject), pt.as_pyclass(AnyObject).com_type())
+    print(AnyObject(pt._vba_cast(pt._com, AnyObject)), AnyObject(pt._vba_cast(pt._com, AnyObject)).com_type())
+    print(pt.name())
 
     app.refresh_display(True)
-
-    # def some_func(i_type: Status):
-    #     print(i_type, type(i_type))
-    #     print(int(i_type) + 3)
-
-    # some_func(Status.IN_PROGRESS)
-    # some_func(1)
         
 except Exception as e:
     traceback_str = traceback.format_exc()

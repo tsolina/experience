@@ -50,6 +50,3 @@ class DatumTarget(AnyObject):
     def set_rectangular_area_size(self, i_length: float, i_width: float) -> 'DatumTarget':
         self.datum_target.SetRectangularAreaSize(i_length, i_width)
         return self
-
-    def __repr__(self):
-        return f'DatumTarget(name="{self.name()}")'

@@ -19,7 +19,7 @@ class AxisToAxis(Shape):
         super().__init__(com)
         self.axis_to_axis = com
 
-    def hybrid_shape(self) -> HybridShape:
+    def hybrid_shape(self) -> 'HybridShape':
         from experience.mecmod_interfaces import HybridShape
         return HybridShape(self.axis_to_axis.HybridShape)
 

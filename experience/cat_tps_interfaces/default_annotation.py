@@ -22,6 +22,3 @@ class DefaultAnnotation(AnyObject):
 
     def is_in_automatic_search_mode(self) -> bool:
         return self.default_annotation.IsInAutomaticSearchMode()
-
-    def __repr__(self):
-        return f'DefaultAnnotation(name="{ self.name() }")'

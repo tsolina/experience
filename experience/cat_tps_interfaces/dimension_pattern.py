@@ -16,6 +16,3 @@ class DimensionPattern(AnyObject):
 
     def instance_count(self) -> float:
         return self.dimension_pattern.InstanceCount
-
-    def __repr__(self):
-        return f'DimensionPattern(name="{ self.name() }")'

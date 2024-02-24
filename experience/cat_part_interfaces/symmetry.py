@@ -19,7 +19,7 @@ class Symmetry(Shape):
         super().__init__(com)
         self.symmetry = com
 
-    def hybrid_shape(self) -> HybridShape:
+    def hybrid_shape(self) -> 'HybridShape':
         from experience.mecmod_interfaces import HybridShape
         return HybridShape(self.symmetry.HybridShape)
 

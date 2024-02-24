@@ -22,6 +22,3 @@ class UserSurface(AnyObject):
     def add_user_surface(self, i_support: 'UserSurface') -> 'UserSurface':
         self.user_surfaces.AdduserSurface(i_support)
         return self
-
-    def __repr__(self):
-        return f'UserSurface(name="{self.name()}")'

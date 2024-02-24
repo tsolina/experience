@@ -14,9 +14,5 @@ class ParticularTolElem(AnyObject):
         super().__init__(com)
         self.particular_tol_elem = com
 
-
     def particular_geometry(self) -> str:
         return self.particular_tol_elem.ParticularGeometry
-
-    def __repr__(self):
-        return f'ParticularTolElem(name="{ self.name() }")'

@@ -16,13 +16,8 @@ class NonSemanticGDT(AnyObject):
         super().__init__(com)
         self.non_semantic_gdt = com
 
-
     def get_2d_annot(self, value: str = None) -> DrawingGDT:
         return DrawingGDT(self.non_semantic_gdt.Get2dAnnot())
 
-
     def tps_parallel_on_screen(self, value: str = None) -> TPSParallelOnScreen:
         return self.non_semantic_gdt.TPSParallelOnScreen()
-
-    def __repr__(self):
-        return f'NonSemanticGDT(name="{self.name()}")'

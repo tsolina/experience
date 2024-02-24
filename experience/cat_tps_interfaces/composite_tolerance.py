@@ -20,6 +20,3 @@ class CompositeTolerance(AnyObject):
 
     def value(self) -> float:
         return self.composite_tolerance.Value
-
-    def __repr__(self):
-        return f'CompositeTolerance(name="{ self.name() }")'

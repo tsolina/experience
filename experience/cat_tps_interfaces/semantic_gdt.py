@@ -122,6 +122,3 @@ class SemanticGDT(AnyObject):
 
     def tolerance_zone(self) -> ToleranceZone:
         return ToleranceZone(self.semantic_gdt.ToleranceZone())
-
-    def __repr__(self):
-        return f'SemanticGdt(name="{self.name()}")'

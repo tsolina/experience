@@ -18,8 +18,5 @@ class ToleranceUnitBasisValue(AnyObject):
         self.tolerance_unit_basis_value.SetValues(i_value1, i_value2)
         return self
 
-    def values(self, o_value1: float, o_value2: float) -> None: #', o_value1: float, o_value2: float'
-        return self.tolerance_unit_basis_value.Values(o_value1, o_value2)
-
-    def __repr__(self):
-        return f'ToleranceUnitBasisValue(name="{ self.name() }")'
+    def values(self) -> None: #', o_value1: float, o_value2: float'
+        return self.tolerance_unit_basis_value.Values()

@@ -21,8 +21,5 @@ class ProjectedToleranceZone(AnyObject):
     def position(self) -> float:
         return self.projected_tolerance_zone.Position
 
-    def get_projected_tol_zone_reference(self, op_reference: tuple) -> tuple: #, op_reference: tuple
-        return self.projected_tolerance_zone.GetProjectedTolZoneReference(op_reference)
-
-    def __repr__(self):
-        return f'ProjectedToleranceZone(name="{self.name()}")'
+    def get_projected_tol_zone_reference(self) -> tuple: #, op_reference: tuple
+        return self.projected_tolerance_zone.GetProjectedTolZoneReference()
