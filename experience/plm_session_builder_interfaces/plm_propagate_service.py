@@ -26,6 +26,3 @@ class PLMPropagateService(Service):
     
     def get_last_error(self) -> tuple[str, int]:
         return self._get_multi([self._com],("PLMPropagateService", "getLastError"),("String", "Long"))
-
-    def __repr__(self):
-        return f'PLMPropagateService(name="{self.name()}")'

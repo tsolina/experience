@@ -31,6 +31,3 @@ class PLMProductService(Service):
     
     def compose_link(self, i_plm_occurrence: 'PLMOccurrence', i_vpm_rep_instance: 'VPMRepInstance', i_catia_reference: 'Reference') -> AnyObject:
         return AnyObject(self.plm_product_service.ComposeLink(i_plm_occurrence._com, i_vpm_rep_instance._com, i_catia_reference._com))
-
-    def __repr__(self):
-        return f'PLMProductService(name="{self.name()}")'

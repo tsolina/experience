@@ -4,6 +4,7 @@ from experience.inf_interfaces import Service
 
 if TYPE_CHECKING:
     from experience.product_structure_client_interfaces import Shape3Ds, VPMRootOccurrence
+    from experience.vpm_editor_context_interfaces.vpm_editor_context_types import *
 
 class ProductSessionService(Service):
     """
@@ -23,15 +24,5 @@ class ProductSessionService(Service):
     def shapes_3ds(self) -> 'Shape3Ds':
         return Shape3Ds(self.product_session_service.Shape3Ds)
 
-    def compare_root_occurrences(self, i_first_root_occurrence: 'VPMRootOccurrence', i_second_root_occurrence: 'VPMRootOccurrence') -> int:
-        """ r_val:  
-        enum CatCompareOccurrenceResult {
-        catDifferentObjects,
-        catIdenticalOccurrence,
-        catIdenticalReference
-        }  
-        """
-        return self.product_session_service.CatCompareOccurrenceResult(i_first_root_occurrence, i_second_root_occurrence)
-
-    def __repr__(self):
-        return f'ProductSessionService(name="{self.name()}")'
+    def compare_root_occurrences(self, i_first_root_occurrence: 'VPMRootOccurrence', i_second_root_occurrence: 'VPMRootOccurrence') -> CatCompareOccurrenceResult:
+        return CatCompareOccurrenceResult.item(self.product_session_service.CatCompareOccurrenceResult(i_first_root_occurrence, i_second_root_occurrence))

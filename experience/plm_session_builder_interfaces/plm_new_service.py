@@ -29,9 +29,14 @@ class PLMNewService(Service):
         from experience.inf_interfaces import Editor
         return Editor(self.plm_new_service.PLMCreate(i_user_type)) 
     
+    def plm_create_drawing(self) -> 'Editor':
+        from experience.inf_interfaces import Editor
+        return Editor(self.plm_new_service.PLMCreate('Drawing')) 
+    
+    def plm_create_3d_shape(self) -> 'Editor':
+        from experience.inf_interfaces import Editor
+        return Editor(self.plm_new_service.PLMCreate('3DShape')) 
+    
     def set_attribute_value(self, i_attribute_id: str, i_attribute_value: 'cat_variant') -> 'PLMNewService':
         self.plm_new_service.SetAttributeValue(i_attribute_id, i_attribute_value)
         return self
-
-    def __repr__(self):
-        return f'PLMNewService(name="{self.name()}")'
