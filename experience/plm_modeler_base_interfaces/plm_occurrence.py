@@ -26,6 +26,3 @@ class PLMOccurrence(AnyObject):
     def plm_occurrences(self) -> 'PLMOccurrences':
         from experience.plm_modeler_base_interfaces import PLMOccurrences
         return PLMOccurrences(self.plm_occurrence.PLMOccurrences) 
-
-    def __repr__(self):
-        return f'PLMOccurence(name="{self.name()}")'

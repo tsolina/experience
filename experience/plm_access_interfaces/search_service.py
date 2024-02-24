@@ -35,7 +35,3 @@ class SearchService(Service):
     def search(self) -> 'SearchService':
         self.search_service.Search()
         return self
-
-    def __repr__(self):
-        print("repr", dir(self))
-        return f'SearchService(name="{self.name()}")'

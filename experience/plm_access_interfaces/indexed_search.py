@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.system import AnyObject
+from experience.plm_access_interfaces.plm_access_types import *
 
 if TYPE_CHECKING:
     from experience.plm_modeler_base_interfaces import PLMEntities
@@ -48,15 +49,12 @@ class IndexedSearch(AnyObject):
         self.indexed_search.Search()
         return self       
     
-    def sort_by(self, i_sort_by_predicate: str, i_sort_order: int) -> 'IndexedSearch':
+    def sort_by(self, i_sort_by_predicate: str, i_sort_order: SearchSortOrder) -> 'IndexedSearch':
         """ i_sort_order:
         enum SearchSortOrder {
         SearchSortOrder_Ascending,
         SearchSortOrder_Descending
         }  
         """
-        self.indexed_search.SortBy(i_sort_by_predicate, i_sort_order)
+        self.indexed_search.SortBy(i_sort_by_predicate, int(i_sort_order))
         return self     
-
-    def __repr__(self):
-        return f'IndexedSearch(name="{self.name()}")'

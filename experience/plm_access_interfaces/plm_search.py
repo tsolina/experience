@@ -41,6 +41,3 @@ class PLMSearch(PLMAppContext):
     def searches(self) -> 'PLMSearches':
         from experience.plm_access_interfaces import PLMSearches
         return PLMSearches(self.plm_search.Searches)
-
-    def __repr__(self):
-        return f'PLMSearch(name="{self.name()}")'

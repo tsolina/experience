@@ -21,6 +21,3 @@ class PLMPlay(AnyObject):
     def stop(self) -> 'PLMPlay':
         self.indexed_search.Stop()
         return self 
-
-    def __repr__(self):
-        return f'PLMPlay(name="{self.name()}")'

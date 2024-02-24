@@ -1,6 +1,7 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.system import AnyObject
+from experience.plm_access_interfaces.plm_access_types import *
 
 if TYPE_CHECKING:
     from experience.plm_modeler_base_interfaces import PLMEntities
@@ -28,14 +29,8 @@ class DatabaseSearch(AnyObject):
         self.database_search.BaseType = i_base_type
         return self
         
-    def condition(self, i_condition: int) -> 'DatabaseSearch':
-        """
-        enum SearchCondition {
-            SearchCondition_AND,
-            SearchCondition_OR
-        } 
-        """
-        self.database_search.Condition = i_condition
+    def condition(self, i_condition: SearchCondition) -> 'DatabaseSearch':
+        self.database_search.Condition = int(i_condition)
         return self
     
     def extension(self, i_extension: str) -> 'DatabaseSearch':
@@ -46,16 +41,8 @@ class DatabaseSearch(AnyObject):
         self.database_search.LatestVersion = i_latest_version
         return self
 
-    def mode(self, i_mode: int) -> 'DatabaseSearch':
-        """
-        enum SearchMode {
-        SearchMode_Easy,
-        SearchMode_Extended,
-        SearchMode_Expert,
-        SearchMode_Predefined
-        }  
-        """
-        self.database_search.Mode = i_mode
+    def mode(self, i_mode: SearchMode) -> 'DatabaseSearch':
+        self.database_search.Mode = int(i_mode)
         return self
     
     def page_count(self) -> int:
@@ -76,44 +63,12 @@ class DatabaseSearch(AnyObject):
         self.database_search.AddEasyCriteria(i_attr_id, i_attr_value)
         return self   
     
-    def add_extended_criteria(self, i_attr_id: str, i_attr_value: str, i_operator: int) -> 'DatabaseSearch':
-        """ i_operator
-        enum SearchOperator {
-        SearchOperator_EQ,
-        SearchOperator_NOT_EQ,
-        SearchOperator_LIKE,
-        SearchOperator_NOT_LIKE,
-        SearchOperator_LT,
-        SearchOperator_LT_EQ,
-        SearchOperator_GT,
-        SearchOperator_GT_EQ,
-        SearchOperator_BETWEEN,
-        SearchOperator_NOT_BETWEEN,
-        SearchOperator_NULL,
-        SearchOperator_NOT_NULL
-        } 
-        """
-        self.database_search.AddExtendedCriteria(i_attr_id, i_attr_value, i_operator)
+    def add_extended_criteria(self, i_attr_id: str, i_attr_value: str, i_operator: SearchOperator) -> 'DatabaseSearch':
+        self.database_search.AddExtendedCriteria(i_attr_id, i_attr_value, int(i_operator))
         return self 
     
-    def add_extended_range_criteria(self, i_attr_id: str, i_attr_start_value: str, i_attr_end_value: str, i_operator: int) -> 'DatabaseSearch':
-        """ i_operator
-        enum SearchOperator {
-        SearchOperator_EQ,
-        SearchOperator_NOT_EQ,
-        SearchOperator_LIKE,
-        SearchOperator_NOT_LIKE,
-        SearchOperator_LT,
-        SearchOperator_LT_EQ,
-        SearchOperator_GT,
-        SearchOperator_GT_EQ,
-        SearchOperator_BETWEEN,
-        SearchOperator_NOT_BETWEEN,
-        SearchOperator_NULL,
-        SearchOperator_NOT_NULL
-        } 
-        """
-        self.database_search.AddExtendedRangeCriteria(i_attr_id, i_attr_start_value, i_attr_end_value, i_operator)
+    def add_extended_range_criteria(self, i_attr_id: str, i_attr_start_value: str, i_attr_end_value: str, i_operator: SearchOperator) -> 'DatabaseSearch':
+        self.database_search.AddExtendedRangeCriteria(i_attr_id, i_attr_start_value, i_attr_end_value, int(i_operator))
         return self 
     
     def add_predefined_criteria(self, i_criteria_with_pq_abbreviation: str) -> 'DatabaseSearch':
@@ -128,15 +83,6 @@ class DatabaseSearch(AnyObject):
         self.database_search.SetExpertExpression(i_expression)
         return self  
 
-    def sort_by(self, i_sort_by_attr: str, i_sort_order: int) -> 'DatabaseSearch':
-        """ i_sort_order
-        enum SearchSortOrder {
-        SearchSortOrder_Ascending,
-        SearchSortOrder_Descending
-        } 
-        """
-        self.database_search.SortBy(i_sort_by_attr, i_sort_order)
+    def sort_by(self, i_sort_by_attr: str, i_sort_order: SearchSortOrder) -> 'DatabaseSearch':
+        self.database_search.SortBy(i_sort_by_attr, int(i_sort_order))
         return self        
-
-    def __repr__(self):
-        return f'DatabaseSearch(name="{self.name()}")'

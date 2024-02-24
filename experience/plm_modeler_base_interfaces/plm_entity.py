@@ -44,6 +44,3 @@ class PLMEntity(AnyObject):
             self.set_attribute_value("Name", value) # "PLM_ExternalID"
             return self
         return self.get_attribute_value("Name")
-
-    def __repr__(self):
-        return f'PLMEntity(name="{self.name()}")'
