@@ -1,3 +1,4 @@
+import re
 from typing import TYPE_CHECKING, Type, TypeVar, Union, Optional
 from experience.base_interfaces.experience import Experience
 from experience.system.system_types import CATScriptLanguage
@@ -126,6 +127,17 @@ class AnyObject(Experience):
         End Function
         """   
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_obj])
+    
+    def _replace_args(self, i_string: str) -> str:
+        pattern = r'\b(\w+)\b\s+As\s+\((\d*)\)\s*(\w*)'
+
+        def replace_match(match):
+            name = match.group(1)
+            index = match.group(2) if match.group(2) else ""
+            type_str = match.group(3)
+            return f"{name}({index}) As {type_str}" if type_str else f"{name}({index})"
+        
+        return re.sub(pattern, replace_match, i_string)
 
     def _get_multi(self, params, ins, outs) -> tuple:
         # print(params)
@@ -133,8 +145,10 @@ class AnyObject(Experience):
         com_type = ins[0]
         method = ins[1]
         str_ins = ins[2:]
-        dim_in = ", ".join([f"in{i} As {value}" for i, value in enumerate(str_ins)])
-        dim_out = ", ".join([f"out{i} As {value}" for i, value in enumerate(outs)])
+        # dim_in = ", ".join([f"in{i} As {value}" for i, value in enumerate(str_ins)]).replace(" As ()", "() As ")
+        # dim_out = ", ".join([f"out{i} As {value}" for i, value in enumerate(outs)]).replace(" As ()", "() As ")
+        dim_in = self._replace_args(", ".join([f"in{i} As {value}" for i, value in enumerate(str_ins)]))
+        dim_out = self._replace_args(", ".join([f"out{i} As {value}" for i, value in enumerate(outs)]))
         args_in = ", ".join([f"in{i}" for i, _ in enumerate(str_ins)])
         args_out = ", ".join([f"out{i}" for i, _ in enumerate(outs)])
         if len(str_ins) == 0:
@@ -151,12 +165,9 @@ class AnyObject(Experience):
                 {vba_function_name} = Array({args_out})
             End Function
         """
-        # print(vba_code)
+        print(vba_code)
         # print(dir(self))
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
 
-    # def __repr__(self):
-    #     return f'AnyObject(name="{self.name()}")'
-    
     def __repr__(self):
         return f'{self.__class__.__name__}(name="{self.name()}")'

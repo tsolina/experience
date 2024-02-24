@@ -1,10 +1,11 @@
 from typing import Union, Optional, TYPE_CHECKING
 
 from experience.inf_interfaces import Service
+from experience.vpm_editor_context_interfaces.vpm_editor_context_types import *
 
 if TYPE_CHECKING:
     from experience.product_structure_client_interfaces import Shape3Ds, VPMRootOccurrence
-    from experience.vpm_editor_context_interfaces.vpm_editor_context_types import *
+    
 
 class ProductSessionService(Service):
     """

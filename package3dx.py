@@ -42,10 +42,14 @@ try:
     #     print("test:", vp.get_symbol_type())
     #     vp.set_symbol_type(InfSymbolType.two_unfilled_concentric_circles)
 
-    part = app.active_editor().active_object(Part)
-    axis = part.axis_systems().item(1)
+    # part = app.active_editor().active_object(Part)
+    # axis = part.axis_systems().item(1)
 
-    print(axis.name(), axis.get_vectors())
+    # print(axis.name(), axis.get_vectors())
+
+    user = app.services().pno_service().person()
+    print(user.collaborative_space_id(), user.organization_id(), user.person_id(), user.role_id())
+    
 
     app.refresh_display(True)
         

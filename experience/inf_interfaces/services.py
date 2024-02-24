@@ -7,6 +7,8 @@ if TYPE_CHECKING:
     from experience.vpm_editor_context_interfaces import PLMProductService, ProductSessionService
     from experience.knowledge_interfaces import KnowledgeServices
     from experience.drafting_interfaces import DrawingGenService
+    from experience.plm_application_context_interfaces import PLMRefreshService
+    from experience.plm_application_context_interfaces import PnOService
 
 class Services():
     def __init__(self, com):
@@ -54,6 +56,14 @@ class Services():
     def drawing_gen_service(self) -> 'DrawingGenService':
         from experience.drafting_interfaces import DrawingGenService
         return DrawingGenService(self.services.Application.GetSessionService("CATDrawingGenService")) 
+    
+    def plm_refresh_service(self) -> 'PLMRefreshService':
+        from experience.plm_application_context_interfaces.plm_refresh_service import PLMRefreshService
+        return PLMRefreshService(self.services.Application.GetSessionService("PLMRefreshService")) 
+    
+    def pno_service(self) -> 'PnOService':
+        from experience.plm_application_context_interfaces import PnOService
+        return PnOService(self.services.Application.GetSessionService("PnOService")) 
 
     def __repr__(self):
         return f'Services()'
