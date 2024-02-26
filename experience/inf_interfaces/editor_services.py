@@ -6,6 +6,7 @@ if TYPE_CHECKING:
     from experience.drafting_interfaces import DrawingService
     from experience.vpm_editor_context_interfaces import PLMProductService
     from experience.cat_opns_measure_interfaces import MeasureService, MeasurableService
+    from experience.plm_validation_interfaces import VALValidationService
 
 class EditorServices():
     def __init__(self, com):
@@ -31,6 +32,10 @@ class EditorServices():
     def measurable_service(self) -> 'MeasurableService':
         from experience.cat_opns_measure_interfaces import MeasurableService
         return MeasurableService(self.editor_services.GetService("MeasurableService"))
+    
+    def validation_service(self) -> 'VALValidationService':
+        from experience.plm_validation_interfaces import VALValidationService
+        return VALValidationService(self.editor_services.GetService("ValidationService"))
 
     def __repr__(self):
         return f'EditorServices()'

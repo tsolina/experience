@@ -47,11 +47,11 @@ try:
 
     # print(axis.name(), axis.get_vectors())
 
-    user = app.services().pno_service().person()
-    print(user.collaborative_space_id(), user.organization_id(), user.person_id(), user.role_id())
+    srv = app.active_editor().services().validation_service()
+    print(srv.validation().reviews().count())
     
 
-    app.refresh_display(True)
+    # app.refresh_display(True)
         
 except Exception as e:
     traceback_str = traceback.format_exc()

@@ -26,6 +26,7 @@ from .plm_session_builder_interfaces import *
 from .vpm_editor_context_interfaces import *
 
 from .plm_application_context_interfaces import *
+from .plm_validation_interfaces import *
 
 # from cat_logger import create_logger
 # except Exception as e:
