@@ -9,6 +9,7 @@ if TYPE_CHECKING:
     from experience.drafting_interfaces import DrawingGenService
     from experience.plm_application_context_interfaces import PLMRefreshService
     from experience.plm_application_context_interfaces import PnOService
+    from experience.cat_material_interfaces import MATPLMService
 
 class Services():
     def __init__(self, com):
@@ -64,6 +65,10 @@ class Services():
     def pno_service(self) -> 'PnOService':
         from experience.plm_application_context_interfaces import PnOService
         return PnOService(self.services.Application.GetSessionService("PnOService")) 
+
+    def mat_plm_service(self) -> 'MATPLMService':
+        from experience.cat_material_interfaces import MATPLMService
+        return MATPLMService(self.services.Application.GetSessionService("MATPLMService"))    
 
     def __repr__(self):
         return f'Services()'
