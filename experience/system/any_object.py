@@ -79,7 +79,8 @@ class AnyObject(Experience):
         """
 
         # TODO: at least verify that target_class is instance of AnyObject
-        return target_class(self._com.Application.SystemService.Evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [self._com]))
+        #return target_class(self._com.Application.SystemService.Evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [self._com]))
+        return target_class(self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [self._com]))
 
     def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: Union[float, int, bool, str] = None) -> tuple:
         """
@@ -167,7 +168,7 @@ class AnyObject(Experience):
                 {vba_function_name} = Array({args_out})
             End Function
         """
-        print(vba_code)
+        #print(vba_code)
         # print(dir(self))
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
 

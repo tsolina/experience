@@ -8,7 +8,7 @@ app = experience_application()
 root = app.active_editor().active_object(VPMRootOccurrence)
 
 # accessing instance and setting the title
-prod_instance = root.occurrences().item(1).instance_occurrence_of().title("Instance.1")
+prod_instance = root.occurrences().item(1).instance_occurrence_of().title("Instance.1").as_pyclass(VPMInstance)
 
 # setting the title to reference
 prod_reference = prod_instance.reference_instance_of().title("Reference")

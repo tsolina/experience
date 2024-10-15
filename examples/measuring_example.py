@@ -17,7 +17,7 @@ with PartReady() as cat:
     line = hsf.add_new_line_pt_pt(p1, p2).compute().append_to(g_set).name("line")
 
     # - access measurable environment -
-    measure = cat.app.active_editor().services().MeasurableService()
+    measure = cat.app.active_editor().services().measurable_service()
 
     # - measure distance between two points -
     print("distance between points: ", measure.get_measurable_between(p1).distance_min_to_value_only(p2))
