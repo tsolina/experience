@@ -2,6 +2,7 @@
 # part must be open and shape selected to run this example
 from experience import *
 import traceback
+
 # accessing application
 app = experience_application()
 

@@ -1,4 +1,4 @@
-from pycatia.drafting_interfaces.drawing_dimension import DrawingDimension
+from experience.cat_annotation_interfaces.drawing_dimension import DrawingDimension
 from experience.system import AnyObject
 from experience.cat_tps_interfaces import ControledRadius, DimensionLimit, DimensionPattern, EnvelopCondition
 

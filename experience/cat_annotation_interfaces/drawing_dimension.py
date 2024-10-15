@@ -116,11 +116,11 @@ class DrawingDimension(AnyObject):
             return self
         return CatDimReference.item(self.drawing_dimension.ValueReference)
 
-    def get_boundary_box(self) -> tuple: #CATSafeArrayVariant oValues
-        return self.drawing_dimension.GetBoundaryBox()
+    def get_boundary_box(self) -> tuple[int, int, int ,int, int, int, int ,int]:
+        return self._get_safe_array(self._com, "GetBoundaryBox", 7)
 
     def get_clip(self) -> tuple[float, float, int]:
-        return self.drawing_dimension.GetClip()
+        return self._get_multi([self._com],("DrawingDimension", "GetClip"),("Double", "Double", "Long"))
 
     def get_dim_ext_line(self) -> DrawingDimExtLine:
         return DrawingDimExtLine(self.drawing_dimension.GetDimExtLine())
@@ -129,7 +129,10 @@ class DrawingDimension(AnyObject):
         return DrawingDimLine(self.drawing_dimension.GetDimLine())
 
     def get_tolerances(self) -> tuple[int, str, str, str, float, float, int]:
-        return self.drawing_dimension.GetTolerances()
+        '''
+        oTolType, oTolName, oUpTol, oLowTol, odUpTol, oDisplayMode
+        '''
+        return self._get_multi([self._com], ("DrawingDimension", "GetTolerances"), ("Long", "String", "String", "String", "Double", "Double", "Long"))
 
     def get_value(self) -> DrawingDimValue:
         return DrawingDimValue(self.drawing_dimension.GetValue())

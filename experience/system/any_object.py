@@ -140,8 +140,10 @@ class AnyObject(Experience):
         return re.sub(pattern, replace_match, i_string)
 
     def _get_multi(self, params, ins, outs) -> tuple:
-        # print(params)
-        ### _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference")) ###
+        """
+        _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference"))
+        """ 
+        
         com_type = ins[0]
         method = ins[1]
         str_ins = ins[2:]
