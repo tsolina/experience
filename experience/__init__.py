@@ -30,6 +30,7 @@ from .plm_validation_interfaces import *
 from .cat_material_interfaces import *
 
 from .cat_digitized_morphing_interfaces import *
+from .drafting_2d_interfaces import *
 
 # from cat_logger import create_logger
 # except Exception as e:

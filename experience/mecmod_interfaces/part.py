@@ -1,6 +1,7 @@
 from typing import Union
 from experience.cat_part_interfaces.shape_factory import ShapeFactory
 from experience.cat_tps_interfaces import AnnotationSets
+from experience.drafting_2d_interfaces.layout_2d_factory import Layout2DRoot, Layout2DFactory
 from experience.exceptions import CATIAApplicationException
 from experience.knowledge_interfaces import Parameters, Relations
 from experience.system import AnyObject, Collection
@@ -60,6 +61,16 @@ class Part(AnyObject):
             self.part.InWorkObject = value
             return self
         return AnyObject(self.part.InWorkObject)
+    
+    def layout_2d_factory(self) -> Layout2DFactory:
+        '''
+        if Layout2DRoot:
+        '''
+        return self.get_item("CATLayoutRootFactory", Layout2DFactory)
+    
+    def layout_2d_root(self) -> Layout2DRoot:
+        return self.get_item("CATLayoutRoot", Layout2DRoot)
+        #return Layout2DRoot(self.part.GetItem("CATLayoutRoot"))
 
     def main_body(self, value: Body = None) -> Union[Body, 'Part']:
         """ set value if provided and return self, otherwise reads the value """
