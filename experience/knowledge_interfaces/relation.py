@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Union
 
 from experience.knowledge_interfaces.knowledge_activate_object import KnowledgeActivateObject
 from experience.system.any_object import AnyObject
@@ -11,7 +11,7 @@ class Relation(KnowledgeActivateObject):
         super().__init__(com)
         self.relation = com
 
-    def comment(self, value: str = None) -> str:
+    def comment(self, value: str = None) -> Union['Relation', str]:
         if value is not None:
             self.relation.Comment = value
             return self

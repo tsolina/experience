@@ -24,9 +24,9 @@ class KnowledgeObjects(KnowledgeServices):
         super().__init__(com)
         self.knowledge_objects = com
 
-    def get_knowledge_root_set(self, i_create_or_not: AnyObject, ik_set_type: 'KnowledgeSetType') -> 'KnowledgeSet':
+    def get_knowledge_root_set(self, i_create_or_not: bool, ik_set_type: 'KnowledgeSetType') -> 'KnowledgeSet':
         from experience.knowledge_interfaces import KnowledgeSet
-        return KnowledgeSet(self.knowledge_services.GetKnowledgeRootSet(i_create_or_not, ik_set_type.value))
+        return KnowledgeSet(self.knowledge_services.GetKnowledgeRootSet(i_create_or_not, int(ik_set_type)))
 
     def __repr__(self):
         return f'{self.__class__.__name__}(name="{self.name()}")'
