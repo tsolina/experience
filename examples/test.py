@@ -34,19 +34,24 @@ def expert_rule():
 
     print(rbr.comment)
 
-# ssec = app.active_editor().services().section_service()
-# print(ssec.count())
-# if ssec.count():
-#     sec = ssec.item(1)
-#     sec.export(app.active_editor().active_object())
+def section():
+    # - no such interface available anymore -
+    ssec = app.active_editor().services().section_service()
+    print(ssec.count())
+    if ssec.count():
+        sec = ssec.item(1)
+        sec.export(app.active_editor().active_object())
 
-ctrl = app.setting_controllers().item("SectioningSettings").as_pyclass(SectioningSettingAtt)
-print(ctrl._com.GetAttr("SectionMode"))
-print(ctrl.section_mode(2).section_mode())
-# print(ctrl.com_type())
+def settings():
+    ctrl = app.setting_controllers().item("SectioningSettings").as_pyclass(SectioningSettingAtt)
+    print(ctrl._com.GetAttr("SectionMode"))
+    print(ctrl.section_mode(2).section_mode())
+    # print(ctrl.com_type())
 
-ctrl = app.setting_controllers().item("SectioningSettings").as_pyclass(SettingRepository)
-print(ctrl.get_attr("SectionMode"))
-print(ctrl.get_attr_info("SectionMode"))
+    ctrl = app.setting_controllers().item("SectioningSettings").as_pyclass(SettingRepository)
+    print(ctrl.get_attr("SectionMode"))
+    print(ctrl.get_attr_info("SectionMode"))
+
+
 
 print("ok")

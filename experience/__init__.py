@@ -8,6 +8,7 @@ from .drafting_interfaces import *
 from .cat_annotation_interfaces import *
 from .cat_opns_measure_interfaces import *
 from .cat_opns_section_interfaces import *
+from .cat_opns_voc_interfaces import *
 from .inf_interfaces import *
 from .inf_os_idl_interfaces import *
 from .knowledge_interfaces import *
