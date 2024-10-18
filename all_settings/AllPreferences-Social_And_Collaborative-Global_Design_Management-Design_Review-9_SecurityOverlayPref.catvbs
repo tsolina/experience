@@ -1,0 +1,322 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DMUOverlay")
+
+boolean1 = settingRepository1.GetAttr("ActiveState")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActiveState"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ActiveState", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ActiveState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("FillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "FillColor", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("Position")
+'--------------------------------------------------
+' Parameter 1 : (String) "Position"
+' Returned value : (Variant) (String) "CatOverlayBottom"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Position", bSTR6, bSTR7, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Position"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("TileMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "TileMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TileMode", bSTR8, bSTR9, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TileMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("Type")
+'--------------------------------------------------
+' Parameter 1 : (String) "Type"
+' Returned value : (Variant) (String) "CatOverlayStaticText"
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "Type", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Type"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("TextColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "TextColor", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "TextColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR15 = settingRepository1.GetAttr("TextFont")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextFont"
+' Returned value : (Variant) (String) "${Default_Font}"
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "TextFont", bSTR16, bSTR17, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "TextFont"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("TextSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextSize"
+' Returned value : (Variant) (Unsigned Long) 20
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "TextSize", bSTR18, bSTR19, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "TextSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR20 = settingRepository1.GetAttr("Text_Static")
+'--------------------------------------------------
+' Parameter 1 : (String) "Text_Static"
+' Returned value : (Variant) (String) "${Default_OverlayText}"
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "Text_Static", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "Text_Static"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR23 = settingRepository1.GetAttr("MappingFile")
+'--------------------------------------------------
+' Parameter 1 : (String) "MappingFile"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "MappingFile", bSTR24, bSTR25, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "MappingFile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR26 = settingRepository1.GetAttr("Text_Mapping")
+'--------------------------------------------------
+' Parameter 1 : (String) "Text_Mapping"
+' Returned value : (Variant) (String) "[PARAMETER_OUT]"
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "Text_Mapping", bSTR27, bSTR28, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "Text_Mapping"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("ParameterName")
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterName"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ParameterName", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("ParameterInputValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterInputValue"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "ParameterInputValue", bSTR31, bSTR32, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterInputValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("ParameterOutputValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterOutputValue"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "ParameterOutputValue", bSTR33, bSTR34, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterOutputValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("DateFormat")
+'--------------------------------------------------
+' Parameter 1 : (String) "DateFormat"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "DateFormat", bSTR35, bSTR36, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "DateFormat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("DateFormat")
+'--------------------------------------------------
+' Parameter 1 : (String) "DateFormat"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DateFormat", bSTR37, bSTR38, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DateFormat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

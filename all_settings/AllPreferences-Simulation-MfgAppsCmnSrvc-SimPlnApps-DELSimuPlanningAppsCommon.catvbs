@@ -1,0 +1,275 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELMSDHighlightSettings")
+
+uLong1 = settingRepository1.GetAttr("HighlightTimeoutValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightTimeoutValue"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "HighlightTimeoutValue", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightTimeoutValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("Track3DDisplayCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "Track3DDisplayCheckButton"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Track3DDisplayCheckButton", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Track3DDisplayCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("HighlightProcessFromProductCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightProcessFromProductCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "HighlightProcessFromProductCheckButton", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightProcessFromProductCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("HighlightProductFromProcessCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightProductFromProcessCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "HighlightProductFromProcessCheckButton", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightProductFromProcessCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("HighlightOperationFromProcessCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightOperationFromProcessCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "HighlightOperationFromProcessCheckButton", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightOperationFromProcessCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("HighlightSameAsOperationFromSystemCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightSameAsOperationFromSystemCheckButton"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "HighlightSameAsOperationFromSystemCheckButton", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightSameAsOperationFromSystemCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("HighlightProcessFromOperationCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightProcessFromOperationCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "HighlightProcessFromOperationCheckButton", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightProcessFromOperationCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("HighlightLocalizedResFromOperationCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightLocalizedResFromOperationCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "HighlightLocalizedResFromOperationCheckButton", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightLocalizedResFromOperationCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("HighlightWithAndUsedResFromOperationCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightWithAndUsedResFromOperationCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "HighlightWithAndUsedResFromOperationCheckButton", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightWithAndUsedResFromOperationCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("HighlightOperationFromResourceCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightOperationFromResourceCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "HighlightOperationFromResourceCheckButton", bSTR19, bSTR20, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightOperationFromResourceCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("HighlightBalancedOpeFromWorkplanOpeCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightBalancedOpeFromWorkplanOpeCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "HighlightBalancedOpeFromWorkplanOpeCheckButton", bSTR21, bSTR22, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightBalancedOpeFromWorkplanOpeCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("HighlightWorkplanOpeFromBalancedOpeCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightWorkplanOpeFromBalancedOpeCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "HighlightWorkplanOpeFromBalancedOpeCheckButton", bSTR23, bSTR24, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightWorkplanOpeFromBalancedOpeCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("HighlightUsedResFromExecutingResCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightUsedResFromExecutingResCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "HighlightUsedResFromExecutingResCheckButton", bSTR25, bSTR26, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightUsedResFromExecutingResCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("HighlightExecutingResFromUsedResCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightExecutingResFromUsedResCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "HighlightExecutingResFromUsedResCheckButton", bSTR27, bSTR28, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightExecutingResFromUsedResCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,560 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IASClassASoftParametricDefaults")
+
+long1 = settingRepository1.GetAttr("OmniPointSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPointSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "OmniPointSoftParametricMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPointSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("OmniPointKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPointKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "OmniPointKeepSpecifications", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPointKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("OmniCurveSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "OmniCurveSoftParametricMode", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("OmniCurveKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "OmniCurveKeepSpecifications", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("OmniCurveBlendSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveBlendSoftParametricMode"
+' Returned value : (Variant) (Long) 5
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "OmniCurveBlendSoftParametricMode", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveBlendSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("OmniCurveBlendKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveBlendKeepSpecifications"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "OmniCurveBlendKeepSpecifications", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCurveBlendKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("OmniProjectSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniProjectSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "OmniProjectSoftParametricMode", bSTR13, bSTR14, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniProjectSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("OmniProjectKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniProjectKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "OmniProjectKeepSpecifications", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniProjectKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("OmniProjectKeepMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniProjectKeepMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "OmniProjectKeepMode", bSTR17, bSTR18, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniProjectKeepMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("OmniIntersectSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniIntersectSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "OmniIntersectSoftParametricMode", bSTR19, bSTR20, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniIntersectSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("OmniIntersectKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniIntersectKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "OmniIntersectKeepSpecifications", bSTR21, bSTR22, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniIntersectKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("CurveConcatenateSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurveConcatenateSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "CurveConcatenateSoftParametricMode", bSTR23, bSTR24, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "CurveConcatenateSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("CurveConcatenateKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurveConcatenateKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "CurveConcatenateKeepSpecifications", bSTR25, bSTR26, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "CurveConcatenateKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("OmniPatchSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPatchSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "OmniPatchSoftParametricMode", bSTR27, bSTR28, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPatchSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("OmniPatchKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPatchKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "OmniPatchKeepSpecifications", bSTR29, bSTR30, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPatchKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("OmniSurfSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniSurfSoftParametricMode"
+' Returned value : (Variant) (Long) 5
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "OmniSurfSoftParametricMode", bSTR31, bSTR32, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniSurfSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("OmniSurfKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniSurfKeepSpecifications"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "OmniSurfKeepSpecifications", bSTR33, bSTR34, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniSurfKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("OmniFilletSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniFilletSoftParametricMode"
+' Returned value : (Variant) (Long) 5
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "OmniFilletSoftParametricMode", bSTR35, bSTR36, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniFilletSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("OmniFilletKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniFilletKeepSpecifications"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "OmniFilletKeepSpecifications", bSTR37, bSTR38, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniFilletKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("OmniCutSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCutSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "OmniCutSoftParametricMode", bSTR39, bSTR40, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCutSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean31 = settingRepository1.GetAttr("OmniCutKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCutKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "OmniCutKeepSpecifications", bSTR41, bSTR42, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCutKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean33 = settingRepository1.GetAttr("OmniCutKeepMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCutKeepMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "OmniCutKeepMode", bSTR43, bSTR44, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniCutKeepMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("UncutSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "UncutSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "UncutSoftParametricMode", bSTR45, bSTR46, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "UncutSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean36 = settingRepository1.GetAttr("UncutKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "UncutKeepSpecifications"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "UncutKeepSpecifications", bSTR47, bSTR48, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "UncutKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("OmniPlaneSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPlaneSoftParametricMode"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "OmniPlaneSoftParametricMode", bSTR49, bSTR50, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniPlaneSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("OmniMatchSoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniMatchSoftParametricMode"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "OmniMatchSoftParametricMode", bSTR51, bSTR52, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniMatchSoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean40 = settingRepository1.GetAttr("OmniMatchKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniMatchKeepSpecifications"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "OmniMatchKeepSpecifications", bSTR53, bSTR54, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "OmniMatchKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("SymmetrySoftParametricMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymmetrySoftParametricMode"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "SymmetrySoftParametricMode", bSTR55, bSTR56, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "SymmetrySoftParametricMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean43 = settingRepository1.GetAttr("SymmetryKeepSpecifications")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymmetryKeepSpecifications"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "SymmetryKeepSpecifications", bSTR57, bSTR58, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "SymmetryKeepSpecifications"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,427 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CAT3DAppVNavSettings")
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("HighLight0Color")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighLight0Color"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "HighLight0Color", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "HighLight0Color"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("HighLight1Color")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighLight1Color"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 254
+'    Array[1] : (Variant) (Unsigned Long) 168
+'    Array[2] : (Variant) (Unsigned Long) 76
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "HighLight1Color", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "HighLight1Color"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("HighLight2Color")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighLight2Color"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 237
+'    Array[2] : (Variant) (Unsigned Long) 122
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "HighLight2Color", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "HighLight2Color"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("IASClassAAppOptionsDefaults")
+
+boolean4 = settingRepository2.GetAttr("SurfLikeSelection")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfLikeSelection"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository2.GetAttrInfo "SurfLikeSelection", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfLikeSelection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository3 = settingControllers1.Item("IASCommonShapeTolerancesDefaults")
+
+long1 = settingRepository3.GetAttr("AutomaticTargetSelectionPreferBoundary")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticTargetSelectionPreferBoundary"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository3.GetAttrInfo "AutomaticTargetSelectionPreferBoundary", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticTargetSelectionPreferBoundary"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository2.GetAttr("SelectionFilterLastDefaults")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionFilterLastDefaults"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository2.GetAttrInfo "SelectionFilterLastDefaults", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionFilterLastDefaults"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository2.GetAttr("SelectionTraceTrapButtonConfig")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTraceTrapButtonConfig"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository2.GetAttrInfo "SelectionTraceTrapButtonConfig", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTraceTrapButtonConfig"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository2.GetAttr("MultiSelectionActivationWithCTRL")
+'--------------------------------------------------
+' Parameter 1 : (String) "MultiSelectionActivationWithCTRL"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean9
+settingRepository2.GetAttrInfo "MultiSelectionActivationWithCTRL", bSTR15, bSTR16, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "MultiSelectionActivationWithCTRL"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository2.GetAttr("SelectionBehaviour")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionBehaviour"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean10
+settingRepository2.GetAttrInfo "SelectionBehaviour", bSTR17, bSTR18, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionBehaviour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository2.GetAttr("SelectionPickThroughWireframe")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionPickThroughWireframe"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean11
+settingRepository2.GetAttrInfo "SelectionPickThroughWireframe", bSTR19, bSTR20, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionPickThroughWireframe"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository2.GetAttr("SelectionTableBehaviour")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTableBehaviour"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean12
+settingRepository2.GetAttrInfo "SelectionTableBehaviour", bSTR21, bSTR22, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTableBehaviour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository2.GetAttr("SelectionTableShowAllControls")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTableShowAllControls"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean13
+settingRepository2.GetAttrInfo "SelectionTableShowAllControls", bSTR23, bSTR24, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTableShowAllControls"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository2.GetAttr("SelectionTableFilterByDimension")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTableFilterByDimension"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean14
+settingRepository2.GetAttrInfo "SelectionTableFilterByDimension", bSTR25, bSTR26, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionTableFilterByDimension"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository2.GetAttr("TrapSelectionDepth")
+'--------------------------------------------------
+' Parameter 1 : (String) "TrapSelectionDepth"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean15
+settingRepository2.GetAttrInfo "TrapSelectionDepth", bSTR27, bSTR28, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "TrapSelectionDepth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository2.GetAttr("TrapSelectionSubElements")
+'--------------------------------------------------
+' Parameter 1 : (String) "TrapSelectionSubElements"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean16
+settingRepository2.GetAttrInfo "TrapSelectionSubElements", bSTR29, bSTR30, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "TrapSelectionSubElements"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("Resolution")
+'--------------------------------------------------
+' Parameter 1 : (String) "Resolution"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "Resolution", bSTR31, bSTR32, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "Resolution"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository3.GetAttr("AutomaticTargetSelection")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticTargetSelection"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean18
+settingRepository3.GetAttrInfo "AutomaticTargetSelection", bSTR33, bSTR34, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticTargetSelection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository3.GetAttr("AutomaticTargetSelectionTolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticTargetSelectionTolerance"
+' Returned value : (Variant) (Double) 2.000000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean19
+settingRepository3.GetAttrInfo "AutomaticTargetSelectionTolerance", bSTR35, bSTR36, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticTargetSelectionTolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("PixelSizeWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "PixelSizeWidth"
+' Returned value : (Variant) (Float) 95.000000
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "PixelSizeWidth", bSTR37, bSTR38, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "PixelSizeWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("SquarePixelFlag")
+'--------------------------------------------------
+' Parameter 1 : (String) "SquarePixelFlag"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "SquarePixelFlag", bSTR39, bSTR40, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "SquarePixelFlag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("PixelSizeHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "PixelSizeHeight"
+' Returned value : (Variant) (Float) 95.000000
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "PixelSizeHeight", bSTR41, bSTR42, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "PixelSizeHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

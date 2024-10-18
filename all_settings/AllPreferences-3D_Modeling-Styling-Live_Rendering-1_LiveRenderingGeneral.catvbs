@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("RenderingLiveSettings")
+
+long1 = settingRepository1.GetAttr("FileSaveAllowed")
+'--------------------------------------------------
+' Parameter 1 : (String) "FileSaveAllowed"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "FileSaveAllowed", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "FileSaveAllowed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("InsertLogo")
+'--------------------------------------------------
+' Parameter 1 : (String) "InsertLogo"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "InsertLogo", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "InsertLogo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ForceMaterialShading")
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceMaterialShading"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ForceMaterialShading", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceMaterialShading"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ForceMaterialSelector")
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceMaterialSelector"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ForceMaterialSelector", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceMaterialSelector"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

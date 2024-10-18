@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATDMUCommon")
+
+long1 = settingRepository1.GetAttr("DataProtection")
+'--------------------------------------------------
+' Parameter 1 : (String) "DataProtection"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DataProtection", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DataProtection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ReportSave")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReportSave"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ReportSave", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ReportSave"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("ReportPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReportPath"
+' Returned value : (Variant) (String) "CSIDL_LOCAL_APPDATA\DassaultSystemes\CATTemp\GraphSVG"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ReportPath", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ReportPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

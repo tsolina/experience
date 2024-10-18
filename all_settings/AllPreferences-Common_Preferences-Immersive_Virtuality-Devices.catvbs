@@ -1,0 +1,104 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IVDevice")
+
+uLong1 = settingRepository1.GetAttr("AutoSpaceTargetMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoSpaceTargetMode"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "AutoSpaceTargetMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoSpaceTargetMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("RobotSensitivity")
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotSensitivity"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "RobotSensitivity", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotSensitivity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("MaxFrequency")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxFrequency"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "MaxFrequency", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxFrequency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("AutoSpaceTargetMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoSpaceTargetMode"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "AutoSpaceTargetMode", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoSpaceTargetMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("ShowSpaceTargetOpt")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowSpaceTargetOpt"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ShowSpaceTargetOpt", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowSpaceTargetOpt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

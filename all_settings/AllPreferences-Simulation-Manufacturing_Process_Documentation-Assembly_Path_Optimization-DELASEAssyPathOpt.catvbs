@@ -1,0 +1,313 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELPathPlanningSettings")
+
+long1 = settingRepository1.GetAttr("FindTrackComplexityDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "FindTrackComplexityDisplay"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "FindTrackComplexityDisplay", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "FindTrackComplexityDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("TransientTPointVisuDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "TransientTPointVisuDisplay"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TransientTPointVisuDisplay", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TransientTPointVisuDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("VisualFeedbackMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VisualFeedbackMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "VisualFeedbackMode", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "VisualFeedbackMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("MaxComputationTimeChkBtn")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxComputationTimeChkBtn"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "MaxComputationTimeChkBtn", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxComputationTimeChkBtn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("MaxComputationTimeVal")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxComputationTimeVal"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "MaxComputationTimeVal", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxComputationTimeVal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("ExtractTPointsInCollision")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExtractTPointsInCollision"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ExtractTPointsInCollision", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ExtractTPointsInCollision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("OptimizeTrack")
+'--------------------------------------------------
+' Parameter 1 : (String) "OptimizeTrack"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "OptimizeTrack", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "OptimizeTrack"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("ShowComputationTime")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowComputationTime"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ShowComputationTime", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowComputationTime"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("AllowFindTrackBatch")
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowFindTrackBatch"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "AllowFindTrackBatch", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowFindTrackBatch"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("AutomaticRenaming")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticRenaming"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "AutomaticRenaming", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticRenaming"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("ComputeMinimumDistance")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeMinimumDistance"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ComputeMinimumDistance", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeMinimumDistance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("ExtractMaxRadius")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExtractMaxRadius"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ExtractMaxRadius", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ExtractMaxRadius"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("QualityOfComputedTrack")
+'--------------------------------------------------
+' Parameter 1 : (String) "QualityOfComputedTrack"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "QualityOfComputedTrack", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "QualityOfComputedTrack"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("TargetArea")
+'--------------------------------------------------
+' Parameter 1 : (String) "TargetArea"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "TargetArea", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "TargetArea"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("ComputeTrajectory")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeTrajectory"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ComputeTrajectory", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeTrajectory"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("OptimizationQuality")
+'--------------------------------------------------
+' Parameter 1 : (String) "OptimizationQuality"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "OptimizationQuality", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "OptimizationQuality"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

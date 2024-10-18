@@ -1,0 +1,150 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingTemplateOptions")
+
+bSTR1 = settingRepository1.GetAttr("standard")
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "standard", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("NumOfStandardPLM")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfStandardPLM"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "NumOfStandardPLM", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfStandardPLM"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("StandardPLM")
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLM"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "ISO Drafting Standard std-72166499-00000002 A 1"
+'    Array[1] : (Variant) (String) "ANSI-ASME Drafting Standard std-72166499-00000003 A 2"
+'    Array[2] : (Variant) (String) "JIS Drafting Standard std-72166499-00000004 A 3"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "StandardPLM", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLM"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("StandardPLMID")
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMID"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "CD02C52200006C706516DCC500010707"
+'    Array[1] : (Variant) (String) "CD02C52200006C706516DCDA00010782"
+'    Array[2] : (Variant) (String) "CD02C52200006C706516DCF80001084E"
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "StandardPLMID", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMID"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("IsStandardPLM")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsStandardPLM"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "IsStandardPLM", bSTR10, bSTR11, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "IsStandardPLM"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("StandardPLMAdd")
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMAdd"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "StandardPLMAdd", bSTR12, bSTR13, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMAdd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("StandardPLMRemove")
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMRemove"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "StandardPLMRemove", bSTR14, bSTR15, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMRemove"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

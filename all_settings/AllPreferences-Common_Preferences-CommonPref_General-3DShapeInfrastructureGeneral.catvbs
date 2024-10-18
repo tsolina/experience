@@ -1,0 +1,163 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("3DShapeInfrastructureGeneral")
+
+boolean1 = settingRepository1.GetAttr("LinkStatusAtRepLevel")
+'--------------------------------------------------
+' Parameter 1 : (String) "LinkStatusAtRepLevel"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "LinkStatusAtRepLevel", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "LinkStatusAtRepLevel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("StatusOnPubOnly")
+'--------------------------------------------------
+' Parameter 1 : (String) "StatusOnPubOnly"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "StatusOnPubOnly", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "StatusOnPubOnly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ViewerWantedOnSynchro")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewerWantedOnSynchro"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ViewerWantedOnSynchro", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewerWantedOnSynchro"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ViewerOnSynchroWhenNeeded")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewerOnSynchroWhenNeeded"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ViewerOnSynchroWhenNeeded", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewerOnSynchroWhenNeeded"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("CheckCyclicity")
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCyclicity"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "CheckCyclicity", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCyclicity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("3DShapeInfrastructureDisplay")
+
+boolean11 = settingRepository2.GetAttr("UpdateExternalReferences")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateExternalReferences"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository2.GetAttrInfo "UpdateExternalReferences", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateExternalReferences"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository2.GetAttr("UpdateDependencies")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateDependencies"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository2.GetAttrInfo "UpdateDependencies", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateDependencies"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("DeleteWarningBox")
+'--------------------------------------------------
+' Parameter 1 : (String) "DeleteWarningBox"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DeleteWarningBox", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DeleteWarningBox"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

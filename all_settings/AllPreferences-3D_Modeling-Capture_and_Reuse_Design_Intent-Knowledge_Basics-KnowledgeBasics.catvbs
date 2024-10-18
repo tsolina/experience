@@ -1,0 +1,294 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("Knowledge")
+
+boolean1 = settingRepository1.GetAttr("ParametersViewWithValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "ParametersViewWithValue"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ParametersViewWithValue", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ParametersViewWithValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ParametersViewWithFormula")
+'--------------------------------------------------
+' Parameter 1 : (String) "ParametersViewWithFormula"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ParametersViewWithFormula", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ParametersViewWithFormula"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("EncadrementPathnames")
+'--------------------------------------------------
+' Parameter 1 : (String) "EncadrementPathnames"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "EncadrementPathnames", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "EncadrementPathnames"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("RelationSynchronousAtCreation")
+'--------------------------------------------------
+' Parameter 1 : (String) "RelationSynchronousAtCreation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "RelationSynchronousAtCreation", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "RelationSynchronousAtCreation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("RelationIntegratedToUpdate")
+'--------------------------------------------------
+' Parameter 1 : (String) "RelationIntegratedToUpdate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "RelationIntegratedToUpdate", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "RelationIntegratedToUpdate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("RelationIntegratedToUpdateNoQuestion")
+'--------------------------------------------------
+' Parameter 1 : (String) "RelationIntegratedToUpdateNoQuestion"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "RelationIntegratedToUpdateNoQuestion", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "RelationIntegratedToUpdateNoQuestion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DesignTableSynchroMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableSynchroMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DesignTableSynchroMode", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableSynchroMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("DesignTableDefaultCopyMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableDefaultCopyMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "DesignTableDefaultCopyMode", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableDefaultCopyMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("DesignTableRepRef")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableRepRef"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "DesignTableRepRef", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableRepRef"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR19 = settingRepository1.GetAttr("EditSpreadsheetExtApp")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditSpreadsheetExtApp"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "EditSpreadsheetExtApp", bSTR20, bSTR21, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "EditSpreadsheetExtApp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ScriptExecutionAtLoadSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ScriptExecutionAtLoadSetting"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "ScriptExecutionAtLoadSetting", bSTR22, bSTR23, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "ScriptExecutionAtLoadSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ExcelLibPrefAtLoadSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExcelLibPrefAtLoadSetting"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "ExcelLibPrefAtLoadSetting", bSTR24, bSTR25, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "ExcelLibPrefAtLoadSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("FxCommandUserInterfaceOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "FxCommandUserInterfaceOption"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "FxCommandUserInterfaceOption", bSTR26, bSTR27, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "FxCommandUserInterfaceOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("DesignTableTabulatedFileExt")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableTabulatedFileExt"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "DesignTableTabulatedFileExt", bSTR28, bSTR29, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableTabulatedFileExt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("DesignTableDocumentTypeSelection")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableDocumentTypeSelection"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "DesignTableDocumentTypeSelection", bSTR30, bSTR31, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignTableDocumentTypeSelection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FstDisplay")
+
+long1 = settingRepository1.GetAttr("FstSymbolSupport")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSymbolSupport"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "FstSymbolSupport", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSymbolSupport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("FstSymbolColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSymbolColor"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "FstSymbolColor", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSymbolColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("FstSymbolMark")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSymbolMark"
+' Returned value : (Variant) (String) "None"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "FstSymbolMark", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSymbolMark"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("FstAnalysisColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstAnalysisColors"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "FstAnalysisColors", bSTR8, bSTR9, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FstAnalysisColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("FstAnalysisLabels")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstAnalysisLabels"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "FstAnalysisLabels", bSTR10, bSTR11, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "FstAnalysisLabels"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("FstAnalysisEffectivity")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstAnalysisEffectivity"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "FstAnalysisEffectivity", bSTR12, bSTR13, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "FstAnalysisEffectivity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

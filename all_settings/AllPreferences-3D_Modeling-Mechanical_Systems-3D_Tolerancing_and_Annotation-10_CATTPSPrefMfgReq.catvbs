@@ -1,0 +1,275 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("TPSMfgReqText")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqText"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TPSMfgReqText", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("TPSMfgReqFlagNote")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqFlagNote"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "TPSMfgReqFlagNote", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqFlagNote"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("TPSMfgReqNOA")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqNOA"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TPSMfgReqNOA", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqNOA"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("TPSMfgReqWeldFeature")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqWeldFeature"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "TPSMfgReqWeldFeature", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqWeldFeature"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("TPSMfgReqDatumFeature")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqDatumFeature"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "TPSMfgReqDatumFeature", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqDatumFeature"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("TPSMfgReqDatumTarget")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqDatumTarget"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "TPSMfgReqDatumTarget", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqDatumTarget"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("TPSMfgReqDatumSystem")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqDatumSystem"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "TPSMfgReqDatumSystem", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqDatumSystem"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("TPSMfgReqBasicDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqBasicDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "TPSMfgReqBasicDim", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqBasicDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("TPSMfgReqReferenceDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqReferenceDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "TPSMfgReqReferenceDim", bSTR17, bSTR18, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqReferenceDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("TPSMfgReqCoordinateDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqCoordinateDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "TPSMfgReqCoordinateDim", bSTR19, bSTR20, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqCoordinateDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("TPSMfgReqGenerateSeveralOrSingleReq")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqGenerateSeveralOrSingleReq"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "TPSMfgReqGenerateSeveralOrSingleReq", bSTR21, bSTR22, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSMfgReqGenerateSeveralOrSingleReq"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("TPSUseMfgReqCloningOrVersioningToTrackChanges")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSUseMfgReqCloningOrVersioningToTrackChanges"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "TPSUseMfgReqCloningOrVersioningToTrackChanges", bSTR23, bSTR24, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSUseMfgReqCloningOrVersioningToTrackChanges"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("TPSModifyMfgReqIfPossibleElseClone")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSModifyMfgReqIfPossibleElseClone"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "TPSModifyMfgReqIfPossibleElseClone", bSTR25, bSTR26, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSModifyMfgReqIfPossibleElseClone"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("TPSModifyMfgReqIfPossibleElseVersion")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSModifyMfgReqIfPossibleElseVersion"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "TPSModifyMfgReqIfPossibleElseVersion", bSTR27, bSTR28, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSModifyMfgReqIfPossibleElseVersion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,299 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+uLong1 = settingRepository1.GetAttr("SMDTitleFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTitleFontSize"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SMDTitleFontSize", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTitleFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SMDTitleFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTitleFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SMDTitleFontColor", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTitleFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("SMDStateFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SMDStateFillColor", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SMDStateFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 100
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SMDStateFillTransparency", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("SMDStateLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SMDStateLineColor", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SMDStateLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SMDStateLineType", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SMDStateLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SMDStateLineThickness", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("SMDStateFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFontSize"
+' Returned value : (Variant) (Unsigned Long) 7
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SMDStateFontSize", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("SMDStateFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SMDStateFontColor", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDStateFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("SMDTransitionLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SMDTransitionLineColor", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("SMDTransitionLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SMDTransitionLineType", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("SMDTransitionLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SMDTransitionLineThickness", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("SMDTransitionFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SMDTransitionFontSize", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("SMDTransitionFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "SMDTransitionFontColor", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "SMDTransitionFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,53 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+bSTR1 = settingRepository1.GetAttr("standard")
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "standard", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble1
+arrayOfVariantOfDouble1 = settingRepository1.GetAttrArray("AnnotationSetRatioSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationSetRatioSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 1.000000
+'    Array[1] : (Variant) (Double) 100.000000
+'    Array[2] : (Variant) (Double) 10000.000000
+'    Array[3] : (Variant) (Double) 0.010000
+'    Array[4] : (Variant) (Double) 0.000100
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AnnotationSetRatioSetting", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationSetRatioSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

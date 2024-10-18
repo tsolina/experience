@@ -1,0 +1,218 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBSimulationSettings")
+
+double1 = settingRepository1.GetAttr("SimulationStartTime")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationStartTime"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SimulationStartTime", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationStartTime"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("SimulationEndTime")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationEndTime"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SimulationEndTime", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationEndTime"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("SimulationRealTimeYesOrNo")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationRealTimeYesOrNo"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SimulationRealTimeYesOrNo", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationRealTimeYesOrNo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SimulationGraphicsUpdatesYesOrNo")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationGraphicsUpdatesYesOrNo"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SimulationGraphicsUpdatesYesOrNo", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationGraphicsUpdatesYesOrNo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SimulationSynchronousRefresh")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationSynchronousRefresh"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SimulationSynchronousRefresh", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationSynchronousRefresh"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SimulationSpecTreeVisibility")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationSpecTreeVisibility"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SimulationSpecTreeVisibility", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationSpecTreeVisibility"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("MsgWndVisibility")
+'--------------------------------------------------
+' Parameter 1 : (String) "MsgWndVisibility"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "MsgWndVisibility", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "MsgWndVisibility"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("SimulationMasterClockYesOrNo")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationMasterClockYesOrNo"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SimulationMasterClockYesOrNo", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationMasterClockYesOrNo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("SimulationMasterClockStepSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationMasterClockStepSize"
+' Returned value : (Variant) (Double) 0.100000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SimulationMasterClockStepSize", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationMasterClockStepSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("SimulationUpdateTime")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationUpdateTime"
+' Returned value : (Variant) (Float) 0.100000
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SimulationUpdateTime", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationUpdateTime"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("SimulationUpdateRate")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationUpdateRate"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SimulationUpdateRate", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationUpdateRate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

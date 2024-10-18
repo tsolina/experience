@@ -1,0 +1,39 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELDbgRobotApplications")
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("RobotApplicationsType")
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotApplicationsType"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Material Handling"
+'    Array[1] : (Variant) (String) "Spot welding"
+'    Array[2] : (Variant) (String) "Arc welding"
+'    Array[3] : (Variant) (String) "Painting"
+'    Array[4] : (Variant) (String) "Sealing"
+'    Array[5] : (Variant) (String) "Riveting"
+'    Array[6] : (Variant) (String) "Drilling and Riveting"
+'    Array[7] : (Variant) (String) "Shot Peening"
+'    Array[8] : (Variant) (String) "Sandblasting"
+'    Array[9] : (Variant) (String) "Polishing"
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RobotApplicationsType", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotApplicationsType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

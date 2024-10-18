@@ -1,0 +1,465 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CXPGeneralSettings")
+
+boolean1 = settingRepository1.GetAttr("ForceVPManipPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceVPManipPlay"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ForceVPManipPlay", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceVPManipPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("OneClickPrimAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "OneClickPrimAuth"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "OneClickPrimAuth", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "OneClickPrimAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ShowBehaviorsInTree")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowBehaviorsInTree"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ShowBehaviorsInTree", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowBehaviorsInTree"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ShowDynamicActorsCategoryInTree")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowDynamicActorsCategoryInTree"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ShowDynamicActorsCategoryInTree", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowDynamicActorsCategoryInTree"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("SelectionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionMode"
+' Returned value : (Variant) (String) "LeafActorSelection"
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SelectionMode", bSTR10, bSTR11, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("DisplayAssetPanelAtStart")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayAssetPanelAtStart"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DisplayAssetPanelAtStart", bSTR12, bSTR13, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayAssetPanelAtStart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ScriptEditorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "ScriptEditorFontSize"
+' Returned value : (Variant) (Long) 14
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ScriptEditorFontSize", bSTR14, bSTR15, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ScriptEditorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("ScriptEditorShowLines")
+'--------------------------------------------------
+' Parameter 1 : (String) "ScriptEditorShowLines"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ScriptEditorShowLines", bSTR16, bSTR17, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ScriptEditorShowLines"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR18 = settingRepository1.GetAttr("3DActorRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DActorRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "3DActorRepVisuPlay", bSTR19, bSTR20, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "3DActorRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR21 = settingRepository1.GetAttr("3DActorRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DActorRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "3DActorRepVisuAuth", bSTR22, bSTR23, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "3DActorRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR24 = settingRepository1.GetAttr("ProductActorRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProductActorRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "ProductActorRepVisuPlay", bSTR25, bSTR26, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "ProductActorRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR27 = settingRepository1.GetAttr("ProductActorRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProductActorRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ProductActorRepVisuAuth", bSTR28, bSTR29, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ProductActorRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR30 = settingRepository1.GetAttr("TriggerZoneRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "TriggerZoneRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "TriggerZoneRepVisuPlay", bSTR31, bSTR32, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "TriggerZoneRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR33 = settingRepository1.GetAttr("TriggerZoneRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "TriggerZoneRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "TriggerZoneRepVisuAuth", bSTR34, bSTR35, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "TriggerZoneRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR36 = settingRepository1.GetAttr("CameraRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "CameraRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "CameraRepVisuPlay", bSTR37, bSTR38, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "CameraRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR39 = settingRepository1.GetAttr("CameraRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "CameraRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR40
+bSTR40 = ""
+Dim bSTR41
+bSTR41 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "CameraRepVisuAuth", bSTR40, bSTR41, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "CameraRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR42 = settingRepository1.GetAttr("LightRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "LightRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "LightRepVisuPlay", bSTR43, bSTR44, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "LightRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR45 = settingRepository1.GetAttr("LightRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "LightRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR46
+bSTR46 = ""
+Dim bSTR47
+bSTR47 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "LightRepVisuAuth", bSTR46, bSTR47, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "LightRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR48 = settingRepository1.GetAttr("PointRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "PointRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "PointRepVisuPlay", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "PointRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR51 = settingRepository1.GetAttr("PointRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "PointRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR52
+bSTR52 = ""
+Dim bSTR53
+bSTR53 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "PointRepVisuAuth", bSTR52, bSTR53, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "PointRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR54 = settingRepository1.GetAttr("PathRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "PathRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "PathRepVisuPlay", bSTR55, bSTR56, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "PathRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR57 = settingRepository1.GetAttr("PathRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "PathRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR58
+bSTR58 = ""
+Dim bSTR59
+bSTR59 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "PathRepVisuAuth", bSTR58, bSTR59, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "PathRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR60 = settingRepository1.GetAttr("GridRepVisuPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "GridRepVisuPlay"
+' Returned value : (Variant) (String) "Hidden"
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "GridRepVisuPlay", bSTR61, bSTR62, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "GridRepVisuPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR63 = settingRepository1.GetAttr("GridRepVisuAuth")
+'--------------------------------------------------
+' Parameter 1 : (String) "GridRepVisuAuth"
+' Returned value : (Variant) (String) "Shown"
+'--------------------------------------------------
+
+Dim bSTR64
+bSTR64 = ""
+Dim bSTR65
+bSTR65 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "GridRepVisuAuth", bSTR64, bSTR65, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "GridRepVisuAuth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

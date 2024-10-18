@@ -1,0 +1,207 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATSysModelica")
+
+Dim arrayOfVariantOfBoolean1
+arrayOfVariantOfBoolean1 = settingRepository1.GetAttrArray("AnimationFollow")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnimationFollow"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Boolean) False
+'    Array[1] : (Variant) (Boolean) True
+'    Array[2] : (Variant) (Boolean) True
+'    Array[3] : (Variant) (Boolean) True
+'    Array[4] : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "AnimationFollow", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "AnimationFollow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("StartReplayAfterSimulation")
+'--------------------------------------------------
+' Parameter 1 : (String) "StartReplayAfterSimulation"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "StartReplayAfterSimulation", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "StartReplayAfterSimulation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("NbOfHistoryFrames")
+'--------------------------------------------------
+' Parameter 1 : (String) "NbOfHistoryFrames"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "NbOfHistoryFrames", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "NbOfHistoryFrames"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("IntervalBetweenFrames")
+'--------------------------------------------------
+' Parameter 1 : (String) "IntervalBetweenFrames"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "IntervalBetweenFrames", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "IntervalBetweenFrames"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("ArrowLengthFactor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ArrowLengthFactor"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ArrowLengthFactor", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ArrowLengthFactor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("MaxNbVarBrowsers")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxNbVarBrowsers"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "MaxNbVarBrowsers", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxNbVarBrowsers"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("WarningCloseVarBrowsers")
+'--------------------------------------------------
+' Parameter 1 : (String) "WarningCloseVarBrowsers"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "WarningCloseVarBrowsers", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "WarningCloseVarBrowsers"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("VariableBrowserDocking")
+'--------------------------------------------------
+' Parameter 1 : (String) "VariableBrowserDocking"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "VariableBrowserDocking", bSTR15, bSTR16, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "VariableBrowserDocking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("ResultsKeepPlotList")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsKeepPlotList"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ResultsKeepPlotList", bSTR17, bSTR18, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsKeepPlotList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("CATSysSettingsPlotterUI")
+
+uLong6 = settingRepository2.GetAttr("PlotPanelDocking")
+'--------------------------------------------------
+' Parameter 1 : (String) "PlotPanelDocking"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean12
+settingRepository2.GetAttrInfo "PlotPanelDocking", bSTR19, bSTR20, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "PlotPanelDocking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,332 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("DimLinePosRelative")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimLinePosRelative"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DimLinePosRelative", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DimLinePosRelative"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("AngleDimComputation")
+'--------------------------------------------------
+' Parameter 1 : (String) "AngleDimComputation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AngleDimComputation", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AngleDimComputation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("DimActivateSnapBetSymbolsSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimActivateSnapBetSymbolsSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DimActivateSnapBetSymbolsSetting", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DimActivateSnapBetSymbolsSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("DimMoveSubPart")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimMoveSubPart"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DimMoveSubPart", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DimMoveSubPart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("LineUpBaseOffsetLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpBaseOffsetLength"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "LineUpBaseOffsetLength", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpBaseOffsetLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("LineUpBaseOffsetAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpBaseOffsetAngle"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "LineUpBaseOffsetAngle", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpBaseOffsetAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("LineUpOffsetLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpOffsetLength"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "LineUpOffsetLength", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpOffsetLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("LineUpOffsetAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpOffsetAngle"
+' Returned value : (Variant) (Double) 15.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "LineUpOffsetAngle", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "LineUpOffsetAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("DrwLineUpStackVal")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLineUpStackVal"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "DrwLineUpStackVal", bSTR17, bSTR18, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLineUpStackVal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("DrwLineUpCumulVal")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLineUpCumulVal"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DrwLineUpCumulVal", bSTR19, bSTR20, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLineUpCumulVal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("DimSketch")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimSketch"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "DimSketch", bSTR21, bSTR22, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "DimSketch"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("DimLinePosValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimLinePosValue"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "DimLinePosValue", bSTR23, bSTR24, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "DimLinePosValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("DimDrivingAuto")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDrivingAuto"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DimDrivingAuto", bSTR25, bSTR26, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDrivingAuto"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("DimDetectChamfer")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDetectChamfer"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "DimDetectChamfer", bSTR27, bSTR28, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDetectChamfer"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DimCircle")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimCircle"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "DimCircle", bSTR29, bSTR30, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "DimCircle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DimForce2D")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimForce2D"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "DimForce2D", bSTR31, bSTR32, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "DimForce2D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("CATDrwAssocDimOnApproximate")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwAssocDimOnApproximate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "CATDrwAssocDimOnApproximate", bSTR33, bSTR34, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwAssocDimOnApproximate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

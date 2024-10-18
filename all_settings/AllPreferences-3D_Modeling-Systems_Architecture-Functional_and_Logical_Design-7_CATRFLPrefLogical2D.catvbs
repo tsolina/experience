@@ -1,0 +1,546 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("Log2DRepFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 124
+'    Array[1] : (Variant) (Unsigned Long) 180
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Log2DRepFillColor", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("Log2DRepFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 90
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Log2DRepFillTransparency", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("Log2DRepLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 66
+'    Array[1] : (Variant) (Unsigned Long) 95
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Log2DRepLineColor", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("Log2DRepLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Log2DRepLineType", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("Log2DRepLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "Log2DRepLineWeight", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("Log2DRepDisplayTitleArea")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepDisplayTitleArea"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Log2DRepDisplayTitleArea", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepDisplayTitleArea"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("LogDataFlowExpositionLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 128
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "LogDataFlowExpositionLineColor", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("LogDataFlowExpositionLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "LogDataFlowExpositionLineType", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("LogDataFlowExpositionLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "LogDataFlowExpositionLineWeight", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("LogDataFlowExpositionSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "LogDataFlowExpositionSize", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("LogDataFlowExpositionDisplayConnectorName")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionDisplayConnectorName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "LogDataFlowExpositionDisplayConnectorName", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionDisplayConnectorName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("LogDataFlowExpositionConnectorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionConnectorFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "LogDataFlowExpositionConnectorFontSize", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionConnectorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("LogDataFlowExpositionDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "LogDataFlowExpositionDisplayText", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("LogDataFlowExpositionTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "LogDataFlowExpositionTextFontSize", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowExpositionTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("LogDataFlowLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "LogDataFlowLineColor", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("LogDataFlowLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "LogDataFlowLineType", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("LogDataFlowLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "LogDataFlowLineWeight", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("LogDataFlowSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "LogDataFlowSize", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("LogDataFlowDisplayConnectorName")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowDisplayConnectorName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "LogDataFlowDisplayConnectorName", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowDisplayConnectorName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("LogDataFlowConnectorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowConnectorFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "LogDataFlowConnectorFontSize", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowConnectorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("LogDataFlowDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "LogDataFlowDisplayText", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("LogDataFlowTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "LogDataFlowTextFontSize", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDataFlowTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("Log2DRepTextFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 72
+'    Array[1] : (Variant) (Unsigned Long) 104
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "Log2DRepTextFillColor", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("Log2DRepTextFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "Log2DRepTextFillTransparency", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("Log2DRepTextFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "Log2DRepTextFontColor", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("Log2DRepTextPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextPosition"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "Log2DRepTextPosition", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("Log2DRepTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "Log2DRepTextFontSize", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "Log2DRepTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

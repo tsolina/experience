@@ -1,0 +1,201 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ShapeDesignGeneral")
+
+short1 = settingRepository1.GetAttr("AxisLineVisuOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisLineVisuOption"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "AxisLineVisuOption", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisLineVisuOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short2 = settingRepository1.GetAttr("GroupInputOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupInputOption"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "GroupInputOption", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupInputOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("GSMTempAnalysisDefaultBehavior")
+'--------------------------------------------------
+' Parameter 1 : (String) "GSMTempAnalysisDefaultBehavior"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "GSMTempAnalysisDefaultBehavior", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "GSMTempAnalysisDefaultBehavior"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short3 = settingRepository1.GetAttr("CtxMenuOnOneLevel")
+'--------------------------------------------------
+' Parameter 1 : (String) "CtxMenuOnOneLevel"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CtxMenuOnOneLevel", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CtxMenuOnOneLevel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("Part")
+
+boolean6 = settingRepository2.GetAttr("PRT_Settings_Vid_Panel")
+'--------------------------------------------------
+' Parameter 1 : (String) "PRT_Settings_Vid_Panel"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository2.GetAttrInfo "PRT_Settings_Vid_Panel", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "PRT_Settings_Vid_Panel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short4 = settingRepository1.GetAttr("InheritGPMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "InheritGPMode"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "InheritGPMode", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "InheritGPMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("TMMergingDistance")
+'--------------------------------------------------
+' Parameter 1 : (String) "TMMergingDistance"
+' Returned value : (Variant) (Double) 0.001000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "TMMergingDistance", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "TMMergingDistance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("TMTolerantLayDownState")
+'--------------------------------------------------
+' Parameter 1 : (String) "TMTolerantLayDownState"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "TMTolerantLayDownState", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "TMTolerantLayDownState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("TMDeviation")
+'--------------------------------------------------
+' Parameter 1 : (String) "TMDeviation"
+' Returned value : (Variant) (Double) 0.001000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "TMDeviation", bSTR17, bSTR18, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "TMDeviation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("TMSmoothingType")
+'--------------------------------------------------
+' Parameter 1 : (String) "TMSmoothingType"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "TMSmoothingType", bSTR19, bSTR20, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "TMSmoothingType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

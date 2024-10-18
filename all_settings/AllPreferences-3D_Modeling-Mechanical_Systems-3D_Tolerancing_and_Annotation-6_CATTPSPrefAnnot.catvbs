@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("TPS_ANNOT_MOVEAFTERCREATION_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_MOVEAFTERCREATION_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TPS_ANNOT_MOVEAFTERCREATION_SETTING", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_MOVEAFTERCREATION_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("DrwTextOnAttachmentPtsOnly")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTextOnAttachmentPtsOnly"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DrwTextOnAttachmentPtsOnly", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTextOnAttachmentPtsOnly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("AutoPosLinkOnAnnotLeaderSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoPosLinkOnAnnotLeaderSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "AutoPosLinkOnAnnotLeaderSetting", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoPosLinkOnAnnotLeaderSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("TPS_ANNOT_EXTLINELENGTH_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_EXTLINELENGTH_SETTING"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "TPS_ANNOT_EXTLINELENGTH_SETTING", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_EXTLINELENGTH_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("BrokenLinksAutoReconnectionSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "BrokenLinksAutoReconnectionSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "BrokenLinksAutoReconnectionSetting", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "BrokenLinksAutoReconnectionSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("BrokenLinksAutoReconnectionModeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "BrokenLinksAutoReconnectionModeSetting"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "BrokenLinksAutoReconnectionModeSetting", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "BrokenLinksAutoReconnectionModeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("LeaderAssociativity")
+'--------------------------------------------------
+' Parameter 1 : (String) "LeaderAssociativity"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "LeaderAssociativity", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "LeaderAssociativity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("MinOffsetLeaderExtremityAutoPos")
+'--------------------------------------------------
+' Parameter 1 : (String) "MinOffsetLeaderExtremityAutoPos"
+' Returned value : (Variant) (Double) 2.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "MinOffsetLeaderExtremityAutoPos", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "MinOffsetLeaderExtremityAutoPos"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

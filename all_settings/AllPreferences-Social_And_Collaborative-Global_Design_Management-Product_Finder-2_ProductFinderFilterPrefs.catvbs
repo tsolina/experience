@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMNavigator")
+
+long1 = settingRepository1.GetAttr("UwpActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UwpActivation", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ExpandAllActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExpandAllActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ExpandAllActivation", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ExpandAllActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ActivateOffsetVolumeFilterPreview")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActivateOffsetVolumeFilterPreview"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ActivateOffsetVolumeFilterPreview", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ActivateOffsetVolumeFilterPreview"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("DefaultTypeOfFilter")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultTypeOfFilter"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DefaultTypeOfFilter", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultTypeOfFilter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

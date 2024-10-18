@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMCache")
+
+uLong1 = settingRepository1.GetAttr("CacheMaxSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheMaxSize"
+' Returned value : (Variant) (Unsigned Long) 1000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "CacheMaxSize", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheMaxSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("CheckCacheCoherency")
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCacheCoherency"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "CheckCacheCoherency", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCacheCoherency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("CacheMetadataMaxElements")
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheMetadataMaxElements"
+' Returned value : (Variant) (Unsigned Long) 5000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CacheMetadataMaxElements", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheMetadataMaxElements"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR7 = settingRepository1.GetAttr("CacheLocalPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheLocalPath"
+' Returned value : (Variant) (String) "CSIDL_LOCAL_APPDATA"
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CacheLocalPath", bSTR8, bSTR9, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheLocalPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

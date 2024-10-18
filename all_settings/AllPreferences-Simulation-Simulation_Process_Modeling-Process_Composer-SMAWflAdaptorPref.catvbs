@@ -1,0 +1,110 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAWflUICalculator")
+
+long1 = settingRepository1.GetAttr("ExpandMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExpandMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ExpandMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ExpandMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("AllowNAN")
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowNAN"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AllowNAN", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowNAN"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("SMAWflUIOSCommand")
+
+boolean3 = settingRepository2.GetAttr("FailOnErrorStream")
+'--------------------------------------------------
+' Parameter 1 : (String) "FailOnErrorStream"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository2.GetAttrInfo "FailOnErrorStream", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "FailOnErrorStream"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository3 = settingControllers1.Item("SMAWflUIMonteCarlo")
+
+boolean5 = settingRepository3.GetAttr("StatisticsSelectDefault")
+'--------------------------------------------------
+' Parameter 1 : (String) "StatisticsSelectDefault"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository3.GetAttrInfo "StatisticsSelectDefault", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "StatisticsSelectDefault"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository4 = settingControllers1.Item("SMAWflUIReliability")
+
+boolean7 = settingRepository4.GetAttr("StatisticsSelectDefault")
+'--------------------------------------------------
+' Parameter 1 : (String) "StatisticsSelectDefault"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository4.GetAttrInfo "StatisticsSelectDefault", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "StatisticsSelectDefault"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

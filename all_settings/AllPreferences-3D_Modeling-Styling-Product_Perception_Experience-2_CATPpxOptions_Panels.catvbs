@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATPpxOptionData_Panels")
+
+long1 = settingRepository1.GetAttr("Scale")
+'--------------------------------------------------
+' Parameter 1 : (String) "Scale"
+' Returned value : (Variant) (Long) 100
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Scale", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Scale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("NewLineControl")
+'--------------------------------------------------
+' Parameter 1 : (String) "NewLineControl"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "NewLineControl", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "NewLineControl"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

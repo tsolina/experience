@@ -1,0 +1,382 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELRscClearanceSettings")
+
+uLong1 = settingRepository1.GetAttr("NbLevelGunTip")
+'--------------------------------------------------
+' Parameter 1 : (String) "NbLevelGunTip"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "NbLevelGunTip", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "NbLevelGunTip"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("NbRaysGunTip")
+'--------------------------------------------------
+' Parameter 1 : (String) "NbRaysGunTip"
+' Returned value : (Variant) (Unsigned Long) 16
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "NbRaysGunTip", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "NbRaysGunTip"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("OffsetGunTip")
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetGunTip"
+' Returned value : (Variant) (Double) 2.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "OffsetGunTip", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetGunTip"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SelfClearStat")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelfClearStat"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SelfClearStat", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SelfClearStat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("SelfClearVal")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelfClearVal"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SelfClearVal", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SelfClearVal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("SpotOperClearVals")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpotOperClearVals"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "PJ_GunTip|0"
+'    Array[1] : (Variant) (String) "PJ_GunArm|3"
+'    Array[2] : (Variant) (String) "PJ_GunEnd|5"
+'    Array[3] : (Variant) (String) "PJ_GunBody|10"
+'    Array[4] : (Variant) (String) "PJ_Robot|50"
+'    Array[5] : (Variant) (String) "PJ_Active|1"
+'    Array[6] : (Variant) (String) "GR_GunTip|0"
+'    Array[7] : (Variant) (String) "GR_GunArm|10"
+'    Array[8] : (Variant) (String) "GR_GunEnd|10"
+'    Array[9] : (Variant) (String) "GR_GunBody|50"
+'    Array[10] : (Variant) (String) "GR_Robot|50"
+'    Array[11] : (Variant) (String) "GR_Active|1"
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SpotOperClearVals", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SpotOperClearVals"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("RobotMotionClearVals")
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotMotionClearVals"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "PJ_GunTip|10"
+'    Array[1] : (Variant) (String) "PJ_GunArm|10"
+'    Array[2] : (Variant) (String) "PJ_GunEnd|10"
+'    Array[3] : (Variant) (String) "PJ_GunBody|50"
+'    Array[4] : (Variant) (String) "PJ_Robot|100"
+'    Array[5] : (Variant) (String) "PJ_Active|1"
+'    Array[6] : (Variant) (String) "GR_GunTip|10"
+'    Array[7] : (Variant) (String) "GR_GunArm|50"
+'    Array[8] : (Variant) (String) "GR_GunEnd|50"
+'    Array[9] : (Variant) (String) "GR_GunBody|100"
+'    Array[10] : (Variant) (String) "GR_Robot|100"
+'    Array[11] : (Variant) (String) "GR_Active|1"
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "RobotMotionClearVals", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotMotionClearVals"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("RobotColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "RobotColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("ProdJigColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProdJigColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ProdJigColor", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ProdJigColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("GunBodyColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunBodyColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "GunBodyColor", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "GunBodyColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR21 = settingRepository1.GetAttr("GunBodyTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunBodyTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "GunBodyTemplate", bSTR22, bSTR23, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "GunBodyTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("GunArmColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunArmColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "GunArmColor", bSTR24, bSTR25, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "GunArmColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR26 = settingRepository1.GetAttr("GunArmTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunArmTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "GunArmTemplate", bSTR27, bSTR28, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "GunArmTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("GunEndColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunEndColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "GunEndColor", bSTR29, bSTR30, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "GunEndColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR31 = settingRepository1.GetAttr("GunEndTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunEndTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "GunEndTemplate", bSTR32, bSTR33, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "GunEndTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("GunTipColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTipColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "GunTipColor", bSTR34, bSTR35, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTipColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR36 = settingRepository1.GetAttr("GunTipTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTipTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "GunTipTemplate", bSTR37, bSTR38, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTipTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

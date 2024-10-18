@@ -1,0 +1,275 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATCrDToolsOptionsRepository")
+
+boolean1 = settingRepository1.GetAttr("DisplayNavigationPads")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayNavigationPads"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DisplayNavigationPads", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayNavigationPads"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("DisplaySectionViewType")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplaySectionViewType"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DisplaySectionViewType", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplaySectionViewType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("AutoMatchModeOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoMatchModeOn"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "AutoMatchModeOn", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoMatchModeOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("G0MatchingTolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "G0MatchingTolerance"
+' Returned value : (Variant) (Long) 15
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "G0MatchingTolerance", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "G0MatchingTolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("G1MatchingAngleTolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "G1MatchingAngleTolerance"
+' Returned value : (Variant) (Long) 15
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "G1MatchingAngleTolerance", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "G1MatchingAngleTolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("PressureHandling")
+'--------------------------------------------------
+' Parameter 1 : (String) "PressureHandling"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "PressureHandling", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "PressureHandling"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("UseVelocityAsPressure")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseVelocityAsPressure"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "UseVelocityAsPressure", bSTR13, bSTR14, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "UseVelocityAsPressure"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("PressureOpacityOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "PressureOpacityOn"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "PressureOpacityOn", bSTR15, bSTR16, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "PressureOpacityOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("PressureThicknessOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "PressureThicknessOn"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "PressureThicknessOn", bSTR17, bSTR18, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "PressureThicknessOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("PencilSmoothingValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "PencilSmoothingValue"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "PencilSmoothingValue", bSTR19, bSTR20, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "PencilSmoothingValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("PenPressureHandling")
+'--------------------------------------------------
+' Parameter 1 : (String) "PenPressureHandling"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "PenPressureHandling", bSTR21, bSTR22, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "PenPressureHandling"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("UsePenVelocityAsPressure")
+'--------------------------------------------------
+' Parameter 1 : (String) "UsePenVelocityAsPressure"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "UsePenVelocityAsPressure", bSTR23, bSTR24, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "UsePenVelocityAsPressure"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("PenPressureOpacityOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "PenPressureOpacityOn"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "PenPressureOpacityOn", bSTR25, bSTR26, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "PenPressureOpacityOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("PenPressureThicknessOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "PenPressureThicknessOn"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "PenPressureThicknessOn", bSTR27, bSTR28, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "PenPressureThicknessOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

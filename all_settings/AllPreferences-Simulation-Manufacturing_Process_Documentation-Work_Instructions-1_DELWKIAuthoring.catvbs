@@ -1,0 +1,218 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELPLMWorkInstructionSettings")
+
+long1 = settingRepository1.GetAttr("WorkInstructionUseTextMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkInstructionUseTextMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "WorkInstructionUseTextMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkInstructionUseTextMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("WorkInstructionAutoRenameInstance")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkInstructionAutoRenameInstance"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "WorkInstructionAutoRenameInstance", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkInstructionAutoRenameInstance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("DCPFormulaValidityCheckIndirectImpacts")
+'--------------------------------------------------
+' Parameter 1 : (String) "DCPFormulaValidityCheckIndirectImpacts"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "DCPFormulaValidityCheckIndirectImpacts", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "DCPFormulaValidityCheckIndirectImpacts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("DCPFormulaValidityCheckPreviouslyCollected")
+'--------------------------------------------------
+' Parameter 1 : (String) "DCPFormulaValidityCheckPreviouslyCollected"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "DCPFormulaValidityCheckPreviouslyCollected", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "DCPFormulaValidityCheckPreviouslyCollected"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("OperationTimeModeOnCreation")
+'--------------------------------------------------
+' Parameter 1 : (String) "OperationTimeModeOnCreation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "OperationTimeModeOnCreation", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "OperationTimeModeOnCreation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("MagnifierSizeAsPercentOfScreen")
+'--------------------------------------------------
+' Parameter 1 : (String) "MagnifierSizeAsPercentOfScreen"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "MagnifierSizeAsPercentOfScreen", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "MagnifierSizeAsPercentOfScreen"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("ViewCreationLevelRestriction")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewCreationLevelRestriction"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ViewCreationLevelRestriction", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewCreationLevelRestriction"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("FTAReqSurfaceOverloadEffectTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "FTAReqSurfaceOverloadEffectTransparency"
+' Returned value : (Variant) (Long) 150
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "FTAReqSurfaceOverloadEffectTransparency", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "FTAReqSurfaceOverloadEffectTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("UpdateViewsOnRedraw")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateViewsOnRedraw"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "UpdateViewsOnRedraw", bSTR17, bSTR18, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateViewsOnRedraw"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("UpdateAVPOnRedraw")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateAVPOnRedraw"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "UpdateAVPOnRedraw", bSTR19, bSTR20, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateAVPOnRedraw"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("ListDetailedFastenChildren")
+'--------------------------------------------------
+' Parameter 1 : (String) "ListDetailedFastenChildren"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ListDetailedFastenChildren", bSTR21, bSTR22, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ListDetailedFastenChildren"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SWXSolidworksSettings")
+
+boolean1 = settingRepository1.GetAttr("ImportTesselated")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportTesselated"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ImportTesselated", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportTesselated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ImportExact")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportExact"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ImportExact", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportExact"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ImportReferenceGeometries")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportReferenceGeometries"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ImportReferenceGeometries", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportReferenceGeometries"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ExportSketch")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportSketch"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ExportSketch", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportSketch"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ExportMates")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportMates"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ExportMates", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportMates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("EditInSW")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditInSW"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "EditInSW", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "EditInSW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

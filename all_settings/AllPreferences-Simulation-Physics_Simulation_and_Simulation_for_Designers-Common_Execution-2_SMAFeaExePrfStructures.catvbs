@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAFeaExePreferences")
+
+long1 = settingRepository1.GetAttr("ExplicitPrecision")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExplicitPrecision"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ExplicitPrecision", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ExplicitPrecision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("ResultsFormat")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsFormat"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ResultsFormat", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsFormat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("UseExternalAbaqusSolver")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseExternalAbaqusSolver"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "UseExternalAbaqusSolver", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "UseExternalAbaqusSolver"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR7 = settingRepository1.GetAttr("ExternalAbaqusSolverPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalAbaqusSolverPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ExternalAbaqusSolverPath", bSTR8, bSTR9, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalAbaqusSolverPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("UseUSUBSetupFile")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseUSUBSetupFile"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "UseUSUBSetupFile", bSTR10, bSTR11, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "UseUSUBSetupFile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR12 = settingRepository1.GetAttr("USUBSetupFilePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "USUBSetupFilePath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "USUBSetupFilePath", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "USUBSetupFilePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("StopExecPerPEEQ")
+'--------------------------------------------------
+' Parameter 1 : (String) "StopExecPerPEEQ"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "StopExecPerPEEQ", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "StopExecPerPEEQ"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("PEEQLimitFactor")
+'--------------------------------------------------
+' Parameter 1 : (String) "PEEQLimitFactor"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "PEEQLimitFactor", bSTR17, bSTR18, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "PEEQLimitFactor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

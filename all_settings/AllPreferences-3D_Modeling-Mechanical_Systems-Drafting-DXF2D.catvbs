@@ -1,0 +1,351 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DXF")
+
+boolean1 = settingRepository1.GetAttr("ImportPaperSpacesInBackground")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportPaperSpacesInBackground"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ImportPaperSpacesInBackground", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportPaperSpacesInBackground"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ImportKeepModelSpace")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportKeepModelSpace"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ImportKeepModelSpace", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportKeepModelSpace"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ImportMapLayerOn2DL")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportMapLayerOn2DL"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ImportMapLayerOn2DL", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportMapLayerOn2DL"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ImportMapLayerTable")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportMapLayerTable"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ImportMapLayerTable", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportMapLayerTable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ExportVersion")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportVersion"
+' Returned value : (Variant) (Long) 7
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ExportVersion", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportVersion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR11 = settingRepository1.GetAttr("ImportDftStandard")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportDftStandard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ImportDftStandard", bSTR12, bSTR13, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportDftStandard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR14 = settingRepository1.GetAttr("ImportDxfStandard")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportDxfStandard"
+' Returned value : (Variant) (String) "DXF"
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ImportDxfStandard", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportDxfStandard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ImportUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportUnit"
+' Returned value : (Variant) (Long) 6
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ImportUnit", bSTR17, bSTR18, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ImportEndPoints")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportEndPoints"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ImportEndPoints", bSTR19, bSTR20, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportEndPoints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ImportDimensions")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportDimensions"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ImportDimensions", bSTR21, bSTR22, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportDimensions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("ImportMapViewInDetail")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportMapViewInDetail"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ImportMapViewInDetail", bSTR23, bSTR24, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportMapViewInDetail"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR25 = settingRepository1.GetAttr("ExportDxfStandard")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportDxfStandard"
+' Returned value : (Variant) (String) "DXF"
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ExportDxfStandard", bSTR26, bSTR27, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportDxfStandard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("ExportSheets")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportSheets"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "ExportSheets", bSTR28, bSTR29, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportSheets"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("ExportMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ExportMode", bSTR30, bSTR31, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("ExportDimensionsAsDimensions")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportDimensionsAsDimensions"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "ExportDimensionsAsDimensions", bSTR32, bSTR33, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportDimensionsAsDimensions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("ExportViewAsViewport")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportViewAsViewport"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "ExportViewAsViewport", bSTR34, bSTR35, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportViewAsViewport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("ExportBlockMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportBlockMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR36
+bSTR36 = ""
+Dim bSTR37
+bSTR37 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "ExportBlockMode", bSTR36, bSTR37, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportBlockMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("ExportLayerName")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportLayerName"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "ExportLayerName", bSTR38, bSTR39, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportLayerName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

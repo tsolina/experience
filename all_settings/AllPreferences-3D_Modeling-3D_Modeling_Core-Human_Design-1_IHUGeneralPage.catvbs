@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IHUGeneralSettings")
+
+bSTR1 = settingRepository1.GetAttr("CustomNPresetDefaultAction")
+'--------------------------------------------------
+' Parameter 1 : (String) "CustomNPresetDefaultAction"
+' Returned value : (Variant) (String) "ComboItem0"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "CustomNPresetDefaultAction", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "CustomNPresetDefaultAction"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("SkeletonViewMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SkeletonViewMode"
+' Returned value : (Variant) (String) "ComboItem2"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SkeletonViewMode", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SkeletonViewMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ShowTopBannerLookAt")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowTopBannerLookAt"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ShowTopBannerLookAt", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowTopBannerLookAt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ShowTopBannerIK")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowTopBannerIK"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ShowTopBannerIK", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowTopBannerIK"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR11 = settingRepository1.GetAttr("FirstPersonViewDefaultAction")
+'--------------------------------------------------
+' Parameter 1 : (String) "FirstPersonViewDefaultAction"
+' Returned value : (Variant) (String) "ComboItem0"
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "FirstPersonViewDefaultAction", bSTR12, bSTR13, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "FirstPersonViewDefaultAction"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ViewAngleDefaultAction")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAngleDefaultAction"
+' Returned value : (Variant) (Long) 16
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ViewAngleDefaultAction", bSTR14, bSTR15, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAngleDefaultAction"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

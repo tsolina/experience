@@ -1,0 +1,199 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("ViewAssociativity")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAssociativity"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ViewAssociativity", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAssociativity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("CaptureCurrentAndUnsetAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureCurrentAndUnsetAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CaptureCurrentAndUnsetAtViewActivationSetting", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureCurrentAndUnsetAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ApplyVisuFilterAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ApplyVisuFilterAtViewActivationSetting", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ApplyViewpointAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ApplyViewpointAtViewActivationSetting", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ViewReferential")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferential"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ViewReferential", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferential"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("ViewReferentialZoomable")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferentialZoomable"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ViewReferentialZoomable", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferentialZoomable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("ViewProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewProfile"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ViewProfile", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("ViewsAssocToHoles")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewsAssocToHoles"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ViewsAssocToHoles", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewsAssocToHoles"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("ApplyVisuFilterAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "ApplyVisuFilterAtViewActivationSetting", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("ApplyViewpointAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "ApplyViewpointAtViewActivationSetting", bSTR19, bSTR20, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

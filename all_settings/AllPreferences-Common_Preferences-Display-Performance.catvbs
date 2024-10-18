@@ -1,0 +1,408 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VisualizationRepository")
+
+uLong1 = settingRepository1.GetAttr("3DAccuracy")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DAccuracy"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "3DAccuracy", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "3DAccuracy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("2DAccuracy")
+'--------------------------------------------------
+' Parameter 1 : (String) "2DAccuracy"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "2DAccuracy", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "2DAccuracy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("ForceRebuildVisuOnPrefUpdate")
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceRebuildVisuOnPrefUpdate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ForceRebuildVisuOnPrefUpdate", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceRebuildVisuOnPrefUpdate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("SLIMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SLIMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SLIMode", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SLIMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("TwoSideLightingMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "TwoSideLightingMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "TwoSideLightingMode", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "TwoSideLightingMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("HaloMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "HaloMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "HaloMode", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "HaloMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("PickingWindowSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "PickingWindowSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "PickingWindowSize", bSTR13, bSTR14, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "PickingWindowSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("3DCvAccuracyRatio")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DCvAccuracyRatio"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "3DCvAccuracyRatio", bSTR15, bSTR16, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "3DCvAccuracyRatio"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("OptimizedMeshMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OptimizedMeshMode"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "OptimizedMeshMode", bSTR17, bSTR18, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "OptimizedMeshMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("Isopar Generation")
+'--------------------------------------------------
+' Parameter 1 : (String) "Isopar Generation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "Isopar Generation", bSTR19, bSTR20, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "Isopar Generation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("NbIsopars")
+'--------------------------------------------------
+' Parameter 1 : (String) "NbIsopars"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "NbIsopars", bSTR21, bSTR22, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "NbIsopars"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("AccuratePickingMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AccuratePickingMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "AccuratePickingMode", bSTR23, bSTR24, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "AccuratePickingMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("AccuratePickingWindowSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "AccuratePickingWindowSize"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "AccuratePickingWindowSize", bSTR25, bSTR26, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "AccuratePickingWindowSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("GPUPicking")
+'--------------------------------------------------
+' Parameter 1 : (String) "GPUPicking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "GPUPicking", bSTR27, bSTR28, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "GPUPicking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("FastGPUPicking")
+'--------------------------------------------------
+' Parameter 1 : (String) "FastGPUPicking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "FastGPUPicking", bSTR29, bSTR30, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "FastGPUPicking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("UnloadMemoryFromGPU")
+'--------------------------------------------------
+' Parameter 1 : (String) "UnloadMemoryFromGPU"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "UnloadMemoryFromGPU", bSTR31, bSTR32, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "UnloadMemoryFromGPU"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean27 = settingRepository1.GetAttr("MeshCompressionNormalEnable")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshCompressionNormalEnable"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "MeshCompressionNormalEnable", bSTR33, bSTR34, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshCompressionNormalEnable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("2DPpAccuracy")
+'--------------------------------------------------
+' Parameter 1 : (String) "2DPpAccuracy"
+' Returned value : (Variant) (Float) 0.020000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "2DPpAccuracy", bSTR35, bSTR36, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "2DPpAccuracy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float3 = settingRepository1.GetAttr("2DFxAccuracy")
+'--------------------------------------------------
+' Parameter 1 : (String) "2DFxAccuracy"
+' Returned value : (Variant) (Float) 0.020000
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "2DFxAccuracy", bSTR37, bSTR38, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "2DFxAccuracy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float4 = settingRepository1.GetAttr("3DPpAccuracy")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DPpAccuracy"
+' Returned value : (Variant) (Float) 0.200000
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "3DPpAccuracy", bSTR39, bSTR40, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "3DPpAccuracy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float5 = settingRepository1.GetAttr("3DFxAccuracy")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DFxAccuracy"
+' Returned value : (Variant) (Float) 0.200000
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "3DFxAccuracy", bSTR41, bSTR42, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "3DFxAccuracy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

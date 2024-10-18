@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBRobotBase")
+
+long1 = settingRepository1.GetAttr("RotVelocityLimit")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotVelocityLimit"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RotVelocityLimit", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RotVelocityLimit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ReachabilityCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReachabilityCheck"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ReachabilityCheck", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ReachabilityCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("SingularityCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "SingularityCheck"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SingularityCheck", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SingularityCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("RobotCableHeartbeat")
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotCableHeartbeat"
+' Returned value : (Variant) (Double) 0.050000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RobotCableHeartbeat", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RobotCableHeartbeat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("SetToolRotStepX")
+'--------------------------------------------------
+' Parameter 1 : (String) "SetToolRotStepX"
+' Returned value : (Variant) (Double) 1.570796
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SetToolRotStepX", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SetToolRotStepX"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("SetToolRotStepY")
+'--------------------------------------------------
+' Parameter 1 : (String) "SetToolRotStepY"
+' Returned value : (Variant) (Double) 1.570796
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SetToolRotStepY", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SetToolRotStepY"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("SetToolRotStepZ")
+'--------------------------------------------------
+' Parameter 1 : (String) "SetToolRotStepZ"
+' Returned value : (Variant) (Double) 1.570796
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SetToolRotStepZ", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SetToolRotStepZ"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

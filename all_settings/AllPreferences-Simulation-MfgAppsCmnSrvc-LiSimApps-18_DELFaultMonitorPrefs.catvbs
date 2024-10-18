@@ -1,0 +1,106 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELFaultMonitorSettings")
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("DefinedProfiles")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefinedProfiles"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Default|Collision|1|0|0|0|DOFTravel|0|0|0|0|DOFSoft|0|0|0|0|DOFSpeed|0|0|0|0|DOFAccel|0|0|0|0|DOFCaution|0|0|0|0|AxisSafety|0|0|0|0|TCPLinSpeed|0|0|0|0|TCPRotSpeed|0|0|0|0|TCPLinAccel|0|0|0|0|TCPRotAccel|0|0|0|0|Reachability|1|0|0|0|Singularity|1|0|0|0"
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DefinedProfiles", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DefinedProfiles"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("ActiveIndex")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActiveIndex"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ActiveIndex", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ActiveIndex"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("DisplayedIndex")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayedIndex"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DisplayedIndex", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayedIndex"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("ProfileCount")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileCount"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ProfileCount", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileCount"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("ApplyRscClearance")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyRscClearance"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ApplyRscClearance", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyRscClearance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

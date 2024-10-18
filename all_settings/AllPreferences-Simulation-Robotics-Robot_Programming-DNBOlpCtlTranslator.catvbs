@@ -1,0 +1,399 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBOlpSettings")
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("ControllerInfo")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControllerInfo"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "ABB S4"
+'    Array[1] : (Variant) (String) "AUBO"
+'    Array[2] : (Variant) (String) "COMAU"
+'    Array[3] : (Variant) (String) "DAIHEN"
+'    Array[4] : (Variant) (String) "DENSO"
+'    Array[5] : (Variant) (String) "DENSO RC7M"
+'    Array[6] : (Variant) (String) "DENSO RC8"
+'    Array[7] : (Variant) (String) "DOOSAN"
+'    Array[8] : (Variant) (String) "DUERR"
+'    Array[9] : (Variant) (String) "EPSON"
+'    Array[10] : (Variant) (String) "FANUC RJ TPE"
+'    Array[11] : (Variant) (String) "FANUC R-30iA"
+'    Array[12] : (Variant) (String) "FANUC R-30iB"
+'    Array[13] : (Variant) (String) "KASSOW"
+'    Array[14] : (Variant) (String) "KAWASAKI"
+'    Array[15] : (Variant) (String) "KAWASAKI C"
+'    Array[16] : (Variant) (String) "KAWASAKI D"
+'    Array[17] : (Variant) (String) "KAWASAKI E"
+'    Array[18] : (Variant) (String) "KAWASAKI F"
+'    Array[19] : (Variant) (String) "ARCMAN"
+'    Array[20] : (Variant) (String) "KUKA"
+'    Array[21] : (Variant) (String) "MITSUBISHI"
+'    Array[22] : (Variant) (String) "MOTOMAN DX100"
+'    Array[23] : (Variant) (String) "MOTOMAN DX200"
+'    Array[24] : (Variant) (String) "MOTOMAN ERC"
+'    Array[25] : (Variant) (String) "MOTOMAN FS100"
+'    Array[26] : (Variant) (String) "MOTOMAN MRC"
+'    Array[27] : (Variant) (String) "MOTOMAN NX100"
+'    Array[28] : (Variant) (String) "MOTOMAN XRC"
+'    Array[29] : (Variant) (String) "MOTOMAN YRC1000"
+'    Array[30] : (Variant) (String) "NACHI"
+'    Array[31] : (Variant) (String) "NACHI AW"
+'    Array[32] : (Variant) (String) "NACHI AX"
+'    Array[33] : (Variant) (String) "NACHI FD"
+'    Array[34] : (Variant) (String) "OMRON eV+"
+'    Array[35] : (Variant) (String) "PANASONIC"
+'    Array[36] : (Variant) (String) "SIASUN"
+'    Array[37] : (Variant) (String) "STAUBLI"
+'    Array[38] : (Variant) (String) "UNIVERSAL"
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ControllerInfo", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ControllerInfo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("TranslatorPLMXID")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorPLMXID"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'    Array[1] : (Variant) (String) ""
+'    Array[2] : (Variant) (String) ""
+'    Array[3] : (Variant) (String) ""
+'    Array[4] : (Variant) (String) ""
+'    Array[5] : (Variant) (String) ""
+'    Array[6] : (Variant) (String) ""
+'    Array[7] : (Variant) (String) ""
+'    Array[8] : (Variant) (String) ""
+'    Array[9] : (Variant) (String) ""
+'    Array[10] : (Variant) (String) ""
+'    Array[11] : (Variant) (String) ""
+'    Array[12] : (Variant) (String) ""
+'    Array[13] : (Variant) (String) ""
+'    Array[14] : (Variant) (String) ""
+'    Array[15] : (Variant) (String) ""
+'    Array[16] : (Variant) (String) ""
+'    Array[17] : (Variant) (String) ""
+'    Array[18] : (Variant) (String) ""
+'    Array[19] : (Variant) (String) ""
+'    Array[20] : (Variant) (String) ""
+'    Array[21] : (Variant) (String) ""
+'    Array[22] : (Variant) (String) ""
+'    Array[23] : (Variant) (String) ""
+'    Array[24] : (Variant) (String) ""
+'    Array[25] : (Variant) (String) ""
+'    Array[26] : (Variant) (String) ""
+'    Array[27] : (Variant) (String) ""
+'    Array[28] : (Variant) (String) ""
+'    Array[29] : (Variant) (String) ""
+'    Array[30] : (Variant) (String) ""
+'    Array[31] : (Variant) (String) ""
+'    Array[32] : (Variant) (String) ""
+'    Array[33] : (Variant) (String) ""
+'    Array[34] : (Variant) (String) ""
+'    Array[35] : (Variant) (String) ""
+'    Array[36] : (Variant) (String) ""
+'    Array[37] : (Variant) (String) ""
+'    Array[38] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TranslatorPLMXID", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorPLMXID"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR3
+arrayOfVariantOfBSTR3 = settingRepository1.GetAttrArray("TranslatorRevision")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorRevision"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'    Array[1] : (Variant) (String) ""
+'    Array[2] : (Variant) (String) ""
+'    Array[3] : (Variant) (String) ""
+'    Array[4] : (Variant) (String) ""
+'    Array[5] : (Variant) (String) ""
+'    Array[6] : (Variant) (String) ""
+'    Array[7] : (Variant) (String) ""
+'    Array[8] : (Variant) (String) ""
+'    Array[9] : (Variant) (String) ""
+'    Array[10] : (Variant) (String) ""
+'    Array[11] : (Variant) (String) ""
+'    Array[12] : (Variant) (String) ""
+'    Array[13] : (Variant) (String) ""
+'    Array[14] : (Variant) (String) ""
+'    Array[15] : (Variant) (String) ""
+'    Array[16] : (Variant) (String) ""
+'    Array[17] : (Variant) (String) ""
+'    Array[18] : (Variant) (String) ""
+'    Array[19] : (Variant) (String) ""
+'    Array[20] : (Variant) (String) ""
+'    Array[21] : (Variant) (String) ""
+'    Array[22] : (Variant) (String) ""
+'    Array[23] : (Variant) (String) ""
+'    Array[24] : (Variant) (String) ""
+'    Array[25] : (Variant) (String) ""
+'    Array[26] : (Variant) (String) ""
+'    Array[27] : (Variant) (String) ""
+'    Array[28] : (Variant) (String) ""
+'    Array[29] : (Variant) (String) ""
+'    Array[30] : (Variant) (String) ""
+'    Array[31] : (Variant) (String) ""
+'    Array[32] : (Variant) (String) ""
+'    Array[33] : (Variant) (String) ""
+'    Array[34] : (Variant) (String) ""
+'    Array[35] : (Variant) (String) ""
+'    Array[36] : (Variant) (String) ""
+'    Array[37] : (Variant) (String) ""
+'    Array[38] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "TranslatorRevision", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorRevision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR4
+arrayOfVariantOfBSTR4 = settingRepository1.GetAttrArray("DownloaderV2")
+'--------------------------------------------------
+' Parameter 1 : (String) "DownloaderV2"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'    Array[1] : (Variant) (String) ""
+'    Array[2] : (Variant) (String) ""
+'    Array[3] : (Variant) (String) ""
+'    Array[4] : (Variant) (String) ""
+'    Array[5] : (Variant) (String) "RC7M"
+'    Array[6] : (Variant) (String) "RC8"
+'    Array[7] : (Variant) (String) ""
+'    Array[8] : (Variant) (String) ""
+'    Array[9] : (Variant) (String) ""
+'    Array[10] : (Variant) (String) "R-J3"
+'    Array[11] : (Variant) (String) "R-30iA"
+'    Array[12] : (Variant) (String) "R-30iB"
+'    Array[13] : (Variant) (String) ""
+'    Array[14] : (Variant) (String) "E CONTROLLER"
+'    Array[15] : (Variant) (String) "C CONTROLLER"
+'    Array[16] : (Variant) (String) "D CONTROLLER"
+'    Array[17] : (Variant) (String) "E CONTROLLER"
+'    Array[18] : (Variant) (String) "F CONTROLLER"
+'    Array[19] : (Variant) (String) ""
+'    Array[20] : (Variant) (String) ""
+'    Array[21] : (Variant) (String) ""
+'    Array[22] : (Variant) (String) "DX100"
+'    Array[23] : (Variant) (String) "DX200"
+'    Array[24] : (Variant) (String) "MRC"
+'    Array[25] : (Variant) (String) "DX100"
+'    Array[26] : (Variant) (String) "MRC"
+'    Array[27] : (Variant) (String) "NX100"
+'    Array[28] : (Variant) (String) "XRC"
+'    Array[29] : (Variant) (String) "YRC1000"
+'    Array[30] : (Variant) (String) "AX"
+'    Array[31] : (Variant) (String) "AW"
+'    Array[32] : (Variant) (String) "AX"
+'    Array[33] : (Variant) (String) "FD"
+'    Array[34] : (Variant) (String) ""
+'    Array[35] : (Variant) (String) ""
+'    Array[36] : (Variant) (String) ""
+'    Array[37] : (Variant) (String) ""
+'    Array[38] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DownloaderV2", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DownloaderV2"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR5
+arrayOfVariantOfBSTR5 = settingRepository1.GetAttrArray("UploaderV2")
+'--------------------------------------------------
+' Parameter 1 : (String) "UploaderV2"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'    Array[1] : (Variant) (String) ""
+'    Array[2] : (Variant) (String) ""
+'    Array[3] : (Variant) (String) ""
+'    Array[4] : (Variant) (String) ""
+'    Array[5] : (Variant) (String) "RC7M"
+'    Array[6] : (Variant) (String) "RC8"
+'    Array[7] : (Variant) (String) ""
+'    Array[8] : (Variant) (String) ""
+'    Array[9] : (Variant) (String) ""
+'    Array[10] : (Variant) (String) "R-J3"
+'    Array[11] : (Variant) (String) "R-30iA"
+'    Array[12] : (Variant) (String) "R-30iB"
+'    Array[13] : (Variant) (String) ""
+'    Array[14] : (Variant) (String) "E CONTROLLER"
+'    Array[15] : (Variant) (String) "C CONTROLLER"
+'    Array[16] : (Variant) (String) "D CONTROLLER"
+'    Array[17] : (Variant) (String) "E CONTROLLER"
+'    Array[18] : (Variant) (String) "F CONTROLLER"
+'    Array[19] : (Variant) (String) ""
+'    Array[20] : (Variant) (String) ""
+'    Array[21] : (Variant) (String) ""
+'    Array[22] : (Variant) (String) "DX100"
+'    Array[23] : (Variant) (String) "DX200"
+'    Array[24] : (Variant) (String) "MRC"
+'    Array[25] : (Variant) (String) "DX100"
+'    Array[26] : (Variant) (String) "MRC"
+'    Array[27] : (Variant) (String) "NX100"
+'    Array[28] : (Variant) (String) "XRC"
+'    Array[29] : (Variant) (String) "YRC1000"
+'    Array[30] : (Variant) (String) "AX"
+'    Array[31] : (Variant) (String) "AW"
+'    Array[32] : (Variant) (String) "AX"
+'    Array[33] : (Variant) (String) "FD"
+'    Array[34] : (Variant) (String) ""
+'    Array[35] : (Variant) (String) ""
+'    Array[36] : (Variant) (String) ""
+'    Array[37] : (Variant) (String) ""
+'    Array[38] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "UploaderV2", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "UploaderV2"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "ShowPulseCounts"
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowPulseCounts"
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ShowPulseCounts", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowPulseCounts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "ShowRrsAutoDowns"
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowRrsAutoDowns"
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ShowRrsAutoDowns", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowRrsAutoDowns"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR6
+arrayOfVariantOfBSTR6 = settingRepository1.GetAttrArray("Translator")
+'--------------------------------------------------
+' Parameter 1 : (String) "Translator"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "DELMIA Rapid Translator"
+'    Array[1] : (Variant) (String) "DELMIA Aubo Translator"
+'    Array[2] : (Variant) (String) "DELMIA Comau Translator"
+'    Array[3] : (Variant) (String) "DELMIA Daihen Translator"
+'    Array[4] : (Variant) (String) "DELMIA DENSO Translator"
+'    Array[5] : (Variant) (String) "DELMIA DENSO Translator"
+'    Array[6] : (Variant) (String) "DELMIA DENSO Translator"
+'    Array[7] : (Variant) (String) "DELMIA Doosan DRL Translator"
+'    Array[8] : (Variant) (String) "DELMIA Duerr Translator"
+'    Array[9] : (Variant) (String) "DELMIA Epson Translator"
+'    Array[10] : (Variant) (String) "DELMIA Fanuc Translator"
+'    Array[11] : (Variant) (String) "DELMIA Fanuc Translator"
+'    Array[12] : (Variant) (String) "DELMIA Fanuc Translator"
+'    Array[13] : (Variant) (String) "DELMIA Kassow Translator"
+'    Array[14] : (Variant) (String) "DELMIA Kawasaki Translator"
+'    Array[15] : (Variant) (String) "DELMIA Kawasaki Translator"
+'    Array[16] : (Variant) (String) "DELMIA Kawasaki Translator"
+'    Array[17] : (Variant) (String) "DELMIA Kawasaki Translator"
+'    Array[18] : (Variant) (String) "DELMIA Kawasaki Translator"
+'    Array[19] : (Variant) (String) "DELMIA ARCMAN Translator"
+'    Array[20] : (Variant) (String) "DELMIA Kuka Translator"
+'    Array[21] : (Variant) (String) "DELMIA Mitsubishi Translator"
+'    Array[22] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[23] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[24] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[25] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[26] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[27] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[28] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[29] : (Variant) (String) "DELMIA Motoman Translator"
+'    Array[30] : (Variant) (String) "DELMIA Nachi Translator"
+'    Array[31] : (Variant) (String) "DELMIA Nachi Translator"
+'    Array[32] : (Variant) (String) "DELMIA Nachi Translator"
+'    Array[33] : (Variant) (String) "DELMIA Nachi Translator"
+'    Array[34] : (Variant) (String) "DELMIA Omron eV+ Translator"
+'    Array[35] : (Variant) (String) "DELMIA Panasonic Translator"
+'    Array[36] : (Variant) (String) "DELMIA Siasun Translator"
+'    Array[37] : (Variant) (String) "DELMIA Staubli Translator"
+'    Array[38] : (Variant) (String) "DELMIA UniversalRobots Translator"
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "Translator", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "Translator"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

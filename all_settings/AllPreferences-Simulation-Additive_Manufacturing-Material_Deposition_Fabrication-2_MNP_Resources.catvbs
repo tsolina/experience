@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NCMfgResources")
+
+bSTR1 = settingRepository1.GetAttr("PPToolsLocation")
+'--------------------------------------------------
+' Parameter 1 : (String) "PPToolsLocation"
+' Returned value : (Variant) (String) "${CATStartupPath}"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "PPToolsLocation", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "PPToolsLocation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("SimpleToolInActivity")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimpleToolInActivity"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SimpleToolInActivity", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SimpleToolInActivity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

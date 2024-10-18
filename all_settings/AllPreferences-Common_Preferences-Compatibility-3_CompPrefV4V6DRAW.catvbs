@@ -1,0 +1,218 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("ImportCenterEndPoints")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportCenterEndPoints"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ImportCenterEndPoints", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportCenterEndPoints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ConvertDimensionAsGraphic")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConvertDimensionAsGraphic"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ConvertDimensionAsGraphic", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ConvertDimensionAsGraphic"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ConvertBalloonAsGraphic")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConvertBalloonAsGraphic"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ConvertBalloonAsGraphic", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ConvertBalloonAsGraphic"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ConvertOtherAnnotAsGraphic")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConvertOtherAnnotAsGraphic"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ConvertOtherAnnotAsGraphic", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ConvertOtherAnnotAsGraphic"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ExplodeDitto")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExplodeDitto"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ExplodeDitto", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ExplodeDitto"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("DrwExplodeSymbolo")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwExplodeSymbolo"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DrwExplodeSymbolo", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwExplodeSymbolo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("DrwBlinkRed")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwBlinkRed"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "DrwBlinkRed", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwBlinkRed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("DrwPreventGVS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPreventGVS"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DrwPreventGVS", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPreventGVS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR17 = settingRepository1.GetAttr("DrwGVSXmlV4V5")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGVSXmlV4V5"
+' Returned value : (Variant) (String) "DefaultGenerativeStyle.xml"
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "DrwGVSXmlV4V5", bSTR18, bSTR19, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGVSXmlV4V5"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("DrwAllDetailOneSheet")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwAllDetailOneSheet"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "DrwAllDetailOneSheet", bSTR20, bSTR21, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwAllDetailOneSheet"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("V4V5_LimitThickBold")
+'--------------------------------------------------
+' Parameter 1 : (String) "V4V5_LimitThickBold"
+' Returned value : (Variant) (Double) 0.200000
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "V4V5_LimitThickBold", bSTR22, bSTR23, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "V4V5_LimitThickBold"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

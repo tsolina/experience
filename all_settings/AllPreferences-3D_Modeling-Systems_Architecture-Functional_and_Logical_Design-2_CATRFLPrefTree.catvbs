@@ -1,0 +1,389 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+uLong1 = settingRepository1.GetAttr("RFLPGnrlGeneralOptionsValidILFolder")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsValidILFolder"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptionsValidILFolder", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsValidILFolder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("RFLPGnrlGeneralOptionsBrokenILFolder")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsBrokenILFolder"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptionsBrokenILFolder", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsBrokenILFolder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("RFLPGnrlGeneralOptionsPartiallyLoadedILFolder")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsPartiallyLoadedILFolder"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptionsPartiallyLoadedILFolder", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsPartiallyLoadedILFolder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("RFLPGnrlGeneralOptions2DLayoutRep")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptions2DLayoutRep"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptions2DLayoutRep", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptions2DLayoutRep"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("RFLPGnrlGeneralOptionsDisplayTreeShowParameter")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsDisplayTreeShowParameter"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptionsDisplayTreeShowParameter", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsDisplayTreeShowParameter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("RFLPGnrlGeneralOptionsActivateThumbnailTreeToSwitchView")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsActivateThumbnailTreeToSwitchView"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptionsActivateThumbnailTreeToSwitchView", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsActivateThumbnailTreeToSwitchView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("RFLPGnrlGeneralOptionsExcludeFlows")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsExcludeFlows"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "RFLPGnrlGeneralOptionsExcludeFlows", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGeneralOptionsExcludeFlows"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("FctDisplayTreeShowCnx")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowCnx"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "FctDisplayTreeShowCnx", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowCnx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("FctDisplayTreeShowBrokenCnx")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowBrokenCnx"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "FctDisplayTreeShowBrokenCnx", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowBrokenCnx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("FctDisplayTreeShowPartiallyLoadedCnx")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowPartiallyLoadedCnx"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "FctDisplayTreeShowPartiallyLoadedCnx", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowPartiallyLoadedCnx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("LogDisplayTreeShowCnx")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowCnx"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "LogDisplayTreeShowCnx", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowCnx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("LogDisplayTreeShowBrokenCnx")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowBrokenCnx"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "LogDisplayTreeShowBrokenCnx", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowBrokenCnx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("LogDisplayTreeShowPartiallyLoadedCnx")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowPartiallyLoadedCnx"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "LogDisplayTreeShowPartiallyLoadedCnx", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowPartiallyLoadedCnx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("LogDisplayTreeShowTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowTypes"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "LogDisplayTreeShowTypes", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("ReqDisplayTreeShowDerived")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReqDisplayTreeShowDerived"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ReqDisplayTreeShowDerived", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ReqDisplayTreeShowDerived"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("ReqDisplayTreeShowParameter")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReqDisplayTreeShowParameter"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ReqDisplayTreeShowParameter", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ReqDisplayTreeShowParameter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("FctDisplayTreeShowPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "FctDisplayTreeShowPort", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeShowPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("FctDisplayTreeGroupPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeGroupPort"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "FctDisplayTreeGroupPort", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDisplayTreeGroupPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("LogDisplayTreeShowPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "LogDisplayTreeShowPort", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeShowPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("LogDisplayTreeGroupPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeGroupPort"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "LogDisplayTreeGroupPort", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "LogDisplayTreeGroupPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

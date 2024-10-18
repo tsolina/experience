@@ -1,0 +1,114 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("L3dISOGENSettings")
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("L3dISOGenRootPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenRootPath"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "L3dISOGenRootPath", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenRootPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("L3dISOGenProjectPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenProjectPath"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "L3dISOGenProjectPath", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenProjectPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR3
+arrayOfVariantOfBSTR3 = settingRepository1.GetAttrArray("L3dISOGenStylePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenStylePath"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "L3dISOGenStylePath", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenStylePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR4
+arrayOfVariantOfBSTR4 = settingRepository1.GetAttrArray("L3dISOGenIRUNPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenIRUNPath"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "L3dISOGenIRUNPath", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenIRUNPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR5
+arrayOfVariantOfBSTR5 = settingRepository1.GetAttrArray("L3dISOGenErrorPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenErrorPath"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "L3dISOGenErrorPath", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dISOGenErrorPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

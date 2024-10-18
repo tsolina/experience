@@ -1,0 +1,28 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IVSensorialUser")
+
+long1 = settingRepository1.GetAttr("DominantHand")
+'--------------------------------------------------
+' Parameter 1 : (String) "DominantHand"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DominantHand", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DominantHand"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

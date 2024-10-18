@@ -1,0 +1,469 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELLiveSimSettings")
+
+uLong1 = settingRepository1.GetAttr("ASOLowLight")
+'--------------------------------------------------
+' Parameter 1 : (String) "ASOLowLight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ASOLowLight", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ASOLowLight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("DesignInContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignInContext"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DesignInContext", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignInContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("PersistRscPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "PersistRscPosition"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "PersistRscPosition", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "PersistRscPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("KeepTreeVis")
+'--------------------------------------------------
+' Parameter 1 : (String) "KeepTreeVis"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "KeepTreeVis", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "KeepTreeVis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("BackgrColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgrColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 3
+'    Array[1] : (Variant) (Unsigned Long) 3
+'    Array[2] : (Variant) (Unsigned Long) 64
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "BackgrColor", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgrColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("ThumbnailSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThumbnailSize"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ThumbnailSize", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ThumbnailSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("ThumbnailGrouping")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThumbnailGrouping"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ThumbnailGrouping", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ThumbnailGrouping"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("SessionRestoreExit")
+'--------------------------------------------------
+' Parameter 1 : (String) "SessionRestoreExit"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SessionRestoreExit", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SessionRestoreExit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("SessionRestoreEnter")
+'--------------------------------------------------
+' Parameter 1 : (String) "SessionRestoreEnter"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SessionRestoreEnter", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SessionRestoreEnter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("AppEscInsertNewData")
+'--------------------------------------------------
+' Parameter 1 : (String) "AppEscInsertNewData"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "AppEscInsertNewData", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "AppEscInsertNewData"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("AppEscApplySimState")
+'--------------------------------------------------
+' Parameter 1 : (String) "AppEscApplySimState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "AppEscApplySimState", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "AppEscApplySimState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("AppEscSimEvent")
+'--------------------------------------------------
+' Parameter 1 : (String) "AppEscSimEvent"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "AppEscSimEvent", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "AppEscSimEvent"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("DROTabDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "DROTabDisplay"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DROTabDisplay", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DROTabDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("ApplyStatePos")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStatePos"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ApplyStatePos", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStatePos"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("ApplyStateCol")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateCol"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ApplyStateCol", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateCol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("ApplyStateVis")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateVis"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ApplyStateVis", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateVis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("ApplyStateViewpoint")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateViewpoint"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "ApplyStateViewpoint", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateViewpoint"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("ApplyStateInSim")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateInSim"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ApplyStateInSim", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateInSim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("ApplyStateAfterCE")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateAfterCE"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "ApplyStateAfterCE", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateAfterCE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("ActivateAfterCE")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActivateAfterCE"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "ActivateAfterCE", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "ActivateAfterCE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("AdvExportCGR")
+'--------------------------------------------------
+' Parameter 1 : (String) "AdvExportCGR"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "AdvExportCGR", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "AdvExportCGR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("SimStateInPrd")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimStateInPrd"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "SimStateInPrd", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "SimStateInPrd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("ApplyStateCtx")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateCtx"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "ApplyStateCtx", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateCtx"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("ApplyStateScope")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateScope"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "ApplyStateScope", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyStateScope"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

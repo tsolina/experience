@@ -1,0 +1,182 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("3DShapeInfrastructureReferencePlanes")
+
+short1 = settingRepository1.GetAttr("Preset")
+'--------------------------------------------------
+' Parameter 1 : (String) "Preset"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Preset", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Preset"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short2 = settingRepository1.GetAttr("SizeMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SizeMode"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SizeMode", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SizeMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short3 = settingRepository1.GetAttr("Appearance")
+'--------------------------------------------------
+' Parameter 1 : (String) "Appearance"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Appearance", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Appearance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("Transparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Transparency"
+' Returned value : (Variant) (Double) 236.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Transparency", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Transparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ShowPlaneLabel")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowPlaneLabel"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ShowPlaneLabel", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowPlaneLabel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ShowOrientationArrow")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowOrientationArrow"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ShowOrientationArrow", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowOrientationArrow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("VisualizationRepository")
+
+uLong1 = settingRepository2.GetAttr("AxisSystemDefLengthInModelUnits")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisSystemDefLengthInModelUnits"
+' Returned value : (Variant) (Unsigned Long) 35
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository2.GetAttrInfo "AxisSystemDefLengthInModelUnits", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisSystemDefLengthInModelUnits"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("FrontFaceColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FrontFaceColor"
+' Returned value : (Variant) (Double) 5670400.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "FrontFaceColor", bSTR15, bSTR16, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "FrontFaceColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("BackFaceColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "BackFaceColor"
+' Returned value : (Variant) (Double) 2747849984.000000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "BackFaceColor", bSTR17, bSTR18, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "BackFaceColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) True
+'--------------------------------------------------
+
+End Sub

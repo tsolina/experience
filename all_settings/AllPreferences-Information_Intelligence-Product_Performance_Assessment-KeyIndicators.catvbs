@@ -1,0 +1,28 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("KPISettings")
+
+bSTR1 = settingRepository1.GetAttr("PolicyName")
+'--------------------------------------------------
+' Parameter 1 : (String) "PolicyName"
+' Returned value : (Variant) (String) "Universal"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "PolicyName", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "PolicyName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

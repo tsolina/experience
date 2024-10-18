@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("StellarPreciseRepository")
+
+boolean1 = settingRepository1.GetAttr("DistributedRendering")
+'--------------------------------------------------
+' Parameter 1 : (String) "DistributedRendering"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DistributedRendering", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DistributedRendering"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) True
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("HostName")
+'--------------------------------------------------
+' Parameter 1 : (String) "HostName"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "HostName", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "HostName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("Port")
+'--------------------------------------------------
+' Parameter 1 : (String) "Port"
+' Returned value : (Variant) (Unsigned Long) 8080
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Port", bSTR6, bSTR7, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Port"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR8 = settingRepository1.GetAttr("LocalHostName")
+'--------------------------------------------------
+' Parameter 1 : (String) "LocalHostName"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "LocalHostName", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "LocalHostName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("EnableCompression")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnableCompression"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "EnableCompression", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "EnableCompression"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("CompressionRatio")
+'--------------------------------------------------
+' Parameter 1 : (String) "CompressionRatio"
+' Returned value : (Variant) (Unsigned Long) 60
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "CompressionRatio", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "CompressionRatio"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

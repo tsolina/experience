@@ -1,0 +1,413 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("RequirementLink2DRepLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementLink2DRepLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RequirementLink2DRepLineColor", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementLink2DRepLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("RequirementLink2DRepLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementLink2DRepLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "RequirementLink2DRepLineType", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementLink2DRepLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("RequirementLink2DRepLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementLink2DRepLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "RequirementLink2DRepLineWeight", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementLink2DRepLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("RequirementDisplayOptionsBoxWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementDisplayOptionsBoxWidth"
+' Returned value : (Variant) (Unsigned Long) 72
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RequirementDisplayOptionsBoxWidth", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementDisplayOptionsBoxWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("RequirementDisplayOptionsBoxHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementDisplayOptionsBoxHeight"
+' Returned value : (Variant) (Unsigned Long) 48
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "RequirementDisplayOptionsBoxHeight", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementDisplayOptionsBoxHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("Requirement2DRepFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Requirement2DRepFillColor", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("Requirement2DRepFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "Requirement2DRepFillTransparency", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("Requirement2DRepLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "Requirement2DRepLineColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("Requirement2DRepLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "Requirement2DRepLineType", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("Requirement2DRepLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "Requirement2DRepLineWeight", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("RequirementILOptionsLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "RequirementILOptionsLineColor", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("RequirementILOptionsLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsLineType"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "RequirementILOptionsLineType", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("RequirementILOptionsLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "RequirementILOptionsLineWeight", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("RequirementILOptionsDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "RequirementILOptionsDisplayText", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("RequirementILOptionsTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "RequirementILOptionsTextFontSize", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "RequirementILOptionsTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("Requirement2DRepTextFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "Requirement2DRepTextFillColor", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("Requirement2DRepTextFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "Requirement2DRepTextFillTransparency", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("Requirement2DRepTextFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "Requirement2DRepTextFontColor", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("Requirement2DRepTextPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextPosition"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "Requirement2DRepTextPosition", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("Requirement2DRepTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "Requirement2DRepTextFontSize", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "Requirement2DRepTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,971 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("MeasureSettings")
+
+long1 = settingRepository1.GetAttr("BorderStatusNEW")
+'--------------------------------------------------
+' Parameter 1 : (String) "BorderStatusNEW"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "BorderStatusNEW", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "BorderStatusNEW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("LineColorNEW")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineColorNEW"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 61
+'    Array[1] : (Variant) (Unsigned Long) 61
+'    Array[2] : (Variant) (Unsigned Long) 61
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "LineColorNEW", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "LineColorNEW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("LineWidthNEW")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineWidthNEW"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "LineWidthNEW", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "LineWidthNEW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("TextColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "TextColor", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "TextColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("TextFontName")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextFontName"
+' Returned value : (Variant) (String) "Arial (TT)"
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "TextFontName", bSTR10, bSTR11, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "TextFontName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR12 = settingRepository1.GetAttr("TextFontNEW")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextFontNEW"
+' Returned value : (Variant) (String) "arial.ttf"
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TextFontNEW", bSTR13, bSTR14, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TextFontNEW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("TextSizeNEW")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextSizeNEW"
+' Returned value : (Variant) (Float) 3.500000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "TextSizeNEW", bSTR15, bSTR16, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "TextSizeNEW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("TextBoxColorNEW")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextBoxColorNEW"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 54
+'    Array[1] : (Variant) (Unsigned Long) 142
+'    Array[2] : (Variant) (Unsigned Long) 196
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "TextBoxColorNEW", bSTR17, bSTR18, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "TextBoxColorNEW"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("CoordinatesPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "CoordinatesPrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "CoordinatesPrefix", bSTR19, bSTR20, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "CoordinatesPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("LengthPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "LengthPrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "LengthPrefix", bSTR21, bSTR22, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "LengthPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("MinimumDistancePrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "MinimumDistancePrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "MinimumDistancePrefix", bSTR23, bSTR24, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "MinimumDistancePrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("MaximumDistancePrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistancePrefix"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "MaximumDistancePrefix", bSTR25, bSTR26, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistancePrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("AnglePrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnglePrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "AnglePrefix", bSTR27, bSTR28, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "AnglePrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("RadiusPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "RadiusPrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "RadiusPrefix", bSTR29, bSTR30, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "RadiusPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("DiameterPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "DiameterPrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "DiameterPrefix", bSTR31, bSTR32, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "DiameterPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("AreaPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "AreaPrefix"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "AreaPrefix", bSTR33, bSTR34, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "AreaPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("VolumePrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumePrefix"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "VolumePrefix", bSTR35, bSTR36, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumePrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("ThicknessPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessPrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ThicknessPrefix", bSTR37, bSTR38, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("BandAnalysisPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "BandAnalysisPrefix"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "BandAnalysisPrefix", bSTR39, bSTR40, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "BandAnalysisPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("MaximumDistancefrom1to2Prefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistancefrom1to2Prefix"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "MaximumDistancefrom1to2Prefix", bSTR41, bSTR42, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistancefrom1to2Prefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("MeasureAlongADirectionPrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureAlongADirectionPrefix"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "MeasureAlongADirectionPrefix", bSTR43, bSTR44, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureAlongADirectionPrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("CurvilinearDistancePrefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvilinearDistancePrefix"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "CurvilinearDistancePrefix", bSTR45, bSTR46, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvilinearDistancePrefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("CoordinatesUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "CoordinatesUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "CoordinatesUnit", bSTR47, bSTR48, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "CoordinatesUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("LengthUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "LengthUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "LengthUnit", bSTR49, bSTR50, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "LengthUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("MinimumDistanceUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "MinimumDistanceUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "MinimumDistanceUnit", bSTR51, bSTR52, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "MinimumDistanceUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long19 = settingRepository1.GetAttr("MaximumDistanceUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistanceUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "MaximumDistanceUnit", bSTR53, bSTR54, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistanceUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long20 = settingRepository1.GetAttr("AngleUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "AngleUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "AngleUnit", bSTR55, bSTR56, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "AngleUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long21 = settingRepository1.GetAttr("RadiusUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "RadiusUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "RadiusUnit", bSTR57, bSTR58, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "RadiusUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long22 = settingRepository1.GetAttr("DiameterUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "DiameterUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "DiameterUnit", bSTR59, bSTR60, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "DiameterUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long23 = settingRepository1.GetAttr("AreaUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "AreaUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "AreaUnit", bSTR61, bSTR62, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "AreaUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long24 = settingRepository1.GetAttr("VolumeUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "VolumeUnit", bSTR63, bSTR64, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long25 = settingRepository1.GetAttr("ThicknessUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "ThicknessUnit", bSTR65, bSTR66, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long26 = settingRepository1.GetAttr("BandAnalysisUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "BandAnalysisUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "BandAnalysisUnit", bSTR67, bSTR68, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "BandAnalysisUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long27 = settingRepository1.GetAttr("MaximumDistancefrom1to2Unit")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistancefrom1to2Unit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "MaximumDistancefrom1to2Unit", bSTR69, bSTR70, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "MaximumDistancefrom1to2Unit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long28 = settingRepository1.GetAttr("MeasureAlongADirectionUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureAlongADirectionUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "MeasureAlongADirectionUnit", bSTR71, bSTR72, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureAlongADirectionUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long29 = settingRepository1.GetAttr("CurvilinearDistanceUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvilinearDistanceUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "CurvilinearDistanceUnit", bSTR73, bSTR74, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvilinearDistanceUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long30 = settingRepository1.GetAttr("InlineDisplayStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "InlineDisplayStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "InlineDisplayStatus", bSTR75, bSTR76, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "InlineDisplayStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long31 = settingRepository1.GetAttr("MeasureOnlyShownElementsStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureOnlyShownElementsStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "MeasureOnlyShownElementsStatus", bSTR77, bSTR78, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureOnlyShownElementsStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long32 = settingRepository1.GetAttr("SecondMomentOfArea")
+'--------------------------------------------------
+' Parameter 1 : (String) "SecondMomentOfArea"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "SecondMomentOfArea", bSTR79, bSTR80, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "SecondMomentOfArea"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long33 = settingRepository1.GetAttr("MeasureAssociativeStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureAssociativeStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "MeasureAssociativeStatus", bSTR81, bSTR82, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureAssociativeStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long34 = settingRepository1.GetAttr("MeasuresNodeStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasuresNodeStatus"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "MeasuresNodeStatus", bSTR83, bSTR84, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasuresNodeStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long35 = settingRepository1.GetAttr("MeasureTildeStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureTildeStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "MeasureTildeStatus", bSTR85, bSTR86, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureTildeStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long36 = settingRepository1.GetAttr("AdvancedSelectionFiltersStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "AdvancedSelectionFiltersStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "AdvancedSelectionFiltersStatus", bSTR87, bSTR88, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "AdvancedSelectionFiltersStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long37 = settingRepository1.GetAttr("AutoAttachMoveStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoAttachMoveStatus"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "AutoAttachMoveStatus", bSTR89, bSTR90, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoAttachMoveStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long38 = settingRepository1.GetAttr("MeasureWithGeometryTypeStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureWithGeometryTypeStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "MeasureWithGeometryTypeStatus", bSTR91, bSTR92, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "MeasureWithGeometryTypeStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long39 = settingRepository1.GetAttr("ProductUpdateStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProductUpdateStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR93
+bSTR93 = ""
+Dim bSTR94
+bSTR94 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "ProductUpdateStatus", bSTR93, bSTR94, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "ProductUpdateStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long40 = settingRepository1.GetAttr("PositionalLinkStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "PositionalLinkStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR95
+bSTR95 = ""
+Dim bSTR96
+bSTR96 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "PositionalLinkStatus", bSTR95, bSTR96, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "PositionalLinkStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long41 = settingRepository1.GetAttr("FillStyleOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "FillStyleOption"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR97
+bSTR97 = ""
+Dim bSTR98
+bSTR98 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "FillStyleOption", bSTR97, bSTR98, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "FillStyleOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long42 = settingRepository1.GetAttr("CalculationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CalculationMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR99
+bSTR99 = ""
+Dim bSTR100
+bSTR100 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "CalculationMode", bSTR99, bSTR100, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "CalculationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long43 = settingRepository1.GetAttr("GradientFillStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "GradientFillStyle"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR101
+bSTR101 = ""
+Dim bSTR102
+bSTR102 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "GradientFillStyle", bSTR101, bSTR102, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "GradientFillStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

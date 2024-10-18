@@ -1,0 +1,218 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("TabletSupport")
+
+long1 = settingRepository1.GetAttr("TPActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "TPActivation", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "TPActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("GPActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "GPActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "GPActivation", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "GPActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("TPActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "TPActivation", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "TPActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("TPAction")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPAction"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "TPAction", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "TPAction"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("TPScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPScale"
+' Returned value : (Variant) (Float) 5.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "TPScale", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "TPScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("TPTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPTransparency"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TPTransparency", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TPTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("GPActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "GPActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "GPActivation", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "GPActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float3 = settingRepository1.GetAttr("GPScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "GPScale"
+' Returned value : (Variant) (Float) 5.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "GPScale", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "GPScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float4 = settingRepository1.GetAttr("GPTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "GPTransparency"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "GPTransparency", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "GPTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("TPPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPPosition"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "TPPosition", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "TPPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("GPPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "GPPosition"
+' Returned value : (Variant) (Long) 6
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "GPPosition", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "GPPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

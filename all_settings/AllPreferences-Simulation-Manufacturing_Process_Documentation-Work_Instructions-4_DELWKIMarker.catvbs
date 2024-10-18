@@ -1,0 +1,313 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("MarkerSetting")
+
+boolean1 = settingRepository1.GetAttr("MarkerAutoCustomiseMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "MarkerAutoCustomiseMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "MarkerAutoCustomiseMode", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "MarkerAutoCustomiseMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("Snap3DArrow")
+'--------------------------------------------------
+' Parameter 1 : (String) "Snap3DArrow"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Snap3DArrow", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Snap3DArrow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("LabelMarkerGraphicProps")
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelMarkerGraphicProps"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "LabelMarkerGraphicProps", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelMarkerGraphicProps"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("TextMarkerZoomMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextMarkerZoomMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "TextMarkerZoomMode", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "TextMarkerZoomMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("TextMarkerPositionalLink")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextMarkerPositionalLink"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "TextMarkerPositionalLink", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "TextMarkerPositionalLink"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("Associativity")
+'--------------------------------------------------
+' Parameter 1 : (String) "Associativity"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "Associativity", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "Associativity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("MarkerDocMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "MarkerDocMode"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "MarkerDocMode", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "MarkerDocMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("PictureMarkerDocMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureMarkerDocMode"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "PictureMarkerDocMode", bSTR15, bSTR16, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureMarkerDocMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("IconRatioToTextSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "IconRatioToTextSize"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "IconRatioToTextSize", bSTR17, bSTR18, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "IconRatioToTextSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("GridSpace")
+'--------------------------------------------------
+' Parameter 1 : (String) "GridSpace"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "GridSpace", bSTR19, bSTR20, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "GridSpace"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("RotationSnap")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationSnap"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "RotationSnap", bSTR21, bSTR22, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationSnap"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("MarkerType")
+'--------------------------------------------------
+' Parameter 1 : (String) "MarkerType"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "MarkerType", bSTR23, bSTR24, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "MarkerType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("Marker3DName")
+'--------------------------------------------------
+' Parameter 1 : (String) "Marker3DName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "Marker3DName", bSTR25, bSTR26, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "Marker3DName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("Marker2DName")
+'--------------------------------------------------
+' Parameter 1 : (String) "Marker2DName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "Marker2DName", bSTR27, bSTR28, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "Marker2DName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("GridSpaceValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "GridSpaceValue"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "GridSpaceValue", bSTR29, bSTR30, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "GridSpaceValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("RotationSnapValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationSnapValue"
+' Returned value : (Variant) (Unsigned Long) 90
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "RotationSnapValue", bSTR31, bSTR32, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationSnapValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

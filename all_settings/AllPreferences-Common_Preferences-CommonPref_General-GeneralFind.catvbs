@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("GeneralFind")
+
+bSTR1 = settingRepository1.GetAttr("Prefix")
+'--------------------------------------------------
+' Parameter 1 : (String) "Prefix"
+' Returned value : (Variant) (String) "none"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Prefix", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Prefix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ContextScope")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContextScope"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ContextScope", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ContextScope"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ContextPriority")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContextPriority"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ContextPriority", bSTR6, bSTR7, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ContextPriority"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("DeepSearch")
+'--------------------------------------------------
+' Parameter 1 : (String) "DeepSearch"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DeepSearch", bSTR8, bSTR9, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DeepSearch"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("MaxDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxDisplay"
+' Returned value : (Variant) (Unsigned Long) 100
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "MaxDisplay", bSTR10, bSTR11, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("MaxPSO")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxPSO"
+' Returned value : (Variant) (Unsigned Long) 1000
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "MaxPSO", bSTR12, bSTR13, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxPSO"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

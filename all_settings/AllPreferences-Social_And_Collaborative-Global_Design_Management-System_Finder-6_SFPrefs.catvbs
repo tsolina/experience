@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("RFLPNavigator")
+
+uLong1 = settingRepository1.GetAttr("OpenWithRep")
+'--------------------------------------------------
+' Parameter 1 : (String) "OpenWithRep"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "OpenWithRep", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "OpenWithRep"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("OpenWithChildren")
+'--------------------------------------------------
+' Parameter 1 : (String) "OpenWithChildren"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "OpenWithChildren", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "OpenWithChildren"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("LockAtOpen")
+'--------------------------------------------------
+' Parameter 1 : (String) "LockAtOpen"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "LockAtOpen", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "LockAtOpen"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

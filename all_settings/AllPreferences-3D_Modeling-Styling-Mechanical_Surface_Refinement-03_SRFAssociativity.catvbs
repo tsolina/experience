@@ -1,0 +1,256 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ICMCLAAssociativitySettings")
+
+bSTR1 = settingRepository1.GetAttr("Local")
+'--------------------------------------------------
+' Parameter 1 : (String) "Local"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Local", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Local"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DummyLocal")
+'--------------------------------------------------
+' Parameter 1 : (String) "DummyLocal"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DummyLocal", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DummyLocal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("ICMCLA3dCurveFss")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLA3dCurveFss"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ICMCLA3dCurveFss", bSTR7, bSTR8, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLA3dCurveFss"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("ICMCLAShapeCurveBlendCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeCurveBlendCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ICMCLAShapeCurveBlendCmd", bSTR10, bSTR11, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeCurveBlendCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR12 = settingRepository1.GetAttr("ICMCLAShapePatchFromCurves2Cmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapePatchFromCurves2Cmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ICMCLAShapePatchFromCurves2Cmd", bSTR13, bSTR14, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapePatchFromCurves2Cmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR15 = settingRepository1.GetAttr("ICMCLAShapePatchFromPatchesCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapePatchFromPatchesCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ICMCLAShapePatchFromPatchesCmd", bSTR16, bSTR17, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapePatchFromPatchesCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR18 = settingRepository1.GetAttr("ICMCLAShapeFlangeCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeFlangeCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ICMCLAShapeFlangeCmd", bSTR19, bSTR20, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeFlangeCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR21 = settingRepository1.GetAttr("ICMClassAFilletFSS")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMClassAFilletFSS"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ICMClassAFilletFSS", bSTR22, bSTR23, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMClassAFilletFSS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR24 = settingRepository1.GetAttr("ICMCLAShapeSurfaceBlendCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeSurfaceBlendCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ICMCLAShapeSurfaceBlendCmd", bSTR25, bSTR26, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeSurfaceBlendCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR27 = settingRepository1.GetAttr("ICMCLAShapeFeatureModelingCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeFeatureModelingCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ICMCLAShapeFeatureModelingCmd", bSTR28, bSTR29, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeFeatureModelingCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR30 = settingRepository1.GetAttr("ICMCLAShapeExtrapolationFeatCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeExtrapolationFeatCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ICMCLAShapeExtrapolationFeatCmd", bSTR31, bSTR32, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeExtrapolationFeatCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR33 = settingRepository1.GetAttr("ICMCLAShapeConversionCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeConversionCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ICMCLAShapeConversionCmd", bSTR34, bSTR35, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeConversionCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR36 = settingRepository1.GetAttr("ICMCLAShapeSurfaceConversionCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeSurfaceConversionCmd"
+' Returned value : (Variant) (String) "1"
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ICMCLAShapeSurfaceConversionCmd", bSTR37, bSTR38, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ICMCLAShapeSurfaceConversionCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

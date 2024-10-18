@@ -1,0 +1,237 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("LegacyProviderOptions")
+
+bSTR1 = settingRepository1.GetAttr("RESTART_APP_WARNING")
+'--------------------------------------------------
+' Parameter 1 : (String) "RESTART_APP_WARNING"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RESTART_APP_WARNING", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RESTART_APP_WARNING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("IsLegacyProviderExpObjActivated")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsLegacyProviderExpObjActivated"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "IsLegacyProviderExpObjActivated", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "IsLegacyProviderExpObjActivated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("EXTN_SELECTION_WARNINGV5")
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNINGV5"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "EXTN_SELECTION_WARNINGV5", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNINGV5"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("EXTN_SELECTION_WARNING")
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNING"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "EXTN_SELECTION_WARNING", bSTR10, bSTR11, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("V55_CATDrawing")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATDrawing"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "V55_CATDrawing", bSTR12, bSTR13, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATDrawing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("V55_CATAnalysis")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATAnalysis"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "V55_CATAnalysis", bSTR14, bSTR15, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATAnalysis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("V55_catalog")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_catalog"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "V55_catalog", bSTR16, bSTR17, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_catalog"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("V55_CATProcess")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATProcess"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "V55_CATProcess", bSTR18, bSTR19, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATProcess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("V55_CATMaterial")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATMaterial"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "V55_CATMaterial", bSTR20, bSTR21, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_CATMaterial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("V55_PVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_PVR"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "V55_PVR", bSTR22, bSTR23, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_PVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("V55_DesignTable")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_DesignTable"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "V55_DesignTable", bSTR24, bSTR25, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_DesignTable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("V55_NonCAD_Documents")
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_NonCAD_Documents"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "V55_NonCAD_Documents", bSTR26, bSTR27, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "V55_NonCAD_Documents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

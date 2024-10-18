@@ -1,0 +1,503 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMNavigator")
+
+boolean1 = settingRepository1.GetAttr("StableOrdering")
+'--------------------------------------------------
+' Parameter 1 : (String) "StableOrdering"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "StableOrdering", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "StableOrdering"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("AlphabeticalOrdering")
+'--------------------------------------------------
+' Parameter 1 : (String) "AlphabeticalOrdering"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AlphabeticalOrdering", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AlphabeticalOrdering"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("GroupingActivated")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingActivated"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "GroupingActivated", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingActivated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("Grouping_BeadFastener")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_BeadFastener"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Grouping_BeadFastener", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_BeadFastener"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("Grouping_SpotFastener")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_SpotFastener"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "Grouping_SpotFastener", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_SpotFastener"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("Grouping_LocFastener")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_LocFastener"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "Grouping_LocFastener", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_LocFastener"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("Grouping_BundleFastener")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_BundleFastener"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "Grouping_BundleFastener", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_BundleFastener"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("Grouping_Piping_Rigid_Pipe")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Rigid_Pipe"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "Grouping_Piping_Rigid_Pipe", bSTR15, bSTR16, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Rigid_Pipe"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("Grouping_Piping_Flexible_Pipe")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Flexible_Pipe"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "Grouping_Piping_Flexible_Pipe", bSTR17, bSTR18, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Flexible_Pipe"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("Grouping_Piping_Insulation")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Insulation"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "Grouping_Piping_Insulation", bSTR19, bSTR20, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Insulation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("Grouping_Piping_Part")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Part"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "Grouping_Piping_Part", bSTR21, bSTR22, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_Piping_Part"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("Grouping_SharedEquipmentPart")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_SharedEquipmentPart"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "Grouping_SharedEquipmentPart", bSTR23, bSTR24, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_SharedEquipmentPart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("Grouping_SharedSupportPart")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_SharedSupportPart"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "Grouping_SharedSupportPart", bSTR25, bSTR26, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_SharedSupportPart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("Grouping_ElecPart")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ElecPart"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "Grouping_ElecPart", bSTR27, bSTR28, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ElecPart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("Grouping_HarnessBundle")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_HarnessBundle"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "Grouping_HarnessBundle", bSTR29, bSTR30, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_HarnessBundle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("Grouping_WireHarness")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_WireHarness"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "Grouping_WireHarness", bSTR31, bSTR32, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_WireHarness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("Grouping_GeoHarness")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_GeoHarness"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "Grouping_GeoHarness", bSTR33, bSTR34, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_GeoHarness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("Grouping_ElecProtection")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ElecProtection"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "Grouping_ElecProtection", bSTR35, bSTR36, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ElecProtection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("Grouping_ElecConductor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ElecConductor"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "Grouping_ElecConductor", bSTR37, bSTR38, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ElecConductor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("Grouping_ToolingSkeleton")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingSkeleton"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "Grouping_ToolingSkeleton", bSTR39, bSTR40, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingSkeleton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long19 = settingRepository1.GetAttr("Grouping_ToolingMobileUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingMobileUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "Grouping_ToolingMobileUnit", bSTR41, bSTR42, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingMobileUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long20 = settingRepository1.GetAttr("Grouping_ToolingTool")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingTool"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "Grouping_ToolingTool", bSTR43, bSTR44, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingTool"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long21 = settingRepository1.GetAttr("Grouping_ToolingLayout")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingLayout"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "Grouping_ToolingLayout", bSTR45, bSTR46, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingLayout"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long22 = settingRepository1.GetAttr("Grouping_ToolingFlow")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingFlow"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "Grouping_ToolingFlow", bSTR47, bSTR48, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingFlow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long23 = settingRepository1.GetAttr("Grouping_ToolingPart")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingPart"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "Grouping_ToolingPart", bSTR49, bSTR50, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingPart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long24 = settingRepository1.GetAttr("Grouping_ToolingComponent")
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingComponent"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "Grouping_ToolingComponent", bSTR51, bSTR52, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "Grouping_ToolingComponent"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

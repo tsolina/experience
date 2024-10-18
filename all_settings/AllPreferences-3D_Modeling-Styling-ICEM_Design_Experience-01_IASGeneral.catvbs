@@ -1,0 +1,279 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IASClassAAppOptionsDefaults")
+
+long1 = settingRepository1.GetAttr("DefaultPlayMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultPlayMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DefaultPlayMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultPlayMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) True
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("KeyboardLayout")
+'--------------------------------------------------
+' Parameter 1 : (String) "KeyboardLayout"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "KeyboardLayout", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "KeyboardLayout"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("CAT3DAppVNavSettings")
+
+long3 = settingRepository2.GetAttr("AnalyzeVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnalyzeVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository2.GetAttrInfo "AnalyzeVisualization", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "AnalyzeVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository2.GetAttr("OrganizeVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "OrganizeVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository2.GetAttrInfo "OrganizeVisualization", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "OrganizeVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository2.GetAttr("CreationCmdsVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreationCmdsVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository2.GetAttrInfo "CreationCmdsVisualization", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CreationCmdsVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository2.GetAttr("ModifyToolsVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "ModifyToolsVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository2.GetAttrInfo "ModifyToolsVisualization", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ModifyToolsVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository2.GetAttr("CompareVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "CompareVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository2.GetAttrInfo "CompareVisualization", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "CompareVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository2.GetAttr("DisplayModesVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayModesVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository2.GetAttrInfo "DisplayModesVisualization", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayModesVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository2.GetAttr("SculptVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "SculptVisualization"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository2.GetAttrInfo "SculptVisualization", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SculptVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("SelectionSetsGuided")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionSetsGuided"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SelectionSetsGuided", bSTR19, bSTR20, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionSetsGuided"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("PtBasedCmdsAutoCloseBehaviour")
+'--------------------------------------------------
+' Parameter 1 : (String) "PtBasedCmdsAutoCloseBehaviour"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "PtBasedCmdsAutoCloseBehaviour", bSTR21, bSTR22, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "PtBasedCmdsAutoCloseBehaviour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository3 = settingControllers1.Item("IdxWelcomeRepository")
+
+long10 = settingRepository3.GetAttr("HideCheckState")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideCheckState"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean14
+settingRepository3.GetAttrInfo "HideCheckState", bSTR23, bSTR24, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "HideCheckState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("ActivateIntermediatePresets")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActivateIntermediatePresets"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ActivateIntermediatePresets", bSTR25, bSTR26, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ActivateIntermediatePresets"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("ProjectionOnSupport")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProjectionOnSupport"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ProjectionOnSupport", bSTR27, bSTR28, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ProjectionOnSupport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

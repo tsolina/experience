@@ -1,0 +1,614 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("CATFTAUseLastTolerancesSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAUseLastTolerancesSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "CATFTAUseLastTolerancesSetting", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAUseLastTolerancesSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("TPS_SIZE_DEFAULTUPPERANGLENUM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTUPPERANGLENUM_SETTING"
+' Returned value : (Variant) (Double) 0.100000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTUPPERANGLENUM_SETTING", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTUPPERANGLENUM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("TPS_ANGLE_SIZE_SYM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANGLE_SIZE_SYM_SETTING"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "TPS_ANGLE_SIZE_SYM_SETTING", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANGLE_SIZE_SYM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("TPS_SIZE_DEFAULTLOWERANGLENUM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTLOWERANGLENUM_SETTING"
+' Returned value : (Variant) (Double) -0.100000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTLOWERANGLENUM_SETTING", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTLOWERANGLENUM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("TPS_SIZE_DEFAULTNUMANGLESTEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTNUMANGLESTEP_SETTING"
+' Returned value : (Variant) (Double) 0.100000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTNUMANGLESTEP_SETTING", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTNUMANGLESTEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DIM_ANG_GENERAL_TOL_CLASS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_ANG_GENERAL_TOL_CLASS"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DIM_ANG_GENERAL_TOL_CLASS", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_ANG_GENERAL_TOL_CLASS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DIM_ANG_GENERAL_TOL_ASME_CLASS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_ANG_GENERAL_TOL_ASME_CLASS"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "DIM_ANG_GENERAL_TOL_ASME_CLASS", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_ANG_GENERAL_TOL_ASME_CLASS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble1
+arrayOfVariantOfDouble1 = settingRepository1.GetAttrArray("CATFTAChamferDefaultUpperTolSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferDefaultUpperTolSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 0.100000
+'    Array[1] : (Variant) (Double) 10.000000
+'    Array[2] : (Variant) (Double) 1000.000000
+'    Array[3] : (Variant) (Double) 0.001000
+'    Array[4] : (Variant) (Double) 0.000010
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "CATFTAChamferDefaultUpperTolSetting", bSTR15, bSTR16, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferDefaultUpperTolSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("CATFTAChamferSymLowerTolSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferSymLowerTolSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "CATFTAChamferSymLowerTolSetting", bSTR17, bSTR18, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferSymLowerTolSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble2
+arrayOfVariantOfDouble2 = settingRepository1.GetAttrArray("CATFTAChamferDefaultLowerTolSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferDefaultLowerTolSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) -0.100000
+'    Array[1] : (Variant) (Double) -10.000000
+'    Array[2] : (Variant) (Double) -1000.000000
+'    Array[3] : (Variant) (Double) -0.001000
+'    Array[4] : (Variant) (Double) -0.000010
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "CATFTAChamferDefaultLowerTolSetting", bSTR19, bSTR20, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferDefaultLowerTolSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble3
+arrayOfVariantOfDouble3 = settingRepository1.GetAttrArray("CATFTAChamferNumValStepSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferNumValStepSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 0.010000
+'    Array[1] : (Variant) (Double) 1.000000
+'    Array[2] : (Variant) (Double) 100.000000
+'    Array[3] : (Variant) (Double) 0.000100
+'    Array[4] : (Variant) (Double) 0.000001
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "CATFTAChamferNumValStepSetting", bSTR21, bSTR22, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferNumValStepSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("CATFTAChamferGeneralTolClassSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferGeneralTolClassSetting"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "CATFTAChamferGeneralTolClassSetting", bSTR23, bSTR24, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferGeneralTolClassSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("CATFTAChamferGeneralTolASMEClassSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferGeneralTolASMEClassSetting"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "CATFTAChamferGeneralTolASMEClassSetting", bSTR25, bSTR26, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAChamferGeneralTolASMEClassSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble4
+arrayOfVariantOfDouble4 = settingRepository1.GetAttrArray("TPS_SIZE_DEFAULTUPPERNUM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTUPPERNUM_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 0.100000
+'    Array[1] : (Variant) (Double) 10.000000
+'    Array[2] : (Variant) (Double) 1000.000000
+'    Array[3] : (Variant) (Double) 0.001000
+'    Array[4] : (Variant) (Double) 0.000010
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTUPPERNUM_SETTING", bSTR27, bSTR28, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTUPPERNUM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("TPS_SIZE_SYM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_SYM_SETTING"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "TPS_SIZE_SYM_SETTING", bSTR29, bSTR30, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_SYM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble5
+arrayOfVariantOfDouble5 = settingRepository1.GetAttrArray("TPS_SIZE_DEFAULTLOWERNUM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTLOWERNUM_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) -0.100000
+'    Array[1] : (Variant) (Double) -10.000000
+'    Array[2] : (Variant) (Double) -1000.000000
+'    Array[3] : (Variant) (Double) -0.001000
+'    Array[4] : (Variant) (Double) -0.000010
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTLOWERNUM_SETTING", bSTR31, bSTR32, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTLOWERNUM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble6
+arrayOfVariantOfDouble6 = settingRepository1.GetAttrArray("TPS_SIZE_DEFAULTNUMSTEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTNUMSTEP_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 0.010000
+'    Array[1] : (Variant) (Double) 1.000000
+'    Array[2] : (Variant) (Double) 100.000000
+'    Array[3] : (Variant) (Double) 0.000100
+'    Array[4] : (Variant) (Double) 0.000001
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTNUMSTEP_SETTING", bSTR33, bSTR34, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTNUMSTEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("DIM_GENERAL_TOL_CLASS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_GENERAL_TOL_CLASS"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "DIM_GENERAL_TOL_CLASS", bSTR35, bSTR36, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_GENERAL_TOL_CLASS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("DIM_GENERAL_TOL_ASME_CLASS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_GENERAL_TOL_ASME_CLASS"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "DIM_GENERAL_TOL_ASME_CLASS", bSTR37, bSTR38, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "DIM_GENERAL_TOL_ASME_CLASS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR39 = settingRepository1.GetAttr("TPS_SIZE_DEFAULTTAB_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTTAB_SETTING"
+' Returned value : (Variant) (String) "H7"
+'--------------------------------------------------
+
+Dim bSTR40
+bSTR40 = ""
+Dim bSTR41
+bSTR41 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTTAB_SETTING", bSTR40, bSTR41, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTTAB_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR42 = settingRepository1.GetAttr("TPS_SIZE_DEFAULTEXTTAB_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTEXTTAB_SETTING"
+' Returned value : (Variant) (String) "g6"
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "TPS_SIZE_DEFAULTEXTTAB_SETTING", bSTR43, bSTR44, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_SIZE_DEFAULTEXTTAB_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("TPS_ANNOT_ZEROAFTER_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_ZEROAFTER_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "TPS_ANNOT_ZEROAFTER_SETTING", bSTR45, bSTR46, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_ZEROAFTER_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("TPS_ANNOT_ZEROBEFORE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_ZEROBEFORE_SETTING"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "TPS_ANNOT_ZEROBEFORE_SETTING", bSTR47, bSTR48, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_ZEROBEFORE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR49 = settingRepository1.GetAttr("TPS_ANNOT_NUMDESCRIPTION_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_NUMDESCRIPTION_SETTING"
+' Returned value : (Variant) (String) "NUM.DIMM"
+'--------------------------------------------------
+
+Dim bSTR50
+bSTR50 = ""
+Dim bSTR51
+bSTR51 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "TPS_ANNOT_NUMDESCRIPTION_SETTING", bSTR50, bSTR51, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_NUMDESCRIPTION_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("TPS_ANNOT_NUMDISPLAYFACTOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_NUMDISPLAYFACTOR_SETTING"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR52
+bSTR52 = ""
+Dim bSTR53
+bSTR53 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "TPS_ANNOT_NUMDISPLAYFACTOR_SETTING", bSTR52, bSTR53, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_NUMDISPLAYFACTOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble7
+arrayOfVariantOfDouble7 = settingRepository1.GetAttrArray("TPS_ANNOT_SEMANTICDEFAULTNUM_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_SEMANTICDEFAULTNUM_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 0.100000
+'    Array[1] : (Variant) (Double) 10.000000
+'    Array[2] : (Variant) (Double) 1000.000000
+'    Array[3] : (Variant) (Double) 0.001000
+'    Array[4] : (Variant) (Double) 0.000010
+'--------------------------------------------------
+
+Dim bSTR54
+bSTR54 = ""
+Dim bSTR55
+bSTR55 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "TPS_ANNOT_SEMANTICDEFAULTNUM_SETTING", bSTR54, bSTR55, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_SEMANTICDEFAULTNUM_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble8
+arrayOfVariantOfDouble8 = settingRepository1.GetAttrArray("TPS_ANNOT_SEMANTICSTEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_SEMANTICSTEP_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 0.010000
+'    Array[1] : (Variant) (Double) 1.000000
+'    Array[2] : (Variant) (Double) 100.000000
+'    Array[3] : (Variant) (Double) 0.000100
+'    Array[4] : (Variant) (Double) 0.000001
+'--------------------------------------------------
+
+Dim bSTR56
+bSTR56 = ""
+Dim bSTR57
+bSTR57 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "TPS_ANNOT_SEMANTICSTEP_SETTING", bSTR56, bSTR57, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_SEMANTICSTEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("TPS_ANNOT_DEFAULTPRECISION_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_DEFAULTPRECISION_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 2
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 0
+'    Array[3] : (Variant) (Long) 4
+'    Array[4] : (Variant) (Long) 6
+'--------------------------------------------------
+
+Dim bSTR58
+bSTR58 = ""
+Dim bSTR59
+bSTR59 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "TPS_ANNOT_DEFAULTPRECISION_SETTING", bSTR58, bSTR59, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_DEFAULTPRECISION_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("TPS_ANNOT_DEFAULTSEPARATOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_DEFAULTSEPARATOR_SETTING"
+' Returned value : (Variant) (Long) 11
+'--------------------------------------------------
+
+Dim bSTR60
+bSTR60 = ""
+Dim bSTR61
+bSTR61 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "TPS_ANNOT_DEFAULTSEPARATOR_SETTING", bSTR60, bSTR61, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_ANNOT_DEFAULTSEPARATOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

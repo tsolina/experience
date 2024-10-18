@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAFeaPython")
+
+long1 = settingRepository1.GetAttr("UseDefault")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseDefault"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UseDefault", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UseDefault"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("Executable")
+'--------------------------------------------------
+' Parameter 1 : (String) "Executable"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Executable", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Executable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("Library")
+'--------------------------------------------------
+' Parameter 1 : (String) "Library"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Library", bSTR7, bSTR8, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Library"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("Editor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Editor"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Editor", bSTR10, bSTR11, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Editor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

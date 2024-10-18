@@ -1,0 +1,109 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CAT3DAppVNavSettings")
+
+long1 = settingRepository1.GetAttr("ZBufferVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "ZBufferVisualization"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ZBufferVisualization", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ZBufferVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("BackgroundColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgroundColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "BackgroundColor", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgroundColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("BackgroundTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgroundTransparency"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "BackgroundTransparency", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgroundTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("SectionsAutomaticRedistribution")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionsAutomaticRedistribution"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SectionsAutomaticRedistribution", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionsAutomaticRedistribution"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("HighlightUseEyePosInParallel")
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightUseEyePosInParallel"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "HighlightUseEyePosInParallel", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "HighlightUseEyePosInParallel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

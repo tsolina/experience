@@ -1,0 +1,104 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("3DShapeInfrastructureReview")
+
+boolean1 = settingRepository1.GetAttr("PublishSetsAndGeometricalFeatures")
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishSetsAndGeometricalFeatures"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "PublishSetsAndGeometricalFeatures", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishSetsAndGeometricalFeatures"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("PublishPublicKnowledgeParameters")
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishPublicKnowledgeParameters"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "PublishPublicKnowledgeParameters", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishPublicKnowledgeParameters"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("PublishAllChildrenSets")
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishAllChildrenSets"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "PublishAllChildrenSets", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishAllChildrenSets"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("PublishInsideThisSetOnly")
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishInsideThisSetOnly"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "PublishInsideThisSetOnly", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishInsideThisSetOnly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("PublishInsideThisSetOnlyName")
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishInsideThisSetOnlyName"
+' Returned value : (Variant) (String) "Final"
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "PublishInsideThisSetOnlyName", bSTR10, bSTR11, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "PublishInsideThisSetOnlyName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

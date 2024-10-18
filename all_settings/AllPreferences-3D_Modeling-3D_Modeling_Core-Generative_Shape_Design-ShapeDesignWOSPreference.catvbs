@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ShapeDesignWOS")
+
+double1 = settingRepository1.GetAttr("WorkOnSupportHSpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportHSpacing"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "WorkOnSupportHSpacing", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportHSpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("WorkOnSupportHGraduation")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportHGraduation"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "WorkOnSupportHGraduation", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportHGraduation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("WorkOnSupportVSpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportVSpacing"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "WorkOnSupportVSpacing", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportVSpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("WorkOnSupportVGraduation")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportVGraduation"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "WorkOnSupportVGraduation", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportVGraduation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("WorkOnSupportDistortionsAutorisation")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportDistortionsAutorisation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "WorkOnSupportDistortionsAutorisation", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupportDistortionsAutorisation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("WorkOnSupport3DLabelsUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupport3DLabelsUnit"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "WorkOnSupport3DLabelsUnit", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupport3DLabelsUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("WorkOnSupport3DClippingFactor")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupport3DClippingFactor"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "WorkOnSupport3DClippingFactor", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupport3DClippingFactor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("WorkOnSupport3DNbMaxLine")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupport3DNbMaxLine"
+' Returned value : (Variant) (Double) 70.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "WorkOnSupport3DNbMaxLine", bSTR15, bSTR16, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkOnSupport3DNbMaxLine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

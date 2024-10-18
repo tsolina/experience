@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("MaterialFBDIOptionsSettings")
+
+short1 = settingRepository1.GetAttr("FBDIOptimSimilarity")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIOptimSimilarity"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "FBDIOptimSimilarity", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIOptimSimilarity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("FBDIOptimisationActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIOptimisationActivation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "FBDIOptimisationActivation", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIOptimisationActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

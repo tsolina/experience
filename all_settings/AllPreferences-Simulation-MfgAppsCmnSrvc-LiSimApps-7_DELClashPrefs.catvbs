@@ -1,0 +1,386 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATSimClashConfigSettings")
+
+uLong1 = settingRepository1.GetAttr("SimClashConfigFeedbackHighlightState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackHighlightState"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SimClashConfigFeedbackHighlightState", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackHighlightState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SimClashConfigFeedbackCurveState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackCurveState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SimClashConfigFeedbackCurveState", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackCurveState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SimClashConfigDetectionClashState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionClashState"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SimClashConfigDetectionClashState", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionClashState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SimClashConfigDetectionContactState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionContactState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SimClashConfigDetectionContactState", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionContactState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("SimClashConfigDetectionInclusionState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionInclusionState"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SimClashConfigDetectionInclusionState", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionInclusionState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("SimClashConfigClashReporting")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigClashReporting"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SimClashConfigClashReporting", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigClashReporting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("SimClashConfigFeedbackColorState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackColorState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SimClashConfigFeedbackColorState", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackColorState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("SimClashConfigFeedbackMovingColorState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackMovingColorState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SimClashConfigFeedbackMovingColorState", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackMovingColorState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("TabularDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "TabularDisplay"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "TabularDisplay", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "TabularDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("SimClashConfigDetectionPointCloudState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionPointCloudState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SimClashConfigDetectionPointCloudState", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigDetectionPointCloudState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("ClashColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ClashColor", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("ClashTransp")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashTransp"
+' Returned value : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ClashTransp", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashTransp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("ContactColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContactColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 165
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ContactColor", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ContactColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("ContactTransp")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContactTransp"
+' Returned value : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ContactTransp", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ContactTransp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("ClearanceColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClearanceColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ClearanceColor", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ClearanceColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("ClearanceTransp")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClearanceTransp"
+' Returned value : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ClearanceTransp", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ClearanceTransp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("MovingColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "MovingColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "MovingColor", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "MovingColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("MovingTransp")
+'--------------------------------------------------
+' Parameter 1 : (String) "MovingTransp"
+' Returned value : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "MovingTransp", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "MovingTransp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("SimClashConfigFeedbackPointCloudLocalState")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackPointCloudLocalState"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "SimClashConfigFeedbackPointCloudLocalState", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "SimClashConfigFeedbackPointCloudLocalState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

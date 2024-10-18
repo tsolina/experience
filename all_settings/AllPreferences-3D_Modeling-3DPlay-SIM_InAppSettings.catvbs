@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SIM_InAppSettings")
+
+boolean1 = settingRepository1.GetAttr("SIM_REFRAME_ON_DD_CHANGE")
+'--------------------------------------------------
+' Parameter 1 : (String) "SIM_REFRAME_ON_DD_CHANGE"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SIM_REFRAME_ON_DD_CHANGE", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SIM_REFRAME_ON_DD_CHANGE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("SIM_ANIMATE_ON_DD_CHANGE")
+'--------------------------------------------------
+' Parameter 1 : (String) "SIM_ANIMATE_ON_DD_CHANGE"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SIM_ANIMATE_ON_DD_CHANGE", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SIM_ANIMATE_ON_DD_CHANGE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("SIM_KEEPINFO_ON_DD_CHANGE")
+'--------------------------------------------------
+' Parameter 1 : (String) "SIM_KEEPINFO_ON_DD_CHANGE"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SIM_KEEPINFO_ON_DD_CHANGE", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SIM_KEEPINFO_ON_DD_CHANGE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

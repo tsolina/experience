@@ -1,0 +1,788 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CAT2DLToolsOptions")
+
+boolean1 = settingRepository1.GetAttr("DrwLockSwitchStandard")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLockSwitchStandard"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DrwLockSwitchStandard", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLockSwitchStandard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("DrwLockUpdateStandard")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLockUpdateStandard"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DrwLockUpdateStandard", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLockUpdateStandard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("DrwLockBackgroundView")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLockBackgroundView"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DrwLockBackgroundView", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLockBackgroundView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("PreventViewUpgrade")
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventViewUpgrade"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "PreventViewUpgrade", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventViewUpgrade"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("PreventViewGeomUpgrade")
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventViewGeomUpgrade"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "PreventViewGeomUpgrade", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventViewGeomUpgrade"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR11 = settingRepository1.GetAttr("DrwFrameAndTitleBlockPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwFrameAndTitleBlockPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DrwFrameAndTitleBlockPath", bSTR12, bSTR13, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwFrameAndTitleBlockPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("DrwStyleCreation")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwStyleCreation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DrwStyleCreation", bSTR14, bSTR15, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwStyleCreation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("DrwButtonReset")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwButtonReset"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "DrwButtonReset", bSTR16, bSTR17, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwButtonReset"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("DrwPreventGVS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPreventGVS"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "DrwPreventGVS", bSTR18, bSTR19, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPreventGVS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("GVSParameterOverrideSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "GVSParameterOverrideSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "GVSParameterOverrideSetting", bSTR20, bSTR21, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "GVSParameterOverrideSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("DisableAnnotLockEditionPropAccess")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableAnnotLockEditionPropAccess"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DisableAnnotLockEditionPropAccess", bSTR22, bSTR23, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableAnnotLockEditionPropAccess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("SheetNameUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetNameUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "SheetNameUnicitySetting", bSTR24, bSTR25, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetNameUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("ViewNameUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewNameUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "ViewNameUnicitySetting", bSTR26, bSTR27, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewNameUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ViewNameUnicityScopeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewNameUnicityScopeSetting"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "ViewNameUnicityScopeSetting", bSTR28, bSTR29, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewNameUnicityScopeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean27 = settingRepository1.GetAttr("FilterNameUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterNameUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "FilterNameUnicitySetting", bSTR30, bSTR31, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterNameUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean29 = settingRepository1.GetAttr("ShowGeolocOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowGeolocOptions"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "ShowGeolocOptions", bSTR32, bSTR33, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowGeolocOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("SelectionOnCurrentAssembly")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionOnCurrentAssembly"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "SelectionOnCurrentAssembly", bSTR34, bSTR35, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionOnCurrentAssembly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("ShowWarningSelectionOutAssembly")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutAssembly"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR36
+bSTR36 = ""
+Dim bSTR37
+bSTR37 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "ShowWarningSelectionOutAssembly", bSTR36, bSTR37, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutAssembly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("EngineeringConnectionLocation")
+'--------------------------------------------------
+' Parameter 1 : (String) "EngineeringConnectionLocation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "EngineeringConnectionLocation", bSTR38, bSTR39, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "EngineeringConnectionLocation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("CATDrwTbFontNameSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbFontNameSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR40
+bSTR40 = ""
+Dim bSTR41
+bSTR41 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "CATDrwTbFontNameSetting", bSTR40, bSTR41, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbFontNameSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("CATDrwTbFontSizeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbFontSizeSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR42
+bSTR42 = ""
+Dim bSTR43
+bSTR43 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "CATDrwTbFontSizeSetting", bSTR42, bSTR43, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbFontSizeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("CATDrwTbBoldSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbBoldSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR44
+bSTR44 = ""
+Dim bSTR45
+bSTR45 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "CATDrwTbBoldSetting", bSTR44, bSTR45, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbBoldSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("CATDrwTbItalicSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbItalicSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR46
+bSTR46 = ""
+Dim bSTR47
+bSTR47 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "CATDrwTbItalicSetting", bSTR46, bSTR47, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbItalicSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("CATDrwTbUnderOverLineSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbUnderOverLineSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR48
+bSTR48 = ""
+Dim bSTR49
+bSTR49 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "CATDrwTbUnderOverLineSetting", bSTR48, bSTR49, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbUnderOverLineSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("CATDrwTbStrikeThroughSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbStrikeThroughSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR50
+bSTR50 = ""
+Dim bSTR51
+bSTR51 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "CATDrwTbStrikeThroughSetting", bSTR50, bSTR51, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbStrikeThroughSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("CATDrwTbJustificationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbJustificationSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR52
+bSTR52 = ""
+Dim bSTR53
+bSTR53 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "CATDrwTbJustificationSetting", bSTR52, bSTR53, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbJustificationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("CATDrwTbAnchorPointSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbAnchorPointSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR54
+bSTR54 = ""
+Dim bSTR55
+bSTR55 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "CATDrwTbAnchorPointSetting", bSTR54, bSTR55, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbAnchorPointSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("CATDrwTbFrameSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbFrameSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR56
+bSTR56 = ""
+Dim bSTR57
+bSTR57 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "CATDrwTbFrameSetting", bSTR56, bSTR57, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbFrameSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("CATDrwTbSymbolSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbSymbolSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR58
+bSTR58 = ""
+Dim bSTR59
+bSTR59 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "CATDrwTbSymbolSetting", bSTR58, bSTR59, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbSymbolSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("CATDrwTbDimensionLineSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbDimensionLineSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR60
+bSTR60 = ""
+Dim bSTR61
+bSTR61 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "CATDrwTbDimensionLineSetting", bSTR60, bSTR61, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbDimensionLineSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("CATDrwTbTolerancesSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbTolerancesSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR62
+bSTR62 = ""
+Dim bSTR63
+bSTR63 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "CATDrwTbTolerancesSetting", bSTR62, bSTR63, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbTolerancesSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("CATDrwTbNumDispDescSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbNumDispDescSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR64
+bSTR64 = ""
+Dim bSTR65
+bSTR65 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "CATDrwTbNumDispDescSetting", bSTR64, bSTR65, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbNumDispDescSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("CATDrwTbPrecisionSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbPrecisionSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR66
+bSTR66 = ""
+Dim bSTR67
+bSTR67 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "CATDrwTbPrecisionSetting", bSTR66, bSTR67, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbPrecisionSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("CATDrwTbColorSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbColorSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR68
+bSTR68 = ""
+Dim bSTR69
+bSTR69 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "CATDrwTbColorSetting", bSTR68, bSTR69, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbColorSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long19 = settingRepository1.GetAttr("CATDrwTbThicknessSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbThicknessSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR70
+bSTR70 = ""
+Dim bSTR71
+bSTR71 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "CATDrwTbThicknessSetting", bSTR70, bSTR71, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbThicknessSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long20 = settingRepository1.GetAttr("CATDrwTbLineTypeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbLineTypeSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR72
+bSTR72 = ""
+Dim bSTR73
+bSTR73 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "CATDrwTbLineTypeSetting", bSTR72, bSTR73, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbLineTypeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long21 = settingRepository1.GetAttr("CATDrwTbPointTypeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbPointTypeSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR74
+bSTR74 = ""
+Dim bSTR75
+bSTR75 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "CATDrwTbPointTypeSetting", bSTR74, bSTR75, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbPointTypeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long22 = settingRepository1.GetAttr("CATDrwTbPatternSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbPatternSetting"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR76
+bSTR76 = ""
+Dim bSTR77
+bSTR77 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "CATDrwTbPatternSetting", bSTR76, bSTR77, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwTbPatternSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean54 = settingRepository1.GetAttr("DistinguishCodeInUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCodeInUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR78
+bSTR78 = ""
+Dim bSTR79
+bSTR79 = ""
+Dim boolean55
+settingRepository1.GetAttrInfo "DistinguishCodeInUnicitySetting", bSTR78, bSTR79, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCodeInUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean56 = settingRepository1.GetAttr("DistinguishCaseInUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCaseInUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR80
+bSTR80 = ""
+Dim bSTR81
+bSTR81 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "DistinguishCaseInUnicitySetting", bSTR80, bSTR81, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCaseInUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean58 = settingRepository1.GetAttr("ShowWarningSelectionOutFavoriteContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutFavoriteContext"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR82
+bSTR82 = ""
+Dim bSTR83
+bSTR83 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "ShowWarningSelectionOutFavoriteContext", bSTR82, bSTR83, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutFavoriteContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,184 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SectioningSettings")
+
+long1 = settingRepository1.GetAttr("SectionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionMode"
+' Returned value : (Variant) (Long) 4
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SectionMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("OnlyPlaneDynMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "OnlyPlaneDynMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "OnlyPlaneDynMode", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "OnlyPlaneDynMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ComputeWireIntersectionsMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeWireIntersectionsMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ComputeWireIntersectionsMode", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeWireIntersectionsMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("SectionInfoDispMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionInfoDispMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SectionInfoDispMode", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionInfoDispMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("SectionPlaneVisuMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionPlaneVisuMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SectionPlaneVisuMode", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionPlaneVisuMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("SectionUpdateMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionUpdateMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SectionUpdateMode", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionUpdateMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("SectionPositionalLinkMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionPositionalLinkMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SectionPositionalLinkMode", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionPositionalLinkMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SectionContourColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionContourColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SectionContourColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionContourColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("SectionContourDominant")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionContourDominant"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SectionContourDominant", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionContourDominant"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

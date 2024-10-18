@@ -1,0 +1,1409 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FreeStyleGlobalUserSettings")
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("TranslatorColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "TranslatorColor", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("TranslatorArrowType")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorArrowType"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TranslatorArrowType", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorArrowType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("TranslatorCenterType")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorCenterType"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "TranslatorCenterType", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorCenterType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("RatioApparitionDumbbells")
+'--------------------------------------------------
+' Parameter 1 : (String) "RatioApparitionDumbbells"
+' Returned value : (Variant) (Float) 5.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RatioApparitionDumbbells", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RatioApparitionDumbbells"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("FSMouseCursorType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSMouseCursorType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "FSMouseCursorType", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FSMouseCursorType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("DisplayCPAsBezierMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayCPAsBezierMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DisplayCPAsBezierMode", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayCPAsBezierMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("DisplayFreeBordersMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayFreeBordersMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "DisplayFreeBordersMode", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayFreeBordersMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("3DTagsTransparentBackgroundMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DTagsTransparentBackgroundMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "3DTagsTransparentBackgroundMode", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "3DTagsTransparentBackgroundMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("MeshPointFeedBack")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshPointFeedBack"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "MeshPointFeedBack", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshPointFeedBack"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("TranslatorMagnetType")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorMagnetType"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "TranslatorMagnetType", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorMagnetType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("TranslatorCanoDirections3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorCanoDirections3D"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "TranslatorCanoDirections3D", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "TranslatorCanoDirections3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("MeshPointColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshPointColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "MeshPointColor", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshPointColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("MeshPointType")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshPointType"
+' Returned value : (Variant) (Unsigned Long) 8
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "MeshPointType", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshPointType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("FurtiveDisplayCPMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "FurtiveDisplayCPMode", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("FurtiveDisplayCPColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "FurtiveDisplayCPColor", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("FurtiveDisplayCPLnType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPLnType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "FurtiveDisplayCPLnType", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPLnType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("FurtiveDisplayCPPtType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPPtType"
+' Returned value : (Variant) (Unsigned Long) 8
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "FurtiveDisplayCPPtType", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayCPPtType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("FurtiveDisplaySegMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "FurtiveDisplaySegMode", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("FurtiveDisplaySegColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "FurtiveDisplaySegColor", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("FurtiveDisplaySegLnType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegLnType"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "FurtiveDisplaySegLnType", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegLnType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("FurtiveDisplaySegPtType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegPtType"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "FurtiveDisplaySegPtType", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplaySegPtType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("FurtiveDisplayIsoCurvesMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayIsoCurvesMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "FurtiveDisplayIsoCurvesMode", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayIsoCurvesMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("FurtiveDisplayIsoCurvesColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayIsoCurvesColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 128
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "FurtiveDisplayIsoCurvesColor", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayIsoCurvesColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("FurtiveDisplayIsoCurvesLnType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayIsoCurvesLnType"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "FurtiveDisplayIsoCurvesLnType", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "FurtiveDisplayIsoCurvesLnType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("DressUpDefaultVariantsSettings")
+
+long11 = settingRepository2.GetAttr("CurvesDisplayCPAsBezierCChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesDisplayCPAsBezierCChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository2.GetAttrInfo "CurvesDisplayCPAsBezierCChk", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesDisplayCPAsBezierCChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository2.GetAttr("CurvesDisplayFreeBordersCChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesDisplayFreeBordersCChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository2.GetAttrInfo "CurvesDisplayFreeBordersCChk", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesDisplayFreeBordersCChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository2.GetAttr("SurfacesDCPSChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesDCPSChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository2.GetAttrInfo "SurfacesDCPSChk", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesDCPSChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository2.GetAttr("SurfacesDisplayCPAsBezierSChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesDisplayCPAsBezierSChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository2.GetAttrInfo "SurfacesDisplayCPAsBezierSChk", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesDisplayCPAsBezierSChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository2.GetAttr("SurfacesDisplayFreeBordersSChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesDisplayFreeBordersSChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository2.GetAttrInfo "SurfacesDisplayFreeBordersSChk", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesDisplayFreeBordersSChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository2.GetAttr("FacesDisplayCPAsBezierFChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesDisplayCPAsBezierFChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository2.GetAttrInfo "FacesDisplayCPAsBezierFChk", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesDisplayCPAsBezierFChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository2.GetAttr("FacesDisplayFreeBordersFChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesDisplayFreeBordersFChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository2.GetAttrInfo "FacesDisplayFreeBordersFChk", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesDisplayFreeBordersFChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("ControlPointsMeshUColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlPointsMeshUColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "ControlPointsMeshUColor", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlPointsMeshUColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("MeshUTypeLine")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshUTypeLine"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "MeshUTypeLine", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshUTypeLine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("MeshUThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshUThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "MeshUThickness", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshUThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("ControlPointsMeshVColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlPointsMeshVColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "ControlPointsMeshVColor", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlPointsMeshVColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("MeshVTypeLine")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshVTypeLine"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "MeshVTypeLine", bSTR71, bSTR72, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshVTypeLine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("MeshVThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshVThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "MeshVThickness", bSTR73, bSTR74, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "MeshVThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("FaceMeshUColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshUColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "FaceMeshUColor", bSTR75, bSTR76, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshUColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("FaceMeshUTypeLine")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshUTypeLine"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "FaceMeshUTypeLine", bSTR77, bSTR78, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshUTypeLine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("FaceMeshUThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshUThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "FaceMeshUThickness", bSTR79, bSTR80, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshUThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong9
+arrayOfVariantOfULong9 = settingRepository1.GetAttrArray("FaceMeshVColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshVColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "FaceMeshVColor", bSTR81, bSTR82, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshVColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("FaceMeshVTypeLine")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshVTypeLine"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "FaceMeshVTypeLine", bSTR83, bSTR84, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshVTypeLine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("FaceMeshVThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshVThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "FaceMeshVThickness", bSTR85, bSTR86, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "FaceMeshVThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository2.GetAttr("CurvesCPCChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCChk"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean44
+settingRepository2.GetAttrInfo "CurvesCPCChk", bSTR87, bSTR88, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository2.GetAttrArray("CurvesCPCClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean45
+settingRepository2.GetAttrInfo "CurvesCPCClr", bSTR89, bSTR90, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long19 = settingRepository2.GetAttr("CurvesCPCLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCLnTp"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean46
+settingRepository2.GetAttrInfo "CurvesCPCLnTp", bSTR91, bSTR92, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long20 = settingRepository2.GetAttr("CurvesCPCPntTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCPntTp"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR93
+bSTR93 = ""
+Dim bSTR94
+bSTR94 = ""
+Dim boolean47
+settingRepository2.GetAttrInfo "CurvesCPCPntTp", bSTR93, bSTR94, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesCPCPntTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long21 = settingRepository2.GetAttr("CurvesSCChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesSCChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR95
+bSTR95 = ""
+Dim bSTR96
+bSTR96 = ""
+Dim boolean48
+settingRepository2.GetAttrInfo "CurvesSCChk", bSTR95, bSTR96, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesSCChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository2.GetAttrArray("CurvesSCClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesSCClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR97
+bSTR97 = ""
+Dim bSTR98
+bSTR98 = ""
+Dim boolean49
+settingRepository2.GetAttrInfo "CurvesSCClr", bSTR97, bSTR98, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesSCClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long22 = settingRepository2.GetAttr("CurvesSCPntTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesSCPntTp"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR99
+bSTR99 = ""
+Dim bSTR100
+bSTR100 = ""
+Dim boolean50
+settingRepository2.GetAttrInfo "CurvesSCPntTp", bSTR99, bSTR100, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "CurvesSCPntTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long23 = settingRepository2.GetAttr("SurfacesCPSChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSChk"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR101
+bSTR101 = ""
+Dim bSTR102
+bSTR102 = ""
+Dim boolean51
+settingRepository2.GetAttrInfo "SurfacesCPSChk", bSTR101, bSTR102, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong3
+arrayOfVariantOfLong3 = settingRepository2.GetAttrArray("SurfacesCPSClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR103
+bSTR103 = ""
+Dim bSTR104
+bSTR104 = ""
+Dim boolean52
+settingRepository2.GetAttrInfo "SurfacesCPSClr", bSTR103, bSTR104, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long24 = settingRepository2.GetAttr("SurfacesCPSLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSLnTp"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR105
+bSTR105 = ""
+Dim bSTR106
+bSTR106 = ""
+Dim boolean53
+settingRepository2.GetAttrInfo "SurfacesCPSLnTp", bSTR105, bSTR106, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long25 = settingRepository2.GetAttr("SurfacesCPSPntTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSPntTp"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR107
+bSTR107 = ""
+Dim bSTR108
+bSTR108 = ""
+Dim boolean54
+settingRepository2.GetAttrInfo "SurfacesCPSPntTp", bSTR107, bSTR108, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesCPSPntTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long26 = settingRepository2.GetAttr("SurfacesSSChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesSSChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR109
+bSTR109 = ""
+Dim bSTR110
+bSTR110 = ""
+Dim boolean55
+settingRepository2.GetAttrInfo "SurfacesSSChk", bSTR109, bSTR110, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesSSChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong4
+arrayOfVariantOfLong4 = settingRepository2.GetAttrArray("SurfacesSSClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesSSClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR111
+bSTR111 = ""
+Dim bSTR112
+bSTR112 = ""
+Dim boolean56
+settingRepository2.GetAttrInfo "SurfacesSSClr", bSTR111, bSTR112, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesSSClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long27 = settingRepository2.GetAttr("SurfacesSSLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesSSLnTp"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR113
+bSTR113 = ""
+Dim bSTR114
+bSTR114 = ""
+Dim boolean57
+settingRepository2.GetAttrInfo "SurfacesSSLnTp", bSTR113, bSTR114, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesSSLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long28 = settingRepository2.GetAttr("SurfacesISChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesISChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR115
+bSTR115 = ""
+Dim bSTR116
+bSTR116 = ""
+Dim boolean58
+settingRepository2.GetAttrInfo "SurfacesISChk", bSTR115, bSTR116, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesISChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong5
+arrayOfVariantOfLong5 = settingRepository2.GetAttrArray("SurfacesISClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesISClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR117
+bSTR117 = ""
+Dim bSTR118
+bSTR118 = ""
+Dim boolean59
+settingRepository2.GetAttrInfo "SurfacesISClr", bSTR117, bSTR118, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesISClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long29 = settingRepository2.GetAttr("SurfacesISLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesISLnTp"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR119
+bSTR119 = ""
+Dim bSTR120
+bSTR120 = ""
+Dim boolean60
+settingRepository2.GetAttrInfo "SurfacesISLnTp", bSTR119, bSTR120, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfacesISLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long30 = settingRepository2.GetAttr("FacesCPFChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFChk"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR121
+bSTR121 = ""
+Dim bSTR122
+bSTR122 = ""
+Dim boolean61
+settingRepository2.GetAttrInfo "FacesCPFChk", bSTR121, bSTR122, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong6
+arrayOfVariantOfLong6 = settingRepository2.GetAttrArray("FacesCPFClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR123
+bSTR123 = ""
+Dim bSTR124
+bSTR124 = ""
+Dim boolean62
+settingRepository2.GetAttrInfo "FacesCPFClr", bSTR123, bSTR124, boolean62
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long31 = settingRepository2.GetAttr("FacesCPFLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFLnTp"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR125
+bSTR125 = ""
+Dim bSTR126
+bSTR126 = ""
+Dim boolean63
+settingRepository2.GetAttrInfo "FacesCPFLnTp", bSTR125, bSTR126, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long32 = settingRepository2.GetAttr("FacesCPFPntTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFPntTp"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR127
+bSTR127 = ""
+Dim bSTR128
+bSTR128 = ""
+Dim boolean64
+settingRepository2.GetAttrInfo "FacesCPFPntTp", bSTR127, bSTR128, boolean64
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesCPFPntTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long33 = settingRepository2.GetAttr("FacesSFChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesSFChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR129
+bSTR129 = ""
+Dim bSTR130
+bSTR130 = ""
+Dim boolean65
+settingRepository2.GetAttrInfo "FacesSFChk", bSTR129, bSTR130, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesSFChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong7
+arrayOfVariantOfLong7 = settingRepository2.GetAttrArray("FacesSFClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesSFClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR131
+bSTR131 = ""
+Dim bSTR132
+bSTR132 = ""
+Dim boolean66
+settingRepository2.GetAttrInfo "FacesSFClr", bSTR131, bSTR132, boolean66
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesSFClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long34 = settingRepository2.GetAttr("FacesSFLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesSFLnTp"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR133
+bSTR133 = ""
+Dim bSTR134
+bSTR134 = ""
+Dim boolean67
+settingRepository2.GetAttrInfo "FacesSFLnTp", bSTR133, bSTR134, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesSFLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long35 = settingRepository2.GetAttr("FacesIFChk")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesIFChk"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR135
+bSTR135 = ""
+Dim bSTR136
+bSTR136 = ""
+Dim boolean68
+settingRepository2.GetAttrInfo "FacesIFChk", bSTR135, bSTR136, boolean68
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesIFChk"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong8
+arrayOfVariantOfLong8 = settingRepository2.GetAttrArray("FacesIFClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesIFClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR137
+bSTR137 = ""
+Dim bSTR138
+bSTR138 = ""
+Dim boolean69
+settingRepository2.GetAttrInfo "FacesIFClr", bSTR137, bSTR138, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesIFClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long36 = settingRepository2.GetAttr("FacesIFLnTp")
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesIFLnTp"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR139
+bSTR139 = ""
+Dim bSTR140
+bSTR140 = ""
+Dim boolean70
+settingRepository2.GetAttrInfo "FacesIFLnTp", bSTR139, bSTR140, boolean70
+'--------------------------------------------------
+' Parameter 1 : (String) "FacesIFLnTp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

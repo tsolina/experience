@@ -1,0 +1,256 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("PreventRootUpgrade")
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventRootUpgrade"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "PreventRootUpgrade", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventRootUpgrade"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("PreventContentUpgrade")
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventContentUpgrade"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "PreventContentUpgrade", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "PreventContentUpgrade"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("DisableAnnotLockEditionPropAccess")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableAnnotLockEditionPropAccess"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DisableAnnotLockEditionPropAccess", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableAnnotLockEditionPropAccess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ViewNameUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewNameUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ViewNameUnicitySetting", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewNameUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("CaptureNameUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureNameUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "CaptureNameUnicitySetting", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureNameUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("EngineeringConnectionLocation")
+'--------------------------------------------------
+' Parameter 1 : (String) "EngineeringConnectionLocation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "EngineeringConnectionLocation", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "EngineeringConnectionLocation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("PUBLISHED_GEOMETRY")
+'--------------------------------------------------
+' Parameter 1 : (String) "PUBLISHED_GEOMETRY"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "PUBLISHED_GEOMETRY", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "PUBLISHED_GEOMETRY"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("CATDWC_FTA_ARM_OPTION")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDWC_FTA_ARM_OPTION"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "CATDWC_FTA_ARM_OPTION", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDWC_FTA_ARM_OPTION"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("SelectionOnCurrentAssembly")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionOnCurrentAssembly"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "SelectionOnCurrentAssembly", bSTR17, bSTR18, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectionOnCurrentAssembly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("ShowWarningSelectionOutAssembly")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutAssembly"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ShowWarningSelectionOutAssembly", bSTR19, bSTR20, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutAssembly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("DistinguishCodeInUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCodeInUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "DistinguishCodeInUnicitySetting", bSTR21, bSTR22, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCodeInUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("DistinguishCaseInUnicitySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCaseInUnicitySetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "DistinguishCaseInUnicitySetting", bSTR23, bSTR24, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "DistinguishCaseInUnicitySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("ShowWarningSelectionOutFavoriteContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutFavoriteContext"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "ShowWarningSelectionOutFavoriteContext", bSTR25, bSTR26, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowWarningSelectionOutFavoriteContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

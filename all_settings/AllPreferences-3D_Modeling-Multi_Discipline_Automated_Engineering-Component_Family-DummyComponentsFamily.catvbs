@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ComponentFamily")
+
+boolean1 = settingRepository1.GetAttr("CfyUseItemsOnlyWithTargetMaturity")
+'--------------------------------------------------
+' Parameter 1 : (String) "CfyUseItemsOnlyWithTargetMaturity"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "CfyUseItemsOnlyWithTargetMaturity", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "CfyUseItemsOnlyWithTargetMaturity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("CfyInitializeWithMinimumDuplicateConfig")
+'--------------------------------------------------
+' Parameter 1 : (String) "CfyInitializeWithMinimumDuplicateConfig"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CfyInitializeWithMinimumDuplicateConfig", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CfyInitializeWithMinimumDuplicateConfig"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("CfyLockDefineComponentsNotToDuplicate")
+'--------------------------------------------------
+' Parameter 1 : (String) "CfyLockDefineComponentsNotToDuplicate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "CfyLockDefineComponentsNotToDuplicate", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "CfyLockDefineComponentsNotToDuplicate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

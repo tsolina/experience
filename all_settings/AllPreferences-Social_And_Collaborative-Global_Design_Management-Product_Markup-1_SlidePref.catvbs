@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("4DNavigator")
+
+bSTR1 = settingRepository1.GetAttr("DMUSlideExportImageFormatProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImageFormatProperties"
+' Returned value : (Variant) (String) "JPEG"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DMUSlideExportImageFormatProperties", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImageFormatProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("DMUSlideExportImagePathProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImagePathProperties"
+' Returned value : (Variant) (String) "C:\temp"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DMUSlideExportImagePathProperties", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImagePathProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DMUSlideExportImageWidthProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImageWidthProperties"
+' Returned value : (Variant) (Long) 800
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DMUSlideExportImageWidthProperties", bSTR7, bSTR8, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImageWidthProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DMUSlideExportImageHeightProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImageHeightProperties"
+' Returned value : (Variant) (Long) 600
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DMUSlideExportImageHeightProperties", bSTR9, bSTR10, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DMUSlideExportImageHeightProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,215 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CircuitBoardDesign")
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("ColorROUTE_KEEPOUT")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorROUTE_KEEPOUT"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 220
+'    Array[1] : (Variant) (Long) 190
+'    Array[2] : (Variant) (Long) 24
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ColorROUTE_KEEPOUT", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorROUTE_KEEPOUT"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository1.GetAttrArray("ColorROUTE_OUTLINE")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorROUTE_OUTLINE"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 190
+'    Array[2] : (Variant) (Long) 24
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ColorROUTE_OUTLINE", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorROUTE_OUTLINE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong3
+arrayOfVariantOfLong3 = settingRepository1.GetAttrArray("ColorPLACE_OUTLINE")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorPLACE_OUTLINE"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ColorPLACE_OUTLINE", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorPLACE_OUTLINE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong4
+arrayOfVariantOfLong4 = settingRepository1.GetAttrArray("ColorOTHER_OUTLINE")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorOTHER_OUTLINE"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ColorOTHER_OUTLINE", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorOTHER_OUTLINE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong5
+arrayOfVariantOfLong5 = settingRepository1.GetAttrArray("ColorVIA_KEEPOUT")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorVIA_KEEPOUT"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 0
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ColorVIA_KEEPOUT", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorVIA_KEEPOUT"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong6
+arrayOfVariantOfLong6 = settingRepository1.GetAttrArray("ColorPLACE_KEEPOUT")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorPLACE_KEEPOUT"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 0
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ColorPLACE_KEEPOUT", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorPLACE_KEEPOUT"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong7
+arrayOfVariantOfLong7 = settingRepository1.GetAttrArray("ColorPLACE_REGION")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorPLACE_REGION"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 73
+'    Array[1] : (Variant) (Long) 182
+'    Array[2] : (Variant) (Long) 79
+'    Array[3] : (Variant) (Long) 130
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ColorPLACE_REGION", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorPLACE_REGION"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("UpdateDocument")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateDocument"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "UpdateDocument", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateDocument"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("UpdateBoardName")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateBoardName"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "UpdateBoardName", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateBoardName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

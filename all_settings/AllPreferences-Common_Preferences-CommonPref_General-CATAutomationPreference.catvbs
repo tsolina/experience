@@ -1,0 +1,83 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("Scripting")
+
+settingRepository1.GetAttrArray "ExternalReferences"
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalReferences"
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ExternalReferences", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalReferences"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "DefaultMacroLibraries"
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMacroLibraries"
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DefaultMacroLibraries", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMacroLibraries"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("CATScriptEditor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATScriptEditor"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "CATScriptEditor", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "CATScriptEditor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR8 = settingRepository1.GetAttr("CATVBSEditor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATVBSEditor"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CATVBSEditor", bSTR9, bSTR10, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CATVBSEditor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,87 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMNavigator")
+
+long1 = settingRepository1.GetAttr("GroupingCriteriaExploreStrategy")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingCriteriaExploreStrategy"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "GroupingCriteriaExploreStrategy", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingCriteriaExploreStrategy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("GroupingSavedCriteria")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingSavedCriteria"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "GroupingSavedCriteria", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingSavedCriteria"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("GroupingSimplifyGroups")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingSimplifyGroups"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "GroupingSimplifyGroups", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingSimplifyGroups"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("GroupingDisplay3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingDisplay3D"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "GroupingDisplay3D", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupingDisplay3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

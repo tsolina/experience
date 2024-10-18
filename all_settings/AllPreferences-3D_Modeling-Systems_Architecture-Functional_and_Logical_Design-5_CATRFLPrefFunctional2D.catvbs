@@ -1,0 +1,858 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("Fct2DRepFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 154
+'    Array[1] : (Variant) (Unsigned Long) 179
+'    Array[2] : (Variant) (Unsigned Long) 194
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Fct2DRepFillColor", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("Fct2DRepFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 70
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Fct2DRepFillTransparency", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("Fct2DRepLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 65
+'    Array[1] : (Variant) (Unsigned Long) 92
+'    Array[2] : (Variant) (Unsigned Long) 108
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Fct2DRepLineColor", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("Fct2DRepLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Fct2DRepLineType", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("Fct2DRepLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "Fct2DRepLineWeight", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("Fct2DRepDisplayTitleArea")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepDisplayTitleArea"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Fct2DRepDisplayTitleArea", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepDisplayTitleArea"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("FctDataFlowExpositionLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 200
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "FctDataFlowExpositionLineColor", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("FctDataFlowExpositionLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "FctDataFlowExpositionLineType", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("FctDataFlowExpositionLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "FctDataFlowExpositionLineWeight", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("FctDataFlowExpositionSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "FctDataFlowExpositionSize", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("FctDataFlowExpositionDisplayConnectorName")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionDisplayConnectorName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "FctDataFlowExpositionDisplayConnectorName", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionDisplayConnectorName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("FctDataFlowExpositionConnectorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionConnectorFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "FctDataFlowExpositionConnectorFontSize", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionConnectorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("FctDataFlowExpositionDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "FctDataFlowExpositionDisplayText", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("FctDataFlowExpositionTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "FctDataFlowExpositionTextFontSize", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowExpositionTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("FctCtrlFlowExpositionLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 181
+'    Array[1] : (Variant) (Unsigned Long) 88
+'    Array[2] : (Variant) (Unsigned Long) 19
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionLineColor", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("FctCtrlFlowExpositionLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionLineType", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("FctCtrlFlowExpositionLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionLineWeight", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("FctCtrlFlowExpositionSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionSize", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("FctCtrlFlowExpositionDisplayConnectorName")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionDisplayConnectorName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionDisplayConnectorName", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionDisplayConnectorName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("FctCtrlFlowExpositionConnectorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionConnectorFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionConnectorFontSize", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionConnectorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("FctCtrlFlowExpositionDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionDisplayText", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("FctCtrlFlowExpositionTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "FctCtrlFlowExpositionTextFontSize", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowExpositionTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("FctDataFlowLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "FctDataFlowLineColor", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("FctDataFlowLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "FctDataFlowLineType", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("FctDataFlowLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "FctDataFlowLineWeight", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("FctDataFlowSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "FctDataFlowSize", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("FctDataFlowDisplayConnectorName")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowDisplayConnectorName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "FctDataFlowDisplayConnectorName", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowDisplayConnectorName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("FctDataFlowConnectorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowConnectorFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "FctDataFlowConnectorFontSize", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowConnectorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong24 = settingRepository1.GetAttr("FctDataFlowDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "FctDataFlowDisplayText", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong25 = settingRepository1.GetAttr("FctDataFlowTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "FctDataFlowTextFontSize", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "FctDataFlowTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("FctCtrlFlowLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 128
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "FctCtrlFlowLineColor", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong26 = settingRepository1.GetAttr("FctCtrlFlowLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "FctCtrlFlowLineType", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong27 = settingRepository1.GetAttr("FctCtrlFlowLineWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowLineWeight"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "FctCtrlFlowLineWeight", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowLineWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong28 = settingRepository1.GetAttr("FctCtrlFlowSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "FctCtrlFlowSize", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong29 = settingRepository1.GetAttr("FctCtrlFlowDisplayConnectorName")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowDisplayConnectorName"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "FctCtrlFlowDisplayConnectorName", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowDisplayConnectorName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong30 = settingRepository1.GetAttr("FctCtrlFlowConnectorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowConnectorFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "FctCtrlFlowConnectorFontSize", bSTR71, bSTR72, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowConnectorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong31 = settingRepository1.GetAttr("FctCtrlFlowDisplayText")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowDisplayText"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "FctCtrlFlowDisplayText", bSTR73, bSTR74, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowDisplayText"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong32 = settingRepository1.GetAttr("FctCtrlFlowTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "FctCtrlFlowTextFontSize", bSTR75, bSTR76, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "FctCtrlFlowTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("Fct2DRepTextFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 91
+'    Array[1] : (Variant) (Unsigned Long) 127
+'    Array[2] : (Variant) (Unsigned Long) 149
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "Fct2DRepTextFillColor", bSTR77, bSTR78, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong33 = settingRepository1.GetAttr("Fct2DRepTextFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "Fct2DRepTextFillTransparency", bSTR79, bSTR80, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("Fct2DRepTextFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "Fct2DRepTextFontColor", bSTR81, bSTR82, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong34 = settingRepository1.GetAttr("Fct2DRepTextPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextPosition"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "Fct2DRepTextPosition", bSTR83, bSTR84, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong35 = settingRepository1.GetAttr("Fct2DRepTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFontSize"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "Fct2DRepTextFontSize", bSTR85, bSTR86, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "Fct2DRepTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

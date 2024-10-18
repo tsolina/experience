@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ElectricalHarnessInstallation")
+
+long1 = settingRepository1.GetAttr("L2PGenerateBranchesToCavities")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PGenerateBranchesToCavities"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "L2PGenerateBranchesToCavities", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PGenerateBranchesToCavities"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("L2PAllowMulitpleLinks")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PAllowMulitpleLinks"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "L2PAllowMulitpleLinks", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PAllowMulitpleLinks"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("L2PMapLogCableToPhyWire")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PMapLogCableToPhyWire"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "L2PMapLogCableToPhyWire", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PMapLogCableToPhyWire"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("L2PV2AllowHarnessSync")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PV2AllowHarnessSync"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "L2PV2AllowHarnessSync", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PV2AllowHarnessSync"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("L2PV2AllowConnectorPortSync")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PV2AllowConnectorPortSync"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "L2PV2AllowConnectorPortSync", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PV2AllowConnectorPortSync"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("L2PSearchIn3DEXPERIENCEOrCatalog")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PSearchIn3DEXPERIENCEOrCatalog"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "L2PSearchIn3DEXPERIENCEOrCatalog", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PSearchIn3DEXPERIENCEOrCatalog"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("L2PAssistantSyncTypeOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PAssistantSyncTypeOption"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "L2PAssistantSyncTypeOption", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "L2PAssistantSyncTypeOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

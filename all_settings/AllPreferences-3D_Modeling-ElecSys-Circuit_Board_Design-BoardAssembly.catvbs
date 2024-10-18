@@ -1,0 +1,391 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CircuitBoardDesign")
+
+double1 = settingRepository1.GetAttr("ComponentHeigth")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComponentHeigth"
+' Returned value : (Variant) (Double) 0.100000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ComponentHeigth", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ComponentHeigth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("WithRandomColorForComponent")
+'--------------------------------------------------
+' Parameter 1 : (String) "WithRandomColorForComponent"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "WithRandomColorForComponent", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "WithRandomColorForComponent"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("AxisMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "AxisMode", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ComponentAxisSystemImport")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComponentAxisSystemImport"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ComponentAxisSystemImport", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ComponentAxisSystemImport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("PhysicalComponentModel")
+'--------------------------------------------------
+' Parameter 1 : (String) "PhysicalComponentModel"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "PhysicalComponentModel", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "PhysicalComponentModel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR11 = settingRepository1.GetAttr("UpdateAssemblyReportPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateAssemblyReportPath"
+' Returned value : (Variant) (String) "c:\temp"
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "UpdateAssemblyReportPath", bSTR12, bSTR13, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateAssemblyReportPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("ConstraintMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConstraintMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ConstraintMode", bSTR14, bSTR15, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ConstraintMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("IntermediateProductCycle")
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateProductCycle"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "IntermediateProductCycle", bSTR16, bSTR17, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateProductCycle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("ExportDefautConfiguration")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportDefautConfiguration"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ExportDefautConfiguration", bSTR18, bSTR19, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportDefautConfiguration"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("EcadFiletype")
+'--------------------------------------------------
+' Parameter 1 : (String) "EcadFiletype"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "EcadFiletype", bSTR20, bSTR21, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "EcadFiletype"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("DefaultUnity")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultUnity"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DefaultUnity", bSTR22, bSTR23, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultUnity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("DefaultDecimalSymbol")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultDecimalSymbol"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DefaultDecimalSymbol", bSTR24, bSTR25, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultDecimalSymbol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("DefaultIdfversion")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultIdfversion"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DefaultIdfversion", bSTR26, bSTR27, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultIdfversion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("FCBKFactor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FCBKFactor"
+' Returned value : (Variant) (Double) 0.500000
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "FCBKFactor", bSTR28, bSTR29, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "FCBKFactor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR30 = settingRepository1.GetAttr("LibFilePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "LibFilePath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "LibFilePath", bSTR31, bSTR32, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "LibFilePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("ImposedDataSource")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImposedDataSource"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ImposedDataSource", bSTR33, bSTR34, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ImposedDataSource"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("DataSourceMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DataSourceMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "DataSourceMode", bSTR35, bSTR36, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "DataSourceMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR37 = settingRepository1.GetAttr("SelectedCatalog")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectedCatalog"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "SelectedCatalog", bSTR38, bSTR39, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectedCatalog"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR40 = settingRepository1.GetAttr("SelectedLibrary")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectedLibrary"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "SelectedLibrary", bSTR41, bSTR42, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectedLibrary"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("CollabSpaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "CollabSpaces"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "CollabSpaces", bSTR43, bSTR44, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "CollabSpaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

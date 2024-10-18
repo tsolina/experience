@@ -1,0 +1,283 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBSimTraceSettings")
+
+uLong1 = settingRepository1.GetAttr("SimTraceDeletePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceDeletePath"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SimTraceDeletePath", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceDeletePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SimTracePointVisu")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTracePointVisu"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SimTracePointVisu", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTracePointVisu"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SimTraceLineVisu")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineVisu"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SimTraceLineVisu", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineVisu"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SimTraceAxisVisu")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisVisu"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SimTraceAxisVisu", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisVisu"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SimTraceLegend")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLegend"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 1
+'    Array[2] : (Variant) (Unsigned Long) 0
+'    Array[3] : (Variant) (Unsigned Long) 0
+'    Array[4] : (Variant) (Unsigned Long) 0
+'    Array[5] : (Variant) (Unsigned Long) 0
+'    Array[6] : (Variant) (Unsigned Long) 0
+'    Array[7] : (Variant) (Unsigned Long) 0
+'    Array[8] : (Variant) (Unsigned Long) 1
+'    Array[9] : (Variant) (Unsigned Long) 1
+'    Array[10] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SimTraceLegend", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLegend"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("SimTracePointColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTracePointColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SimTracePointColor", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTracePointColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("SimTracePointType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTracePointType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SimTracePointType", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTracePointType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("SimTraceLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SimTraceLineColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("SimTraceLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SimTraceLineType", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("SimTraceLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SimTraceLineThickness", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("SimTraceAxisColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SimTraceAxisColor", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("SimTraceAxisType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SimTraceAxisType", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("SimTraceAxisThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SimTraceAxisThickness", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SimTraceAxisThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

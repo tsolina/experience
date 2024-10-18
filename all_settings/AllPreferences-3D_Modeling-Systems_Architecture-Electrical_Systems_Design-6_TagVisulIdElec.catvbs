@@ -1,0 +1,108 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ELEditorToolsOptions")
+
+uLong1 = settingRepository1.GetAttr("SchOrphanSheetConnectorsChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchOrphanSheetConnectorsChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SchOrphanSheetConnectorsChkButton", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SchOrphanSheetConnectorsChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SchDeletedPLMObjectsChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchDeletedPLMObjectsChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SchDeletedPLMObjectsChkButton", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SchDeletedPLMObjectsChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SchNotInSessionObjectsChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchNotInSessionObjectsChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SchNotInSessionObjectsChkButton", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SchNotInSessionObjectsChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SchNotLoadedObjects3Options")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchNotLoadedObjects3Options"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SchNotLoadedObjects3Options", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SchNotLoadedObjects3Options"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SchNotLoadedObjectsOpt2Color")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchNotLoadedObjectsOpt2Color"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 205
+'    Array[1] : (Variant) (Unsigned Long) 205
+'    Array[2] : (Variant) (Unsigned Long) 193
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SchNotLoadedObjectsOpt2Color", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SchNotLoadedObjectsOpt2Color"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

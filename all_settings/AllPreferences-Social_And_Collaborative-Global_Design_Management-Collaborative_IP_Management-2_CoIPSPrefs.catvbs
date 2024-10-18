@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMPropagate")
+
+long1 = settingRepository1.GetAttr("exclude")
+'--------------------------------------------------
+' Parameter 1 : (String) "exclude"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "exclude", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "exclude"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("devMich")
+'--------------------------------------------------
+' Parameter 1 : (String) "devMich"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "devMich", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "devMich"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("save")
+'--------------------------------------------------
+' Parameter 1 : (String) "save"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "save", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "save"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("SettingFilter_1")
+'--------------------------------------------------
+' Parameter 1 : (String) "SettingFilter_1"
+' Returned value : (Variant) (Long) 55
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SettingFilter_1", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SettingFilter_1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

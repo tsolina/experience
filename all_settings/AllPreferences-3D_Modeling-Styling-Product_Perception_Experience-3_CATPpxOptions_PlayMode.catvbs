@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATPpxOptionData_PlayMode")
+
+float1 = settingRepository1.GetAttr("AnimationLengthMS")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnimationLengthMS"
+' Returned value : (Variant) (Float) 5.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "AnimationLengthMS", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "AnimationLengthMS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("SlideshowDelayMS")
+'--------------------------------------------------
+' Parameter 1 : (String) "SlideshowDelayMS"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SlideshowDelayMS", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SlideshowDelayMS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("AnimationSmoothing")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnimationSmoothing"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AnimationSmoothing", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AnimationSmoothing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("StageCaptureViewpoint")
+'--------------------------------------------------
+' Parameter 1 : (String) "StageCaptureViewpoint"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "StageCaptureViewpoint", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "StageCaptureViewpoint"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("VRHMDFocalLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "VRHMDFocalLength"
+' Returned value : (Variant) (String) "16"
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "VRHMDFocalLength", bSTR10, bSTR11, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "VRHMDFocalLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("VRHMDUserFocalLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "VRHMDUserFocalLength"
+' Returned value : (Variant) (Long) 50
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "VRHMDUserFocalLength", bSTR12, bSTR13, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "VRHMDUserFocalLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("FasterTriggerDetection")
+'--------------------------------------------------
+' Parameter 1 : (String) "FasterTriggerDetection"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "FasterTriggerDetection", bSTR14, bSTR15, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "FasterTriggerDetection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

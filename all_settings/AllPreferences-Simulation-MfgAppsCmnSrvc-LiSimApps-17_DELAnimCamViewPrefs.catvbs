@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SIMAnimCamViewerSettings")
+
+long1 = settingRepository1.GetAttr("CamViewExportImageFormat")
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImageFormat"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "CamViewExportImageFormat", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImageFormat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("CamViewExportImagePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImagePath"
+' Returned value : (Variant) (String) "${CATTemp}"
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "CamViewExportImagePath", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImagePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("CamViewExportImageWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImageWidth"
+' Returned value : (Variant) (Long) 800
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "CamViewExportImageWidth", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImageWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("CamViewExportImageHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImageHeight"
+' Returned value : (Variant) (Long) 600
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CamViewExportImageHeight", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CamViewExportImageHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

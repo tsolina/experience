@@ -7,6 +7,7 @@ if TYPE_CHECKING:
     from experience.inf_os_idl_interfaces import FileSystem, SystemConfiguration
     from experience.inf_interfaces import Services
     from experience.inf_os_idl_interfaces.inf_os_types import *
+    from experience.inf_os_idl_interfaces.setting_controllers import SettingControllers
 
 class Application(AnyObject):
     def __init__(self, com):
@@ -119,6 +120,10 @@ class Application(AnyObject):
             self._com.ScriptCommand = int(value)
             return self
         return CatScriptCommand.item(self._com.ScriptCommand)
+    
+    def setting_controllers(self) -> 'SettingControllers':
+        from experience.inf_os_idl_interfaces.setting_controllers import SettingControllers
+        return SettingControllers(self._com.SettingControllers)
 
     def status_bar(self, value: str = None) -> Union['Application', str]:
         if value is not None:

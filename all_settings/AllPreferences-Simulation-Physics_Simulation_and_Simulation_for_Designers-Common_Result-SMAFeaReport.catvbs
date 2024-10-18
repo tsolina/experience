@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAFeaReporting")
+
+long1 = settingRepository1.GetAttr("PictureSizeMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureSizeMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "PictureSizeMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureSizeMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("PictureFormat")
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureFormat"
+' Returned value : (Variant) (String) "JPEG"
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "PictureFormat", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureFormat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("PictureWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureWidth"
+' Returned value : (Variant) (Long) 600
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "PictureWidth", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("PictureHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureHeight"
+' Returned value : (Variant) (Long) 450
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "PictureHeight", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "PictureHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

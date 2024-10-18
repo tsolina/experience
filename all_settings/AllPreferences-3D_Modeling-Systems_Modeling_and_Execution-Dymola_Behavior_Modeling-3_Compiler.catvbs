@@ -1,0 +1,275 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATSysModelica")
+
+boolean1 = settingRepository1.GetAttr("WSLForSimulationCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "WSLForSimulationCheck"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "WSLForSimulationCheck", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "WSLForSimulationCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("CustomCompilerOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "CustomCompilerOptions"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "CustomCompilerOptions", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "CustomCompilerOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("CustomLinkerOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "CustomLinkerOptions"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CustomLinkerOptions", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CustomLinkerOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("CompilerCFlagPaths")
+'--------------------------------------------------
+' Parameter 1 : (String) "CompilerCFlagPaths"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CompilerCFlagPaths", bSTR10, bSTR11, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CompilerCFlagPaths"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR12 = settingRepository1.GetAttr("CompilerLDFlagPaths")
+'--------------------------------------------------
+' Parameter 1 : (String) "CompilerLDFlagPaths"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "CompilerLDFlagPaths", bSTR13, bSTR14, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "CompilerLDFlagPaths"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR15 = settingRepository1.GetAttr("VCVersion")
+'--------------------------------------------------
+' Parameter 1 : (String) "VCVersion"
+' Returned value : (Variant) (String) "VC14"
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "VCVersion", bSTR16, bSTR17, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "VCVersion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR18 = settingRepository1.GetAttr("GCC64PathLinux")
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC64PathLinux"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "GCC64PathLinux", bSTR19, bSTR20, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC64PathLinux"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("WSLCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "WSLCheck"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "WSLCheck", bSTR21, bSTR22, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "WSLCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR23 = settingRepository1.GetAttr("WSLPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "WSLPath"
+' Returned value : (Variant) (String) "C:\Windows\System32\wsl.exe"
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "WSLPath", bSTR24, bSTR25, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "WSLPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR26 = settingRepository1.GetAttr("VCPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "VCPath"
+' Returned value : (Variant) (String) "CSIDL_PROGRAM_FILES\Microsoft Visual Studio 14.0\VC"
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "VCPath", bSTR27, bSTR28, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "VCPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("GCC32Check")
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC32Check"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "GCC32Check", bSTR29, bSTR30, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC32Check"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR31 = settingRepository1.GetAttr("GCC32Path")
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC32Path"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "GCC32Path", bSTR32, bSTR33, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC32Path"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("GCC64Check")
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC64Check"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "GCC64Check", bSTR34, bSTR35, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC64Check"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR36 = settingRepository1.GetAttr("GCC64Path")
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC64Path"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "GCC64Path", bSTR37, bSTR38, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "GCC64Path"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

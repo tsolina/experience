@@ -1,0 +1,503 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("3DShapeInfrastructure3DShapeColor")
+
+boolean1 = settingRepository1.GetAttr("ShowNotDirtyMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowNotDirtyMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ShowNotDirtyMode", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowNotDirtyMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("DefaultColorsEditability")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultColorsEditability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DefaultColorsEditability", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultColorsEditability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ColorSynchronizationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ColorSynchronizationMode", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ColorSynchronizationEditability")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationEditability"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ColorSynchronizationEditability", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationEditability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short1 = settingRepository1.GetAttr("ColorInheritanceMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorInheritanceMode"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ColorInheritanceMode", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorInheritanceMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("VersionCombo")
+'--------------------------------------------------
+' Parameter 1 : (String) "VersionCombo"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "VersionCombo", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "VersionCombo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("SolidDefaultProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidDefaultProperties"
+' Returned value : (Variant) (Double) 3789677055.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SolidDefaultProperties", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidDefaultProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short2 = settingRepository1.GetAttr("SolidEdgesDefaultType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidEdgesDefaultType"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SolidEdgesDefaultType", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidEdgesDefaultType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short3 = settingRepository1.GetAttr("SolidEdgesDefaultThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidEdgesDefaultThickness"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SolidEdgesDefaultThickness", bSTR17, bSTR18, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidEdgesDefaultThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("SolidEdgesDefaultColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidEdgesDefaultColor"
+' Returned value : (Variant) (Double) 255.000000
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "SolidEdgesDefaultColor", bSTR19, bSTR20, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "SolidEdgesDefaultColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("SurfaceDefaultProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceDefaultProperties"
+' Returned value : (Variant) (Double) 2139062271.000000
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "SurfaceDefaultProperties", bSTR21, bSTR22, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceDefaultProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short4 = settingRepository1.GetAttr("SurfaceEdgesDefaultType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceEdgesDefaultType"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "SurfaceEdgesDefaultType", bSTR23, bSTR24, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceEdgesDefaultType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short5 = settingRepository1.GetAttr("SurfaceEdgesDefaultThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceEdgesDefaultThickness"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "SurfaceEdgesDefaultThickness", bSTR25, bSTR26, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceEdgesDefaultThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("SurfaceEdgesDefaultColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceEdgesDefaultColor"
+' Returned value : (Variant) (Double) 255.000000
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "SurfaceEdgesDefaultColor", bSTR27, bSTR28, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "SurfaceEdgesDefaultColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("VolumeDefaultProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeDefaultProperties"
+' Returned value : (Variant) (Double) 3032203007.000000
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "VolumeDefaultProperties", bSTR29, bSTR30, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeDefaultProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short6 = settingRepository1.GetAttr("VolumeEdgesDefaultType")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeEdgesDefaultType"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "VolumeEdgesDefaultType", bSTR31, bSTR32, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeEdgesDefaultType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short7 = settingRepository1.GetAttr("VolumeEdgesDefaultThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeEdgesDefaultThickness"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "VolumeEdgesDefaultThickness", bSTR33, bSTR34, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeEdgesDefaultThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("VolumeEdgesDefaultColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeEdgesDefaultColor"
+' Returned value : (Variant) (Double) 255.000000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "VolumeEdgesDefaultColor", bSTR35, bSTR36, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeEdgesDefaultColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("WireDefaultProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "WireDefaultProperties"
+' Returned value : (Variant) (Double) 255.000000
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "WireDefaultProperties", bSTR37, bSTR38, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "WireDefaultProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short8 = settingRepository1.GetAttr("WireDefaultType")
+'--------------------------------------------------
+' Parameter 1 : (String) "WireDefaultType"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "WireDefaultType", bSTR39, bSTR40, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "WireDefaultType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short9 = settingRepository1.GetAttr("WireDefaultThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "WireDefaultThickness"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "WireDefaultThickness", bSTR41, bSTR42, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "WireDefaultThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double8 = settingRepository1.GetAttr("PointDefaultProperties")
+'--------------------------------------------------
+' Parameter 1 : (String) "PointDefaultProperties"
+' Returned value : (Variant) (Double) 255.000000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "PointDefaultProperties", bSTR43, bSTR44, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "PointDefaultProperties"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short10 = settingRepository1.GetAttr("PointDefaultSymbol")
+'--------------------------------------------------
+' Parameter 1 : (String) "PointDefaultSymbol"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "PointDefaultSymbol", bSTR45, bSTR46, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "PointDefaultSymbol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("ColorSynchronizationModeManage")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationModeManage"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "ColorSynchronizationModeManage", bSTR47, bSTR48, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationModeManage"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean30 = settingRepository1.GetAttr("ColorSynchronizationModeOnFeature")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationModeOnFeature"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "ColorSynchronizationModeOnFeature", bSTR49, bSTR50, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationModeOnFeature"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("ColorSynchronizationModeOnSubElements")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationModeOnSubElements"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "ColorSynchronizationModeOnSubElements", bSTR51, bSTR52, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorSynchronizationModeOnSubElements"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

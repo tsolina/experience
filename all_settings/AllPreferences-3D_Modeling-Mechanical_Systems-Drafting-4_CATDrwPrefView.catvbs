@@ -1,0 +1,1039 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("GenFilCreate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenFilCreate"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "GenFilCreate", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "GenFilCreate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("Gen3DColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "Gen3DColors"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Gen3DColors", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Gen3DColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("GenWireFrame")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenWireFrame"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "GenWireFrame", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "GenWireFrame"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("DrwProject3DPts")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwProject3DPts"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DrwProject3DPts", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwProject3DPts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ExctShadedBGModeOnOrOff")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGModeOnOrOff"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ExctShadedBGModeOnOrOff", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGModeOnOrOff"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DrwGenerationModeVal")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationModeVal"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DrwGenerationModeVal", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationModeVal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("DrwPreventGVS")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPreventGVS"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DrwPreventGVS", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPreventGVS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("Drw3DExtractedRepresentations")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw3DExtractedRepresentations"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "Drw3DExtractedRepresentations", bSTR15, bSTR16, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw3DExtractedRepresentations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("CATDrwDimClipNoShow")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwDimClipNoShow"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "CATDrwDimClipNoShow", bSTR17, bSTR18, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwDimClipNoShow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("CATDrwGeomOf2DLView")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwGeomOf2DLView"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "CATDrwGeomOf2DLView", bSTR19, bSTR20, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwGeomOf2DLView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("DrwCopyViewWithLinks")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwCopyViewWithLinks"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "DrwCopyViewWithLinks", bSTR21, bSTR22, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwCopyViewWithLinks"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("CATDrwBreakLinesGap")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwBreakLinesGap"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "CATDrwBreakLinesGap", bSTR23, bSTR24, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwBreakLinesGap"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("EmbedCopyFilters")
+'--------------------------------------------------
+' Parameter 1 : (String) "EmbedCopyFilters"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "EmbedCopyFilters", bSTR25, bSTR26, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "EmbedCopyFilters"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("GenAxisCreate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenAxisCreate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "GenAxisCreate", bSTR27, bSTR28, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "GenAxisCreate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("GenThreadCreate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenThreadCreate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "GenThreadCreate", bSTR29, bSTR30, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "GenThreadCreate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("GenCenterCreate")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenCenterCreate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "GenCenterCreate", bSTR31, bSTR32, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "GenCenterCreate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean30 = settingRepository1.GetAttr("GenHiddenLines")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenHiddenLines"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "GenHiddenLines", bSTR33, bSTR34, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "GenHiddenLines"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("GenPatterns")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenPatterns"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "GenPatterns", bSTR35, bSTR36, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "GenPatterns"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean34 = settingRepository1.GetAttr("GenSmoothEdges")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenSmoothEdges"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "GenSmoothEdges", bSTR37, bSTR38, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "GenSmoothEdges"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean36 = settingRepository1.GetAttr("DrwGenerationForBox")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationForBox"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "DrwGenerationForBox", bSTR39, bSTR40, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationForBox"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("DrwGenerationForBoxTol")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationForBoxTol"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "DrwGenerationForBoxTol", bSTR41, bSTR42, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationForBoxTol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean39 = settingRepository1.GetAttr("DrwOcclusionCulling")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwOcclusionCulling"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "DrwOcclusionCulling", bSTR43, bSTR44, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwOcclusionCulling"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean41 = settingRepository1.GetAttr("ClashDetectionSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashDetectionSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "ClashDetectionSetting", bSTR45, bSTR46, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashDetectionSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean43 = settingRepository1.GetAttr("GenHiddenLinesAutoHideSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenHiddenLinesAutoHideSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "GenHiddenLinesAutoHideSetting", bSTR47, bSTR48, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "GenHiddenLinesAutoHideSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("DrwGenFilConfigure")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenFilConfigure"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "DrwGenFilConfigure", bSTR49, bSTR50, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenFilConfigure"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("GenWireFrameMod")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenWireFrameMod"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "GenWireFrameMod", bSTR51, bSTR52, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "GenWireFrameMod"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean47 = settingRepository1.GetAttr("3DPolyhedralData")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DPolyhedralData"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "3DPolyhedralData", bSTR53, bSTR54, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "3DPolyhedralData"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("CATDrwHRVLOD")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwHRVLOD"
+' Returned value : (Variant) (Long) 4
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "CATDrwHRVLOD", bSTR55, bSTR56, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwHRVLOD"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean50 = settingRepository1.GetAttr("DrwRasterWithTextureSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwRasterWithTextureSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "DrwRasterWithTextureSetting", bSTR57, bSTR58, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwRasterWithTextureSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("DrwProject3DSymbol")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwProject3DSymbol"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "DrwProject3DSymbol", bSTR59, bSTR60, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwProject3DSymbol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("DrwProject3DSymbol")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwProject3DSymbol"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "DrwProject3DSymbol", bSTR61, bSTR62, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwProject3DSymbol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("SectionLinetype")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionLinetype"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "SectionLinetype", bSTR63, bSTR64, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionLinetype"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("DetailLinetype")
+'--------------------------------------------------
+' Parameter 1 : (String) "DetailLinetype"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean55
+settingRepository1.GetAttrInfo "DetailLinetype", bSTR65, bSTR66, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "DetailLinetype"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("BrokenLinetype")
+'--------------------------------------------------
+' Parameter 1 : (String) "BrokenLinetype"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean56
+settingRepository1.GetAttrInfo "BrokenLinetype", bSTR67, bSTR68, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "BrokenLinetype"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("BreakoutLinetype")
+'--------------------------------------------------
+' Parameter 1 : (String) "BreakoutLinetype"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "BreakoutLinetype", bSTR69, bSTR70, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "BreakoutLinetype"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("SkinLinetype")
+'--------------------------------------------------
+' Parameter 1 : (String) "SkinLinetype"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean58
+settingRepository1.GetAttrInfo "SkinLinetype", bSTR71, bSTR72, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "SkinLinetype"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("DrwDetailThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDetailThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "DrwDetailThickness", bSTR73, bSTR74, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDetailThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("DrwSectionThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwSectionThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean60
+settingRepository1.GetAttrInfo "DrwSectionThickness", bSTR75, bSTR76, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwSectionThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("DrwBrokenThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwBrokenThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean61
+settingRepository1.GetAttrInfo "DrwBrokenThickness", bSTR77, bSTR78, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwBrokenThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("DrwBreakoutThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwBreakoutThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean62
+settingRepository1.GetAttrInfo "DrwBreakoutThickness", bSTR79, bSTR80, boolean62
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwBreakoutThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("DrwSkinThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwSkinThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "DrwSkinThickness", bSTR81, bSTR82, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwSkinThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean64 = settingRepository1.GetAttr("ExctShadedBGTexture")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGTexture"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean65
+settingRepository1.GetAttrInfo "ExctShadedBGTexture", bSTR83, bSTR84, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGTexture"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("ExctShadedBGPtrnClrFrm3DOrPlt")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGPtrnClrFrm3DOrPlt"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean66
+settingRepository1.GetAttrInfo "ExctShadedBGPtrnClrFrm3DOrPlt", bSTR85, bSTR86, boolean66
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGPtrnClrFrm3DOrPlt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("ExctShadedBGPtrnPltClr")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGPtrnPltClr"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean67
+settingRepository1.GetAttrInfo "ExctShadedBGPtrnPltClr", bSTR87, bSTR88, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGPtrnPltClr"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("CATDrwRasterMod")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwRasterMod"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean68
+settingRepository1.GetAttrInfo "CATDrwRasterMod", bSTR89, bSTR90, boolean68
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwRasterMod"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("CATDrwLODVisuMod")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwLODVisuMod"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean69
+settingRepository1.GetAttrInfo "CATDrwLODVisuMod", bSTR91, bSTR92, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwLODVisuMod"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("DrwDefVisuPicture")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDefVisuPicture"
+' Returned value : (Variant) (Long) 91
+'--------------------------------------------------
+
+Dim bSTR93
+bSTR93 = ""
+Dim bSTR94
+bSTR94 = ""
+Dim boolean70
+settingRepository1.GetAttrInfo "DrwDefVisuPicture", bSTR93, bSTR94, boolean70
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDefVisuPicture"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("CATDrwLODPrintMod")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwLODPrintMod"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR95
+bSTR95 = ""
+Dim bSTR96
+bSTR96 = ""
+Dim boolean71
+settingRepository1.GetAttrInfo "CATDrwLODPrintMod", bSTR95, bSTR96, boolean71
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwLODPrintMod"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("DrwDefPrintPicture")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDefPrintPicture"
+' Returned value : (Variant) (Long) 300
+'--------------------------------------------------
+
+Dim bSTR97
+bSTR97 = ""
+Dim bSTR98
+bSTR98 = ""
+Dim boolean72
+settingRepository1.GetAttrInfo "DrwDefPrintPicture", bSTR97, bSTR98, boolean72
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDefPrintPicture"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("ExctShadedBGMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR99
+bSTR99 = ""
+Dim bSTR100
+bSTR100 = ""
+Dim boolean73
+settingRepository1.GetAttrInfo "ExctShadedBGMode", bSTR99, bSTR100, boolean73
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("ExctShadedBGLODVisuQlty")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODVisuQlty"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR101
+bSTR101 = ""
+Dim bSTR102
+bSTR102 = ""
+Dim boolean74
+settingRepository1.GetAttrInfo "ExctShadedBGLODVisuQlty", bSTR101, bSTR102, boolean74
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODVisuQlty"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("ExctShadedBGLODVisuQltyCstm")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODVisuQltyCstm"
+' Returned value : (Variant) (Long) 91
+'--------------------------------------------------
+
+Dim bSTR103
+bSTR103 = ""
+Dim bSTR104
+bSTR104 = ""
+Dim boolean75
+settingRepository1.GetAttrInfo "ExctShadedBGLODVisuQltyCstm", bSTR103, bSTR104, boolean75
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODVisuQltyCstm"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("ExctShadedBGLODPrintQlty")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODPrintQlty"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR105
+bSTR105 = ""
+Dim bSTR106
+bSTR106 = ""
+Dim boolean76
+settingRepository1.GetAttrInfo "ExctShadedBGLODPrintQlty", bSTR105, bSTR106, boolean76
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODPrintQlty"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("ExctShadedBGLODPrintQltyCstm")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODPrintQltyCstm"
+' Returned value : (Variant) (Long) 300
+'--------------------------------------------------
+
+Dim bSTR107
+bSTR107 = ""
+Dim bSTR108
+bSTR108 = ""
+Dim boolean77
+settingRepository1.GetAttrInfo "ExctShadedBGLODPrintQltyCstm", bSTR107, bSTR108, boolean77
+'--------------------------------------------------
+' Parameter 1 : (String) "ExctShadedBGLODPrintQltyCstm"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

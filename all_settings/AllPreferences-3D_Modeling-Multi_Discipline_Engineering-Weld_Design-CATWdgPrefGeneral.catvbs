@@ -1,0 +1,125 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("WDGGeneral")
+
+long1 = settingRepository1.GetAttr("WdgCreationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "WdgCreationMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "WdgCreationMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "WdgCreationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("FstGeneral")
+
+bSTR3 = settingRepository2.GetAttr("FstReportDirectory")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstReportDirectory"
+' Returned value : (Variant) (String) "${CATTemp}"
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository2.GetAttrInfo "FstReportDirectory", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "FstReportDirectory"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository2.GetAttr("FstLengthUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstLengthUnit"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository2.GetAttrInfo "FstLengthUnit", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FstLengthUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository2.GetAttr("FstWeightUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstWeightUnit"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository2.GetAttrInfo "FstWeightUnit", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "FstWeightUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository2.GetAttr("FstPrecision")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstPrecision"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean5
+settingRepository2.GetAttrInfo "FstPrecision", bSTR10, bSTR11, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FstPrecision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository2.GetAttr("FstSctfNotation")
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSctfNotation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean7
+settingRepository2.GetAttrInfo "FstSctfNotation", bSTR12, bSTR13, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "FstSctfNotation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

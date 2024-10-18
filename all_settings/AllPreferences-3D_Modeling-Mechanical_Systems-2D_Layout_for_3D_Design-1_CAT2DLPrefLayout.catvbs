@@ -1,0 +1,516 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CAT2DLToolsOptions")
+
+boolean1 = settingRepository1.GetAttr("HideWhenStartWkb")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideWhenStartWkb"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "HideWhenStartWkb", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "HideWhenStartWkb"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("RenderStylePerObject")
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStylePerObject"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RenderStylePerObject", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStylePerObject"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("TileWindow")
+'--------------------------------------------------
+' Parameter 1 : (String) "TileWindow"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TileWindow", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TileWindow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("CAT2DLFitAllInSheetOpt")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLFitAllInSheetOpt"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "CAT2DLFitAllInSheetOpt", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLFitAllInSheetOpt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ForceRenderStyleOnLayoutViewer")
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceRenderStyleOnLayoutViewer"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ForceRenderStyleOnLayoutViewer", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ForceRenderStyleOnLayoutViewer"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR11 = settingRepository1.GetAttr("standard")
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "standard", bSTR12, bSTR13, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR14 = settingRepository1.GetAttr("FrameTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "FrameTemplate", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("NumOfFrameTemplates")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfFrameTemplates"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "NumOfFrameTemplates", bSTR17, bSTR18, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfFrameTemplates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "FrameTemplates"
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplates"
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "FrameTemplates", bSTR19, bSTR20, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "FrameTemplateIDs"
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplateIDs"
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "FrameTemplateIDs", bSTR21, bSTR22, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplateIDs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("FrameTemplateAdd")
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplateAdd"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "FrameTemplateAdd", bSTR23, bSTR24, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplateAdd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("FrameTemplateRemove")
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplateRemove"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "FrameTemplateRemove", bSTR25, bSTR26, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "FrameTemplateRemove"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR27 = settingRepository1.GetAttr("TitleBlockTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "TitleBlockTemplate", bSTR28, bSTR29, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("NumOfTitleBlockTemplates")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfTitleBlockTemplates"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "NumOfTitleBlockTemplates", bSTR30, bSTR31, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfTitleBlockTemplates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "TitleBlockTemplates"
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplates"
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "TitleBlockTemplates", bSTR32, bSTR33, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "TitleBlockTemplateIDs"
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplateIDs"
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "TitleBlockTemplateIDs", bSTR34, bSTR35, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplateIDs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("TitleBlockTemplateAdd")
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplateAdd"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR36
+bSTR36 = ""
+Dim bSTR37
+bSTR37 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "TitleBlockTemplateAdd", bSTR36, bSTR37, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplateAdd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("TitleBlockTemplateRemove")
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplateRemove"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "TitleBlockTemplateRemove", bSTR38, bSTR39, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "TitleBlockTemplateRemove"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR40 = settingRepository1.GetAttr("RevisionTableTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplate"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "RevisionTableTemplate", bSTR41, bSTR42, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("NumOfRevisionTableTemplates")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfRevisionTableTemplates"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "NumOfRevisionTableTemplates", bSTR43, bSTR44, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfRevisionTableTemplates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "RevisionTableTemplates"
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplates"
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "RevisionTableTemplates", bSTR45, bSTR46, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplates"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "RevisionTableTemplateIDs"
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplateIDs"
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "RevisionTableTemplateIDs", bSTR47, bSTR48, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplateIDs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("RevisionTableTemplateAdd")
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplateAdd"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "RevisionTableTemplateAdd", bSTR49, bSTR50, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplateAdd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean34 = settingRepository1.GetAttr("RevisionTableTemplateRemove")
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplateRemove"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "RevisionTableTemplateRemove", bSTR51, bSTR52, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "RevisionTableTemplateRemove"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("RenderStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStyle"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "RenderStyle", bSTR53, bSTR54, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("RenderStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStyle"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "RenderStyle", bSTR55, bSTR56, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("RenderStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStyle"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "RenderStyle", bSTR57, bSTR58, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "RenderStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

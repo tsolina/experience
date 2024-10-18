@@ -1,0 +1,747 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NCMfgResources")
+
+bSTR1 = settingRepository1.GetAttr("PPToolsLocation")
+'--------------------------------------------------
+' Parameter 1 : (String) "PPToolsLocation"
+' Returned value : (Variant) (String) "${CATStartupPath}"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "PPToolsLocation", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "PPToolsLocation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("SimpleToolInActivity")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimpleToolInActivity"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SimpleToolInActivity", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SimpleToolInActivity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("ToolAssemblySearch")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAssemblySearch"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ToolAssemblySearch", bSTR6, bSTR7, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAssemblySearch"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("ToolAutoQuery")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAutoQuery"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ToolAutoQuery", bSTR8, bSTR9, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAutoQuery"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("Tool2DVisu")
+'--------------------------------------------------
+' Parameter 1 : (String) "Tool2DVisu"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "Tool2DVisu", bSTR10, bSTR11, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "Tool2DVisu"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("FeedAutoUpd")
+'--------------------------------------------------
+' Parameter 1 : (String) "FeedAutoUpd"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "FeedAutoUpd", bSTR12, bSTR13, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "FeedAutoUpd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("SpindleAutoUpd")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpindleAutoUpd"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SpindleAutoUpd", bSTR14, bSTR15, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SpindleAutoUpd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("NCMfgToolQueryInMachProcess")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCMfgToolQueryInMachProcess"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "NCMfgToolQueryInMachProcess", bSTR16, bSTR17, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "NCMfgToolQueryInMachProcess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("NCMfgNoToolInMachProcess")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCMfgNoToolInMachProcess"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "NCMfgNoToolInMachProcess", bSTR18, bSTR19, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "NCMfgNoToolInMachProcess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("NCMfgToolAssemblyCreationInMOPanel")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCMfgToolAssemblyCreationInMOPanel"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "NCMfgToolAssemblyCreationInMOPanel", bSTR20, bSTR21, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "NCMfgToolAssemblyCreationInMOPanel"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SpindleDisplayArrow")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpindleDisplayArrow"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 120
+'    Array[1] : (Variant) (Unsigned Long) 120
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "SpindleDisplayArrow", bSTR22, bSTR23, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "SpindleDisplayArrow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("SpindleDisplayArrowHead")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpindleDisplayArrowHead"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 120
+'    Array[1] : (Variant) (Unsigned Long) 120
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "SpindleDisplayArrowHead", bSTR24, bSTR25, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "SpindleDisplayArrowHead"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("CutPartColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CutPartColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 128
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "CutPartColor", bSTR26, bSTR27, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "CutPartColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("NoCutPartColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "NoCutPartColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 162
+'    Array[1] : (Variant) (Unsigned Long) 162
+'    Array[2] : (Variant) (Unsigned Long) 162
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "NoCutPartColor", bSTR28, bSTR29, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "NoCutPartColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("ToolAttachmentTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAttachmentTypes"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "CAPTO"
+'    Array[1] : (Variant) (String) "KM"
+'    Array[2] : (Variant) (String) "HSK"
+'    Array[3] : (Variant) (String) "DIN"
+'    Array[4] : (Variant) (String) "CAT"
+'    Array[5] : (Variant) (String) "BT"
+'    Array[6] : (Variant) (String) "DIN69871"
+'    Array[7] : (Variant) (String) "WELDON"
+'    Array[8] : (Variant) (String) "WHISTLE NOTCH"
+'    Array[9] : (Variant) (String) "COLLET"
+'    Array[10] : (Variant) (String) "CYLINDRICAL SHANK"
+'    Array[11] : (Variant) (String) "CONIC SHANK"
+'    Array[12] : (Variant) (String) "CUBIC SHANK"
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "ToolAttachmentTypes", bSTR30, bSTR31, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAttachmentTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("ToolAttachmentSubTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAttachmentSubTypes"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "C3"
+'    Array[1] : (Variant) (String) "C4"
+'    Array[2] : (Variant) (String) "C5"
+'    Array[3] : (Variant) (String) "C6"
+'    Array[4] : (Variant) (String) "C8"
+'    Array[5] : (Variant) (String) "C10"
+'    Array[6] : (Variant) (String) "KM25"
+'    Array[7] : (Variant) (String) "KM32"
+'    Array[8] : (Variant) (String) "KM40"
+'    Array[9] : (Variant) (String) "KM50"
+'    Array[10] : (Variant) (String) "KM63"
+'    Array[11] : (Variant) (String) "KM80"
+'    Array[12] : (Variant) (String) "KM100"
+'    Array[13] : (Variant) (String) "HSK32"
+'    Array[14] : (Variant) (String) "HSK40"
+'    Array[15] : (Variant) (String) "HSK50"
+'    Array[16] : (Variant) (String) "HSK63"
+'    Array[17] : (Variant) (String) "HSK80"
+'    Array[18] : (Variant) (String) "HSK100"
+'    Array[19] : (Variant) (String) "MB50"
+'    Array[20] : (Variant) (String) "MB63"
+'    Array[21] : (Variant) (String) "MB80"
+'    Array[22] : (Variant) (String) "CAT40"
+'    Array[23] : (Variant) (String) "CAT45"
+'    Array[24] : (Variant) (String) "CAT50"
+'    Array[25] : (Variant) (String) "BT30"
+'    Array[26] : (Variant) (String) "BT40"
+'    Array[27] : (Variant) (String) "BT50"
+'    Array[28] : (Variant) (String) "DIN69871-30"
+'    Array[29] : (Variant) (String) "DIN69871-40"
+'    Array[30] : (Variant) (String) "DIN69871-50"
+'    Array[31] : (Variant) (String) "6"
+'    Array[32] : (Variant) (String) "8"
+'    Array[33] : (Variant) (String) "10"
+'    Array[34] : (Variant) (String) "12"
+'    Array[35] : (Variant) (String) "14"
+'    Array[36] : (Variant) (String) "16"
+'    Array[37] : (Variant) (String) "18"
+'    Array[38] : (Variant) (String) "20"
+'    Array[39] : (Variant) (String) "25"
+'    Array[40] : (Variant) (String) "32"
+'    Array[41] : (Variant) (String) "6"
+'    Array[42] : (Variant) (String) "8"
+'    Array[43] : (Variant) (String) "10"
+'    Array[44] : (Variant) (String) "12"
+'    Array[45] : (Variant) (String) "14"
+'    Array[46] : (Variant) (String) "16"
+'    Array[47] : (Variant) (String) "18"
+'    Array[48] : (Variant) (String) "20"
+'    Array[49] : (Variant) (String) "25"
+'    Array[50] : (Variant) (String) "32"
+'    Array[51] : (Variant) (String) "ER16"
+'    Array[52] : (Variant) (String) "ER25"
+'    Array[53] : (Variant) (String) "ER32"
+'    Array[54] : (Variant) (String) "ER40"
+'    Array[55] : (Variant) (String) "ER50"
+'    Array[56] : (Variant) (String) "6"
+'    Array[57] : (Variant) (String) "8"
+'    Array[58] : (Variant) (String) "10"
+'    Array[59] : (Variant) (String) "12"
+'    Array[60] : (Variant) (String) "14"
+'    Array[61] : (Variant) (String) "16"
+'    Array[62] : (Variant) (String) "18"
+'    Array[63] : (Variant) (String) "20"
+'    Array[64] : (Variant) (String) "25"
+'    Array[65] : (Variant) (String) "32"
+'    Array[66] : (Variant) (String) "CM1"
+'    Array[67] : (Variant) (String) "CM2"
+'    Array[68] : (Variant) (String) "CM3"
+'    Array[69] : (Variant) (String) "CM4"
+'    Array[70] : (Variant) (String) "CM5"
+'    Array[71] : (Variant) (String) "16"
+'    Array[72] : (Variant) (String) "20"
+'    Array[73] : (Variant) (String) "25"
+'    Array[74] : (Variant) (String) "32"
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "ToolAttachmentSubTypes", bSTR32, bSTR33, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAttachmentSubTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("ToolAttachmentNumberOfSubTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAttachmentNumberOfSubTypes"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 6
+'    Array[1] : (Variant) (Unsigned Long) 7
+'    Array[2] : (Variant) (Unsigned Long) 6
+'    Array[3] : (Variant) (Unsigned Long) 3
+'    Array[4] : (Variant) (Unsigned Long) 3
+'    Array[5] : (Variant) (Unsigned Long) 3
+'    Array[6] : (Variant) (Unsigned Long) 3
+'    Array[7] : (Variant) (Unsigned Long) 10
+'    Array[8] : (Variant) (Unsigned Long) 10
+'    Array[9] : (Variant) (Unsigned Long) 5
+'    Array[10] : (Variant) (Unsigned Long) 10
+'    Array[11] : (Variant) (Unsigned Long) 5
+'    Array[12] : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "ToolAttachmentNumberOfSubTypes", bSTR34, bSTR35, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolAttachmentNumberOfSubTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR3
+arrayOfVariantOfBSTR3 = settingRepository1.GetAttrArray("HolderAttachmentTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "HolderAttachmentTypes"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "CAPTO"
+'    Array[1] : (Variant) (String) "KM"
+'    Array[2] : (Variant) (String) "HSK"
+'    Array[3] : (Variant) (String) "DIN"
+'    Array[4] : (Variant) (String) "CAT"
+'    Array[5] : (Variant) (String) "BT"
+'    Array[6] : (Variant) (String) "DIN69871"
+'    Array[7] : (Variant) (String) "WELDON"
+'    Array[8] : (Variant) (String) "WHISTLE NOTCH"
+'    Array[9] : (Variant) (String) "COLLET"
+'    Array[10] : (Variant) (String) "CYLINDRICAL SHANK"
+'    Array[11] : (Variant) (String) "CONIC SHANK"
+'    Array[12] : (Variant) (String) "CUBIC SHANK"
+'--------------------------------------------------
+
+Dim bSTR36
+bSTR36 = ""
+Dim bSTR37
+bSTR37 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "HolderAttachmentTypes", bSTR36, bSTR37, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "HolderAttachmentTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR4
+arrayOfVariantOfBSTR4 = settingRepository1.GetAttrArray("HolderAttachmentSubTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "HolderAttachmentSubTypes"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "C3"
+'    Array[1] : (Variant) (String) "C4"
+'    Array[2] : (Variant) (String) "C5"
+'    Array[3] : (Variant) (String) "C6"
+'    Array[4] : (Variant) (String) "C8"
+'    Array[5] : (Variant) (String) "C10"
+'    Array[6] : (Variant) (String) "KM25"
+'    Array[7] : (Variant) (String) "KM32"
+'    Array[8] : (Variant) (String) "KM40"
+'    Array[9] : (Variant) (String) "KM50"
+'    Array[10] : (Variant) (String) "KM63"
+'    Array[11] : (Variant) (String) "KM80"
+'    Array[12] : (Variant) (String) "KM100"
+'    Array[13] : (Variant) (String) "HSK32"
+'    Array[14] : (Variant) (String) "HSK40"
+'    Array[15] : (Variant) (String) "HSK50"
+'    Array[16] : (Variant) (String) "HSK63"
+'    Array[17] : (Variant) (String) "HSK80"
+'    Array[18] : (Variant) (String) "HSK100"
+'    Array[19] : (Variant) (String) "MB50"
+'    Array[20] : (Variant) (String) "MB63"
+'    Array[21] : (Variant) (String) "MB80"
+'    Array[22] : (Variant) (String) "CAT40"
+'    Array[23] : (Variant) (String) "CAT45"
+'    Array[24] : (Variant) (String) "CAT50"
+'    Array[25] : (Variant) (String) "BT30"
+'    Array[26] : (Variant) (String) "BT40"
+'    Array[27] : (Variant) (String) "BT50"
+'    Array[28] : (Variant) (String) "DIN69871-30"
+'    Array[29] : (Variant) (String) "DIN69871-40"
+'    Array[30] : (Variant) (String) "DIN69871-50"
+'    Array[31] : (Variant) (String) "6"
+'    Array[32] : (Variant) (String) "8"
+'    Array[33] : (Variant) (String) "10"
+'    Array[34] : (Variant) (String) "12"
+'    Array[35] : (Variant) (String) "14"
+'    Array[36] : (Variant) (String) "16"
+'    Array[37] : (Variant) (String) "18"
+'    Array[38] : (Variant) (String) "20"
+'    Array[39] : (Variant) (String) "25"
+'    Array[40] : (Variant) (String) "32"
+'    Array[41] : (Variant) (String) "6"
+'    Array[42] : (Variant) (String) "8"
+'    Array[43] : (Variant) (String) "10"
+'    Array[44] : (Variant) (String) "12"
+'    Array[45] : (Variant) (String) "14"
+'    Array[46] : (Variant) (String) "16"
+'    Array[47] : (Variant) (String) "18"
+'    Array[48] : (Variant) (String) "20"
+'    Array[49] : (Variant) (String) "25"
+'    Array[50] : (Variant) (String) "32"
+'    Array[51] : (Variant) (String) "ER16"
+'    Array[52] : (Variant) (String) "ER25"
+'    Array[53] : (Variant) (String) "ER32"
+'    Array[54] : (Variant) (String) "ER40"
+'    Array[55] : (Variant) (String) "ER50"
+'    Array[56] : (Variant) (String) "6"
+'    Array[57] : (Variant) (String) "8"
+'    Array[58] : (Variant) (String) "10"
+'    Array[59] : (Variant) (String) "12"
+'    Array[60] : (Variant) (String) "14"
+'    Array[61] : (Variant) (String) "16"
+'    Array[62] : (Variant) (String) "18"
+'    Array[63] : (Variant) (String) "20"
+'    Array[64] : (Variant) (String) "25"
+'    Array[65] : (Variant) (String) "32"
+'    Array[66] : (Variant) (String) "CM1"
+'    Array[67] : (Variant) (String) "CM2"
+'    Array[68] : (Variant) (String) "CM3"
+'    Array[69] : (Variant) (String) "CM4"
+'    Array[70] : (Variant) (String) "CM5"
+'    Array[71] : (Variant) (String) "16"
+'    Array[72] : (Variant) (String) "20"
+'    Array[73] : (Variant) (String) "25"
+'    Array[74] : (Variant) (String) "32"
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "HolderAttachmentSubTypes", bSTR38, bSTR39, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "HolderAttachmentSubTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("HolderAttachmentNumberOfSubTypes")
+'--------------------------------------------------
+' Parameter 1 : (String) "HolderAttachmentNumberOfSubTypes"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 6
+'    Array[1] : (Variant) (Unsigned Long) 7
+'    Array[2] : (Variant) (Unsigned Long) 6
+'    Array[3] : (Variant) (Unsigned Long) 3
+'    Array[4] : (Variant) (Unsigned Long) 3
+'    Array[5] : (Variant) (Unsigned Long) 3
+'    Array[6] : (Variant) (Unsigned Long) 3
+'    Array[7] : (Variant) (Unsigned Long) 10
+'    Array[8] : (Variant) (Unsigned Long) 10
+'    Array[9] : (Variant) (Unsigned Long) 5
+'    Array[10] : (Variant) (Unsigned Long) 10
+'    Array[11] : (Variant) (Unsigned Long) 5
+'    Array[12] : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR40
+bSTR40 = ""
+Dim bSTR41
+bSTR41 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "HolderAttachmentNumberOfSubTypes", bSTR40, bSTR41, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "HolderAttachmentNumberOfSubTypes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR5
+arrayOfVariantOfBSTR5 = settingRepository1.GetAttrArray("FSConfigKey1List")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey1List"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Steel"
+'    Array[1] : (Variant) (String) "Stainless Steel"
+'    Array[2] : (Variant) (String) "Aluminium"
+'    Array[3] : (Variant) (String) "Titanium"
+'    Array[4] : (Variant) (String) "Cast Iron"
+'    Array[5] : (Variant) (String) "Hard Material"
+'    Array[6] : (Variant) (String) "Other Metal"
+'--------------------------------------------------
+
+Dim bSTR42
+bSTR42 = ""
+Dim bSTR43
+bSTR43 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "FSConfigKey1List", bSTR42, bSTR43, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey1List"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR6
+arrayOfVariantOfBSTR6 = settingRepository1.GetAttrArray("FSConfigKey2List")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey2List"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Face milling"
+'    Array[1] : (Variant) (String) "Grooving"
+'    Array[2] : (Variant) (String) "Profile contouring"
+'    Array[3] : (Variant) (String) "Drilling"
+'    Array[4] : (Variant) (String) "Reamer"
+'--------------------------------------------------
+
+Dim bSTR44
+bSTR44 = ""
+Dim bSTR45
+bSTR45 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "FSConfigKey2List", bSTR44, bSTR45, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey2List"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR7
+arrayOfVariantOfBSTR7 = settingRepository1.GetAttrArray("FSConfigKey3List")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey3List"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Roughing"
+'    Array[1] : (Variant) (String) "Finishing"
+'    Array[2] : (Variant) (String) "Super Finishing"
+'    Array[3] : (Variant) (String) "Recess"
+'    Array[4] : (Variant) (String) "No quality"
+'--------------------------------------------------
+
+Dim bSTR46
+bSTR46 = ""
+Dim bSTR47
+bSTR47 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "FSConfigKey3List", bSTR46, bSTR47, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey3List"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR48 = settingRepository1.GetAttr("FSConfigKey1Type")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey1Type"
+' Returned value : (Variant) (String) "Machined Material"
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "FSConfigKey1Type", bSTR49, bSTR50, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey1Type"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR51 = settingRepository1.GetAttr("FSConfigKey2Type")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey2Type"
+' Returned value : (Variant) (String) "Machining Type"
+'--------------------------------------------------
+
+Dim bSTR52
+bSTR52 = ""
+Dim bSTR53
+bSTR53 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "FSConfigKey2Type", bSTR52, bSTR53, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey2Type"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR54 = settingRepository1.GetAttr("FSConfigKey3Type")
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey3Type"
+' Returned value : (Variant) (String) "Machining Quality"
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "FSConfigKey3Type", bSTR55, bSTR56, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "FSConfigKey3Type"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

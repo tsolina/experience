@@ -1,0 +1,674 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATSpkToolsOptionsRepositoryDisplay")
+
+long1 = settingRepository1.GetAttr("SpkBMActiveProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMActiveProfile"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SpkBMActiveProfile", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMActiveProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("SpkBMDefaultPointDiameter")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultPointDiameter"
+' Returned value : (Variant) (Long) 5
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SpkBMDefaultPointDiameter", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultPointDiameter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("SpkBMDefaultEdgeThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultEdgeThickness"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SpkBMDefaultEdgeThickness", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultEdgeThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("SpkBMDefaultPointDiameterVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultPointDiameterVR"
+' Returned value : (Variant) (Long) 8
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SpkBMDefaultPointDiameterVR", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultPointDiameterVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("SpkBMDefaultEdgeThicknessVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultEdgeThicknessVR"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SpkBMDefaultEdgeThicknessVR", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMDefaultEdgeThicknessVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("SpkBMNormalModeVertexNeutralColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNeutralColorStored"
+' Returned value : (Variant) (Double) 2391707326.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexNeutralColorStored", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNeutralColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("SpkBMNormalModeEdgeNeutralColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNeutralColorStored"
+' Returned value : (Variant) (Double) 2391707326.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeNeutralColorStored", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNeutralColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("SpkBMNormalModeFaceNeutralColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNeutralColorStored"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceNeutralColorStored", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNeutralColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("SpkBMNormalModeVertexNeutralColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNeutralColorStoredVR"
+' Returned value : (Variant) (Double) 2391707391.000000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexNeutralColorStoredVR", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNeutralColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("SpkBMNormalModeEdgeNeutralColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNeutralColorStoredVR"
+' Returned value : (Variant) (Double) 2391707391.000000
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeNeutralColorStoredVR", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNeutralColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("SpkBMNormalModeFaceNeutralColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNeutralColorStoredVR"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceNeutralColorStoredVR", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNeutralColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("SpkBMNormalModeVertexPreselectedColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexPreselectedColorStored"
+' Returned value : (Variant) (Double) 1313754824.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexPreselectedColorStored", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexPreselectedColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double8 = settingRepository1.GetAttr("SpkBMNormalModeEdgePreselectedColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgePreselectedColorStored"
+' Returned value : (Variant) (Double) 1313754824.000000
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgePreselectedColorStored", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgePreselectedColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double9 = settingRepository1.GetAttr("SpkBMNormalModeFacePreselectedColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFacePreselectedColorStored"
+' Returned value : (Variant) (Double) 1313754674.000000
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "SpkBMNormalModeFacePreselectedColorStored", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFacePreselectedColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double10 = settingRepository1.GetAttr("SpkBMNormalModeVertexPreselectedColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexPreselectedColorStoredVR"
+' Returned value : (Variant) (Double) 4281650943.000000
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexPreselectedColorStoredVR", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexPreselectedColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double11 = settingRepository1.GetAttr("SpkBMNormalModeEdgePreselectedColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgePreselectedColorStoredVR"
+' Returned value : (Variant) (Double) 4281650943.000000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgePreselectedColorStoredVR", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgePreselectedColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double12 = settingRepository1.GetAttr("SpkBMNormalModeFacePreselectedColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFacePreselectedColorStoredVR"
+' Returned value : (Variant) (Double) 4281650738.000000
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "SpkBMNormalModeFacePreselectedColorStoredVR", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFacePreselectedColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double13 = settingRepository1.GetAttr("SpkBMNormalModeVertexSelectedColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelectedColorStored"
+' Returned value : (Variant) (Double) 11272191.000000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexSelectedColorStored", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelectedColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double14 = settingRepository1.GetAttr("SpkBMNormalModeEdgeSelectedColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelectedColorStored"
+' Returned value : (Variant) (Double) 11272191.000000
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeSelectedColorStored", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelectedColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double15 = settingRepository1.GetAttr("SpkBMNormalModeFaceSelectedColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelectedColorStored"
+' Returned value : (Variant) (Double) 11272021.000000
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceSelectedColorStored", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelectedColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double16 = settingRepository1.GetAttr("SpkBMNormalModeVertexSelectedColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelectedColorStoredVR"
+' Returned value : (Variant) (Double) 11272191.000000
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexSelectedColorStoredVR", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelectedColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double17 = settingRepository1.GetAttr("SpkBMNormalModeEdgeSelectedColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelectedColorStoredVR"
+' Returned value : (Variant) (Double) 11272191.000000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeSelectedColorStoredVR", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelectedColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double18 = settingRepository1.GetAttr("SpkBMNormalModeFaceSelectedColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelectedColorStoredVR"
+' Returned value : (Variant) (Double) 11272021.000000
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceSelectedColorStoredVR", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelectedColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double19 = settingRepository1.GetAttr("SpkBMNormalModeVertexSelAndPreselColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelAndPreselColorStored"
+' Returned value : (Variant) (Double) 8174079.000000
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexSelAndPreselColorStored", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelAndPreselColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double20 = settingRepository1.GetAttr("SpkBMNormalModeEdgeSelAndPreselColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelAndPreselColorStored"
+' Returned value : (Variant) (Double) 8174079.000000
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeSelAndPreselColorStored", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelAndPreselColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double21 = settingRepository1.GetAttr("SpkBMNormalModeFaceSelAndPreselColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelAndPreselColorStored"
+' Returned value : (Variant) (Double) 11272116.000000
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceSelAndPreselColorStored", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelAndPreselColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double22 = settingRepository1.GetAttr("SpkBMNormalModeVertexSelAndPreselColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelAndPreselColorStoredVR"
+' Returned value : (Variant) (Double) 8174079.000000
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexSelAndPreselColorStoredVR", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexSelAndPreselColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double23 = settingRepository1.GetAttr("SpkBMNormalModeEdgeSelAndPreselColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelAndPreselColorStoredVR"
+' Returned value : (Variant) (Double) 8174079.000000
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeSelAndPreselColorStoredVR", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeSelAndPreselColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double24 = settingRepository1.GetAttr("SpkBMNormalModeFaceSelAndPreselColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelAndPreselColorStoredVR"
+' Returned value : (Variant) (Double) 11272116.000000
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceSelAndPreselColorStoredVR", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceSelAndPreselColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double25 = settingRepository1.GetAttr("SpkBMNormalModeVertexNotSelectableColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNotSelectableColorStored"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexNotSelectableColorStored", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNotSelectableColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double26 = settingRepository1.GetAttr("SpkBMNormalModeEdgeNotSelectableColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNotSelectableColorStored"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeNotSelectableColorStored", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNotSelectableColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double27 = settingRepository1.GetAttr("SpkBMNormalModeFaceNotSelectableColorStored")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNotSelectableColorStored"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceNotSelectableColorStored", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNotSelectableColorStored"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double28 = settingRepository1.GetAttr("SpkBMNormalModeVertexNotSelectableColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNotSelectableColorStoredVR"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "SpkBMNormalModeVertexNotSelectableColorStoredVR", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeVertexNotSelectableColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double29 = settingRepository1.GetAttr("SpkBMNormalModeEdgeNotSelectableColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNotSelectableColorStoredVR"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "SpkBMNormalModeEdgeNotSelectableColorStoredVR", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeEdgeNotSelectableColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double30 = settingRepository1.GetAttr("SpkBMNormalModeFaceNotSelectableColorStoredVR")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNotSelectableColorStoredVR"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "SpkBMNormalModeFaceNotSelectableColorStoredVR", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "SpkBMNormalModeFaceNotSelectableColorStoredVR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

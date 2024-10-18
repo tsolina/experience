@@ -1,0 +1,28 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("MachiningFBDI")
+
+boolean1 = settingRepository1.GetAttr("MachiningFBDIUserRepMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "MachiningFBDIUserRepMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "MachiningFBDIUserRepMode", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "MachiningFBDIUserRepMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

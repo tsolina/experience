@@ -1,0 +1,218 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBMfgLayoutSettings")
+
+bSTR1 = settingRepository1.GetAttr("SheetStandard")
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStandard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SheetStandard", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStandard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("SheetStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStyle"
+' Returned value : (Variant) (String) "A0 ISO"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SheetStyle", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR7 = settingRepository1.GetAttr("SheetStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStyle"
+' Returned value : (Variant) (String) "A0 ISO"
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SheetStyle", bSTR8, bSTR9, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("SheetStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStyle"
+' Returned value : (Variant) (String) "A0 ISO"
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SheetStyle", bSTR11, bSTR12, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR13 = settingRepository1.GetAttr("SheetOrientation")
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetOrientation"
+' Returned value : (Variant) (String) "Landscape"
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SheetOrientation", bSTR14, bSTR15, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SheetOrientation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("ShowLocalAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowLocalAxis"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ShowLocalAxis", bSTR16, bSTR17, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowLocalAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("CuboidLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "CuboidLength"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "CuboidLength", bSTR18, bSTR19, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "CuboidLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("CuboidWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "CuboidWidth"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "CuboidWidth", bSTR20, bSTR21, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "CuboidWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float3 = settingRepository1.GetAttr("CuboidHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "CuboidHeight"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "CuboidHeight", bSTR22, bSTR23, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "CuboidHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float4 = settingRepository1.GetAttr("CylinderRadius")
+'--------------------------------------------------
+' Parameter 1 : (String) "CylinderRadius"
+' Returned value : (Variant) (Float) 0.500000
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "CylinderRadius", bSTR24, bSTR25, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "CylinderRadius"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float5 = settingRepository1.GetAttr("CylinderHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "CylinderHeight"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "CylinderHeight", bSTR26, bSTR27, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "CylinderHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

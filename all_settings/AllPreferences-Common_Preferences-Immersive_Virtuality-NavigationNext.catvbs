@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NavigationNext")
+
+float1 = settingRepository1.GetAttr("MaxNavSpeed")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxNavSpeed"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "MaxNavSpeed", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxNavSpeed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("RotStepAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotStepAngle"
+' Returned value : (Variant) (Float) 20.000000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "RotStepAngle", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "RotStepAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float3 = settingRepository1.GetAttr("RotSpeed")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotSpeed"
+' Returned value : (Variant) (Float) 5.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "RotSpeed", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "RotSpeed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("RotMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RotMode", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RotMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

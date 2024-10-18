@@ -1,0 +1,294 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATLivePhotoSettingsRepository")
+
+boolean1 = settingRepository1.GetAttr("ReconstructionAssistant")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReconstructionAssistant"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ReconstructionAssistant", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ReconstructionAssistant"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DisplayDiagnostic")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayDiagnostic"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DisplayDiagnostic", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayDiagnostic"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DisplayConstraints")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayConstraints"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DisplayConstraints", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayConstraints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("ColorDrawnElement")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDrawnElement"
+' Returned value : (Variant) (Unsigned Long) 3158064
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ColorDrawnElement", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDrawnElement"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("ColorDefaultConstraints")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDefaultConstraints"
+' Returned value : (Variant) (Unsigned Long) 2829311
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ColorDefaultConstraints", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDefaultConstraints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("ColorDefaultSymmetries")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDefaultSymmetries"
+' Returned value : (Variant) (Unsigned Long) 2261704
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ColorDefaultSymmetries", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDefaultSymmetries"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("ColorCanBeReconstructed")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorCanBeReconstructed"
+' Returned value : (Variant) (Unsigned Long) 5291566
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ColorCanBeReconstructed", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorCanBeReconstructed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("ColorDiagnostic")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDiagnostic"
+' Returned value : (Variant) (Unsigned Long) 15089702
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ColorDiagnostic", bSTR15, bSTR16, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorDiagnostic"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("ColorProposal")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorProposal"
+' Returned value : (Variant) (Unsigned Long) 15245358
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ColorProposal", bSTR17, bSTR18, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorProposal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("ColorIsExtracted")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorIsExtracted"
+' Returned value : (Variant) (Unsigned Long) 11265688
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ColorIsExtracted", bSTR19, bSTR20, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorIsExtracted"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("PhotoViewMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "PhotoViewMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "PhotoViewMode", bSTR21, bSTR22, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "PhotoViewMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("BoardAutoHide")
+'--------------------------------------------------
+' Parameter 1 : (String) "BoardAutoHide"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "BoardAutoHide", bSTR23, bSTR24, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "BoardAutoHide"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("WarningOnDrop")
+'--------------------------------------------------
+' Parameter 1 : (String) "WarningOnDrop"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "WarningOnDrop", bSTR25, bSTR26, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "WarningOnDrop"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("MultipleReference")
+'--------------------------------------------------
+' Parameter 1 : (String) "MultipleReference"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "MultipleReference", bSTR27, bSTR28, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "MultipleReference"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("MatchingAssistant")
+'--------------------------------------------------
+' Parameter 1 : (String) "MatchingAssistant"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "MatchingAssistant", bSTR29, bSTR30, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "MatchingAssistant"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

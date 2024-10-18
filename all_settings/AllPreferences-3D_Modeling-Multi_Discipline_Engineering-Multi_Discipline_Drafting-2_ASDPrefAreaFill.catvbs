@@ -1,0 +1,169 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ASDPrefAreaFill")
+
+boolean1 = settingRepository1.GetAttr("ShowHiddenElements")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowHiddenElements"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ShowHiddenElements", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowHiddenElements"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("OverrideHiddenColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "OverrideHiddenColor"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "OverrideHiddenColor", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "OverrideHiddenColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("HiddenSolidColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "HiddenSolidColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 75
+'    Array[1] : (Variant) (Unsigned Long) 130
+'    Array[2] : (Variant) (Unsigned Long) 160
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "HiddenSolidColor", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "HiddenSolidColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("HiddenAreaOpacity")
+'--------------------------------------------------
+' Parameter 1 : (String) "HiddenAreaOpacity"
+' Returned value : (Variant) (Unsigned Long) 50
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "HiddenAreaOpacity", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "HiddenAreaOpacity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ShowSplittedElements")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowSplittedElements"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ShowSplittedElements", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowSplittedElements"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("OverrideSplittedColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "OverrideSplittedColor"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "OverrideSplittedColor", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "OverrideSplittedColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("SplittedSolidColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SplittedSolidColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 75
+'    Array[1] : (Variant) (Unsigned Long) 130
+'    Array[2] : (Variant) (Unsigned Long) 160
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SplittedSolidColor", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SplittedSolidColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SplittedAreaOpacity")
+'--------------------------------------------------
+' Parameter 1 : (String) "SplittedAreaOpacity"
+' Returned value : (Variant) (Unsigned Long) 80
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SplittedAreaOpacity", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SplittedAreaOpacity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

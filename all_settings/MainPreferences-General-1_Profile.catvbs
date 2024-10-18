@@ -1,0 +1,28 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("UserProfileRepository")
+
+bSTR1 = settingRepository1.GetAttr("ProfileName")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileName"
+' Returned value : (Variant) (String) "3DEXPERIENCEPROFILE"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ProfileName", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

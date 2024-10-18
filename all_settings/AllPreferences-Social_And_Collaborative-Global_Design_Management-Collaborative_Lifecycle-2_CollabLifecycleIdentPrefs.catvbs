@@ -1,0 +1,144 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMBusinessLogic")
+
+bSTR1 = settingRepository1.GetAttr("IdString")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdString"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "IdString", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "IdString"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("VPMIdentificationSettingDlg")
+
+boolean2 = settingRepository2.GetAttr("VPMNDupplicateMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNDupplicateMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository2.GetAttrInfo "VPMNDupplicateMode", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNDupplicateMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) True
+'--------------------------------------------------
+
+boolean4 = settingRepository2.GetAttr("VPMNShowPreviewMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNShowPreviewMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean5
+settingRepository2.GetAttrInfo "VPMNShowPreviewMode", bSTR6, bSTR7, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNShowPreviewMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository2.GetAttr("VPMShowRevAndMaturityFirstMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowRevAndMaturityFirstMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean7
+settingRepository2.GetAttrInfo "VPMShowRevAndMaturityFirstMode", bSTR8, bSTR9, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowRevAndMaturityFirstMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository2.GetAttr("VPMShowResultsMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowResultsMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean9
+settingRepository2.GetAttrInfo "VPMShowResultsMode", bSTR10, bSTR11, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowResultsMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository2.GetAttr("VPMShowResultsMax")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowResultsMax"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean10
+settingRepository2.GetAttrInfo "VPMShowResultsMax", bSTR12, bSTR13, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowResultsMax"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR14 = settingRepository2.GetAttr("VPMShowAttributesString")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowAttributesString"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository2.GetAttrInfo "VPMShowAttributesString", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMShowAttributesString"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

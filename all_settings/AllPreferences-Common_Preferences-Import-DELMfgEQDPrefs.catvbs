@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DeviceBuilder")
+
+boolean1 = settingRepository1.GetAttr("FBDIModeForDeviceBuilder")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIModeForDeviceBuilder"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "FBDIModeForDeviceBuilder", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIModeForDeviceBuilder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("FBDIModeMountOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIModeMountOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "FBDIModeMountOverload", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIModeMountOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("FBDIModeAttachOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIModeAttachOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "FBDIModeAttachOverload", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDIModeAttachOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

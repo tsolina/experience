@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATOIC")
+
+boolean1 = settingRepository1.GetAttr("OICActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "OICActivation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "OICActivation", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "OICActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("OICServerURL")
+'--------------------------------------------------
+' Parameter 1 : (String) "OICServerURL"
+' Returned value : (Variant) (String) "https://r1132100778008-eu1-space.3dexperience.3ds.com:443/upload"
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "OICServerURL", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "OICServerURL"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("MTBFServerURL")
+'--------------------------------------------------
+' Parameter 1 : (String) "MTBFServerURL"
+' Returned value : (Variant) (String) "https://ds3dexp-eu-listencat-ext.extranet.3ds.com/upload"
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "MTBFServerURL", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "MTBFServerURL"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

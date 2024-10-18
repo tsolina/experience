@@ -1,0 +1,91 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+uLong1 = settingRepository1.GetAttr("TPS_AUTO_PT_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AUTO_PT_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "TPS_AUTO_PT_CHECK_SETTING", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AUTO_PT_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("TPS_AUTO_LINE_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AUTO_LINE_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TPS_AUTO_LINE_CHECK_SETTING", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AUTO_LINE_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("TPS_AUTO_PLANE_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AUTO_PLANE_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "TPS_AUTO_PLANE_CHECK_SETTING", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AUTO_PLANE_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble1
+arrayOfVariantOfDouble1 = settingRepository1.GetAttrArray("TPS_LIMITS_OVERRUN_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_LIMITS_OVERRUN_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 10.000000
+'    Array[1] : (Variant) (Double) 1000.000000
+'    Array[2] : (Variant) (Double) 100000.000000
+'    Array[3] : (Variant) (Double) 0.100000
+'    Array[4] : (Variant) (Double) 0.001000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "TPS_LIMITS_OVERRUN_SETTING", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_LIMITS_OVERRUN_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

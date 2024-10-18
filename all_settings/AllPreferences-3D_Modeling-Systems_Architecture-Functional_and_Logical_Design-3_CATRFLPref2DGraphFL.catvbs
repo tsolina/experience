@@ -1,0 +1,397 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+uLong1 = settingRepository1.GetAttr("RFLPGnrlDDFrom2DOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlDDFrom2DOptions"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RFLPGnrlDDFrom2DOptions", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlDDFrom2DOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("RFLPGnrlBridgeOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlBridgeOptions"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "RFLPGnrlBridgeOptions", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlBridgeOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("RFLPGnrlCnxUseAutoRouting")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlCnxUseAutoRouting"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "RFLPGnrlCnxUseAutoRouting", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlCnxUseAutoRouting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("RFLPGnrlILOptionsShowOtherCtxt")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlILOptionsShowOtherCtxt"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RFLPGnrlILOptionsShowOtherCtxt", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlILOptionsShowOtherCtxt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("RFLPGnrlGridDisplayOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridDisplayOptions"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "RFLPGnrlGridDisplayOptions", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridDisplayOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("RFLPGnrlGridSnapPtOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridSnapPtOptions"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "RFLPGnrlGridSnapPtOptions", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridSnapPtOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("RFLPNewGridHorizontalSpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPNewGridHorizontalSpacing"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "RFLPNewGridHorizontalSpacing", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPNewGridHorizontalSpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("RFLPGnrlGridSnapPtOptionsGraduations")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridSnapPtOptionsGraduations"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "RFLPGnrlGridSnapPtOptionsGraduations", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridSnapPtOptionsGraduations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("RFLPGnrlGridAllowDistortionsOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridAllowDistortionsOptions"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "RFLPGnrlGridAllowDistortionsOptions", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridAllowDistortionsOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("RFLPNewGridVerticalSpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPNewGridVerticalSpacing"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "RFLPNewGridVerticalSpacing", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPNewGridVerticalSpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("RFLPGnrlGridAllowDistortionsOptionsGraduations")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridAllowDistortionsOptionsGraduations"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "RFLPGnrlGridAllowDistortionsOptionsGraduations", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlGridAllowDistortionsOptionsGraduations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("RFLPGnrlAllowCopilot")
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlAllowCopilot"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "RFLPGnrlAllowCopilot", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "RFLPGnrlAllowCopilot"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("SchGridStylePrimaryChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SchGridStylePrimaryChkButton", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SchGridStylePrimaryColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 205
+'    Array[1] : (Variant) (Unsigned Long) 205
+'    Array[2] : (Variant) (Unsigned Long) 193
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "SchGridStylePrimaryColor", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("SchGridStylePrimaryDashed")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryDashed"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "SchGridStylePrimaryDashed", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryDashed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("SchGridStylePrimaryWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryWeight"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "SchGridStylePrimaryWeight", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStylePrimaryWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("SchGridStyleSecondaryChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "SchGridStyleSecondaryChkButton", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("SchGridStyleSecondaryColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 205
+'    Array[1] : (Variant) (Unsigned Long) 205
+'    Array[2] : (Variant) (Unsigned Long) 193
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "SchGridStyleSecondaryColor", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("SchGridStyleSecondaryDashed")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryDashed"
+' Returned value : (Variant) (Unsigned Long) 6
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "SchGridStyleSecondaryDashed", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryDashed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("SchGridStyleSecondaryWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryWeight"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "SchGridStyleSecondaryWeight", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "SchGridStyleSecondaryWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,810 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+uLong1 = settingRepository1.GetAttr("UCDTitleFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDTitleFontSize"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UCDTitleFontSize", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDTitleFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("UCDTitleFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDTitleFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "UCDTitleFontColor", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDTitleFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("UCDSystemCheckOverride")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemCheckOverride"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "UCDSystemCheckOverride", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemCheckOverride"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("UCDSystemLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "UCDSystemLineColor", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("UCDSystemLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "UCDSystemLineType", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("UCDSystemLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "UCDSystemLineThickness", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("UCDSystemFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "UCDSystemFontSize", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("UCDSystemFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "UCDSystemFontColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDSystemFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("UCDActorCheckOverride")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorCheckOverride"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "UCDActorCheckOverride", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorCheckOverride"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("UCDActorLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "UCDActorLineColor", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("UCDActorLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "UCDActorLineType", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("UCDActorLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "UCDActorLineThickness", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("UCDActorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "UCDActorFontSize", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("UCDActorFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "UCDActorFontColor", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDActorFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("UCDUseCaseFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "UCDUseCaseFillColor", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("UCDUseCaseFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 100
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "UCDUseCaseFillTransparency", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("UCDUseCaseLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "UCDUseCaseLineColor", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("UCDUseCaseLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "UCDUseCaseLineType", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("UCDUseCaseLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "UCDUseCaseLineThickness", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("UCDUseCaseFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "UCDUseCaseFontSize", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("UCDUseCaseFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "UCDUseCaseFontColor", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDUseCaseFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong9
+arrayOfVariantOfULong9 = settingRepository1.GetAttrArray("UCDAssociationLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "UCDAssociationLineColor", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("UCDAssociationLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "UCDAssociationLineType", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("UCDAssociationLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "UCDAssociationLineThickness", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("UCDAssociationFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "UCDAssociationFontSize", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong10
+arrayOfVariantOfULong10 = settingRepository1.GetAttrArray("UCDAssociationFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "UCDAssociationFontColor", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDAssociationFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong11
+arrayOfVariantOfULong11 = settingRepository1.GetAttrArray("UCDExtendLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "UCDExtendLineColor", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("UCDExtendLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendLineType"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "UCDExtendLineType", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("UCDExtendLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "UCDExtendLineThickness", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("UCDExtendFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "UCDExtendFontSize", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong12
+arrayOfVariantOfULong12 = settingRepository1.GetAttrArray("UCDExtendFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "UCDExtendFontColor", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDExtendFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong13
+arrayOfVariantOfULong13 = settingRepository1.GetAttrArray("UCDIncludeLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "UCDIncludeLineColor", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("UCDIncludeLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeLineType"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "UCDIncludeLineType", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("UCDIncludeLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "UCDIncludeLineThickness", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("UCDIncludeFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "UCDIncludeFontSize", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong14
+arrayOfVariantOfULong14 = settingRepository1.GetAttrArray("UCDIncludeFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "UCDIncludeFontColor", bSTR71, bSTR72, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDIncludeFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong15
+arrayOfVariantOfULong15 = settingRepository1.GetAttrArray("UCDGeneralizationLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDGeneralizationLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "UCDGeneralizationLineColor", bSTR73, bSTR74, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDGeneralizationLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("UCDGeneralizationLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDGeneralizationLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "UCDGeneralizationLineType", bSTR75, bSTR76, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDGeneralizationLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong24 = settingRepository1.GetAttr("UCDGeneralizationLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDGeneralizationLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "UCDGeneralizationLineThickness", bSTR77, bSTR78, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "UCDGeneralizationLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

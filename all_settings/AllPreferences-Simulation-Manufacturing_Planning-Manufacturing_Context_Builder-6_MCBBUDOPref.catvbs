@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELMfgContextBuilderSettings")
+
+long1 = settingRepository1.GetAttr("UDODefault")
+'--------------------------------------------------
+' Parameter 1 : (String) "UDODefault"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UDODefault", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UDODefault"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("UDOSample")
+'--------------------------------------------------
+' Parameter 1 : (String) "UDOSample"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "UDOSample", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "UDOSample"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("UDOInWork")
+'--------------------------------------------------
+' Parameter 1 : (String) "UDOInWork"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "UDOInWork", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "UDOInWork"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

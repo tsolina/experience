@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATFmtQualityCheckOptions")
+
+long1 = settingRepository1.GetAttr("DefaultQualityFileOrDB")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultQualityFileOrDB"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DefaultQualityFileOrDB", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultQualityFileOrDB"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("DefaultQualityList")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultQualityList"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DefaultQualityList", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultQualityList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("DefaultQualityDBCriteriaSetName")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultQualityDBCriteriaSetName"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DefaultQualityDBCriteriaSetName", bSTR7, bSTR8, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultQualityDBCriteriaSetName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

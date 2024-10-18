@@ -1,0 +1,182 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("MoldToolingDesignGeneral")
+
+boolean1 = settingRepository1.GetAttr("AnchorPatternVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnchorPatternVisualization"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AnchorPatternVisualization", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AnchorPatternVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("MBAxisOrientation")
+'--------------------------------------------------
+' Parameter 1 : (String) "MBAxisOrientation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "MBAxisOrientation", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "MBAxisOrientation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("CreateRunnerStruct")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateRunnerStruct"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "CreateRunnerStruct", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateRunnerStruct"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("CreateCoolingStruct")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCoolingStruct"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "CreateCoolingStruct", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCoolingStruct"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ImportCoreCavitySurfaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportCoreCavitySurfaces"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ImportCoreCavitySurfaces", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportCoreCavitySurfaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("KeepLinkForCoolingAnchor")
+'--------------------------------------------------
+' Parameter 1 : (String) "KeepLinkForCoolingAnchor"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "KeepLinkForCoolingAnchor", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "KeepLinkForCoolingAnchor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("ToolingDesignGeneral")
+
+boolean13 = settingRepository2.GetAttr("GroupAssemblyImpactAfterImpactComputation")
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupAssemblyImpactAfterImpactComputation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository2.GetAttrInfo "GroupAssemblyImpactAfterImpactComputation", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "GroupAssemblyImpactAfterImpactComputation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("NbMRUSave")
+'--------------------------------------------------
+' Parameter 1 : (String) "NbMRUSave"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "NbMRUSave", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "NbMRUSave"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("AddResolvedToMRU")
+'--------------------------------------------------
+' Parameter 1 : (String) "AddResolvedToMRU"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "AddResolvedToMRU", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "AddResolvedToMRU"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

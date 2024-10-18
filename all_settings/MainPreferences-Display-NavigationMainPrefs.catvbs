@@ -1,0 +1,313 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VisualizationRepository")
+
+boolean1 = settingRepository1.GetAttr("Viewpoint")
+'--------------------------------------------------
+' Parameter 1 : (String) "Viewpoint"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Viewpoint", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Viewpoint"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("RotationSphereMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationSphereMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RotationSphereMode", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationSphereMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("NavigIconMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "NavigIconMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "NavigIconMode", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "NavigIconMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("MouseFreeMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "MouseFreeMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "MouseFreeMode", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "MouseFreeMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("MouseSpeedValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "MouseSpeedValue"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "MouseSpeedValue", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "MouseSpeedValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("KeyboardRotationAngleValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "KeyboardRotationAngleValue"
+' Returned value : (Variant) (Unsigned Long) 9
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "KeyboardRotationAngleValue", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "KeyboardRotationAngleValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("TightReframeMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "TightReframeMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "TightReframeMode", bSTR13, bSTR14, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "TightReframeMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("Gravity")
+'--------------------------------------------------
+' Parameter 1 : (String) "Gravity"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "Gravity", bSTR15, bSTR16, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "Gravity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("GravityAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "GravityAxis"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "GravityAxis", bSTR17, bSTR18, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "GravityAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("FlyCollisionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlyCollisionMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "FlyCollisionMode", bSTR19, bSTR20, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "FlyCollisionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("FlyCollisionType")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlyCollisionType"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "FlyCollisionType", bSTR21, bSTR22, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "FlyCollisionType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("FlyCollisionSphereRadius")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlyCollisionSphereRadius"
+' Returned value : (Variant) (Float) 1000.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "FlyCollisionSphereRadius", bSTR23, bSTR24, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "FlyCollisionSphereRadius"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("FlySpeedMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlySpeedMode"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "FlySpeedMode", bSTR25, bSTR26, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "FlySpeedMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("FlySpeed")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlySpeed"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "FlySpeed", bSTR27, bSTR28, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "FlySpeed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("FollowGroundMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FollowGroundMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "FollowGroundMode", bSTR29, bSTR30, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "FollowGroundMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("FollowGroundAltitude")
+'--------------------------------------------------
+' Parameter 1 : (String) "FollowGroundAltitude"
+' Returned value : (Variant) (Float) 0.000000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "FollowGroundAltitude", bSTR31, bSTR32, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "FollowGroundAltitude"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

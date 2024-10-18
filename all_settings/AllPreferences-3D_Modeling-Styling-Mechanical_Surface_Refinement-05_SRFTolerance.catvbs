@@ -1,0 +1,173 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FreeStyleGlobalUserSettings")
+
+double1 = settingRepository1.GetAttr("G0Tolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "G0Tolerance"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "G0Tolerance", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "G0Tolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("G1Tolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "G1Tolerance"
+' Returned value : (Variant) (Double) 0.500000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "G1Tolerance", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "G1Tolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("G2Tolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "G2Tolerance"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "G2Tolerance", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "G2Tolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("G3Tolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "G3Tolerance"
+' Returned value : (Variant) (Double) 15.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "G3Tolerance", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "G3Tolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("OutOfToleranceColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "OutOfToleranceColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "OutOfToleranceColor", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "OutOfToleranceColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("WithinToleranceColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "WithinToleranceColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "WithinToleranceColor", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "WithinToleranceColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("DeactivatedColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DeactivatedColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "DeactivatedColor", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "DeactivatedColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("CstDeviationInViewer")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstDeviationInViewer"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "CstDeviationInViewer", bSTR15, bSTR16, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "CstDeviationInViewer"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

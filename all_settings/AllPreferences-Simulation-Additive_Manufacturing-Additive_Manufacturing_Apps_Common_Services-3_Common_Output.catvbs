@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELAdditiveMfgPreferencesRepository")
+
+bSTR1 = settingRepository1.GetAttr("PartSuffix")
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSuffix"
+' Returned value : (Variant) (String) "_Part"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "PartSuffix", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSuffix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("LabelSuffix")
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelSuffix"
+' Returned value : (Variant) (String) "_Label"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "LabelSuffix", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelSuffix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR7 = settingRepository1.GetAttr("DesignedSupportSuffix")
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignedSupportSuffix"
+' Returned value : (Variant) (String) "_DesignedSupport"
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DesignedSupportSuffix", bSTR8, bSTR9, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DesignedSupportSuffix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("TreeSupportSuffix")
+'--------------------------------------------------
+' Parameter 1 : (String) "TreeSupportSuffix"
+' Returned value : (Variant) (String) "_TreeAndConical"
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "TreeSupportSuffix", bSTR11, bSTR12, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "TreeSupportSuffix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR13 = settingRepository1.GetAttr("WiredSupportSuffix")
+'--------------------------------------------------
+' Parameter 1 : (String) "WiredSupportSuffix"
+' Returned value : (Variant) (String) "_Wired"
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "WiredSupportSuffix", bSTR14, bSTR15, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "WiredSupportSuffix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR16 = settingRepository1.GetAttr("VolumeSupportSuffix")
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeSupportSuffix"
+' Returned value : (Variant) (String) "_Volume"
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "VolumeSupportSuffix", bSTR17, bSTR18, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "VolumeSupportSuffix"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("RenderingBatchSettings")
+
+bSTR1 = settingRepository1.GetAttr("QueueAddress")
+'--------------------------------------------------
+' Parameter 1 : (String) "QueueAddress"
+' Returned value : (Variant) (String) "localhost"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "QueueAddress", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "QueueAddress"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("QueuePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "QueuePort"
+' Returned value : (Variant) (Unsigned Long) 10001
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "QueuePort", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "QueuePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR6 = settingRepository1.GetAttr("SaveBatchDirectory")
+'--------------------------------------------------
+' Parameter 1 : (String) "SaveBatchDirectory"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SaveBatchDirectory", bSTR7, bSTR8, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SaveBatchDirectory"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR9 = settingRepository1.GetAttr("CacheBatchDirectory")
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheBatchDirectory"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CacheBatchDirectory", bSTR10, bSTR11, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CacheBatchDirectory"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

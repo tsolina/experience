@@ -1,0 +1,237 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+long1 = settingRepository1.GetAttr("DrwGenerationModeVal")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationModeVal"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DrwGenerationModeVal", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGenerationModeVal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("Drw_Gen_DelayedUpdate")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_Gen_DelayedUpdate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Drw_Gen_DelayedUpdate", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_Gen_DelayedUpdate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("CATDrwPreventAutoUpdate")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwPreventAutoUpdate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CATDrwPreventAutoUpdate", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwPreventAutoUpdate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("DrwExactPreview")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwExactPreview"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "DrwExactPreview", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwExactPreview"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("ViewOrientation")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewOrientation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ViewOrientation", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewOrientation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("CATDrwStrictPositioning")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwStrictPositioning"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "CATDrwStrictPositioning", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwStrictPositioning"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("DrwGMECreation")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGMECreation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DrwGMECreation", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwGMECreation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("GenDimFilter")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimFilter"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "GenDimFilter", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimFilter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("GenDimAutoPos")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimAutoPos"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "GenDimAutoPos", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimAutoPos"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("GenDimAutoTrans")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimAutoTrans"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "GenDimAutoTrans", bSTR19, bSTR20, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimAutoTrans"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("GenDimAnal")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimAnal"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "GenDimAnal", bSTR21, bSTR22, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimAnal"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("GenDimSemiAutoTimeOut")
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimSemiAutoTimeOut"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "GenDimSemiAutoTimeOut", bSTR23, bSTR24, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "GenDimSemiAutoTimeOut"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

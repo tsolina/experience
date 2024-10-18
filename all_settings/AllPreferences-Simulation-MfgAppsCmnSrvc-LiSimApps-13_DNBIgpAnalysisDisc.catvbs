@@ -1,0 +1,390 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBIgpAnalysisDiscSettings")
+
+short1 = settingRepository1.GetAttr("RotationAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationAxis"
+' Returned value : (Variant) (Short) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RotationAxis", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+short2 = settingRepository1.GetAttr("ApproachAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApproachAxis"
+' Returned value : (Variant) (Short) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ApproachAxis", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ApproachAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("ReachableRegionColour")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReachableRegionColour"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ReachableRegionColour", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ReachableRegionColour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository1.GetAttrArray("NotReachableRegionColour")
+'--------------------------------------------------
+' Parameter 1 : (String) "NotReachableRegionColour"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 148
+'    Array[1] : (Variant) (Long) 20
+'    Array[2] : (Variant) (Long) 94
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "NotReachableRegionColour", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "NotReachableRegionColour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong3
+arrayOfVariantOfLong3 = settingRepository1.GetAttrArray("ClashRegionColour")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashRegionColour"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ClashRegionColour", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashRegionColour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong4
+arrayOfVariantOfLong4 = settingRepository1.GetAttrArray("NotComputedRegionColour")
+'--------------------------------------------------
+' Parameter 1 : (String) "NotComputedRegionColour"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "NotComputedRegionColour", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "NotComputedRegionColour"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong5
+arrayOfVariantOfLong5 = settingRepository1.GetAttrArray("InterlockRegionColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "InterlockRegionColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 177
+'    Array[1] : (Variant) (Long) 193
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "InterlockRegionColor", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "InterlockRegionColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("ZbufferCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "ZbufferCheck"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ZbufferCheck", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ZbufferCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("DiscSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "DiscSize"
+' Returned value : (Variant) (Double) 0.100000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "DiscSize", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "DiscSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("DiscTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "DiscTransparency"
+' Returned value : (Variant) (Double) 75.000000
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "DiscTransparency", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "DiscTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("DiscThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DiscThickness"
+' Returned value : (Variant) (Double) 0.002000
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DiscThickness", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DiscThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("RingWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "RingWidth"
+' Returned value : (Variant) (Double) 0.005000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "RingWidth", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "RingWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("ToolPositionsCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolPositionsCheck"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ToolPositionsCheck", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolPositionsCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("GunOpenClearance_Check")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunOpenClearance_Check"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "GunOpenClearance_Check", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "GunOpenClearance_Check"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("GunOCLower")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunOCLower"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "GunOCLower", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "GunOCLower"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("GunOCUpper")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunOCUpper"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "GunOCUpper", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "GunOCUpper"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("GunTipAbrasion_Check")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTipAbrasion_Check"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "GunTipAbrasion_Check", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTipAbrasion_Check"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("GunTALower")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTALower"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "GunTALower", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTALower"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double8 = settingRepository1.GetAttr("GunTAUpper")
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTAUpper"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "GunTAUpper", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "GunTAUpper"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

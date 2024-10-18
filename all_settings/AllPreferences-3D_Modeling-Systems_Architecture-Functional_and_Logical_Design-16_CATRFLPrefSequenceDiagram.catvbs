@@ -1,0 +1,791 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+uLong1 = settingRepository1.GetAttr("SDTitleFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTitleFontSize"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SDTitleFontSize", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTitleFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("SDTitleFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTitleFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SDTitleFontColor", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTitleFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SDActorCheckOverride")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorCheckOverride"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SDActorCheckOverride", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorCheckOverride"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("SDActorFillColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFillColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 181
+'    Array[1] : (Variant) (Unsigned Long) 195
+'    Array[2] : (Variant) (Unsigned Long) 203
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SDActorFillColor", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFillColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SDActorFillTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFillTransparency"
+' Returned value : (Variant) (Unsigned Long) 70
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SDActorFillTransparency", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFillTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("SDActorLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SDActorLineColor", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SDActorLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SDActorLineType", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("SDActorLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SDActorLineThickness", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("SDActorFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SDActorFontSize", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("SDActorFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SDActorFontColor", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActorFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("SDLifelineLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDLifelineLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "SDLifelineLineColor", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "SDLifelineLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("SDLifelineLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDLifelineLineType"
+' Returned value : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SDLifelineLineType", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SDLifelineLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("SDLifelineLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDLifelineLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SDLifelineLineThickness", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SDLifelineLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("SDActivationLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "SDActivationLineColor", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("SDActivationLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "SDActivationLineType", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("SDActivationLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "SDActivationLineThickness", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("SDActivationFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "SDActivationFontSize", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("SDActivationFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "SDActivationFontColor", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "SDActivationFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("SDMessageCheckOverride")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageCheckOverride"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "SDMessageCheckOverride", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageCheckOverride"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("SDMessageLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 128
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "SDMessageLineColor", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("SDMessageLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "SDMessageLineThickness", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("SDMessageFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "SDMessageFontSize", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong9
+arrayOfVariantOfULong9 = settingRepository1.GetAttrArray("SDMessageFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "SDMessageFontColor", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "SDMessageFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong10
+arrayOfVariantOfULong10 = settingRepository1.GetAttrArray("SDGuardLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "SDGuardLineColor", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("SDGuardLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "SDGuardLineType", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("SDGuardLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "SDGuardLineThickness", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("SDGuardFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "SDGuardFontSize", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong11
+arrayOfVariantOfULong11 = settingRepository1.GetAttrArray("SDGuardFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "SDGuardFontColor", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "SDGuardFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong12
+arrayOfVariantOfULong12 = settingRepository1.GetAttrArray("SDInteractionUseLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "SDInteractionUseLineColor", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("SDInteractionUseLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "SDInteractionUseLineType", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("SDInteractionUseLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseLineThickness"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "SDInteractionUseLineThickness", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("SDInteractionUseFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "SDInteractionUseFontSize", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong13
+arrayOfVariantOfULong13 = settingRepository1.GetAttrArray("SDInteractionUseFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "SDInteractionUseFontColor", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "SDInteractionUseFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong14
+arrayOfVariantOfULong14 = settingRepository1.GetAttrArray("SDTimeDurationLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "SDTimeDurationLineColor", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("SDTimeDurationLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "SDTimeDurationLineType", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("SDTimeDurationLineThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationLineThickness"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "SDTimeDurationLineThickness", bSTR71, bSTR72, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationLineThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("SDTimeDurationFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationFontSize"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "SDTimeDurationFontSize", bSTR73, bSTR74, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong15
+arrayOfVariantOfULong15 = settingRepository1.GetAttrArray("SDTimeDurationFontColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationFontColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "SDTimeDurationFontColor", bSTR75, bSTR76, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "SDTimeDurationFontColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING
+
 from experience.system.any_object import AnyObject
 
 if TYPE_CHECKING:
@@ -8,6 +9,7 @@ if TYPE_CHECKING:
     from experience.cat_opns_measure_interfaces import MeasureService, MeasurableService
     from experience.plm_validation_interfaces import VALValidationService
     from experience.cat_opns_inertia_interfaces import InertiaService, InertiaBoxService
+    from experience.cat_opns_section_interfaces.section_service import SectionService
 
 class EditorServices():
     def __init__(self, com):
@@ -39,6 +41,15 @@ class EditorServices():
     def plm_product_service(self) -> 'PLMProductService':
         from experience.vpm_editor_context_interfaces import PLMProductService
         return PLMProductService(self.editor_services.GetService("PLMProductService"))
+    
+    def section_service(self) -> 'SectionService':
+        '''
+        - it seems not to be implemented in R426 - 24x -
+        - no CATOpnsSectionInterfaces.dll found in installation -
+        - still exist in documentation though -
+        '''
+        from experience.cat_opns_section_interfaces.section_service import SectionService
+        return SectionService(self.editor_services.GetService("SectionService"))
     
     def validation_service(self) -> 'VALValidationService':
         from experience.plm_validation_interfaces import VALValidationService

@@ -1,0 +1,106 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PPRNavigator")
+
+long1 = settingRepository1.GetAttr("NoViewWindowListNextTime")
+'--------------------------------------------------
+' Parameter 1 : (String) "NoViewWindowListNextTime"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "NoViewWindowListNextTime", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "NoViewWindowListNextTime"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ExploreWithinContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreWithinContext"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ExploreWithinContext", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreWithinContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ExploreWithParent")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreWithParent"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ExploreWithParent", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreWithParent"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("VPMNavigator")
+
+long4 = settingRepository2.GetAttr("DisplayThumbnailsExploreParents")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayThumbnailsExploreParents"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository2.GetAttrInfo "DisplayThumbnailsExploreParents", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayThumbnailsExploreParents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository2.GetAttr("DisplayTilesExploreParents")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTilesExploreParents"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository2.GetAttrInfo "DisplayTilesExploreParents", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTilesExploreParents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

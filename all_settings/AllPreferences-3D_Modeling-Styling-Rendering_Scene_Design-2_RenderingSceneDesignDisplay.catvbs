@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("RenderingOptionsSettings")
+
+long1 = settingRepository1.GetAttr("ProfileCombo")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileCombo"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ProfileCombo", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileCombo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("ProfileFileBrowse")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileFileBrowse"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ProfileFileBrowse", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ProfileFileBrowse"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("LightVisuMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "LightVisuMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "LightVisuMode", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "LightVisuMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("LightManipMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "LightManipMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "LightManipMode", bSTR8, bSTR9, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "LightManipMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

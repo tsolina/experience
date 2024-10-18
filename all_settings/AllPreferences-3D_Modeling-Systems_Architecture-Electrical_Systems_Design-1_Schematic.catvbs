@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ELEditorToolsOptions")
+
+uLong1 = settingRepository1.GetAttr("SchMoveViewChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchMoveViewChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SchMoveViewChkButton", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SchMoveViewChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("Schematic_ConfirmBeforeDeleteInViewChkButton_Elec")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ConfirmBeforeDeleteInViewChkButton_Elec"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Schematic_ConfirmBeforeDeleteInViewChkButton_Elec", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ConfirmBeforeDeleteInViewChkButton_Elec"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAWflUISettings")
+
+boolean1 = settingRepository1.GetAttr("DisableProcessReloadMessageDialog")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableProcessReloadMessageDialog"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DisableProcessReloadMessageDialog", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableProcessReloadMessageDialog"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("AutoMappingFlag")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoMappingFlag"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AutoMappingFlag", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoMappingFlag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("RealDigits")
+'--------------------------------------------------
+' Parameter 1 : (String) "RealDigits"
+' Returned value : (Variant) (Long) 7
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "RealDigits", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "RealDigits"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("StepNameFlag")
+'--------------------------------------------------
+' Parameter 1 : (String) "StepNameFlag"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "StepNameFlag", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "StepNameFlag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("AutoValidationFlag")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoValidationFlag"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "AutoValidationFlag", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoValidationFlag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("AutoCloseSearchPanelFlag")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoCloseSearchPanelFlag"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "AutoCloseSearchPanelFlag", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoCloseSearchPanelFlag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ParameterMappingView")
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterMappingView"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ParameterMappingView", bSTR13, bSTR14, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ParameterMappingView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

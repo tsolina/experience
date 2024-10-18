@@ -1,0 +1,351 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELDPMProcessCreationSettings")
+
+boolean1 = settingRepository1.GetAttr("ReconnectOperations")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReconnectOperations"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ReconnectOperations", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ReconnectOperations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ControlReassignmentInLPE")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlReassignmentInLPE"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ControlReassignmentInLPE", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlReassignmentInLPE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("SearchAssignableParent")
+'--------------------------------------------------
+' Parameter 1 : (String) "SearchAssignableParent"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SearchAssignableParent", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SearchAssignableParent"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ComputeResultingProducts")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeResultingProducts"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ComputeResultingProducts", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeResultingProducts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("AssignmentFilterMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AssignmentFilterMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "AssignmentFilterMode", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "AssignmentFilterMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("CreatePartialScope")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreatePartialScope"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "CreatePartialScope", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "CreatePartialScope"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("LoadResultingProducts")
+'--------------------------------------------------
+' Parameter 1 : (String) "LoadResultingProducts"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "LoadResultingProducts", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "LoadResultingProducts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("IndustryMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "IndustryMode"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "IndustryMode", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "IndustryMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("WorkingUnderAction")
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkingUnderAction"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "WorkingUnderAction", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "WorkingUnderAction"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("CopyModelFromProduct")
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyModelFromProduct"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "CopyModelFromProduct", bSTR19, bSTR20, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyModelFromProduct"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("CopyModelFromFather")
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyModelFromFather"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "CopyModelFromFather", bSTR21, bSTR22, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyModelFromFather"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("CopyModelVersion")
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyModelVersion"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "CopyModelVersion", bSTR23, bSTR24, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyModelVersion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("Overload3DValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "Overload3DValue"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "Overload3DValue", bSTR25, bSTR26, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "Overload3DValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("DisableCompute")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableCompute"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "DisableCompute", bSTR27, bSTR28, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableCompute"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("InsertionModeForInstallOnInstall")
+'--------------------------------------------------
+' Parameter 1 : (String) "InsertionModeForInstallOnInstall"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "InsertionModeForInstallOnInstall", bSTR29, bSTR30, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "InsertionModeForInstallOnInstall"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("UseSameProcessReference")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseSameProcessReference"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "UseSameProcessReference", bSTR31, bSTR32, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "UseSameProcessReference"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("ReuseSearchMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReuseSearchMode"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "ReuseSearchMode", bSTR33, bSTR34, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "ReuseSearchMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean31 = settingRepository1.GetAttr("CreateScopeOnProvide")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateScopeOnProvide"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "CreateScopeOnProvide", bSTR35, bSTR36, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateScopeOnProvide"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

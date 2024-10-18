@@ -1,0 +1,89 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VOCSettings")
+
+long1 = settingRepository1.GetAttr("DisplayMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DisplayMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("VOCResultColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "VOCResultColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 190
+'    Array[1] : (Variant) (Unsigned Long) 155
+'    Array[2] : (Variant) (Unsigned Long) 105
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "VOCResultColor", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "VOCResultColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("UsePartColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UsePartColor"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "UsePartColor", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "UsePartColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("UseGeometryColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseGeometryColor"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "UseGeometryColor", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "UseGeometryColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

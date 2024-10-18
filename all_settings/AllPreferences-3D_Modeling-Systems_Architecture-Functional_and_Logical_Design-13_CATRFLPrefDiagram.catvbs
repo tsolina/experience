@@ -1,0 +1,946 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PLMEditorColor")
+
+uLong1 = settingRepository1.GetAttr("Schematic_EnableEditScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_EnableEditScale"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Schematic_EnableEditScale", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_EnableEditScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("Schematic_ComponentScaleFactorValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ComponentScaleFactorValue"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Schematic_ComponentScaleFactorValue", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ComponentScaleFactorValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("Schematic_PropagateViewScaleToSymbol")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_PropagateViewScaleToSymbol"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Schematic_PropagateViewScaleToSymbol", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_PropagateViewScaleToSymbol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("Schematic_ShowSymbolRefModifyButtons")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ShowSymbolRefModifyButtons"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Schematic_ShowSymbolRefModifyButtons", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ShowSymbolRefModifyButtons"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("Schematic_ShowConnectedPorts")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ShowConnectedPorts"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "Schematic_ShowConnectedPorts", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ShowConnectedPorts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("Schematic_ShowBranchSymbols")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ShowBranchSymbols"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Schematic_ShowBranchSymbols", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ShowBranchSymbols"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("Schematic_AlwaysCreateNewConnectionPoint")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AlwaysCreateNewConnectionPoint"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "Schematic_AlwaysCreateNewConnectionPoint", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AlwaysCreateNewConnectionPoint"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("Schematic_AutoDisplayConnections")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutoDisplayConnections"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "Schematic_AutoDisplayConnections", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutoDisplayConnections"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("SchMoveViewChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "SchMoveViewChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SchMoveViewChkButton", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SchMoveViewChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("Schematic_ConfirmBeforeDeleteInViewChkButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ConfirmBeforeDeleteInViewChkButton"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "Schematic_ConfirmBeforeDeleteInViewChkButton", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_ConfirmBeforeDeleteInViewChkButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("Schematic_UIActiveContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_UIActiveContext"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "Schematic_UIActiveContext", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_UIActiveContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("Schematic_IsMainViewAvailable")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_IsMainViewAvailable"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "Schematic_IsMainViewAvailable", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_IsMainViewAvailable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("Schematic_GlobalUpdateActivationView")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_GlobalUpdateActivationView"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "Schematic_GlobalUpdateActivationView", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_GlobalUpdateActivationView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("Schematic_SuperimposedRoute")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_SuperimposedRoute"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "Schematic_SuperimposedRoute", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_SuperimposedRoute"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("Schematic_AutomaticAssignSpacesToComponents")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutomaticAssignSpacesToComponents"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "Schematic_AutomaticAssignSpacesToComponents", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutomaticAssignSpacesToComponents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("Schematic_AutomaticAssignSpacesToRoutes")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutomaticAssignSpacesToRoutes"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "Schematic_AutomaticAssignSpacesToRoutes", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutomaticAssignSpacesToRoutes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("Schematic_AutomaticAssignSpacesToGroups")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutomaticAssignSpacesToGroups"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "Schematic_AutomaticAssignSpacesToGroups", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutomaticAssignSpacesToGroups"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("Schematic_AllowCompSelectionDuringRoute")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AllowCompSelectionDuringRoute"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "Schematic_AllowCompSelectionDuringRoute", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AllowCompSelectionDuringRoute"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("Schematic_AllowPortCreationDuringRoute")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AllowPortCreationDuringRoute"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "Schematic_AllowPortCreationDuringRoute", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AllowPortCreationDuringRoute"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("Schematic_AllowToSwitchRoutingMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AllowToSwitchRoutingMode"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "Schematic_AllowToSwitchRoutingMode", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AllowToSwitchRoutingMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("DisplayManagementFor_PresentationView")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayManagementFor_PresentationView"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DisplayManagementFor_PresentationView", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayManagementFor_PresentationView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("Schematic_HideShowFrameSheet")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_HideShowFrameSheet"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "Schematic_HideShowFrameSheet", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_HideShowFrameSheet"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("Schematic_HideShowFrameView")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_HideShowFrameView"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "Schematic_HideShowFrameView", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_HideShowFrameView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("Schematic_Export_UseResourceTable")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_Export_UseResourceTable"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "Schematic_Export_UseResourceTable", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_Export_UseResourceTable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong24 = settingRepository1.GetAttr("Schematic_Save_Navigation_Info")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_Save_Navigation_Info"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "Schematic_Save_Navigation_Info", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_Save_Navigation_Info"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR51 = settingRepository1.GetAttr("standard")
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR52
+bSTR52 = ""
+Dim bSTR53
+bSTR53 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "standard", bSTR52, bSTR53, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong25 = settingRepository1.GetAttr("NumOfStandardPLM")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfStandardPLM"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR54
+bSTR54 = ""
+Dim bSTR55
+bSTR55 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "NumOfStandardPLM", bSTR54, bSTR55, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "NumOfStandardPLM"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "StandardPLM"
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLM"
+'--------------------------------------------------
+
+Dim bSTR56
+bSTR56 = ""
+Dim bSTR57
+bSTR57 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "StandardPLM", bSTR56, bSTR57, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLM"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "StandardPLMID"
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMID"
+'--------------------------------------------------
+
+Dim bSTR58
+bSTR58 = ""
+Dim bSTR59
+bSTR59 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "StandardPLMID", bSTR58, bSTR59, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMID"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean30 = settingRepository1.GetAttr("IsStandardPLM")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsStandardPLM"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR60
+bSTR60 = ""
+Dim bSTR61
+bSTR61 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "IsStandardPLM", bSTR60, bSTR61, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "IsStandardPLM"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("StandardPLMAdd")
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMAdd"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR62
+bSTR62 = ""
+Dim bSTR63
+bSTR63 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "StandardPLMAdd", bSTR62, bSTR63, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMAdd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean34 = settingRepository1.GetAttr("StandardPLMRemove")
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMRemove"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR64
+bSTR64 = ""
+Dim bSTR65
+bSTR65 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "StandardPLMRemove", bSTR64, bSTR65, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "StandardPLMRemove"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong26 = settingRepository1.GetAttr("Schematic_UseGap")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_UseGap"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR66
+bSTR66 = ""
+Dim bSTR67
+bSTR67 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "Schematic_UseGap", bSTR66, bSTR67, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_UseGap"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("Schematic_GapSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_GapSize"
+' Returned value : (Variant) (Double) 2.000000
+'--------------------------------------------------
+
+Dim bSTR68
+bSTR68 = ""
+Dim bSTR69
+bSTR69 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "Schematic_GapSize", bSTR68, bSTR69, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_GapSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong27 = settingRepository1.GetAttr("Schematic_GapPriority")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_GapPriority"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR70
+bSTR70 = ""
+Dim bSTR71
+bSTR71 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "Schematic_GapPriority", bSTR70, bSTR71, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_GapPriority"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong28 = settingRepository1.GetAttr("Schematic_AutoGap")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutoGap"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR72
+bSTR72 = ""
+Dim bSTR73
+bSTR73 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "Schematic_AutoGap", bSTR72, bSTR73, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_AutoGap"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong29 = settingRepository1.GetAttr("Schematic_FlowArrowFrequency_OnFirstSegment")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnFirstSegment"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR74
+bSTR74 = ""
+Dim bSTR75
+bSTR75 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "Schematic_FlowArrowFrequency_OnFirstSegment", bSTR74, bSTR75, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnFirstSegment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong30 = settingRepository1.GetAttr("Schematic_FlowArrowFrequency_OnLastSegment")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnLastSegment"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR76
+bSTR76 = ""
+Dim bSTR77
+bSTR77 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "Schematic_FlowArrowFrequency_OnLastSegment", bSTR76, bSTR77, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnLastSegment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong31 = settingRepository1.GetAttr("Schematic_FlowArrowFrequency_OnMiddleSegment")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnMiddleSegment"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR78
+bSTR78 = ""
+Dim bSTR79
+bSTR79 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "Schematic_FlowArrowFrequency_OnMiddleSegment", bSTR78, bSTR79, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnMiddleSegment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong32 = settingRepository1.GetAttr("Schematic_FlowArrowFrequency_OnAllOtherSegments")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnAllOtherSegments"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR80
+bSTR80 = ""
+Dim bSTR81
+bSTR81 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "Schematic_FlowArrowFrequency_OnAllOtherSegments", bSTR80, bSTR81, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowFrequency_OnAllOtherSegments"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong33 = settingRepository1.GetAttr("Schematic_FlowArrowPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowPosition"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR82
+bSTR82 = ""
+Dim bSTR83
+bSTR83 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "Schematic_FlowArrowPosition", bSTR82, bSTR83, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong34 = settingRepository1.GetAttr("Schematic_NewFlowArrowType")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_NewFlowArrowType"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR84
+bSTR84 = ""
+Dim bSTR85
+bSTR85 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "Schematic_NewFlowArrowType", bSTR84, bSTR85, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_NewFlowArrowType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong35 = settingRepository1.GetAttr("Schematic_FlowArrowTypeDisplayOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowTypeDisplayOption"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR86
+bSTR86 = ""
+Dim bSTR87
+bSTR87 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "Schematic_FlowArrowTypeDisplayOption", bSTR86, bSTR87, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "Schematic_FlowArrowTypeDisplayOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("ACILDisplaySchematic_LineColorForILBetweenInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineColorForILBetweenInstances"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 51
+'    Array[1] : (Variant) (Unsigned Long) 102
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR88
+bSTR88 = ""
+Dim bSTR89
+bSTR89 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "ACILDisplaySchematic_LineColorForILBetweenInstances", bSTR88, bSTR89, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineColorForILBetweenInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong36 = settingRepository1.GetAttr("ACILDisplaySchematic_LineTypeForILBetweenInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineTypeForILBetweenInstances"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR90
+bSTR90 = ""
+Dim bSTR91
+bSTR91 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "ACILDisplaySchematic_LineTypeForILBetweenInstances", bSTR90, bSTR91, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineTypeForILBetweenInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong37 = settingRepository1.GetAttr("ACILDisplaySchematic_LineWeightForILBetweenInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineWeightForILBetweenInstances"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR92
+bSTR92 = ""
+Dim bSTR93
+bSTR93 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "ACILDisplaySchematic_LineWeightForILBetweenInstances", bSTR92, bSTR93, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineWeightForILBetweenInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("ACILDisplaySchematic_LineColorForILBetweenConnectors")
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineColorForILBetweenConnectors"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 51
+'    Array[1] : (Variant) (Unsigned Long) 102
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR94
+bSTR94 = ""
+Dim bSTR95
+bSTR95 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "ACILDisplaySchematic_LineColorForILBetweenConnectors", bSTR94, bSTR95, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineColorForILBetweenConnectors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong38 = settingRepository1.GetAttr("ACILDisplaySchematic_LineTypeForILBetweenConnectors")
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineTypeForILBetweenConnectors"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR96
+bSTR96 = ""
+Dim bSTR97
+bSTR97 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "ACILDisplaySchematic_LineTypeForILBetweenConnectors", bSTR96, bSTR97, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineTypeForILBetweenConnectors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong39 = settingRepository1.GetAttr("ACILDisplaySchematic_LineWeightForILBetweenConnectors")
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineWeightForILBetweenConnectors"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR98
+bSTR98 = ""
+Dim bSTR99
+bSTR99 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "ACILDisplaySchematic_LineWeightForILBetweenConnectors", bSTR98, bSTR99, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "ACILDisplaySchematic_LineWeightForILBetweenConnectors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

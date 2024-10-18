@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VisualizationRepository")
+
+uLong1 = settingRepository1.GetAttr("AmbientActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "AmbientActivation"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "AmbientActivation", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "AmbientActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("DefaultDiffuseAmbientCoefficient")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultDiffuseAmbientCoefficient"
+' Returned value : (Variant) (Float) 0.800000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DefaultDiffuseAmbientCoefficient", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultDiffuseAmbientCoefficient"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("DefaultSpecularCoefficient")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSpecularCoefficient"
+' Returned value : (Variant) (Float) 1.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DefaultSpecularCoefficient", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSpecularCoefficient"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float3 = settingRepository1.GetAttr("DefaultShininess")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultShininess"
+' Returned value : (Variant) (Float) 0.660000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DefaultShininess", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultShininess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

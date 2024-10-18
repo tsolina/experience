@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("Interoperability")
+
+long1 = settingRepository1.GetAttr("DisplayMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayMode"
+' Returned value : (Variant) (Long) 524288
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DisplayMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DisplayV4Text3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayV4Text3D"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DisplayV4Text3D", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayV4Text3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("Draw")
+'--------------------------------------------------
+' Parameter 1 : (String) "Draw"
+' Returned value : (Variant) (String) "Draw"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Draw", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Draw"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("Code_page")
+'--------------------------------------------------
+' Parameter 1 : (String) "Code_page"
+' Returned value : (Variant) (Long) 8
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Code_page", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Code_page"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("PROJECT_File_Path")
+'--------------------------------------------------
+' Parameter 1 : (String) "PROJECT_File_Path"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "PROJECT_File_Path", bSTR11, bSTR12, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "PROJECT_File_Path"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR13 = settingRepository1.GetAttr("Dlname")
+'--------------------------------------------------
+' Parameter 1 : (String) "Dlname"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Dlname", bSTR14, bSTR15, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Dlname"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR16 = settingRepository1.GetAttr("Conversion_Table")
+'--------------------------------------------------
+' Parameter 1 : (String) "Conversion_Table"
+' Returned value : (Variant) (String) "0"
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "Conversion_Table", bSTR17, bSTR18, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Conversion_Table"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

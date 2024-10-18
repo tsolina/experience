@@ -1,0 +1,249 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+bSTR1 = settingRepository1.GetAttr("standard")
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Returned value : (Variant) (String) "ISO"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "standard", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "standard"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble1
+arrayOfVariantOfDouble1 = settingRepository1.GetAttrArray("AnnotationSetRatioSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationSetRatioSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 1.000000
+'    Array[1] : (Variant) (Double) 100.000000
+'    Array[2] : (Variant) (Double) 10000.000000
+'    Array[3] : (Variant) (Double) 0.010000
+'    Array[4] : (Variant) (Double) 0.000100
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AnnotationSetRatioSetting", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationSetRatioSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("AnnotationRatioAssistantSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationRatioAssistantSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "100;50;20;10;5;2;1;0.5;0.2;0.1;0.05;0.02;0.01"
+'    Array[1] : (Variant) (String) "10000;5000;2000;1000;500;200;100;50;20;10;5;2;1"
+'    Array[2] : (Variant) (String) "1000000;500000;200000;100000;50000;20000;10000;5000;2000;1000;500;200;100"
+'    Array[3] : (Variant) (String) "1;0.5;0.2;0.1;0.05;0.02;0.01;0.005;0.002;0.001;0.0005;0.0002;0.0001"
+'    Array[4] : (Variant) (String) "0.01;0.005;0.002;0.001;0.0005;0.0002;0.0001;0.00005;0.00002;0.00001;0.000005;0.000002;0.000001"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "AnnotationRatioAssistantSetting", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationRatioAssistantSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR8 = settingRepository1.GetAttr("UserFeatureTolerancingSchemaCatalog")
+'--------------------------------------------------
+' Parameter 1 : (String) "UserFeatureTolerancingSchemaCatalog"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "UserFeatureTolerancingSchemaCatalog", bSTR9, bSTR10, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "UserFeatureTolerancingSchemaCatalog"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR11 = settingRepository1.GetAttr("CATFTAGenTolFeatParamISO")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolFeatParamISO"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CATFTAGenTolFeatParamISO", bSTR12, bSTR13, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolFeatParamISO"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR14 = settingRepository1.GetAttr("CATFTAGenTolClassesISO")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolClassesISO"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "CATFTAGenTolClassesISO", bSTR15, bSTR16, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolClassesISO"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR17 = settingRepository1.GetAttr("CATFTAGenTolFeatParamASME")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolFeatParamASME"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "CATFTAGenTolFeatParamASME", bSTR18, bSTR19, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolFeatParamASME"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR20 = settingRepository1.GetAttr("CATFTAGenTolClassesASME")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolClassesASME"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "CATFTAGenTolClassesASME", bSTR21, bSTR22, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAGenTolClassesASME"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("NonSemanticAllwaysUpgrade")
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticAllwaysUpgrade"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "NonSemanticAllwaysUpgrade", bSTR23, bSTR24, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticAllwaysUpgrade"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("TPSUpgradeGeneralTol")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSUpgradeGeneralTol"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "TPSUpgradeGeneralTol", bSTR25, bSTR26, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "TPSUpgradeGeneralTol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("NonSemanticTolAllowed")
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticTolAllowed"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "NonSemanticTolAllowed", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticTolAllowed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("NonSemanticDimAllowed")
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticDimAllowed"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "NonSemanticDimAllowed", bSTR29, bSTR30, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticDimAllowed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

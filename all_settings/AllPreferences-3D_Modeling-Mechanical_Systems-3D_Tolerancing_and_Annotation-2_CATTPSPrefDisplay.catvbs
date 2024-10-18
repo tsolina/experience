@@ -1,0 +1,2543 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("NonSemanticMarked")
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticMarked"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "NonSemanticMarked", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "NonSemanticMarked"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("SwitchOffTxtFlagNoteNOAMarking")
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffTxtFlagNoteNOAMarking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SwitchOffTxtFlagNoteNOAMarking", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffTxtFlagNoteNOAMarking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("SwitchOffWeldMarking")
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffWeldMarking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SwitchOffWeldMarking", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffWeldMarking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("SwitchOffSurfaceTextureMarking")
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffSurfaceTextureMarking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SwitchOffSurfaceTextureMarking", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffSurfaceTextureMarking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("SwitchOffEdgeUndefShapeMarking")
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffEdgeUndefShapeMarking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "SwitchOffEdgeUndefShapeMarking", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffEdgeUndefShapeMarking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("SwitchOffTransitionSpecMarking")
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffTransitionSpecMarking"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SwitchOffTransitionSpecMarking", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SwitchOffTransitionSpecMarking"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("DisplayTrackHistoryTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTrackHistoryTreeSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "DisplayTrackHistoryTreeSetting", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTrackHistoryTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("TPS_NODE_UNDERFEAT_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_UNDERFEAT_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "TPS_NODE_UNDERFEAT_SETTING", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_UNDERFEAT_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("TPS_NODE_ANNOTUNDERVIEW_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_ANNOTUNDERVIEW_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "TPS_NODE_ANNOTUNDERVIEW_SETTING", bSTR17, bSTR18, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_ANNOTUNDERVIEW_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("TPS_NODE_ANNOTUNDERSET_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_ANNOTUNDERSET_SETTING"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "TPS_NODE_ANNOTUNDERSET_SETTING", bSTR19, bSTR20, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_ANNOTUNDERSET_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("TPS_NODE_PARAMETERS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_PARAMETERS_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "TPS_NODE_PARAMETERS_SETTING", bSTR21, bSTR22, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_NODE_PARAMETERS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("TPS_TPS_GSM_NORMALSHIFTED_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_TPS_GSM_NORMALSHIFTED_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "TPS_TPS_GSM_NORMALSHIFTED_SETTING", bSTR23, bSTR24, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_TPS_GSM_NORMALSHIFTED_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("TPS_HIGHLIGHT_DEF_ANNOT_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_HIGHLIGHT_DEF_ANNOT_SETTING"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "TPS_HIGHLIGHT_DEF_ANNOT_SETTING", bSTR25, bSTR26, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_HIGHLIGHT_DEF_ANNOT_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean27 = settingRepository1.GetAttr("CATTPSMirrorAnnotSet")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATTPSMirrorAnnotSet"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "CATTPSMirrorAnnotSet", bSTR27, bSTR28, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "CATTPSMirrorAnnotSet"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("CATTPSReframeMargin")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATTPSReframeMargin"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "CATTPSReframeMargin", bSTR29, bSTR30, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "CATTPSReframeMargin"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean30 = settingRepository1.GetAttr("DisplayInvalidFeatures")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayInvalidFeatures"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "DisplayInvalidFeatures", bSTR31, bSTR32, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayInvalidFeatures"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("FeaturesInParentChildWindow")
+'--------------------------------------------------
+' Parameter 1 : (String) "FeaturesInParentChildWindow"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "FeaturesInParentChildWindow", bSTR33, bSTR34, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "FeaturesInParentChildWindow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("CappingContextBackgroundColorMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextBackgroundColorMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "CappingContextBackgroundColorMode", bSTR35, bSTR36, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextBackgroundColorMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("CappingContextPatternMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextPatternMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "CappingContextPatternMode", bSTR37, bSTR38, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextPatternMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean36 = settingRepository1.GetAttr("TPS_GRIDDISPLAY_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRIDDISPLAY_SETTING"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "TPS_GRIDDISPLAY_SETTING", bSTR39, bSTR40, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRIDDISPLAY_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBoolean1
+arrayOfVariantOfBoolean1 = settingRepository1.GetAttrArray("TPS_AllowDistortions_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AllowDistortions_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Boolean) False
+'    Array[1] : (Variant) (Boolean) False
+'    Array[2] : (Variant) (Boolean) False
+'    Array[3] : (Variant) (Boolean) False
+'    Array[4] : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "TPS_AllowDistortions_SETTING", bSTR41, bSTR42, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_AllowDistortions_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble1
+arrayOfVariantOfDouble1 = settingRepository1.GetAttrArray("TPS_GridPrimarySpacing_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridPrimarySpacing_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 100.000000
+'    Array[1] : (Variant) (Double) 10000.000000
+'    Array[2] : (Variant) (Double) 1000000.000000
+'    Array[3] : (Variant) (Double) 1.000000
+'    Array[4] : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "TPS_GridPrimarySpacing_SETTING", bSTR43, bSTR44, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridPrimarySpacing_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble2
+arrayOfVariantOfDouble2 = settingRepository1.GetAttrArray("TPS_GridVPrimarySpacing_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridVPrimarySpacing_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 100.000000
+'    Array[1] : (Variant) (Double) 10000.000000
+'    Array[2] : (Variant) (Double) 1000000.000000
+'    Array[3] : (Variant) (Double) 1.000000
+'    Array[4] : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "TPS_GridVPrimarySpacing_SETTING", bSTR45, bSTR46, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridVPrimarySpacing_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("TPS_GridSecondaryStep_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridSecondaryStep_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 10
+'    Array[1] : (Variant) (Long) 10
+'    Array[2] : (Variant) (Long) 10
+'    Array[3] : (Variant) (Long) 10
+'    Array[4] : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "TPS_GridSecondaryStep_SETTING", bSTR47, bSTR48, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridSecondaryStep_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository1.GetAttrArray("TPS_GridVSecondaryStep_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridVSecondaryStep_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 10
+'    Array[1] : (Variant) (Long) 10
+'    Array[2] : (Variant) (Long) 10
+'    Array[3] : (Variant) (Long) 10
+'    Array[4] : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "TPS_GridVSecondaryStep_SETTING", bSTR49, bSTR50, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GridVSecondaryStep_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong3
+arrayOfVariantOfLong3 = settingRepository1.GetAttrArray("CappingContextBackgroundColorCustom")
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextBackgroundColorCustom"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 67
+'    Array[1] : (Variant) (Long) 102
+'    Array[2] : (Variant) (Long) 85
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "CappingContextBackgroundColorCustom", bSTR51, bSTR52, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextBackgroundColorCustom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean44 = settingRepository1.GetAttr("CappingContextBackgroundColorCustomScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextBackgroundColorCustomScale"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "CappingContextBackgroundColorCustomScale", bSTR53, bSTR54, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextBackgroundColorCustomScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean46 = settingRepository1.GetAttr("CappingContextPatternMaterialAssemblyContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextPatternMaterialAssemblyContext"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "CappingContextPatternMaterialAssemblyContext", bSTR55, bSTR56, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "CappingContextPatternMaterialAssemblyContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean48 = settingRepository1.GetAttr("DimFake")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFake"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "DimFake", bSTR57, bSTR58, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFake"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong4
+arrayOfVariantOfLong4 = settingRepository1.GetAttrArray("DimFakeColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFakeColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 64
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "DimFakeColor", bSTR59, bSTR60, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFakeColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean51 = settingRepository1.GetAttr("DrwTechFeatDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "DrwTechFeatDim", bSTR61, bSTR62, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong5
+arrayOfVariantOfLong5 = settingRepository1.GetAttrArray("DrwTechFeatDimColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDimColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "DrwTechFeatDimColor", bSTR63, bSTR64, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDimColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean54 = settingRepository1.GetAttr("DimTrue")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrue"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean55
+settingRepository1.GetAttrInfo "DimTrue", bSTR65, bSTR66, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong6
+arrayOfVariantOfLong6 = settingRepository1.GetAttrArray("DimTrueColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrueColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean56
+settingRepository1.GetAttrInfo "DimTrueColor", bSTR67, bSTR68, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrueColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean57 = settingRepository1.GetAttr("AnnotWithStaticGeomLink")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotWithStaticGeomLink"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean58
+settingRepository1.GetAttrInfo "AnnotWithStaticGeomLink", bSTR69, bSTR70, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotWithStaticGeomLink"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong7
+arrayOfVariantOfLong7 = settingRepository1.GetAttrArray("AnnotWithStaticGeomLinkCol")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotWithStaticGeomLinkCol"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "AnnotWithStaticGeomLinkCol", bSTR71, bSTR72, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotWithStaticGeomLinkCol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean60
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_CHECK_SETTING", bSTR73, bSTR74, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean61
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_CHECK_SETTING", bSTR75, bSTR76, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("TPS_DATUM_TARGET_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean62
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_CHECK_SETTING", bSTR77, bSTR78, boolean62
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_CHECK_SETTING", bSTR79, bSTR80, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean64
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_CHECK_SETTING", bSTR81, bSTR82, boolean64
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean65
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_CHECK_SETTING", bSTR83, bSTR84, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("TPS_DATUM_TARGET_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean66
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_CHECK_SETTING", bSTR85, bSTR86, boolean66
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_CHECK_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CHECK_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean67
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_CHECK_SETTING", bSTR87, bSTR88, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CHECK_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean68
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING", bSTR89, bSTR90, boolean68
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean69
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_TRANS_SETTING", bSTR91, bSTR92, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("CATFTAEdgesColorSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesColorSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR93
+bSTR93 = ""
+Dim bSTR94
+bSTR94 = ""
+Dim boolean70
+settingRepository1.GetAttrInfo "CATFTAEdgesColorSetting", bSTR93, bSTR94, boolean70
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesColorSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("CATFTAEdgesLineTypeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesLineTypeSetting"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR95
+bSTR95 = ""
+Dim bSTR96
+bSTR96 = ""
+Dim boolean71
+settingRepository1.GetAttrInfo "CATFTAEdgesLineTypeSetting", bSTR95, bSTR96, boolean71
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesLineTypeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("CATFTAEdgesThicknessSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesThicknessSetting"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR97
+bSTR97 = ""
+Dim bSTR98
+bSTR98 = ""
+Dim boolean72
+settingRepository1.GetAttrInfo "CATFTAEdgesThicknessSetting", bSTR97, bSTR98, boolean72
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesThicknessSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("TPS_GRAPHIC_PROP_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR99
+bSTR99 = ""
+Dim bSTR100
+bSTR100 = ""
+Dim boolean73
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_CURVECOLOR_SETTING", bSTR99, bSTR100, boolean73
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR101
+bSTR101 = ""
+Dim bSTR102
+bSTR102 = ""
+Dim boolean74
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_TYPE_SETTING", bSTR101, bSTR102, boolean74
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR103
+bSTR103 = ""
+Dim bSTR104
+bSTR104 = ""
+Dim boolean75
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_THICKNESS_SETTING", bSTR103, bSTR104, boolean75
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("TPS_GRAPHIC_PROP_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR105
+bSTR105 = ""
+Dim bSTR106
+bSTR106 = ""
+Dim boolean76
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_POINTCOLOR_SETTING", bSTR105, bSTR106, boolean76
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR107
+bSTR107 = ""
+Dim bSTR108
+bSTR108 = ""
+Dim boolean77
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_TYPEP_SETTING", bSTR107, bSTR108, boolean77
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR109
+bSTR109 = ""
+Dim bSTR110
+bSTR110 = ""
+Dim boolean78
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING", bSTR109, bSTR110, boolean78
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float2 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR111
+bSTR111 = ""
+Dim bSTR112
+bSTR112 = ""
+Dim boolean79
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_TRANS_SETTING", bSTR111, bSTR112, boolean79
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_EDGECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_EDGECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR113
+bSTR113 = ""
+Dim bSTR114
+bSTR114 = ""
+Dim boolean80
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_EDGECOLOR_SETTING", bSTR113, bSTR114, boolean80
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_EDGECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("TPS_RESTRICTED_LINE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_LINE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR115
+bSTR115 = ""
+Dim bSTR116
+bSTR116 = ""
+Dim boolean81
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_LINE_TYPE_SETTING", bSTR115, bSTR116, boolean81
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_LINE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("TPS_RESTRICTED_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR117
+bSTR117 = ""
+Dim bSTR118
+bSTR118 = ""
+Dim boolean82
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_THICKNESS_SETTING", bSTR117, bSTR118, boolean82
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR119
+bSTR119 = ""
+Dim bSTR120
+bSTR120 = ""
+Dim boolean83
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_CURVECOLOR_SETTING", bSTR119, bSTR120, boolean83
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR121
+bSTR121 = ""
+Dim bSTR122
+bSTR122 = ""
+Dim boolean84
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_TYPE_SETTING", bSTR121, bSTR122, boolean84
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR123
+bSTR123 = ""
+Dim bSTR124
+bSTR124 = ""
+Dim boolean85
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_THICKNESS_SETTING", bSTR123, bSTR124, boolean85
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR125
+bSTR125 = ""
+Dim bSTR126
+bSTR126 = ""
+Dim boolean86
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_POINTCOLOR_SETTING", bSTR125, bSTR126, boolean86
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR127
+bSTR127 = ""
+Dim bSTR128
+bSTR128 = ""
+Dim boolean87
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_TYPEP_SETTING", bSTR127, bSTR128, boolean87
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong9
+arrayOfVariantOfULong9 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR129
+bSTR129 = ""
+Dim bSTR130
+bSTR130 = ""
+Dim boolean88
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_SURFACECOLOR_SETTING", bSTR129, bSTR130, boolean88
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float3 = settingRepository1.GetAttr("TPS_DATUM_TARGET_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR131
+bSTR131 = ""
+Dim bSTR132
+bSTR132 = ""
+Dim boolean89
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_TRANS_SETTING", bSTR131, bSTR132, boolean89
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong10
+arrayOfVariantOfULong10 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_EDGECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR133
+bSTR133 = ""
+Dim bSTR134
+bSTR134 = ""
+Dim boolean90
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_EDGECOLOR_SETTING", bSTR133, bSTR134, boolean90
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("TPS_DATUM_TARGET_LINE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_LINE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR135
+bSTR135 = ""
+Dim bSTR136
+bSTR136 = ""
+Dim boolean91
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_LINE_TYPE_SETTING", bSTR135, bSTR136, boolean91
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_LINE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("TPS_DATUM_TARGET_EDGETHICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGETHICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR137
+bSTR137 = ""
+Dim bSTR138
+bSTR138 = ""
+Dim boolean92
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_EDGETHICKNESS_SETTING", bSTR137, bSTR138, boolean92
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGETHICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong11
+arrayOfVariantOfULong11 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR139
+bSTR139 = ""
+Dim bSTR140
+bSTR140 = ""
+Dim boolean93
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_CURVECOLOR_SETTING", bSTR139, bSTR140, boolean93
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("TPS_DATUM_TARGET_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR141
+bSTR141 = ""
+Dim bSTR142
+bSTR142 = ""
+Dim boolean94
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_TYPE_SETTING", bSTR141, bSTR142, boolean94
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("TPS_DATUM_TARGET_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR143
+bSTR143 = ""
+Dim bSTR144
+bSTR144 = ""
+Dim boolean95
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_THICKNESS_SETTING", bSTR143, bSTR144, boolean95
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong12
+arrayOfVariantOfULong12 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR145
+bSTR145 = ""
+Dim bSTR146
+bSTR146 = ""
+Dim boolean96
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_POINTCOLOR_SETTING", bSTR145, bSTR146, boolean96
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("TPS_DATUM_TARGET_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR147
+bSTR147 = ""
+Dim bSTR148
+bSTR148 = ""
+Dim boolean97
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_TYPEP_SETTING", bSTR147, bSTR148, boolean97
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong13
+arrayOfVariantOfULong13 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR149
+bSTR149 = ""
+Dim bSTR150
+bSTR150 = ""
+Dim boolean98
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING", bSTR149, bSTR150, boolean98
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float4 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR151
+bSTR151 = ""
+Dim bSTR152
+bSTR152 = ""
+Dim boolean99
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_TRANS_SETTING", bSTR151, bSTR152, boolean99
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong14
+arrayOfVariantOfULong14 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR153
+bSTR153 = ""
+Dim bSTR154
+bSTR154 = ""
+Dim boolean100
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING", bSTR153, bSTR154, boolean100
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong24 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR155
+bSTR155 = ""
+Dim bSTR156
+bSTR156 = ""
+Dim boolean101
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING", bSTR155, bSTR156, boolean101
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong25 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR157
+bSTR157 = ""
+Dim bSTR158
+bSTR158 = ""
+Dim boolean102
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING", bSTR157, bSTR158, boolean102
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong15
+arrayOfVariantOfULong15 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR159
+bSTR159 = ""
+Dim bSTR160
+bSTR160 = ""
+Dim boolean103
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING", bSTR159, bSTR160, boolean103
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong26 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR161
+bSTR161 = ""
+Dim bSTR162
+bSTR162 = ""
+Dim boolean104
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_TYPE_SETTING", bSTR161, bSTR162, boolean104
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong27 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR163
+bSTR163 = ""
+Dim bSTR164
+bSTR164 = ""
+Dim boolean105
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_THICKNESS_SETTING", bSTR163, bSTR164, boolean105
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong16
+arrayOfVariantOfULong16 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR165
+bSTR165 = ""
+Dim bSTR166
+bSTR166 = ""
+Dim boolean106
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING", bSTR165, bSTR166, boolean106
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong28 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR167
+bSTR167 = ""
+Dim bSTR168
+bSTR168 = ""
+Dim boolean107
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_TYPEP_SETTING", bSTR167, bSTR168, boolean107
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong17
+arrayOfVariantOfULong17 = settingRepository1.GetAttrArray("TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR169
+bSTR169 = ""
+Dim bSTR170
+bSTR170 = ""
+Dim boolean108
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING", bSTR169, bSTR170, boolean108
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float5 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR171
+bSTR171 = ""
+Dim bSTR172
+bSTR172 = ""
+Dim boolean109
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_TRANS_SETTING", bSTR171, bSTR172, boolean109
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong18
+arrayOfVariantOfULong18 = settingRepository1.GetAttrArray("CATFTAEdgesColorSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesColorSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR173
+bSTR173 = ""
+Dim bSTR174
+bSTR174 = ""
+Dim boolean110
+settingRepository1.GetAttrInfo "CATFTAEdgesColorSetting", bSTR173, bSTR174, boolean110
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesColorSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong29 = settingRepository1.GetAttr("CATFTAEdgesLineTypeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesLineTypeSetting"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR175
+bSTR175 = ""
+Dim bSTR176
+bSTR176 = ""
+Dim boolean111
+settingRepository1.GetAttrInfo "CATFTAEdgesLineTypeSetting", bSTR175, bSTR176, boolean111
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesLineTypeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong30 = settingRepository1.GetAttr("CATFTAEdgesThicknessSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesThicknessSetting"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR177
+bSTR177 = ""
+Dim bSTR178
+bSTR178 = ""
+Dim boolean112
+settingRepository1.GetAttrInfo "CATFTAEdgesThicknessSetting", bSTR177, bSTR178, boolean112
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAEdgesThicknessSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong19
+arrayOfVariantOfULong19 = settingRepository1.GetAttrArray("TPS_GRAPHIC_PROP_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR179
+bSTR179 = ""
+Dim bSTR180
+bSTR180 = ""
+Dim boolean113
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_CURVECOLOR_SETTING", bSTR179, bSTR180, boolean113
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong31 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR181
+bSTR181 = ""
+Dim bSTR182
+bSTR182 = ""
+Dim boolean114
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_TYPE_SETTING", bSTR181, bSTR182, boolean114
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong32 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR183
+bSTR183 = ""
+Dim bSTR184
+bSTR184 = ""
+Dim boolean115
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_THICKNESS_SETTING", bSTR183, bSTR184, boolean115
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong20
+arrayOfVariantOfULong20 = settingRepository1.GetAttrArray("TPS_GRAPHIC_PROP_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR185
+bSTR185 = ""
+Dim bSTR186
+bSTR186 = ""
+Dim boolean116
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_POINTCOLOR_SETTING", bSTR185, bSTR186, boolean116
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong33 = settingRepository1.GetAttr("TPS_GRAPHIC_PROP_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR187
+bSTR187 = ""
+Dim bSTR188
+bSTR188 = ""
+Dim boolean117
+settingRepository1.GetAttrInfo "TPS_GRAPHIC_PROP_TYPEP_SETTING", bSTR187, bSTR188, boolean117
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_GRAPHIC_PROP_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong21
+arrayOfVariantOfULong21 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR189
+bSTR189 = ""
+Dim bSTR190
+bSTR190 = ""
+Dim boolean118
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING", bSTR189, bSTR190, boolean118
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float6 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR191
+bSTR191 = ""
+Dim bSTR192
+bSTR192 = ""
+Dim boolean119
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_TRANS_SETTING", bSTR191, bSTR192, boolean119
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong22
+arrayOfVariantOfULong22 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_EDGECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_EDGECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR193
+bSTR193 = ""
+Dim bSTR194
+bSTR194 = ""
+Dim boolean120
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_EDGECOLOR_SETTING", bSTR193, bSTR194, boolean120
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_EDGECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong34 = settingRepository1.GetAttr("TPS_RESTRICTED_LINE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_LINE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR195
+bSTR195 = ""
+Dim bSTR196
+bSTR196 = ""
+Dim boolean121
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_LINE_TYPE_SETTING", bSTR195, bSTR196, boolean121
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_LINE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong35 = settingRepository1.GetAttr("TPS_RESTRICTED_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR197
+bSTR197 = ""
+Dim bSTR198
+bSTR198 = ""
+Dim boolean122
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_THICKNESS_SETTING", bSTR197, bSTR198, boolean122
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong23
+arrayOfVariantOfULong23 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR199
+bSTR199 = ""
+Dim bSTR200
+bSTR200 = ""
+Dim boolean123
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_CURVECOLOR_SETTING", bSTR199, bSTR200, boolean123
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong36 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 4
+'--------------------------------------------------
+
+Dim bSTR201
+bSTR201 = ""
+Dim bSTR202
+bSTR202 = ""
+Dim boolean124
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_TYPE_SETTING", bSTR201, bSTR202, boolean124
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong37 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 2
+'--------------------------------------------------
+
+Dim bSTR203
+bSTR203 = ""
+Dim bSTR204
+bSTR204 = ""
+Dim boolean125
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_THICKNESS_SETTING", bSTR203, bSTR204, boolean125
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong24
+arrayOfVariantOfULong24 = settingRepository1.GetAttrArray("TPS_RESTRICTED_AREA_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR205
+bSTR205 = ""
+Dim bSTR206
+bSTR206 = ""
+Dim boolean126
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_POINTCOLOR_SETTING", bSTR205, bSTR206, boolean126
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong38 = settingRepository1.GetAttr("TPS_RESTRICTED_AREA_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR207
+bSTR207 = ""
+Dim bSTR208
+bSTR208 = ""
+Dim boolean127
+settingRepository1.GetAttrInfo "TPS_RESTRICTED_AREA_TYPEP_SETTING", bSTR207, bSTR208, boolean127
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_RESTRICTED_AREA_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong25
+arrayOfVariantOfULong25 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR209
+bSTR209 = ""
+Dim bSTR210
+bSTR210 = ""
+Dim boolean128
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_SURFACECOLOR_SETTING", bSTR209, bSTR210, boolean128
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float7 = settingRepository1.GetAttr("TPS_DATUM_TARGET_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR211
+bSTR211 = ""
+Dim bSTR212
+bSTR212 = ""
+Dim boolean129
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_TRANS_SETTING", bSTR211, bSTR212, boolean129
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong26
+arrayOfVariantOfULong26 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_EDGECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR213
+bSTR213 = ""
+Dim bSTR214
+bSTR214 = ""
+Dim boolean130
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_EDGECOLOR_SETTING", bSTR213, bSTR214, boolean130
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong39 = settingRepository1.GetAttr("TPS_DATUM_TARGET_LINE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_LINE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR215
+bSTR215 = ""
+Dim bSTR216
+bSTR216 = ""
+Dim boolean131
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_LINE_TYPE_SETTING", bSTR215, bSTR216, boolean131
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_LINE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong40 = settingRepository1.GetAttr("TPS_DATUM_TARGET_EDGETHICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGETHICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR217
+bSTR217 = ""
+Dim bSTR218
+bSTR218 = ""
+Dim boolean132
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_EDGETHICKNESS_SETTING", bSTR217, bSTR218, boolean132
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_EDGETHICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong27
+arrayOfVariantOfULong27 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR219
+bSTR219 = ""
+Dim bSTR220
+bSTR220 = ""
+Dim boolean133
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_CURVECOLOR_SETTING", bSTR219, bSTR220, boolean133
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong41 = settingRepository1.GetAttr("TPS_DATUM_TARGET_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR221
+bSTR221 = ""
+Dim bSTR222
+bSTR222 = ""
+Dim boolean134
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_TYPE_SETTING", bSTR221, bSTR222, boolean134
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong42 = settingRepository1.GetAttr("TPS_DATUM_TARGET_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR223
+bSTR223 = ""
+Dim bSTR224
+bSTR224 = ""
+Dim boolean135
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_THICKNESS_SETTING", bSTR223, bSTR224, boolean135
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong28
+arrayOfVariantOfULong28 = settingRepository1.GetAttrArray("TPS_DATUM_TARGET_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR225
+bSTR225 = ""
+Dim bSTR226
+bSTR226 = ""
+Dim boolean136
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_POINTCOLOR_SETTING", bSTR225, bSTR226, boolean136
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong43 = settingRepository1.GetAttr("TPS_DATUM_TARGET_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR227
+bSTR227 = ""
+Dim bSTR228
+bSTR228 = ""
+Dim boolean137
+settingRepository1.GetAttrInfo "TPS_DATUM_TARGET_TYPEP_SETTING", bSTR227, bSTR228, boolean137
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_DATUM_TARGET_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong29
+arrayOfVariantOfULong29 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR229
+bSTR229 = ""
+Dim bSTR230
+bSTR230 = ""
+Dim boolean138
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING", bSTR229, bSTR230, boolean138
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_SURFACECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float8 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_TRANS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TRANS_SETTING"
+' Returned value : (Variant) (Float) 128.000000
+'--------------------------------------------------
+
+Dim bSTR231
+bSTR231 = ""
+Dim bSTR232
+bSTR232 = ""
+Dim boolean139
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_TRANS_SETTING", bSTR231, bSTR232, boolean139
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TRANS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong30
+arrayOfVariantOfULong30 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR233
+bSTR233 = ""
+Dim bSTR234
+bSTR234 = ""
+Dim boolean140
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING", bSTR233, bSTR234, boolean140
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong44 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR235
+bSTR235 = ""
+Dim bSTR236
+bSTR236 = ""
+Dim boolean141
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING", bSTR235, bSTR236, boolean141
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_LINE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong45 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR237
+bSTR237 = ""
+Dim bSTR238
+bSTR238 = ""
+Dim boolean142
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING", bSTR237, bSTR238, boolean142
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_EDGETHICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong31
+arrayOfVariantOfULong31 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR239
+bSTR239 = ""
+Dim bSTR240
+bSTR240 = ""
+Dim boolean143
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING", bSTR239, bSTR240, boolean143
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_CURVECOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong46 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_TYPE_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPE_SETTING"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR241
+bSTR241 = ""
+Dim bSTR242
+bSTR242 = ""
+Dim boolean144
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_TYPE_SETTING", bSTR241, bSTR242, boolean144
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPE_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong47 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_THICKNESS_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_THICKNESS_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR243
+bSTR243 = ""
+Dim bSTR244
+bSTR244 = ""
+Dim boolean145
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_THICKNESS_SETTING", bSTR243, bSTR244, boolean145
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_THICKNESS_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong32
+arrayOfVariantOfULong32 = settingRepository1.GetAttrArray("TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR245
+bSTR245 = ""
+Dim bSTR246
+bSTR246 = ""
+Dim boolean146
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING", bSTR245, bSTR246, boolean146
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_POINTCOLOR_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong48 = settingRepository1.GetAttr("TPS_CONTACTING_FEATURE_TYPEP_SETTING")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPEP_SETTING"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR247
+bSTR247 = ""
+Dim bSTR248
+bSTR248 = ""
+Dim boolean147
+settingRepository1.GetAttrInfo "TPS_CONTACTING_FEATURE_TYPEP_SETTING", bSTR247, bSTR248, boolean147
+'--------------------------------------------------
+' Parameter 1 : (String) "TPS_CONTACTING_FEATURE_TYPEP_SETTING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

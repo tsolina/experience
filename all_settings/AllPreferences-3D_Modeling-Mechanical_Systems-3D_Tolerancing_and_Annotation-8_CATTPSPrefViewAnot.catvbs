@@ -1,0 +1,655 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATTPSEditor")
+
+boolean1 = settingRepository1.GetAttr("ViewAssociativity")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAssociativity"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ViewAssociativity", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAssociativity"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("SectionViewOrientationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionViewOrientationMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SectionViewOrientationMode", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SectionViewOrientationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("ChangePrimaryViewPlaneSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ChangePrimaryViewPlaneSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ChangePrimaryViewPlaneSetting", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ChangePrimaryViewPlaneSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ResizeViewBoxOn3DSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResizeViewBoxOn3DSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ResizeViewBoxOn3DSetting", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ResizeViewBoxOn3DSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ViewReferential")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferential"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ViewReferential", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferential"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("ViewReferentialZoomable")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferentialZoomable"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ViewReferentialZoomable", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferentialZoomable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("ViewProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewProfile"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ViewProfile", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("CATFTAAnnotOnZeroZSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAAnnotOnZeroZSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "CATFTAAnnotOnZeroZSetting", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "CATFTAAnnotOnZeroZSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("CreateAnnotBodyOnAnnotPlaneSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateAnnotBodyOnAnnotPlaneSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "CreateAnnotBodyOnAnnotPlaneSetting", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateAnnotBodyOnAnnotPlaneSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("ViewsAssocToHoles")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewsAssocToHoles"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "ViewsAssocToHoles", bSTR19, bSTR20, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewsAssocToHoles"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("CreateLeaderExtremityPosSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateLeaderExtremityPosSetting"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "CreateLeaderExtremityPosSetting", bSTR21, bSTR22, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateLeaderExtremityPosSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("CAPTURE_BODY_HIDE_ALLOWED")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAPTURE_BODY_HIDE_ALLOWED"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "CAPTURE_BODY_HIDE_ALLOWED", bSTR23, bSTR24, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "CAPTURE_BODY_HIDE_ALLOWED"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("EditCaptureEndCreationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditCaptureEndCreationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "EditCaptureEndCreationSetting", bSTR25, bSTR26, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "EditCaptureEndCreationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("CreateCapturePrincipalViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCapturePrincipalViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "CreateCapturePrincipalViewSetting", bSTR27, bSTR28, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCapturePrincipalViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean27 = settingRepository1.GetAttr("CreateCaptureAxonometricViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureAxonometricViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "CreateCaptureAxonometricViewSetting", bSTR29, bSTR30, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureAxonometricViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean29 = settingRepository1.GetAttr("CreateCaptureProjectionViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureProjectionViewSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "CreateCaptureProjectionViewSetting", bSTR31, bSTR32, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureProjectionViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean31 = settingRepository1.GetAttr("CreateCaptureSectionViewsSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureSectionViewsSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "CreateCaptureSectionViewsSetting", bSTR33, bSTR34, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureSectionViewsSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean33 = settingRepository1.GetAttr("CaptureCurrentAndUnsetAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureCurrentAndUnsetAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "CaptureCurrentAndUnsetAtViewActivationSetting", bSTR35, bSTR36, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureCurrentAndUnsetAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean35 = settingRepository1.GetAttr("ApplyVisuFilterAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "ApplyVisuFilterAtViewActivationSetting", bSTR37, bSTR38, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean37 = settingRepository1.GetAttr("ApplyViewpointAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "ApplyViewpointAtViewActivationSetting", bSTR39, bSTR40, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean39 = settingRepository1.GetAttr("CAPTURE_BODY_HIDE_ALLOWED")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAPTURE_BODY_HIDE_ALLOWED"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "CAPTURE_BODY_HIDE_ALLOWED", bSTR41, bSTR42, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "CAPTURE_BODY_HIDE_ALLOWED"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean41 = settingRepository1.GetAttr("EditCaptureEndCreationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditCaptureEndCreationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "EditCaptureEndCreationSetting", bSTR43, bSTR44, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "EditCaptureEndCreationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean43 = settingRepository1.GetAttr("CreateCapturePrincipalViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCapturePrincipalViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "CreateCapturePrincipalViewSetting", bSTR45, bSTR46, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCapturePrincipalViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean45 = settingRepository1.GetAttr("CreateCaptureAxonometricViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureAxonometricViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "CreateCaptureAxonometricViewSetting", bSTR47, bSTR48, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureAxonometricViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean47 = settingRepository1.GetAttr("CreateCaptureProjectionViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureProjectionViewSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "CreateCaptureProjectionViewSetting", bSTR49, bSTR50, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureProjectionViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean49 = settingRepository1.GetAttr("CreateCaptureSectionViewsSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureSectionViewsSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "CreateCaptureSectionViewsSetting", bSTR51, bSTR52, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCaptureSectionViewsSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean51 = settingRepository1.GetAttr("CaptureCurrentAndUnsetAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureCurrentAndUnsetAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "CaptureCurrentAndUnsetAtViewActivationSetting", bSTR53, bSTR54, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "CaptureCurrentAndUnsetAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean53 = settingRepository1.GetAttr("ApplyVisuFilterAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "ApplyVisuFilterAtViewActivationSetting", bSTR55, bSTR56, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean55 = settingRepository1.GetAttr("ApplyViewpointAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean56
+settingRepository1.GetAttrInfo "ApplyViewpointAtViewActivationSetting", bSTR57, bSTR58, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("CreateLeaderExtremityInLimitsSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateLeaderExtremityInLimitsSetting"
+' Returned value : (Variant) (Double) 2.000000
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "CreateLeaderExtremityInLimitsSetting", bSTR59, bSTR60, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateLeaderExtremityInLimitsSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean58 = settingRepository1.GetAttr("ApplyVisuFilterAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "ApplyVisuFilterAtViewActivationSetting", bSTR61, bSTR62, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean60 = settingRepository1.GetAttr("ApplyViewpointAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean61
+settingRepository1.GetAttrInfo "ApplyViewpointAtViewActivationSetting", bSTR63, bSTR64, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean62 = settingRepository1.GetAttr("ApplyVisuFilterAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "ApplyVisuFilterAtViewActivationSetting", bSTR65, bSTR66, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyVisuFilterAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean64 = settingRepository1.GetAttr("ApplyViewpointAtViewActivationSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean65
+settingRepository1.GetAttrInfo "ApplyViewpointAtViewActivationSetting", bSTR67, bSTR68, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "ApplyViewpointAtViewActivationSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

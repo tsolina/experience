@@ -1,0 +1,275 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("LegacyProviderOptions")
+
+bSTR1 = settingRepository1.GetAttr("RESTART_APP_WARNING")
+'--------------------------------------------------
+' Parameter 1 : (String) "RESTART_APP_WARNING"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RESTART_APP_WARNING", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RESTART_APP_WARNING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("DRAWING_IN_PS_ACTIVATION")
+'--------------------------------------------------
+' Parameter 1 : (String) "DRAWING_IN_PS_ACTIVATION"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DRAWING_IN_PS_ACTIVATION", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DRAWING_IN_PS_ACTIVATION"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("EXPOSE_SMT_SERVICE_ATTR")
+'--------------------------------------------------
+' Parameter 1 : (String) "EXPOSE_SMT_SERVICE_ATTR"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "EXPOSE_SMT_SERVICE_ATTR", bSTR6, bSTR7, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "EXPOSE_SMT_SERVICE_ATTR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("SMT_ADVANCED_VERSIONID")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMT_ADVANCED_VERSIONID"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SMT_ADVANCED_VERSIONID", bSTR8, bSTR9, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SMT_ADVANCED_VERSIONID"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("EXTN_SELECTION_WARNINGV4SMT")
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNINGV4SMT"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "EXTN_SELECTION_WARNINGV4SMT", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNINGV4SMT"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR13 = settingRepository1.GetAttr("EXTN_SELECTION_WARNING")
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNING"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "EXTN_SELECTION_WARNING", bSTR14, bSTR15, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "EXTN_SELECTION_WARNING"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("V5S_CATDrawing")
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_CATDrawing"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "V5S_CATDrawing", bSTR16, bSTR17, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_CATDrawing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("V5S_CATAnalysis")
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_CATAnalysis"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "V5S_CATAnalysis", bSTR18, bSTR19, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_CATAnalysis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("V5S_catalog")
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_catalog"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "V5S_catalog", bSTR20, bSTR21, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_catalog"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("V5S_CATMaterial")
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_CATMaterial"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "V5S_CATMaterial", bSTR22, bSTR23, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_CATMaterial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("V5S_DesignTable")
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_DesignTable"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "V5S_DesignTable", bSTR24, bSTR25, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_DesignTable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("V5S_NonCAD_Documents")
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_NonCAD_Documents"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "V5S_NonCAD_Documents", bSTR26, bSTR27, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "V5S_NonCAD_Documents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("SMT_FILTER_STATES_Flag")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMT_FILTER_STATES_Flag"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "SMT_FILTER_STATES_Flag", bSTR28, bSTR29, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "SMT_FILTER_STATES_Flag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR30 = settingRepository1.GetAttr("SMT_FILTER_STATES")
+'--------------------------------------------------
+' Parameter 1 : (String) "SMT_FILTER_STATES"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "SMT_FILTER_STATES", bSTR31, bSTR32, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "SMT_FILTER_STATES"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

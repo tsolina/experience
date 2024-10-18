@@ -1,0 +1,1035 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ICMExtIOOptionsSettings")
+
+long1 = settingRepository1.GetAttr("IdImportContinuityOptimizations")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportContinuityOptimizations"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "IdImportContinuityOptimizations", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportContinuityOptimizations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("IdImportColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportColors"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "IdImportColors", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("IdImportLayers")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportLayers"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "IdImportLayers", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportLayers"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("IdImportLists")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportLists"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "IdImportLists", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportLists"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("IdImportSelectionSets")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportSelectionSets"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "IdImportSelectionSets", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportSelectionSets"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("IdImportLights")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportLights"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "IdImportLights", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportLights"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("IdImportAnnotations")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportAnnotations"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "IdImportAnnotations", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportAnnotations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("IdImportViews")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportViews"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "IdImportViews", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportViews"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("IdSkipIcemdbRootNode")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdSkipIcemdbRootNode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "IdSkipIcemdbRootNode", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "IdSkipIcemdbRootNode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("IdUse2DCurveImportingC2TrimmedSurfaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdUse2DCurveImportingC2TrimmedSurfaces"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "IdUse2DCurveImportingC2TrimmedSurfaces", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "IdUse2DCurveImportingC2TrimmedSurfaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("IdImportSurfaceAsPlane")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportSurfaceAsPlane"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "IdImportSurfaceAsPlane", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportSurfaceAsPlane"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("IdExportPoints")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportPoints"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "IdExportPoints", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportPoints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("IdExportCurves")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportCurves"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "IdExportCurves", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportCurves"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("IdExportSurfaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportSurfaces"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "IdExportSurfaces", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportSurfaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("IdExportPointClouds")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportPointClouds"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "IdExportPointClouds", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportPointClouds"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("IdExportMeshes")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportMeshes"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "IdExportMeshes", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportMeshes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("IdExportSurfaceJoins")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportSurfaceJoins"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "IdExportSurfaceJoins", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportSurfaceJoins"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("IdExportCurveJoins")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportCurveJoins"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "IdExportCurveJoins", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportCurveJoins"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long19 = settingRepository1.GetAttr("IdExportAxisSystem")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportAxisSystem"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "IdExportAxisSystem", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportAxisSystem"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long20 = settingRepository1.GetAttr("IdExportPlanes")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportPlanes"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "IdExportPlanes", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportPlanes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long21 = settingRepository1.GetAttr("IdExportColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportColors"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "IdExportColors", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long22 = settingRepository1.GetAttr("IdExportLayers")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportLayers"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "IdExportLayers", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportLayers"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long23 = settingRepository1.GetAttr("IdExportSelectionSets")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportSelectionSets"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "IdExportSelectionSets", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportSelectionSets"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long24 = settingRepository1.GetAttr("IdExportDisplaySets")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportDisplaySets"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "IdExportDisplaySets", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportDisplaySets"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long25 = settingRepository1.GetAttr("IdExportLights")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportLights"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "IdExportLights", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportLights"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long26 = settingRepository1.GetAttr("IdExportAnnotations")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportAnnotations"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "IdExportAnnotations", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportAnnotations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long27 = settingRepository1.GetAttr("IdExportViews")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportViews"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "IdExportViews", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportViews"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long28 = settingRepository1.GetAttr("IdExportCaptures")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportCaptures"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "IdExportCaptures", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportCaptures"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long29 = settingRepository1.GetAttr("IdExportHidden")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportHidden"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "IdExportHidden", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportHidden"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long30 = settingRepository1.GetAttr("IdTruncateUnderlyingSurface")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdTruncateUnderlyingSurface"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "IdTruncateUnderlyingSurface", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "IdTruncateUnderlyingSurface"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long31 = settingRepository1.GetAttr("IdWriteEmptyNodesToRmsFile")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdWriteEmptyNodesToRmsFile"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "IdWriteEmptyNodesToRmsFile", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "IdWriteEmptyNodesToRmsFile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long32 = settingRepository1.GetAttr("IdImportPoints")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportPoints"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "IdImportPoints", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportPoints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long33 = settingRepository1.GetAttr("IdMappedPoints")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedPoints"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "IdMappedPoints", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedPoints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long34 = settingRepository1.GetAttr("IdImportRawData")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportRawData"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "IdImportRawData", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportRawData"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long35 = settingRepository1.GetAttr("IdMappedRawData")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedRawData"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "IdMappedRawData", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedRawData"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long36 = settingRepository1.GetAttr("IdImportCurves")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportCurves"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "IdImportCurves", bSTR71, bSTR72, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportCurves"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long37 = settingRepository1.GetAttr("IdMappedCurves")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedCurves"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "IdMappedCurves", bSTR73, bSTR74, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedCurves"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long38 = settingRepository1.GetAttr("IdImportScans")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportScans"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "IdImportScans", bSTR75, bSTR76, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportScans"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long39 = settingRepository1.GetAttr("IdMappedScans")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedScans"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "IdMappedScans", bSTR77, bSTR78, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedScans"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long40 = settingRepository1.GetAttr("IdImportSurfaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportSurfaces"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "IdImportSurfaces", bSTR79, bSTR80, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportSurfaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long41 = settingRepository1.GetAttr("IdMappedSurfaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedSurfaces"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "IdMappedSurfaces", bSTR81, bSTR82, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedSurfaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long42 = settingRepository1.GetAttr("IdImportFaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportFaces"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "IdImportFaces", bSTR83, bSTR84, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportFaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long43 = settingRepository1.GetAttr("IdMappedFaces")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedFaces"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "IdMappedFaces", bSTR85, bSTR86, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedFaces"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long44 = settingRepository1.GetAttr("IdImportWires")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportWires"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "IdImportWires", bSTR87, bSTR88, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportWires"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long45 = settingRepository1.GetAttr("IdMappedWires")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedWires"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "IdMappedWires", bSTR89, bSTR90, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedWires"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long46 = settingRepository1.GetAttr("IdImportShells")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportShells"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "IdImportShells", bSTR91, bSTR92, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportShells"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long47 = settingRepository1.GetAttr("IdMappedShells")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedShells"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR93
+bSTR93 = ""
+Dim bSTR94
+bSTR94 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "IdMappedShells", bSTR93, bSTR94, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedShells"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long48 = settingRepository1.GetAttr("IdImportWorkplanes")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportWorkplanes"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR95
+bSTR95 = ""
+Dim bSTR96
+bSTR96 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "IdImportWorkplanes", bSTR95, bSTR96, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportWorkplanes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long49 = settingRepository1.GetAttr("IdMappedWorkplanes")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedWorkplanes"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR97
+bSTR97 = ""
+Dim bSTR98
+bSTR98 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "IdMappedWorkplanes", bSTR97, bSTR98, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "IdMappedWorkplanes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("IdImportContinuityTolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportContinuityTolerance"
+' Returned value : (Variant) (Double) 0.001000
+'--------------------------------------------------
+
+Dim bSTR99
+bSTR99 = ""
+Dim bSTR100
+bSTR100 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "IdImportContinuityTolerance", bSTR99, bSTR100, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportContinuityTolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long50 = settingRepository1.GetAttr("IdImportMaterials")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportMaterials"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR101
+bSTR101 = ""
+Dim bSTR102
+bSTR102 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "IdImportMaterials", bSTR101, bSTR102, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "IdImportMaterials"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long51 = settingRepository1.GetAttr("IdExportMaterials")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportMaterials"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR103
+bSTR103 = ""
+Dim bSTR104
+bSTR104 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "IdExportMaterials", bSTR103, bSTR104, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportMaterials"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR105 = settingRepository1.GetAttr("IdExportTexturePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportTexturePath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR106
+bSTR106 = ""
+Dim bSTR107
+bSTR107 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "IdExportTexturePath", bSTR106, bSTR107, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "IdExportTexturePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long52 = settingRepository1.GetAttr("IdIcemdbVersion")
+'--------------------------------------------------
+' Parameter 1 : (String) "IdIcemdbVersion"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR108
+bSTR108 = ""
+Dim bSTR109
+bSTR109 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "IdIcemdbVersion", bSTR108, bSTR109, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "IdIcemdbVersion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

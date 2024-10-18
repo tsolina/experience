@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBImportD5")
+
+bSTR1 = settingRepository1.GetAttr("D5Cache")
+'--------------------------------------------------
+' Parameter 1 : (String) "D5Cache"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "D5Cache", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "D5Cache"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("KinCorrectionOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "KinCorrectionOption"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "KinCorrectionOption", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "KinCorrectionOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ToolFrameImport")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolFrameImport"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ToolFrameImport", bSTR6, bSTR7, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolFrameImport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("CoorsysImport")
+'--------------------------------------------------
+' Parameter 1 : (String) "CoorsysImport"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CoorsysImport", bSTR8, bSTR9, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CoorsysImport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("AnnotationsImport")
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationsImport"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "AnnotationsImport", bSTR10, bSTR11, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "AnnotationsImport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("WcellPathsImport")
+'--------------------------------------------------
+' Parameter 1 : (String) "WcellPathsImport"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "WcellPathsImport", bSTR12, bSTR13, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "WcellPathsImport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("UDAImport")
+'--------------------------------------------------
+' Parameter 1 : (String) "UDAImport"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "UDAImport", bSTR14, bSTR15, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "UDAImport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("D5ImportClassify")
+'--------------------------------------------------
+' Parameter 1 : (String) "D5ImportClassify"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "D5ImportClassify", bSTR16, bSTR17, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "D5ImportClassify"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

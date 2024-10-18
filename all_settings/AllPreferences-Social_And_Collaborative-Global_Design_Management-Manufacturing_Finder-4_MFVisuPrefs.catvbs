@@ -1,0 +1,334 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PPRNavigator")
+
+long1 = settingRepository1.GetAttr("Process3DNavWithTiles")
+'--------------------------------------------------
+' Parameter 1 : (String) "Process3DNavWithTiles"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Process3DNavWithTiles", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Process3DNavWithTiles"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("Process3DNavWithPictures")
+'--------------------------------------------------
+' Parameter 1 : (String) "Process3DNavWithPictures"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Process3DNavWithPictures", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Process3DNavWithPictures"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("Process3DNavWithProduct3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "Process3DNavWithProduct3D"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Process3DNavWithProduct3D", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Process3DNavWithProduct3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("SystemOp3DNavWithTiles")
+'--------------------------------------------------
+' Parameter 1 : (String) "SystemOp3DNavWithTiles"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SystemOp3DNavWithTiles", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SystemOp3DNavWithTiles"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("SystemOp3DNavWithPictures")
+'--------------------------------------------------
+' Parameter 1 : (String) "SystemOp3DNavWithPictures"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SystemOp3DNavWithPictures", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SystemOp3DNavWithPictures"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("VPMNavigator")
+
+boolean6 = settingRepository2.GetAttr("Navigation3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository2.GetAttrInfo "Navigation3D", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository2.GetAttr("Nav3DHD")
+'--------------------------------------------------
+' Parameter 1 : (String) "Nav3DHD"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository2.GetAttrInfo "Nav3DHD", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "Nav3DHD"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository2.GetAttr("Nav3DHDDensityCV")
+'--------------------------------------------------
+' Parameter 1 : (String) "Nav3DHDDensityCV"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean10
+settingRepository2.GetAttrInfo "Nav3DHDDensityCV", bSTR15, bSTR16, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Nav3DHDDensityCV"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository2.GetAttr("Nav3DHDDensityCVCloud")
+'--------------------------------------------------
+' Parameter 1 : (String) "Nav3DHDDensityCVCloud"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean11
+settingRepository2.GetAttrInfo "Nav3DHDDensityCVCloud", bSTR17, bSTR18, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "Nav3DHDDensityCVCloud"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository2.GetAttr("NoMultiRep")
+'--------------------------------------------------
+' Parameter 1 : (String) "NoMultiRep"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean13
+settingRepository2.GetAttrInfo "NoMultiRep", bSTR19, bSTR20, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "NoMultiRep"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository2.GetAttr("3DSearchMaxItemsBeforeWarn")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DSearchMaxItemsBeforeWarn"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean14
+settingRepository2.GetAttrInfo "3DSearchMaxItemsBeforeWarn", bSTR21, bSTR22, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "3DSearchMaxItemsBeforeWarn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository2.GetAttr("AntiZFighting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AntiZFighting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean16
+settingRepository2.GetAttrInfo "AntiZFighting", bSTR23, bSTR24, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "AntiZFighting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository2.GetAttr("TurntableReframe")
+'--------------------------------------------------
+' Parameter 1 : (String) "TurntableReframe"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean17
+settingRepository2.GetAttrInfo "TurntableReframe", bSTR25, bSTR26, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "TurntableReframe"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository2.GetAttr("TurntableAnimation")
+'--------------------------------------------------
+' Parameter 1 : (String) "TurntableAnimation"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean18
+settingRepository2.GetAttrInfo "TurntableAnimation", bSTR27, bSTR28, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "TurntableAnimation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository2.GetAttr("Navigation3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean20
+settingRepository2.GetAttrInfo "Navigation3D", bSTR29, bSTR30, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository2.GetAttr("NavRepOrNothing")
+'--------------------------------------------------
+' Parameter 1 : (String) "NavRepOrNothing"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean22
+settingRepository2.GetAttrInfo "NavRepOrNothing", bSTR31, bSTR32, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "NavRepOrNothing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository2.GetAttr("Navigation3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean24
+settingRepository2.GetAttrInfo "Navigation3D", bSTR33, bSTR34, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

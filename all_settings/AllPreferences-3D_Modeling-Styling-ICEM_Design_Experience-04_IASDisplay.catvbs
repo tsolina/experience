@@ -1,0 +1,356 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IASClassAAppOptionsDisplay")
+
+long1 = settingRepository1.GetAttr("ControlPointMarkerSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlPointMarkerSize"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ControlPointMarkerSize", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlPointMarkerSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("CAT3DAppVNavSettings")
+
+long2 = settingRepository2.GetAttr("RotationCenterVisualization")
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationCenterVisualization"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository2.GetAttrInfo "RotationCenterVisualization", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "RotationCenterVisualization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository3 = settingControllers1.Item("CAT3DAppColorsGeneral")
+
+long3 = settingRepository3.GetAttr("SelectedTemplate")
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectedTemplate"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository3.GetAttrInfo "SelectedTemplate", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SelectedTemplate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository2.GetAttrArray("ControlsDefaultColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsDefaultColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 127
+'    Array[1] : (Variant) (Unsigned Long) 127
+'    Array[2] : (Variant) (Unsigned Long) 127
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository2.GetAttrInfo "ControlsDefaultColor", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsDefaultColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("LineStyleDefault")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStyleDefault"
+' Returned value : (Variant) (Long) 6
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "LineStyleDefault", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStyleDefault"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository2.GetAttrArray("ControlsActiveColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsActiveColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository2.GetAttrInfo "ControlsActiveColor", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsActiveColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("LineStyleActive")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStyleActive"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "LineStyleActive", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStyleActive"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository2.GetAttrArray("ControlsPreHighlightColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsPreHighlightColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 230
+'    Array[1] : (Variant) (Unsigned Long) 64
+'    Array[2] : (Variant) (Unsigned Long) 38
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository2.GetAttrInfo "ControlsPreHighlightColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsPreHighlightColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("LineStylePreselected")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStylePreselected"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "LineStylePreselected", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStylePreselected"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository2.GetAttrArray("ControlsHighlightColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsHighlightColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 46
+'    Array[1] : (Variant) (Unsigned Long) 130
+'    Array[2] : (Variant) (Unsigned Long) 200
+'    Array[3] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository2.GetAttrInfo "ControlsHighlightColor", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ControlsHighlightColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("LineStyleSelected")
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStyleSelected"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "LineStyleSelected", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "LineStyleSelected"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository2.GetAttr("DefaultMaterialLightDirectionX")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialLightDirectionX"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository2.GetAttrInfo "DefaultMaterialLightDirectionX", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialLightDirectionX"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository2.GetAttr("DefaultMaterialLightDirectionY")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialLightDirectionY"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository2.GetAttrInfo "DefaultMaterialLightDirectionY", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialLightDirectionY"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository2.GetAttr("DefaultMaterialLightDirectionZ")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialLightDirectionZ"
+' Returned value : (Variant) (Double) -1.000000
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository2.GetAttrInfo "DefaultMaterialLightDirectionZ", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialLightDirectionZ"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository2.GetAttr("UpdateFromView")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateFromView"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean16
+settingRepository2.GetAttrInfo "UpdateFromView", bSTR29, bSTR30, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateFromView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository2.GetAttr("AttachToView")
+'--------------------------------------------------
+' Parameter 1 : (String) "AttachToView"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean18
+settingRepository2.GetAttrInfo "AttachToView", bSTR31, bSTR32, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "AttachToView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository2.GetAttr("DefaultMaterialsShowMessage")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialsShowMessage"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean19
+settingRepository2.GetAttrInfo "DefaultMaterialsShowMessage", bSTR33, bSTR34, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultMaterialsShowMessage"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

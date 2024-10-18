@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATLivePhotoSettingsRepository")
+
+long1 = settingRepository1.GetAttr("ResultDimension")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultDimension"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ResultDimension", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultDimension"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ResultTexturing")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultTexturing"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ResultTexturing", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultTexturing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("GeometryCompletionBySymmetry")
+'--------------------------------------------------
+' Parameter 1 : (String) "GeometryCompletionBySymmetry"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "GeometryCompletionBySymmetry", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "GeometryCompletionBySymmetry"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("RegularizationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "RegularizationMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "RegularizationMode", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "RegularizationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ReconstructionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReconstructionMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ReconstructionMode", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ReconstructionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("AskForReconstructionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AskForReconstructionMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "AskForReconstructionMode", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AskForReconstructionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("Default35mmFocalLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "Default35mmFocalLength"
+' Returned value : (Variant) (Long) 50
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "Default35mmFocalLength", bSTR13, bSTR14, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Default35mmFocalLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("UseExifInfoMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseExifInfoMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "UseExifInfoMode", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "UseExifInfoMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

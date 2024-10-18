@@ -1,0 +1,46 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBReportGenerationSettings")
+
+bSTR1 = settingRepository1.GetAttr("ReportFolderPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReportFolderPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ReportFolderPath", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ReportFolderPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+settingRepository1.GetAttrArray "XMLStyleSheetPathList"
+'--------------------------------------------------
+' Parameter 1 : (String) "XMLStyleSheetPathList"
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "XMLStyleSheetPathList", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "XMLStyleSheetPathList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

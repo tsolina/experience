@@ -1,0 +1,326 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("EngineeringConnection")
+
+long1 = settingRepository1.GetAttr("EnggConnectionVisualizationStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionVisualizationStatus"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "EnggConnectionVisualizationStatus", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionVisualizationStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("EnggConnectionChildNodeVisualizationStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionChildNodeVisualizationStatus"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "EnggConnectionChildNodeVisualizationStatus", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionChildNodeVisualizationStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("MCXParmDisplayInTree")
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXParmDisplayInTree"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "MCXParmDisplayInTree", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXParmDisplayInTree"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("EnggConnectionOrientation")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionOrientation"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "EnggConnectionOrientation", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionOrientation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("EnggConnectionType")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionType"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "EnggConnectionType", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("MCXUIForPositioning")
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXUIForPositioning"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "MCXUIForPositioning", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXUIForPositioning"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("ContextualMCXNotif")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContextualMCXNotif"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ContextualMCXNotif", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ContextualMCXNotif"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("MCXDuplicatedAtCopyPaste")
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXDuplicatedAtCopyPaste"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "MCXDuplicatedAtCopyPaste", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXDuplicatedAtCopyPaste"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("MCXCreationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXCreationMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "MCXCreationMode", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "MCXCreationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("EnggConnectionSolve")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionSolve"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "EnggConnectionSolve", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionSolve"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("EnggConnectionAnimateSolve")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionAnimateSolve"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "EnggConnectionAnimateSolve", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "EnggConnectionAnimateSolve"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("DirectManipForMRXCreation")
+'--------------------------------------------------
+' Parameter 1 : (String) "DirectManipForMRXCreation"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DirectManipForMRXCreation", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DirectManipForMRXCreation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("ConstraintCreationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConstraintCreationMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ConstraintCreationMode", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ConstraintCreationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("MRXOrderedList")
+'--------------------------------------------------
+' Parameter 1 : (String) "MRXOrderedList"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Contact"
+'    Array[1] : (Variant) (String) "FixTogetherTransfo"
+'    Array[2] : (Variant) (String) "FixTogether"
+'    Array[3] : (Variant) (String) "Coincidence"
+'    Array[4] : (Variant) (String) "Distance"
+'    Array[5] : (Variant) (String) "Angle"
+'    Array[6] : (Variant) (String) "Parallelism"
+'    Array[7] : (Variant) (String) "Perpendicularity"
+'    Array[8] : (Variant) (String) "Length"
+'    Array[9] : (Variant) (String) "Roll"
+'    Array[10] : (Variant) (String) "Slide"
+'    Array[11] : (Variant) (String) "Tangency"
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "MRXOrderedList", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "MRXOrderedList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("QuickConstraintMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "QuickConstraintMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "QuickConstraintMode", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "QuickConstraintMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("InterferenceWarningMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "InterferenceWarningMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "InterferenceWarningMode", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "InterferenceWarningMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

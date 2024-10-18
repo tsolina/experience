@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SymbolEditorSettings")
+
+uLong1 = settingRepository1.GetAttr("SymbolEditorGeneralGridDisplayOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridDisplayOptions"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SymbolEditorGeneralGridDisplayOptions", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridDisplayOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("SymbolEditorGeneralGridSnapPtOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridSnapPtOptions"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SymbolEditorGeneralGridSnapPtOptions", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridSnapPtOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("SymbolEditorNewGridHorizontalSpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorNewGridHorizontalSpacing"
+' Returned value : (Variant) (Double) 20.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SymbolEditorNewGridHorizontalSpacing", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorNewGridHorizontalSpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SymbolEditorGeneralGridSnapPtOptionsGraduations")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridSnapPtOptionsGraduations"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "SymbolEditorGeneralGridSnapPtOptionsGraduations", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridSnapPtOptionsGraduations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("SymbolEditorGeneralGridAllowDistortionsOptions")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridAllowDistortionsOptions"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "SymbolEditorGeneralGridAllowDistortionsOptions", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridAllowDistortionsOptions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("SymbolEditorGridVerticalSpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGridVerticalSpacing"
+' Returned value : (Variant) (Double) 20.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "SymbolEditorGridVerticalSpacing", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGridVerticalSpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("SymbolEditorGeneralGridAllowDistortionsOptionsGraduations")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridAllowDistortionsOptionsGraduations"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "SymbolEditorGeneralGridAllowDistortionsOptionsGraduations", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralGridAllowDistortionsOptionsGraduations"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("SymbolEditorGeneralAllowCopilot")
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralAllowCopilot"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SymbolEditorGeneralAllowCopilot", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SymbolEditorGeneralAllowCopilot"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

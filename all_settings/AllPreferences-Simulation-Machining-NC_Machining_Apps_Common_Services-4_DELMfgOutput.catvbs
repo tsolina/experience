@@ -1,0 +1,355 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NCMfgOutput")
+
+bSTR1 = settingRepository1.GetAttr("PostPro")
+'--------------------------------------------------
+' Parameter 1 : (String) "PostPro"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "PostPro", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "PostPro"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("MyPPCfgFilePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "MyPPCfgFilePath"
+' Returned value : (Variant) (String) "${CATTemp}"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "MyPPCfgFilePath", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "MyPPCfgFilePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR7 = settingRepository1.GetAttr("PPPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "PPPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "PPPath", bSTR8, bSTR9, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "PPPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("CEPro")
+'--------------------------------------------------
+' Parameter 1 : (String) "CEPro"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CEPro", bSTR11, bSTR12, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CEPro"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR13 = settingRepository1.GetAttr("ExternalCEPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalCEPath"
+' Returned value : (Variant) (String) "${CATTemp}"
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ExternalCEPath", bSTR14, bSTR15, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalCEPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR16 = settingRepository1.GetAttr("CEPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "CEPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "CEPath", bSTR17, bSTR18, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "CEPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ToolPathEditorAccess")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolPathEditorAccess"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ToolPathEditorAccess", bSTR19, bSTR20, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolPathEditorAccess"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("StoreContactPoints")
+'--------------------------------------------------
+' Parameter 1 : (String) "StoreContactPoints"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "StoreContactPoints", bSTR21, bSTR22, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "StoreContactPoints"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("ContactPointsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContactPointsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ContactPointsColor", bSTR23, bSTR24, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ContactPointsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ToolOutputPoint")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolOutputPoint"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ToolOutputPoint", bSTR25, bSTR26, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolOutputPoint"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("TPAutoPack")
+'--------------------------------------------------
+' Parameter 1 : (String) "TPAutoPack"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "TPAutoPack", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "TPAutoPack"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR29 = settingRepository1.GetAttr("NCFileExtension")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCFileExtension"
+' Returned value : (Variant) (String) "CATNCCode"
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "NCFileExtension", bSTR30, bSTR31, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "NCFileExtension"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR32 = settingRepository1.GetAttr("APTTypesToPP")
+'--------------------------------------------------
+' Parameter 1 : (String) "APTTypesToPP"
+' Returned value : (Variant) (String) "aptsource"
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "APTTypesToPP", bSTR33, bSTR34, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "APTTypesToPP"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR35 = settingRepository1.GetAttr("ExportPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportPath"
+' Returned value : (Variant) (String) "${CATTemp}"
+'--------------------------------------------------
+
+Dim bSTR36
+bSTR36 = ""
+Dim bSTR37
+bSTR37 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "ExportPath", bSTR36, bSTR37, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean18 = settingRepository1.GetAttr("NCErrorLimitCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCErrorLimitCheck"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "NCErrorLimitCheck", bSTR38, bSTR39, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "NCErrorLimitCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("NCErrorLimit")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCErrorLimit"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR40
+bSTR40 = ""
+Dim bSTR41
+bSTR41 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "NCErrorLimit", bSTR40, bSTR41, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "NCErrorLimit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("NCWarningLimitCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCWarningLimitCheck"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR42
+bSTR42 = ""
+Dim bSTR43
+bSTR43 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "NCWarningLimitCheck", bSTR42, bSTR43, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "NCWarningLimitCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("NCWarningLimit")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCWarningLimit"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR44
+bSTR44 = ""
+Dim bSTR45
+bSTR45 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "NCWarningLimit", bSTR44, bSTR45, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "NCWarningLimit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,215 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CXPConsoleSettings")
+
+boolean1 = settingRepository1.GetAttr("LaunchAutoAtPlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "LaunchAutoAtPlay"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "LaunchAutoAtPlay", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "LaunchAutoAtPlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ClearBeforePlay")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClearBeforePlay"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ClearBeforePlay", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ClearBeforePlay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("TypeTracesError")
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesError"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "TypeTracesError", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesError"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("ErrorTracesColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ErrorTracesColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 30
+'    Array[2] : (Variant) (Unsigned Long) 30
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ErrorTracesColor", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ErrorTracesColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("TypeTracesWarning")
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesWarning"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "TypeTracesWarning", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesWarning"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("WarningTracesColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "WarningTracesColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 140
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "WarningTracesColor", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "WarningTracesColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("TypeTracesInfo")
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesInfo"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "TypeTracesInfo", bSTR13, bSTR14, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesInfo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("InfoTracesColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "InfoTracesColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "InfoTracesColor", bSTR15, bSTR16, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "InfoTracesColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("TypeTracesDebug")
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesDebug"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "TypeTracesDebug", bSTR17, bSTR18, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "TypeTracesDebug"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("DebugTracesColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DebugTracesColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DebugTracesColor", bSTR19, bSTR20, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DebugTracesColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

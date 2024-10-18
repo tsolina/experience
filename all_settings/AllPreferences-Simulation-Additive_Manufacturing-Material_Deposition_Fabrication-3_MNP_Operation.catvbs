@@ -1,0 +1,180 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NCMfgOperation")
+
+boolean1 = settingRepository1.GetAttr("UseBlockInit")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseBlockInit"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "UseBlockInit", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "UseBlockInit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("CopyOperKeepGeometryLink")
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyOperKeepGeometryLink"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CopyOperKeepGeometryLink", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyOperKeepGeometryLink"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("DisplayTPOnMO")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTPOnMO"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DisplayTPOnMO", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTPOnMO"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("RunMfgWorkFlow")
+'--------------------------------------------------
+' Parameter 1 : (String) "RunMfgWorkFlow"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "RunMfgWorkFlow", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "RunMfgWorkFlow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("DisplayTooltipImage")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTooltipImage"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "DisplayTooltipImage", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTooltipImage"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("DisplayTextTab")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTextTab"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DisplayTextTab", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTextTab"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("ContinueTPOnError")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContinueTPOnError"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ContinueTPOnError", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ContinueTPOnError"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("StartFeedMgt")
+'--------------------------------------------------
+' Parameter 1 : (String) "StartFeedMgt"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "StartFeedMgt", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "StartFeedMgt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("KeepSelectionOrder")
+'--------------------------------------------------
+' Parameter 1 : (String) "KeepSelectionOrder"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "KeepSelectionOrder", bSTR17, bSTR18, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "KeepSelectionOrder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

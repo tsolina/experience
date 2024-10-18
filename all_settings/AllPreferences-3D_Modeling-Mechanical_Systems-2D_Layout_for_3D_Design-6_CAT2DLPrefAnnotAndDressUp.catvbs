@@ -1,0 +1,560 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CAT2DLToolsOptions")
+
+boolean1 = settingRepository1.GetAttr("EnableCreateCalloutInNonPerpViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnableCreateCalloutInNonPerpViewSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "EnableCreateCalloutInNonPerpViewSetting", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "EnableCreateCalloutInNonPerpViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("PosCalloutOfNonPerpViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "PosCalloutOfNonPerpViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "PosCalloutOfNonPerpViewSetting", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "PosCalloutOfNonPerpViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("CalloutSizeOverrunSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutSizeOverrunSetting"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CalloutSizeOverrunSetting", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutSizeOverrunSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("DrwLegendTableTitleHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleHeight"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DrwLegendTableTitleHeight", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("DrwLegendTableTitleHeightNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleHeightNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DrwLegendTableTitleHeightNoOverload", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleHeightNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("DrwLegendTableTitleAlignment")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleAlignment"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "DrwLegendTableTitleAlignment", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleAlignment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("DrwLegendTableTitleAlignmentNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleAlignmentNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DrwLegendTableTitleAlignmentNoOverload", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTitleAlignmentNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("DrwLegendTableImageWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageWidth"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DrwLegendTableImageWidth", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("DrwLegendTableImageWidthNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageWidthNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "DrwLegendTableImageWidthNoOverload", bSTR17, bSTR18, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageWidthNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("DrwLegendTableImageHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageHeight"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DrwLegendTableImageHeight", bSTR19, bSTR20, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("DrwLegendTableImageHeightNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageHeightNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "DrwLegendTableImageHeightNoOverload", bSTR21, bSTR22, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageHeightNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("DrwLegendTableImageAlignment")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageAlignment"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "DrwLegendTableImageAlignment", bSTR23, bSTR24, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageAlignment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean20 = settingRepository1.GetAttr("DrwLegendTableImageAlignmentNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageAlignmentNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DrwLegendTableImageAlignmentNoOverload", bSTR25, bSTR26, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableImageAlignmentNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("DrwLegendTableLegendWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendWidth"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "DrwLegendTableLegendWidth", bSTR27, bSTR28, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("DrwLegendTableLegendWidthNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendWidthNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "DrwLegendTableLegendWidthNoOverload", bSTR29, bSTR30, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendWidthNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("DrwLegendTableLegendAlignment")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendAlignment"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "DrwLegendTableLegendAlignment", bSTR31, bSTR32, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendAlignment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("DrwLegendTableLegendAlignmentNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendAlignmentNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "DrwLegendTableLegendAlignmentNoOverload", bSTR33, bSTR34, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableLegendAlignmentNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("DrwLegendTableCountPerViewWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewWidth"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "DrwLegendTableCountPerViewWidth", bSTR35, bSTR36, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean29 = settingRepository1.GetAttr("DrwLegendTableCountPerViewWidthNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewWidthNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "DrwLegendTableCountPerViewWidthNoOverload", bSTR37, bSTR38, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewWidthNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("DrwLegendTableCountPerViewAlignment")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewAlignment"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "DrwLegendTableCountPerViewAlignment", bSTR39, bSTR40, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewAlignment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("DrwLegendTableCountPerViewAlignmentNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewAlignmentNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "DrwLegendTableCountPerViewAlignmentNoOverload", bSTR41, bSTR42, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableCountPerViewAlignmentNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("DrwLegendTableTotalCountWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountWidth"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "DrwLegendTableTotalCountWidth", bSTR43, bSTR44, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean35 = settingRepository1.GetAttr("DrwLegendTableTotalCountWidthNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountWidthNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "DrwLegendTableTotalCountWidthNoOverload", bSTR45, bSTR46, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountWidthNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("DrwLegendTableTotalCountAlignment")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountAlignment"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "DrwLegendTableTotalCountAlignment", bSTR47, bSTR48, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountAlignment"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean38 = settingRepository1.GetAttr("DrwLegendTableTotalCountAlignmentNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountAlignmentNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "DrwLegendTableTotalCountAlignmentNoOverload", bSTR49, bSTR50, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableTotalCountAlignmentNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("DrwLegendTableHeadersHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableHeadersHeight"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "DrwLegendTableHeadersHeight", bSTR51, bSTR52, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableHeadersHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean41 = settingRepository1.GetAttr("DrwLegendTableHeadersHeightNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableHeadersHeightNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "DrwLegendTableHeadersHeightNoOverload", bSTR53, bSTR54, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableHeadersHeightNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double8 = settingRepository1.GetAttr("DrwLegendTableReportedItemsHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableReportedItemsHeight"
+' Returned value : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "DrwLegendTableReportedItemsHeight", bSTR55, bSTR56, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableReportedItemsHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean44 = settingRepository1.GetAttr("DrwLegendTableReportedItemsHeightNoOverload")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableReportedItemsHeightNoOverload"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "DrwLegendTableReportedItemsHeightNoOverload", bSTR57, bSTR58, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwLegendTableReportedItemsHeightNoOverload"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

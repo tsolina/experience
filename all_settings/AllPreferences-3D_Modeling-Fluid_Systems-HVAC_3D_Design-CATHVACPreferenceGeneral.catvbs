@@ -1,0 +1,370 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("L3dHVACDesignCriteria")
+
+long1 = settingRepository1.GetAttr("L3dLineIDCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dLineIDCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "L3dLineIDCheck", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dLineIDCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("L3dSpecDrivenCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dSpecDrivenCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "L3dSpecDrivenCheck", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dSpecDrivenCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("L3dCompatibilityCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCompatibilityCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "L3dCompatibilityCheck", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCompatibilityCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("L3dPartOriginCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dPartOriginCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "L3dPartOriginCheck", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dPartOriginCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("L3dDataSourceCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dDataSourceCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "L3dDataSourceCheck", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dDataSourceCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("L3dStraightRouteCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dStraightRouteCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "L3dStraightRouteCheck", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dStraightRouteCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("L3dResourceTablesCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dResourceTablesCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "L3dResourceTablesCheck", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dResourceTablesCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("L3dFlexTableCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dFlexTableCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "L3dFlexTableCheck", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dFlexTableCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("L3dMultiRouteOnPortCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dMultiRouteOnPortCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "L3dMultiRouteOnPortCheck", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dMultiRouteOnPortCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("L3dDisplayRouteTableNeededWhenMultipleChoiceCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dDisplayRouteTableNeededWhenMultipleChoiceCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "L3dDisplayRouteTableNeededWhenMultipleChoiceCheck", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dDisplayRouteTableNeededWhenMultipleChoiceCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("L3dConsiderInnerThicknessOfDuctCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dConsiderInnerThicknessOfDuctCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "L3dConsiderInnerThicknessOfDuctCheck", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dConsiderInnerThicknessOfDuctCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("L3dCopyColorFromRouteRefOptionCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCopyColorFromRouteRefOptionCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "L3dCopyColorFromRouteRefOptionCheck", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCopyColorFromRouteRefOptionCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("L3dCreateSingleSpoolCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCreateSingleSpoolCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "L3dCreateSingleSpoolCheck", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCreateSingleSpoolCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("L3dPartPlacementWithOptionCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dPartPlacementWithOptionCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "L3dPartPlacementWithOptionCheck", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dPartPlacementWithOptionCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("L3dUseEDSortingAlgoCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dUseEDSortingAlgoCheck"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "L3dUseEDSortingAlgoCheck", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dUseEDSortingAlgoCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("L3dLocalbendRadiusModifOptionCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dLocalbendRadiusModifOptionCheck"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "L3dLocalbendRadiusModifOptionCheck", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dLocalbendRadiusModifOptionCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("L3dLocalbendRadiusForceUsageFromTblOptionCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dLocalbendRadiusForceUsageFromTblOptionCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "L3dLocalbendRadiusForceUsageFromTblOptionCheck", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dLocalbendRadiusForceUsageFromTblOptionCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("L3dCreate3DShapeWithOptionCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCreate3DShapeWithOptionCheck"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "L3dCreate3DShapeWithOptionCheck", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCreate3DShapeWithOptionCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR37 = settingRepository1.GetAttr("L3dCreate3DShapeComboBoxWithOptionCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCreate3DShapeComboBoxWithOptionCheck"
+' Returned value : (Variant) (String) "DICTest3DShape3"
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "L3dCreate3DShapeComboBoxWithOptionCheck", bSTR38, bSTR39, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "L3dCreate3DShapeComboBoxWithOptionCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

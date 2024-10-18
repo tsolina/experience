@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMNavigator")
+
+uLong1 = settingRepository1.GetAttr("3DSearchMaxItemsBeforeWarn")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DSearchMaxItemsBeforeWarn"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "3DSearchMaxItemsBeforeWarn", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "3DSearchMaxItemsBeforeWarn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("AntiZFighting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AntiZFighting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "AntiZFighting", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "AntiZFighting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("Navigation3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "Navigation3D", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

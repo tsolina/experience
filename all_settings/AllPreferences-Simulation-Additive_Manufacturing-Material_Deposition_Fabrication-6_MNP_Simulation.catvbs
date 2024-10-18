@@ -1,0 +1,484 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DNBVNCSimulSettings")
+
+boolean1 = settingRepository1.GetAttr("DisplayTPInSimul")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTPInSimul"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DisplayTPInSimul", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTPInSimul"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("NCCodeSimulMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "NCCodeSimulMode", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("NCCodeSimulSyncMat")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulSyncMat"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "NCCodeSimulSyncMat", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulSyncMat"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("NCCodeSimulDetailClash")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulDetailClash"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "NCCodeSimulDetailClash", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulDetailClash"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ComputeVolumeInformation")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeVolumeInformation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ComputeVolumeInformation", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeVolumeInformation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("NCCodeMergeClashes")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeMergeClashes"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "NCCodeMergeClashes", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeMergeClashes"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("FaultListSaveinDB")
+'--------------------------------------------------
+' Parameter 1 : (String) "FaultListSaveinDB"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "FaultListSaveinDB", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "FaultListSaveinDB"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("ClashMachine")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashMachine"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ClashMachine", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashMachine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("ClashMachineStop")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashMachineStop"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ClashMachineStop", bSTR17, bSTR18, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashMachineStop"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("ContinuousClashDetection")
+'--------------------------------------------------
+' Parameter 1 : (String) "ContinuousClashDetection"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "ContinuousClashDetection", bSTR19, bSTR20, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "ContinuousClashDetection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("ClashStock")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashStock"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "ClashStock", bSTR21, bSTR22, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashStock"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("ClashStockStop")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashStockStop"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "ClashStockStop", bSTR23, bSTR24, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "ClashStockStop"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("NCCodeMachineKinematics")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeMachineKinematics"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "NCCodeMachineKinematics", bSTR25, bSTR26, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeMachineKinematics"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean27 = settingRepository1.GetAttr("IntermediateSimuResultAutoUpdate")
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateSimuResultAutoUpdate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "IntermediateSimuResultAutoUpdate", bSTR27, bSTR28, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateSimuResultAutoUpdate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean29 = settingRepository1.GetAttr("IntermediateSimuResultAutoSave")
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateSimuResultAutoSave"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "IntermediateSimuResultAutoSave", bSTR29, bSTR30, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateSimuResultAutoSave"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean31 = settingRepository1.GetAttr("NCCodeSaveAllInfo")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSaveAllInfo"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "NCCodeSaveAllInfo", bSTR31, bSTR32, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSaveAllInfo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean33 = settingRepository1.GetAttr("IntermediateSimuResultSaveInDB")
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateSimuResultSaveInDB"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "IntermediateSimuResultSaveInDB", bSTR33, bSTR34, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "IntermediateSimuResultSaveInDB"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean35 = settingRepository1.GetAttr("NCCodeSimulation")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "NCCodeSimulation", bSTR35, bSTR36, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean37 = settingRepository1.GetAttr("NCCodeSimulationISR")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulationISR"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "NCCodeSimulationISR", bSTR37, bSTR38, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulationISR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("MaxDistBtwSteps")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxDistBtwSteps"
+' Returned value : (Variant) (Float) 10.000000
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "MaxDistBtwSteps", bSTR39, bSTR40, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxDistBtwSteps"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean40 = settingRepository1.GetAttr("StopAtToolChange")
+'--------------------------------------------------
+' Parameter 1 : (String) "StopAtToolChange"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "StopAtToolChange", bSTR41, bSTR42, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "StopAtToolChange"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean42 = settingRepository1.GetAttr("NCCodeSimulMatAdd")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulMatAdd"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "NCCodeSimulMatAdd", bSTR43, bSTR44, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulMatAdd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("NCCodeSimulStepBackward")
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulStepBackward"
+' Returned value : (Variant) (Long) 1000
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "NCCodeSimulStepBackward", bSTR45, bSTR46, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "NCCodeSimulStepBackward"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean45 = settingRepository1.GetAttr("SimulStopErrorLimitEnable")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulStopErrorLimitEnable"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "SimulStopErrorLimitEnable", bSTR47, bSTR48, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulStopErrorLimitEnable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("SimulStopErrorLimitValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulStopErrorLimitValue"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "SimulStopErrorLimitValue", bSTR49, bSTR50, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulStopErrorLimitValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

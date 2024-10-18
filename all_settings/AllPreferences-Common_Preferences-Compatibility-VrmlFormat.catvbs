@@ -1,0 +1,165 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VrmlFormat")
+
+long1 = settingRepository1.GetAttr("ImportUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportUnit"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ImportUnit", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+float1 = settingRepository1.GetAttr("ImportCreaseAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportCreaseAngle"
+' Returned value : (Variant) (Float) 0.500000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ImportCreaseAngle", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ImportCreaseAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ExportVersion")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportVersion"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ExportVersion", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportVersion"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("ExportNormals")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportNormals"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ExportNormals", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportNormals"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("ExportEdges")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportEdges"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "ExportEdges", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportEdges"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("ExportTexture")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportTexture"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ExportTexture", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportTexture"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ExportTextureFile")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportTextureFile"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ExportTextureFile", bSTR13, bSTR14, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportTextureFile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("ExportBackgroundColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportBackgroundColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "ExportBackgroundColor", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportBackgroundColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

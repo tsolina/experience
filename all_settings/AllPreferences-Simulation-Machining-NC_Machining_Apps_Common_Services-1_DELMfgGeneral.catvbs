@@ -1,0 +1,1439 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NCMfgDisplay")
+
+bSTR1 = settingRepository1.GetAttr("ButtonOptimizePerformance")
+'--------------------------------------------------
+' Parameter 1 : (String) "ButtonOptimizePerformance"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ButtonOptimizePerformance", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ButtonOptimizePerformance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("AutoUpdate")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoUpdate"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "AutoUpdate", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoUpdate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("TransitionPathDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "TransitionPathDisplay"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "TransitionPathDisplay", bSTR6, bSTR7, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "TransitionPathDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("RunMfgAssistant")
+'--------------------------------------------------
+' Parameter 1 : (String) "RunMfgAssistant"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "RunMfgAssistant", bSTR8, bSTR9, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "RunMfgAssistant"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("ShowOnlyCurrentMachine")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowOnlyCurrentMachine"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ShowOnlyCurrentMachine", bSTR10, bSTR11, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowOnlyCurrentMachine"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("PrefixPLMObjects")
+'--------------------------------------------------
+' Parameter 1 : (String) "PrefixPLMObjects"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR12
+bSTR12 = ""
+Dim bSTR13
+bSTR13 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "PrefixPLMObjects", bSTR12, bSTR13, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "PrefixPLMObjects"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("ColorBody")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorBody"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR14
+bSTR14 = ""
+Dim bSTR15
+bSTR15 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ColorBody", bSTR14, bSTR15, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorBody"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("RequiredColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RequiredColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 204
+'    Array[1] : (Variant) (Unsigned Long) 16
+'    Array[2] : (Variant) (Unsigned Long) 6
+'--------------------------------------------------
+
+Dim bSTR16
+bSTR16 = ""
+Dim bSTR17
+bSTR17 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "RequiredColor", bSTR16, bSTR17, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "RequiredColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("OptionalColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "OptionalColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 234
+'    Array[1] : (Variant) (Unsigned Long) 132
+'    Array[2] : (Variant) (Unsigned Long) 102
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "OptionalColor", bSTR18, bSTR19, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "OptionalColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("ValuatedColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ValuatedColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 64
+'    Array[1] : (Variant) (Unsigned Long) 157
+'    Array[2] : (Variant) (Unsigned Long) 14
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "ValuatedColor", bSTR20, bSTR21, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "ValuatedColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("TextColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "TextColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 200
+'--------------------------------------------------
+
+Dim bSTR22
+bSTR22 = ""
+Dim bSTR23
+bSTR23 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "TextColor", bSTR22, bSTR23, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "TextColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("NotFoundColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "NotFoundColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 128
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 128
+'--------------------------------------------------
+
+Dim bSTR24
+bSTR24 = ""
+Dim bSTR25
+bSTR25 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "NotFoundColor", bSTR24, bSTR25, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "NotFoundColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("NotUpToDateColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "NotUpToDateColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 124
+'    Array[1] : (Variant) (Unsigned Long) 100
+'    Array[2] : (Variant) (Unsigned Long) 3
+'--------------------------------------------------
+
+Dim bSTR26
+bSTR26 = ""
+Dim bSTR27
+bSTR27 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "NotUpToDateColor", bSTR26, bSTR27, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "NotUpToDateColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("MachinedAreaColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "MachinedAreaColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR28
+bSTR28 = ""
+Dim bSTR29
+bSTR29 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "MachinedAreaColor", bSTR28, bSTR29, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "MachinedAreaColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("ActualStockColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActualStockColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR30
+bSTR30 = ""
+Dim bSTR31
+bSTR31 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "ActualStockColor", bSTR30, bSTR31, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "ActualStockColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("ActualStockTransparency")
+'--------------------------------------------------
+' Parameter 1 : (String) "ActualStockTransparency"
+' Returned value : (Variant) (Unsigned Long) 100
+'--------------------------------------------------
+
+Dim bSTR32
+bSTR32 = ""
+Dim bSTR33
+bSTR33 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "ActualStockTransparency", bSTR32, bSTR33, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "ActualStockTransparency"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("ToolDisplayMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolDisplayMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "ToolDisplayMode", bSTR34, bSTR35, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "ToolDisplayMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("PointToDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "PointToDisplay"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR36
+bSTR36 = ""
+Dim bSTR37
+bSTR37 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "PointToDisplay", bSTR36, bSTR37, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "PointToDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("CircleToDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "CircleToDisplay"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR38
+bSTR38 = ""
+Dim bSTR39
+bSTR39 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "CircleToDisplay", bSTR38, bSTR39, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "CircleToDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("CreateCATPart")
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCATPart"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR40
+bSTR40 = ""
+Dim bSTR41
+bSTR41 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "CreateCATPart", bSTR40, bSTR41, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "CreateCATPart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean30 = settingRepository1.GetAttr("InstSetCustoMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "InstSetCustoMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR42
+bSTR42 = ""
+Dim bSTR43
+bSTR43 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "InstSetCustoMode", bSTR42, bSTR43, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "InstSetCustoMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("MfgUserNameProtectionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "MfgUserNameProtectionMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR44
+bSTR44 = ""
+Dim bSTR45
+bSTR45 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "MfgUserNameProtectionMode", bSTR44, bSTR45, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "MfgUserNameProtectionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong9
+arrayOfVariantOfULong9 = settingRepository1.GetAttrArray("BottomColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "BottomColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 120
+'    Array[1] : (Variant) (Unsigned Long) 120
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR46
+bSTR46 = ""
+Dim bSTR47
+bSTR47 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "BottomColor", bSTR46, bSTR47, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "BottomColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("BottomHighlight")
+'--------------------------------------------------
+' Parameter 1 : (String) "BottomHighlight"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR48
+bSTR48 = ""
+Dim bSTR49
+bSTR49 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "BottomHighlight", bSTR48, bSTR49, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "BottomHighlight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong10
+arrayOfVariantOfULong10 = settingRepository1.GetAttrArray("FlankColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlankColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 200
+'    Array[1] : (Variant) (Unsigned Long) 100
+'    Array[2] : (Variant) (Unsigned Long) 100
+'--------------------------------------------------
+
+Dim bSTR50
+bSTR50 = ""
+Dim bSTR51
+bSTR51 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "FlankColor", bSTR50, bSTR51, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "FlankColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("FlankHighlight")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlankHighlight"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR52
+bSTR52 = ""
+Dim bSTR53
+bSTR53 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "FlankHighlight", bSTR52, bSTR53, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "FlankHighlight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong11
+arrayOfVariantOfULong11 = settingRepository1.GetAttrArray("LimitColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "LimitColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 120
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 120
+'--------------------------------------------------
+
+Dim bSTR54
+bSTR54 = ""
+Dim bSTR55
+bSTR55 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "LimitColor", bSTR54, bSTR55, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "LimitColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("LimitHighlight")
+'--------------------------------------------------
+' Parameter 1 : (String) "LimitHighlight"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR56
+bSTR56 = ""
+Dim bSTR57
+bSTR57 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "LimitHighlight", bSTR56, bSTR57, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "LimitHighlight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong12
+arrayOfVariantOfULong12 = settingRepository1.GetAttrArray("CheckColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 190
+'    Array[1] : (Variant) (Unsigned Long) 235
+'    Array[2] : (Variant) (Unsigned Long) 210
+'--------------------------------------------------
+
+Dim bSTR58
+bSTR58 = ""
+Dim bSTR59
+bSTR59 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "CheckColor", bSTR58, bSTR59, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("CheckHighlight")
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckHighlight"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR60
+bSTR60 = ""
+Dim bSTR61
+bSTR61 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "CheckHighlight", bSTR60, bSTR61, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckHighlight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong13
+arrayOfVariantOfULong13 = settingRepository1.GetAttrArray("MachiningColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "MachiningColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR62
+bSTR62 = ""
+Dim bSTR63
+bSTR63 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "MachiningColor", bSTR62, bSTR63, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "MachiningColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong14
+arrayOfVariantOfULong14 = settingRepository1.GetAttrArray("ApproachColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ApproachColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR64
+bSTR64 = ""
+Dim bSTR65
+bSTR65 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "ApproachColor", bSTR64, bSTR65, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "ApproachColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong15
+arrayOfVariantOfULong15 = settingRepository1.GetAttrArray("RetractColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RetractColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR66
+bSTR66 = ""
+Dim bSTR67
+bSTR67 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "RetractColor", bSTR66, bSTR67, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "RetractColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong16
+arrayOfVariantOfULong16 = settingRepository1.GetAttrArray("RapidColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RapidColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR68
+bSTR68 = ""
+Dim bSTR69
+bSTR69 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "RapidColor", bSTR68, bSTR69, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "RapidColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong17
+arrayOfVariantOfULong17 = settingRepository1.GetAttrArray("FinishingColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR70
+bSTR70 = ""
+Dim bSTR71
+bSTR71 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "FinishingColor", bSTR70, bSTR71, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong18
+arrayOfVariantOfULong18 = settingRepository1.GetAttrArray("ChamferingColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "ChamferingColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR72
+bSTR72 = ""
+Dim bSTR73
+bSTR73 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "ChamferingColor", bSTR72, bSTR73, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "ChamferingColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong19
+arrayOfVariantOfULong19 = settingRepository1.GetAttrArray("PlungeColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "PlungeColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR74
+bSTR74 = ""
+Dim bSTR75
+bSTR75 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "PlungeColor", bSTR74, bSTR75, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "PlungeColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong20
+arrayOfVariantOfULong20 = settingRepository1.GetAttrArray("AirCuttingColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "AirCuttingColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR76
+bSTR76 = ""
+Dim bSTR77
+bSTR77 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "AirCuttingColor", bSTR76, bSTR77, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "AirCuttingColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong21
+arrayOfVariantOfULong21 = settingRepository1.GetAttrArray("CollisionsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CollisionsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR78
+bSTR78 = ""
+Dim bSTR79
+bSTR79 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "CollisionsColor", bSTR78, bSTR79, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "CollisionsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong22
+arrayOfVariantOfULong22 = settingRepository1.GetAttrArray("OutOfLimitColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "OutOfLimitColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR80
+bSTR80 = ""
+Dim bSTR81
+bSTR81 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "OutOfLimitColor", bSTR80, bSTR81, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "OutOfLimitColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong23
+arrayOfVariantOfULong23 = settingRepository1.GetAttrArray("MaxAngularColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxAngularColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR82
+bSTR82 = ""
+Dim bSTR83
+bSTR83 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "MaxAngularColor", bSTR82, bSTR83, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxAngularColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong24
+arrayOfVariantOfULong24 = settingRepository1.GetAttrArray("UnreachableColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "UnreachableColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR84
+bSTR84 = ""
+Dim bSTR85
+bSTR85 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "UnreachableColor", bSTR84, bSTR85, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "UnreachableColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("AllFinishingPass")
+'--------------------------------------------------
+' Parameter 1 : (String) "AllFinishingPass"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR86
+bSTR86 = ""
+Dim bSTR87
+bSTR87 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "AllFinishingPass", bSTR86, bSTR87, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "AllFinishingPass"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("FinishingPassNum")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPassNum"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR88
+bSTR88 = ""
+Dim bSTR89
+bSTR89 = ""
+Dim boolean55
+settingRepository1.GetAttrInfo "FinishingPassNum", bSTR88, bSTR89, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPassNum"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong25
+arrayOfVariantOfULong25 = settingRepository1.GetAttrArray("FinishingPass1")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass1"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR90
+bSTR90 = ""
+Dim bSTR91
+bSTR91 = ""
+Dim boolean56
+settingRepository1.GetAttrInfo "FinishingPass1", bSTR90, bSTR91, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong26
+arrayOfVariantOfULong26 = settingRepository1.GetAttrArray("FinishingPass2")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass2"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 108
+'    Array[2] : (Variant) (Unsigned Long) 209
+'--------------------------------------------------
+
+Dim bSTR92
+bSTR92 = ""
+Dim bSTR93
+bSTR93 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "FinishingPass2", bSTR92, bSTR93, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass2"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong27
+arrayOfVariantOfULong27 = settingRepository1.GetAttrArray("FinishingPass3")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass3"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 210
+'    Array[1] : (Variant) (Unsigned Long) 210
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR94
+bSTR94 = ""
+Dim bSTR95
+bSTR95 = ""
+Dim boolean58
+settingRepository1.GetAttrInfo "FinishingPass3", bSTR94, bSTR95, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass3"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong28
+arrayOfVariantOfULong28 = settingRepository1.GetAttrArray("FinishingPass4")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass4"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 210
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 210
+'--------------------------------------------------
+
+Dim bSTR96
+bSTR96 = ""
+Dim bSTR97
+bSTR97 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "FinishingPass4", bSTR96, bSTR97, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass4"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong29
+arrayOfVariantOfULong29 = settingRepository1.GetAttrArray("FinishingPass5")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass5"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 165
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR98
+bSTR98 = ""
+Dim bSTR99
+bSTR99 = ""
+Dim boolean60
+settingRepository1.GetAttrInfo "FinishingPass5", bSTR98, bSTR99, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass5"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong30
+arrayOfVariantOfULong30 = settingRepository1.GetAttrArray("FinishingPass6")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass6"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 210
+'    Array[2] : (Variant) (Unsigned Long) 210
+'--------------------------------------------------
+
+Dim bSTR100
+bSTR100 = ""
+Dim bSTR101
+bSTR101 = ""
+Dim boolean61
+settingRepository1.GetAttrInfo "FinishingPass6", bSTR100, bSTR101, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass6"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong31
+arrayOfVariantOfULong31 = settingRepository1.GetAttrArray("FinishingPass7")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass7"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 220
+'    Array[1] : (Variant) (Unsigned Long) 110
+'    Array[2] : (Variant) (Unsigned Long) 215
+'--------------------------------------------------
+
+Dim bSTR102
+bSTR102 = ""
+Dim bSTR103
+bSTR103 = ""
+Dim boolean62
+settingRepository1.GetAttrInfo "FinishingPass7", bSTR102, bSTR103, boolean62
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass7"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong32
+arrayOfVariantOfULong32 = settingRepository1.GetAttrArray("FinishingPass8")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass8"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 152
+'    Array[1] : (Variant) (Unsigned Long) 83
+'    Array[2] : (Variant) (Unsigned Long) 150
+'--------------------------------------------------
+
+Dim bSTR104
+bSTR104 = ""
+Dim bSTR105
+bSTR105 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "FinishingPass8", bSTR104, bSTR105, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass8"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong33
+arrayOfVariantOfULong33 = settingRepository1.GetAttrArray("FinishingPass9")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass9"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 85
+'    Array[1] : (Variant) (Unsigned Long) 110
+'    Array[2] : (Variant) (Unsigned Long) 45
+'--------------------------------------------------
+
+Dim bSTR106
+bSTR106 = ""
+Dim bSTR107
+bSTR107 = ""
+Dim boolean64
+settingRepository1.GetAttrInfo "FinishingPass9", bSTR106, bSTR107, boolean64
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass9"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong34
+arrayOfVariantOfULong34 = settingRepository1.GetAttrArray("FinishingPass10")
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass10"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 148
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 210
+'--------------------------------------------------
+
+Dim bSTR108
+bSTR108 = ""
+Dim bSTR109
+bSTR109 = ""
+Dim boolean65
+settingRepository1.GetAttrInfo "FinishingPass10", bSTR108, bSTR109, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "FinishingPass10"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("AllSeparationPass")
+'--------------------------------------------------
+' Parameter 1 : (String) "AllSeparationPass"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR110
+bSTR110 = ""
+Dim bSTR111
+bSTR111 = ""
+Dim boolean66
+settingRepository1.GetAttrInfo "AllSeparationPass", bSTR110, bSTR111, boolean66
+'--------------------------------------------------
+' Parameter 1 : (String) "AllSeparationPass"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("SeparationPassNum")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPassNum"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR112
+bSTR112 = ""
+Dim bSTR113
+bSTR113 = ""
+Dim boolean67
+settingRepository1.GetAttrInfo "SeparationPassNum", bSTR112, bSTR113, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPassNum"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong35
+arrayOfVariantOfULong35 = settingRepository1.GetAttrArray("SeparationPass1")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass1"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 128
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR114
+bSTR114 = ""
+Dim bSTR115
+bSTR115 = ""
+Dim boolean68
+settingRepository1.GetAttrInfo "SeparationPass1", bSTR114, bSTR115, boolean68
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong36
+arrayOfVariantOfULong36 = settingRepository1.GetAttrArray("SeparationPass2")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass2"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 146
+'    Array[1] : (Variant) (Unsigned Long) 209
+'    Array[2] : (Variant) (Unsigned Long) 37
+'--------------------------------------------------
+
+Dim bSTR116
+bSTR116 = ""
+Dim bSTR117
+bSTR117 = ""
+Dim boolean69
+settingRepository1.GetAttrInfo "SeparationPass2", bSTR116, bSTR117, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass2"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong37
+arrayOfVariantOfULong37 = settingRepository1.GetAttrArray("SeparationPass3")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass3"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 190
+'    Array[1] : (Variant) (Unsigned Long) 111
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR118
+bSTR118 = ""
+Dim bSTR119
+bSTR119 = ""
+Dim boolean70
+settingRepository1.GetAttrInfo "SeparationPass3", bSTR118, bSTR119, boolean70
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass3"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong38
+arrayOfVariantOfULong38 = settingRepository1.GetAttrArray("SeparationPass4")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass4"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 95
+'    Array[1] : (Variant) (Unsigned Long) 160
+'    Array[2] : (Variant) (Unsigned Long) 155
+'--------------------------------------------------
+
+Dim bSTR120
+bSTR120 = ""
+Dim bSTR121
+bSTR121 = ""
+Dim boolean71
+settingRepository1.GetAttrInfo "SeparationPass4", bSTR120, bSTR121, boolean71
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass4"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong39
+arrayOfVariantOfULong39 = settingRepository1.GetAttrArray("SeparationPass5")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass5"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 210
+'    Array[1] : (Variant) (Unsigned Long) 239
+'    Array[2] : (Variant) (Unsigned Long) 219
+'--------------------------------------------------
+
+Dim bSTR122
+bSTR122 = ""
+Dim bSTR123
+bSTR123 = ""
+Dim boolean72
+settingRepository1.GetAttrInfo "SeparationPass5", bSTR122, bSTR123, boolean72
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass5"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong40
+arrayOfVariantOfULong40 = settingRepository1.GetAttrArray("SeparationPass6")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass6"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 140
+'    Array[1] : (Variant) (Unsigned Long) 70
+'    Array[2] : (Variant) (Unsigned Long) 20
+'--------------------------------------------------
+
+Dim bSTR124
+bSTR124 = ""
+Dim bSTR125
+bSTR125 = ""
+Dim boolean73
+settingRepository1.GetAttrInfo "SeparationPass6", bSTR124, bSTR125, boolean73
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass6"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong41
+arrayOfVariantOfULong41 = settingRepository1.GetAttrArray("SeparationPass7")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass7"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 70
+'    Array[1] : (Variant) (Unsigned Long) 130
+'    Array[2] : (Variant) (Unsigned Long) 180
+'--------------------------------------------------
+
+Dim bSTR126
+bSTR126 = ""
+Dim bSTR127
+bSTR127 = ""
+Dim boolean74
+settingRepository1.GetAttrInfo "SeparationPass7", bSTR126, bSTR127, boolean74
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass7"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong42
+arrayOfVariantOfULong42 = settingRepository1.GetAttrArray("SeparationPass8")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass8"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 209
+'    Array[1] : (Variant) (Unsigned Long) 187
+'    Array[2] : (Variant) (Unsigned Long) 154
+'--------------------------------------------------
+
+Dim bSTR128
+bSTR128 = ""
+Dim bSTR129
+bSTR129 = ""
+Dim boolean75
+settingRepository1.GetAttrInfo "SeparationPass8", bSTR128, bSTR129, boolean75
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass8"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong43
+arrayOfVariantOfULong43 = settingRepository1.GetAttrArray("SeparationPass9")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass9"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 110
+'    Array[1] : (Variant) (Unsigned Long) 130
+'    Array[2] : (Variant) (Unsigned Long) 140
+'--------------------------------------------------
+
+Dim bSTR130
+bSTR130 = ""
+Dim bSTR131
+bSTR131 = ""
+Dim boolean76
+settingRepository1.GetAttrInfo "SeparationPass9", bSTR130, bSTR131, boolean76
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass9"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong44
+arrayOfVariantOfULong44 = settingRepository1.GetAttrArray("SeparationPass10")
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass10"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 179
+'    Array[1] : (Variant) (Unsigned Long) 142
+'    Array[2] : (Variant) (Unsigned Long) 80
+'--------------------------------------------------
+
+Dim bSTR132
+bSTR132 = ""
+Dim bSTR133
+bSTR133 = ""
+Dim boolean77
+settingRepository1.GetAttrInfo "SeparationPass10", bSTR132, bSTR133, boolean77
+'--------------------------------------------------
+' Parameter 1 : (String) "SeparationPass10"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

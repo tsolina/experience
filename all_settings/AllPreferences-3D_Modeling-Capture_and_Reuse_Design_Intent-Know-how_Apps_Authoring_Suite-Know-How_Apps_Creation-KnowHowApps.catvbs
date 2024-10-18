@@ -1,0 +1,104 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATBehaviorCATFct")
+
+uLong1 = settingRepository1.GetAttr("DEFINE_BEHAVIOR")
+'--------------------------------------------------
+' Parameter 1 : (String) "DEFINE_BEHAVIOR"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DEFINE_BEHAVIOR", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DEFINE_BEHAVIOR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("OPERATION_MESSAGES")
+'--------------------------------------------------
+' Parameter 1 : (String) "OPERATION_MESSAGES"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "OPERATION_MESSAGES", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "OPERATION_MESSAGES"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("SHOW_VARIABLE")
+'--------------------------------------------------
+' Parameter 1 : (String) "SHOW_VARIABLE"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "SHOW_VARIABLE", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "SHOW_VARIABLE"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("HIDE_ATTRIB")
+'--------------------------------------------------
+' Parameter 1 : (String) "HIDE_ATTRIB"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "HIDE_ATTRIB", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "HIDE_ATTRIB"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("CHECK_CFGS")
+'--------------------------------------------------
+' Parameter 1 : (String) "CHECK_CFGS"
+' Returned value : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "CHECK_CFGS", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "CHECK_CFGS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

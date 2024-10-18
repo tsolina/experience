@@ -1,0 +1,203 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FbdiSplitRep")
+
+long1 = settingRepository1.GetAttr("FBDI_ComputeMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_ComputeMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "FBDI_ComputeMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_ComputeMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("FBDI_MultiProMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MultiProMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "FBDI_MultiProMode", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MultiProMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("FBDI_ComputeMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_ComputeMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "FBDI_ComputeMode", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_ComputeMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("FBDI_EnableMaxDocs")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_EnableMaxDocs"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "FBDI_EnableMaxDocs", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_EnableMaxDocs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("FBDI_EnableMaxSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_EnableMaxSize"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "FBDI_EnableMaxSize", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_EnableMaxSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("FBDI_MaxNumberOfDocuments")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MaxNumberOfDocuments"
+' Returned value : (Variant) (Long) 100
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "FBDI_MaxNumberOfDocuments", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MaxNumberOfDocuments"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("FBDI_MaxSizeOfDocuments")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MaxSizeOfDocuments"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "FBDI_MaxSizeOfDocuments", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MaxSizeOfDocuments"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("FBDI_MultiProMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MultiProMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "FBDI_MultiProMode", bSTR15, bSTR16, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_MultiProMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("FBDI_HostNames")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_HostNames"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "FBDI_HostNames", bSTR17, bSTR18, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_HostNames"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("FBDI_HostCPUs")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_HostCPUs"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "FBDI_HostCPUs", bSTR19, bSTR20, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_HostCPUs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

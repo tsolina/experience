@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMNavigator")
+
+long1 = settingRepository1.GetAttr("UwpActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UwpActivation", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("autoExpandRootNode")
+'--------------------------------------------------
+' Parameter 1 : (String) "autoExpandRootNode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "autoExpandRootNode", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "autoExpandRootNode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("MRUComputation")
+'--------------------------------------------------
+' Parameter 1 : (String) "MRUComputation"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "MRUComputation", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "MRUComputation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ExploreWidget")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreWidget"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ExploreWidget", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreWidget"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ExploreInContext")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreInContext"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "ExploreInContext", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "ExploreInContext"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("DisplayThumbnailsExploreParents")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayThumbnailsExploreParents"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "DisplayThumbnailsExploreParents", bSTR11, bSTR12, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayThumbnailsExploreParents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("DisplayTilesExploreParents")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTilesExploreParents"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DisplayTilesExploreParents", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayTilesExploreParents"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

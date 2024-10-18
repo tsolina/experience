@@ -1,0 +1,199 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAFeaExePreferences")
+
+long1 = settingRepository1.GetAttr("TotalCpuQty")
+'--------------------------------------------------
+' Parameter 1 : (String) "TotalCpuQty"
+' Returned value : (Variant) (Long) 4
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "TotalCpuQty", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "TotalCpuQty"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("MaxCpuQty")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxCpuQty"
+' Returned value : (Variant) (Long) 32
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "MaxCpuQty", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxCpuQty"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("UseGpuForExecution")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseGpuForExecution"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "UseGpuForExecution", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "UseGpuForExecution"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("FEMUpdateWarning")
+'--------------------------------------------------
+' Parameter 1 : (String) "FEMUpdateWarning"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "FEMUpdateWarning", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "FEMUpdateWarning"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("AllowableSolverMemory")
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowableSolverMemory"
+' Returned value : (Variant) (Long) 50
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "AllowableSolverMemory", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowableSolverMemory"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ResultsStorageOptionOnPrem")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsStorageOptionOnPrem"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ResultsStorageOptionOnPrem", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsStorageOptionOnPrem"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("ResultsStorageOptionCloud")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsStorageOptionCloud"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ResultsStorageOptionCloud", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ResultsStorageOptionCloud"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("UseScratchFolder")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseScratchFolder"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "UseScratchFolder", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "UseScratchFolder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR17 = settingRepository1.GetAttr("ScratchFolderPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "ScratchFolderPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR18
+bSTR18 = ""
+Dim bSTR19
+bSTR19 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "ScratchFolderPath", bSTR18, bSTR19, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "ScratchFolderPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("CpuType")
+'--------------------------------------------------
+' Parameter 1 : (String) "CpuType"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR20
+bSTR20 = ""
+Dim bSTR21
+bSTR21 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "CpuType", bSTR20, bSTR21, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "CpuType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

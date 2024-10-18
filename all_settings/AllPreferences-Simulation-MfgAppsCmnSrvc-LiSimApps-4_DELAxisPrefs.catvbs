@@ -1,0 +1,1379 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELDbgTMPAxisTypeSettings")
+
+boolean1 = settingRepository1.GetAttr("AxisDisplayTextWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextWorldAbs"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AxisDisplayTextWorldAbs", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("AxisDisplaySizeWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeWorldAbs"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "AxisDisplaySizeWorldAbs", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("AxisDisplayColorWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorWorldAbs"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AxisDisplayColorWorldAbs", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("AxisDisplayLineTypeWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeWorldAbs"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeWorldAbs", bSTR7, bSTR8, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("AxisDisplayLineWeightWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightWorldAbs"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightWorldAbs", bSTR9, bSTR10, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("AxisDisplayShowSymbolWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolWorldAbs"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolWorldAbs", bSTR11, bSTR12, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("AxisDisplaySymbolTypeWorldAbs")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeWorldAbs"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeWorldAbs", bSTR13, bSTR14, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeWorldAbs"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("AxisDisplayTextWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextWorldRsc"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "AxisDisplayTextWorldRsc", bSTR15, bSTR16, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong5 = settingRepository1.GetAttr("AxisDisplaySizeWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeWorldRsc"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "AxisDisplaySizeWorldRsc", bSTR17, bSTR18, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("AxisDisplayColorWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorWorldRsc"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "AxisDisplayColorWorldRsc", bSTR19, bSTR20, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong6 = settingRepository1.GetAttr("AxisDisplayLineTypeWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeWorldRsc"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeWorldRsc", bSTR21, bSTR22, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong7 = settingRepository1.GetAttr("AxisDisplayLineWeightWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightWorldRsc"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightWorldRsc", bSTR23, bSTR24, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("AxisDisplayShowSymbolWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolWorldRsc"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolWorldRsc", bSTR25, bSTR26, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong8 = settingRepository1.GetAttr("AxisDisplaySymbolTypeWorldRsc")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeWorldRsc"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeWorldRsc", bSTR27, bSTR28, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeWorldRsc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("AxisDisplayTextRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextRscBase"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "AxisDisplayTextRscBase", bSTR29, bSTR30, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong9 = settingRepository1.GetAttr("AxisDisplaySizeRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeRscBase"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "AxisDisplaySizeRscBase", bSTR31, bSTR32, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("AxisDisplayColorRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorRscBase"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 128
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "AxisDisplayColorRscBase", bSTR33, bSTR34, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong10 = settingRepository1.GetAttr("AxisDisplayLineTypeRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeRscBase"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeRscBase", bSTR35, bSTR36, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong11 = settingRepository1.GetAttr("AxisDisplayLineWeightRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightRscBase"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightRscBase", bSTR37, bSTR38, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("AxisDisplayShowSymbolRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolRscBase"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolRscBase", bSTR39, bSTR40, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong12 = settingRepository1.GetAttr("AxisDisplaySymbolTypeRscBase")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeRscBase"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeRscBase", bSTR41, bSTR42, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeRscBase"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean28 = settingRepository1.GetAttr("AxisDisplayTextCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextCurrentAxis"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "AxisDisplayTextCurrentAxis", bSTR43, bSTR44, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong13 = settingRepository1.GetAttr("AxisDisplaySizeCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeCurrentAxis"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "AxisDisplaySizeCurrentAxis", bSTR45, bSTR46, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("AxisDisplayColorCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorCurrentAxis"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "AxisDisplayColorCurrentAxis", bSTR47, bSTR48, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong14 = settingRepository1.GetAttr("AxisDisplayLineTypeCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeCurrentAxis"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeCurrentAxis", bSTR49, bSTR50, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong15 = settingRepository1.GetAttr("AxisDisplayLineWeightCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightCurrentAxis"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightCurrentAxis", bSTR51, bSTR52, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean34 = settingRepository1.GetAttr("AxisDisplayShowSymbolCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolCurrentAxis"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolCurrentAxis", bSTR53, bSTR54, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong16 = settingRepository1.GetAttr("AxisDisplaySymbolTypeCurrentAxis")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeCurrentAxis"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeCurrentAxis", bSTR55, bSTR56, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeCurrentAxis"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean37 = settingRepository1.GetAttr("AxisDisplayTextUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextUserDefined"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "AxisDisplayTextUserDefined", bSTR57, bSTR58, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong17 = settingRepository1.GetAttr("AxisDisplaySizeUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeUserDefined"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "AxisDisplaySizeUserDefined", bSTR59, bSTR60, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong5
+arrayOfVariantOfULong5 = settingRepository1.GetAttrArray("AxisDisplayColorUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorUserDefined"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "AxisDisplayColorUserDefined", bSTR61, bSTR62, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong18 = settingRepository1.GetAttr("AxisDisplayLineTypeUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeUserDefined"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeUserDefined", bSTR63, bSTR64, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong19 = settingRepository1.GetAttr("AxisDisplayLineWeightUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightUserDefined"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightUserDefined", bSTR65, bSTR66, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean43 = settingRepository1.GetAttr("AxisDisplayShowSymbolUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolUserDefined"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean44
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolUserDefined", bSTR67, bSTR68, boolean44
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong20 = settingRepository1.GetAttr("AxisDisplaySymbolTypeUserDefined")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeUserDefined"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeUserDefined", bSTR69, bSTR70, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeUserDefined"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean46 = settingRepository1.GetAttr("AxisDisplayTextToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextToolPort"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "AxisDisplayTextToolPort", bSTR71, bSTR72, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong21 = settingRepository1.GetAttr("AxisDisplaySizeToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeToolPort"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "AxisDisplaySizeToolPort", bSTR73, bSTR74, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong6
+arrayOfVariantOfULong6 = settingRepository1.GetAttrArray("AxisDisplayColorToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorToolPort"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "AxisDisplayColorToolPort", bSTR75, bSTR76, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong22 = settingRepository1.GetAttr("AxisDisplayLineTypeToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeToolPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean50
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeToolPort", bSTR77, bSTR78, boolean50
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong23 = settingRepository1.GetAttr("AxisDisplayLineWeightToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightToolPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightToolPort", bSTR79, bSTR80, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean52 = settingRepository1.GetAttr("AxisDisplayShowSymbolToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolToolPort"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolToolPort", bSTR81, bSTR82, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong24 = settingRepository1.GetAttr("AxisDisplaySymbolTypeToolPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeToolPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeToolPort", bSTR83, bSTR84, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeToolPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean55 = settingRepository1.GetAttr("AxisDisplayTextMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextMountPort"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean56
+settingRepository1.GetAttrInfo "AxisDisplayTextMountPort", bSTR85, bSTR86, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong25 = settingRepository1.GetAttr("AxisDisplaySizeMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeMountPort"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "AxisDisplaySizeMountPort", bSTR87, bSTR88, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong7
+arrayOfVariantOfULong7 = settingRepository1.GetAttrArray("AxisDisplayColorMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorMountPort"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 165
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean58
+settingRepository1.GetAttrInfo "AxisDisplayColorMountPort", bSTR89, bSTR90, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong26 = settingRepository1.GetAttr("AxisDisplayLineTypeMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeMountPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeMountPort", bSTR91, bSTR92, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong27 = settingRepository1.GetAttr("AxisDisplayLineWeightMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightMountPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR93
+bSTR93 = ""
+Dim bSTR94
+bSTR94 = ""
+Dim boolean60
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightMountPort", bSTR93, bSTR94, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean61 = settingRepository1.GetAttr("AxisDisplayShowSymbolMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolMountPort"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR95
+bSTR95 = ""
+Dim bSTR96
+bSTR96 = ""
+Dim boolean62
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolMountPort", bSTR95, bSTR96, boolean62
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong28 = settingRepository1.GetAttr("AxisDisplaySymbolTypeMountPort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeMountPort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR97
+bSTR97 = ""
+Dim bSTR98
+bSTR98 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeMountPort", bSTR97, bSTR98, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeMountPort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean64 = settingRepository1.GetAttr("AxisDisplayTextBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextBasePort"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR99
+bSTR99 = ""
+Dim bSTR100
+bSTR100 = ""
+Dim boolean65
+settingRepository1.GetAttrInfo "AxisDisplayTextBasePort", bSTR99, bSTR100, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong29 = settingRepository1.GetAttr("AxisDisplaySizeBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeBasePort"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR101
+bSTR101 = ""
+Dim bSTR102
+bSTR102 = ""
+Dim boolean66
+settingRepository1.GetAttrInfo "AxisDisplaySizeBasePort", bSTR101, bSTR102, boolean66
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong8
+arrayOfVariantOfULong8 = settingRepository1.GetAttrArray("AxisDisplayColorBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorBasePort"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR103
+bSTR103 = ""
+Dim bSTR104
+bSTR104 = ""
+Dim boolean67
+settingRepository1.GetAttrInfo "AxisDisplayColorBasePort", bSTR103, bSTR104, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong30 = settingRepository1.GetAttr("AxisDisplayLineTypeBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeBasePort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR105
+bSTR105 = ""
+Dim bSTR106
+bSTR106 = ""
+Dim boolean68
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeBasePort", bSTR105, bSTR106, boolean68
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong31 = settingRepository1.GetAttr("AxisDisplayLineWeightBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightBasePort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR107
+bSTR107 = ""
+Dim bSTR108
+bSTR108 = ""
+Dim boolean69
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightBasePort", bSTR107, bSTR108, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean70 = settingRepository1.GetAttr("AxisDisplayShowSymbolBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolBasePort"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR109
+bSTR109 = ""
+Dim bSTR110
+bSTR110 = ""
+Dim boolean71
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolBasePort", bSTR109, bSTR110, boolean71
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong32 = settingRepository1.GetAttr("AxisDisplaySymbolTypeBasePort")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeBasePort"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR111
+bSTR111 = ""
+Dim bSTR112
+bSTR112 = ""
+Dim boolean72
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeBasePort", bSTR111, bSTR112, boolean72
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeBasePort"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean73 = settingRepository1.GetAttr("AxisDisplayTextToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextToolProfile"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR113
+bSTR113 = ""
+Dim bSTR114
+bSTR114 = ""
+Dim boolean74
+settingRepository1.GetAttrInfo "AxisDisplayTextToolProfile", bSTR113, bSTR114, boolean74
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong33 = settingRepository1.GetAttr("AxisDisplaySizeToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeToolProfile"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR115
+bSTR115 = ""
+Dim bSTR116
+bSTR116 = ""
+Dim boolean75
+settingRepository1.GetAttrInfo "AxisDisplaySizeToolProfile", bSTR115, bSTR116, boolean75
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong9
+arrayOfVariantOfULong9 = settingRepository1.GetAttrArray("AxisDisplayColorToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorToolProfile"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 128
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 128
+'--------------------------------------------------
+
+Dim bSTR117
+bSTR117 = ""
+Dim bSTR118
+bSTR118 = ""
+Dim boolean76
+settingRepository1.GetAttrInfo "AxisDisplayColorToolProfile", bSTR117, bSTR118, boolean76
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong34 = settingRepository1.GetAttr("AxisDisplayLineTypeToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeToolProfile"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR119
+bSTR119 = ""
+Dim bSTR120
+bSTR120 = ""
+Dim boolean77
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeToolProfile", bSTR119, bSTR120, boolean77
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong35 = settingRepository1.GetAttr("AxisDisplayLineWeightToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightToolProfile"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR121
+bSTR121 = ""
+Dim bSTR122
+bSTR122 = ""
+Dim boolean78
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightToolProfile", bSTR121, bSTR122, boolean78
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean79 = settingRepository1.GetAttr("AxisDisplayShowSymbolToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolToolProfile"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR123
+bSTR123 = ""
+Dim bSTR124
+bSTR124 = ""
+Dim boolean80
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolToolProfile", bSTR123, bSTR124, boolean80
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong36 = settingRepository1.GetAttr("AxisDisplaySymbolTypeToolProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeToolProfile"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR125
+bSTR125 = ""
+Dim bSTR126
+bSTR126 = ""
+Dim boolean81
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeToolProfile", bSTR125, bSTR126, boolean81
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeToolProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean82 = settingRepository1.GetAttr("AxisDisplayTextObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextObjFrameProfile"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR127
+bSTR127 = ""
+Dim bSTR128
+bSTR128 = ""
+Dim boolean83
+settingRepository1.GetAttrInfo "AxisDisplayTextObjFrameProfile", bSTR127, bSTR128, boolean83
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayTextObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong37 = settingRepository1.GetAttr("AxisDisplaySizeObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeObjFrameProfile"
+' Returned value : (Variant) (Unsigned Long) 10
+'--------------------------------------------------
+
+Dim bSTR129
+bSTR129 = ""
+Dim bSTR130
+bSTR130 = ""
+Dim boolean84
+settingRepository1.GetAttrInfo "AxisDisplaySizeObjFrameProfile", bSTR129, bSTR130, boolean84
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySizeObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong10
+arrayOfVariantOfULong10 = settingRepository1.GetAttrArray("AxisDisplayColorObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorObjFrameProfile"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR131
+bSTR131 = ""
+Dim bSTR132
+bSTR132 = ""
+Dim boolean85
+settingRepository1.GetAttrInfo "AxisDisplayColorObjFrameProfile", bSTR131, bSTR132, boolean85
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayColorObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong38 = settingRepository1.GetAttr("AxisDisplayLineTypeObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeObjFrameProfile"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR133
+bSTR133 = ""
+Dim bSTR134
+bSTR134 = ""
+Dim boolean86
+settingRepository1.GetAttrInfo "AxisDisplayLineTypeObjFrameProfile", bSTR133, bSTR134, boolean86
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineTypeObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong39 = settingRepository1.GetAttr("AxisDisplayLineWeightObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightObjFrameProfile"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR135
+bSTR135 = ""
+Dim bSTR136
+bSTR136 = ""
+Dim boolean87
+settingRepository1.GetAttrInfo "AxisDisplayLineWeightObjFrameProfile", bSTR135, bSTR136, boolean87
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayLineWeightObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean88 = settingRepository1.GetAttr("AxisDisplayShowSymbolObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolObjFrameProfile"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR137
+bSTR137 = ""
+Dim bSTR138
+bSTR138 = ""
+Dim boolean89
+settingRepository1.GetAttrInfo "AxisDisplayShowSymbolObjFrameProfile", bSTR137, bSTR138, boolean89
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplayShowSymbolObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong40 = settingRepository1.GetAttr("AxisDisplaySymbolTypeObjFrameProfile")
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeObjFrameProfile"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR139
+bSTR139 = ""
+Dim bSTR140
+bSTR140 = ""
+Dim boolean90
+settingRepository1.GetAttrInfo "AxisDisplaySymbolTypeObjFrameProfile", bSTR139, bSTR140, boolean90
+'--------------------------------------------------
+' Parameter 1 : (String) "AxisDisplaySymbolTypeObjFrameProfile"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

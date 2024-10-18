@@ -1,0 +1,28 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("STEP")
+
+bSTR1 = settingRepository1.GetAttr("ShapeDeformation")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShapeDeformation"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ShapeDeformation", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ShapeDeformation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,104 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("NCMfgAutosequence")
+
+boolean1 = settingRepository1.GetAttr("ManagingRules")
+'--------------------------------------------------
+' Parameter 1 : (String) "ManagingRules"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "ManagingRules", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "ManagingRules"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("RuleBasePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "RuleBasePath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "RuleBasePath", bSTR4, bSTR5, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "RuleBasePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("AvailableView")
+'--------------------------------------------------
+' Parameter 1 : (String) "AvailableView"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "AvailableView", bSTR6, bSTR7, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "AvailableView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("AuthorizeRuleSet")
+'--------------------------------------------------
+' Parameter 1 : (String) "AuthorizeRuleSet"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "AuthorizeRuleSet", bSTR8, bSTR9, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "AuthorizeRuleSet"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("AuthorizePrioritySet")
+'--------------------------------------------------
+' Parameter 1 : (String) "AuthorizePrioritySet"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR10
+bSTR10 = ""
+Dim bSTR11
+bSTR11 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "AuthorizePrioritySet", bSTR10, bSTR11, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AuthorizePrioritySet"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,661 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ElectricalWiringDesign")
+
+long1 = settingRepository1.GetAttr("HandleSource")
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleSource"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "HandleSource", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleSource"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("IsPropagationActivated")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsPropagationActivated"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "IsPropagationActivated", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "IsPropagationActivated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("CheckCreationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCreationMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "CheckCreationMode", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCreationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("RatioAdded")
+'--------------------------------------------------
+' Parameter 1 : (String) "RatioAdded"
+' Returned value : (Variant) (Double) 15.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RatioAdded", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RatioAdded"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("EwdFillingRatioReportComputation")
+'--------------------------------------------------
+' Parameter 1 : (String) "EwdFillingRatioReportComputation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "EwdFillingRatioReportComputation", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "EwdFillingRatioReportComputation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("DefaultCuttingLengthTolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultCuttingLengthTolerance"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DefaultCuttingLengthTolerance", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultCuttingLengthTolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("CuttingLengthToleranceEditionRights")
+'--------------------------------------------------
+' Parameter 1 : (String) "CuttingLengthToleranceEditionRights"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "CuttingLengthToleranceEditionRights", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "CuttingLengthToleranceEditionRights"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("SpecTreeVisuOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "SpecTreeVisuOption"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "SpecTreeVisuOption", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "SpecTreeVisuOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("AllowAutoReorder")
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowAutoReorder"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "AllowAutoReorder", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "AllowAutoReorder"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("HandleSource")
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleSource"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "HandleSource", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleSource"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("HandleSigSigSepCode")
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleSigSigSepCode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "HandleSigSigSepCode", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleSigSigSepCode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("SegregationCount")
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationCount"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SegregationCount", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationCount"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("SegregationTable")
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationTable"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "SegregationTable", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationTable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("CurrentSegregationIndex")
+'--------------------------------------------------
+' Parameter 1 : (String) "CurrentSegregationIndex"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "CurrentSegregationIndex", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "CurrentSegregationIndex"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("SegregationTableFileName")
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationTableFileName"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "SegregationTableFileName", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationTableFileName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR3
+arrayOfVariantOfBSTR3 = settingRepository1.GetAttrArray("SegregationTableFilePath")
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationTableFilePath"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "SegregationTableFilePath", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "SegregationTableFilePath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("HandleRule")
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleRule"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "HandleRule", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "HandleRule"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("ComputeAlternateRoute")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeAlternateRoute"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "ComputeAlternateRoute", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeAlternateRoute"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("CorrendEnds")
+'--------------------------------------------------
+' Parameter 1 : (String) "CorrendEnds"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "CorrendEnds", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "CorrendEnds"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("UnsetConductorRouteOptionEnable")
+'--------------------------------------------------
+' Parameter 1 : (String) "UnsetConductorRouteOptionEnable"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "UnsetConductorRouteOptionEnable", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "UnsetConductorRouteOptionEnable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("UnsetConductorConstraintOptionEnable")
+'--------------------------------------------------
+' Parameter 1 : (String) "UnsetConductorConstraintOptionEnable"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "UnsetConductorConstraintOptionEnable", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "UnsetConductorConstraintOptionEnable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("MaxFillingRatio")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxFillingRatio"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "MaxFillingRatio", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxFillingRatio"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long17 = settingRepository1.GetAttr("EnableAutoRouteCmd")
+'--------------------------------------------------
+' Parameter 1 : (String) "EnableAutoRouteCmd"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "EnableAutoRouteCmd", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "EnableAutoRouteCmd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long18 = settingRepository1.GetAttr("RoutePrioritization")
+'--------------------------------------------------
+' Parameter 1 : (String) "RoutePrioritization"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "RoutePrioritization", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "RoutePrioritization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long19 = settingRepository1.GetAttr("IsPropagationActivated")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsPropagationActivated"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "IsPropagationActivated", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "IsPropagationActivated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long20 = settingRepository1.GetAttr("CheckCreationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCreationMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "CheckCreationMode", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "CheckCreationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long21 = settingRepository1.GetAttr("ComputeFromWire")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeFromWire"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "ComputeFromWire", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeFromWire"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR55 = settingRepository1.GetAttr("BendRadiusMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "BendRadiusMode"
+' Returned value : (Variant) (String) "Always"
+'--------------------------------------------------
+
+Dim bSTR56
+bSTR56 = ""
+Dim bSTR57
+bSTR57 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "BendRadiusMode", bSTR56, bSTR57, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "BendRadiusMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long22 = settingRepository1.GetAttr("ComputeCOGandMI")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeCOGandMI"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR58
+bSTR58 = ""
+Dim bSTR59
+bSTR59 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "ComputeCOGandMI", bSTR58, bSTR59, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeCOGandMI"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long23 = settingRepository1.GetAttr("ComputeMassOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeMassOption"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR60
+bSTR60 = ""
+Dim bSTR61
+bSTR61 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "ComputeMassOption", bSTR60, bSTR61, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeMassOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long24 = settingRepository1.GetAttr("StoreCGR")
+'--------------------------------------------------
+' Parameter 1 : (String) "StoreCGR"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR62
+bSTR62 = ""
+Dim bSTR63
+bSTR63 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "StoreCGR", bSTR62, bSTR63, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "StoreCGR"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long25 = settingRepository1.GetAttr("AutoValidation")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoValidation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR64
+bSTR64 = ""
+Dim bSTR65
+bSTR65 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "AutoValidation", bSTR64, bSTR65, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoValidation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long26 = settingRepository1.GetAttr("AutoSync")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoSync"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR66
+bSTR66 = ""
+Dim bSTR67
+bSTR67 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "AutoSync", bSTR66, bSTR67, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoSync"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long27 = settingRepository1.GetAttr("ComputeRawMatQuantityOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeRawMatQuantityOption"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR68
+bSTR68 = ""
+Dim bSTR69
+bSTR69 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "ComputeRawMatQuantityOption", bSTR68, bSTR69, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "ComputeRawMatQuantityOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

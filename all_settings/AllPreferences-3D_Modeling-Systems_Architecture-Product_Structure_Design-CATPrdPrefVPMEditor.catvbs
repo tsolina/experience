@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMEditor")
+
+bSTR1 = settingRepository1.GetAttr("Product")
+'--------------------------------------------------
+' Parameter 1 : (String) "Product"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "Product", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "Product"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("Part")
+'--------------------------------------------------
+' Parameter 1 : (String) "Part"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Part", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Part"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

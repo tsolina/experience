@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELMSDHighlightSettings")
+
+boolean1 = settingRepository1.GetAttr("AutoExpandCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoExpandCheckButton"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AutoExpandCheckButton", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AutoExpandCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("AssociatedProcessesCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "AssociatedProcessesCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AssociatedProcessesCheckButton", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AssociatedProcessesCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("CenterTreeCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "CenterTreeCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "CenterTreeCheckButton", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "CenterTreeCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

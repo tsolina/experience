@@ -1,0 +1,49 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("GeneralGeneral")
+
+boolean1 = settingRepository1.GetAttr("DragAndDrop")
+'--------------------------------------------------
+' Parameter 1 : (String) "DragAndDrop"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DragAndDrop", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DragAndDrop"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("CATMemWarning")
+
+long1 = settingRepository2.GetAttr("UsageLimit")
+'--------------------------------------------------
+' Parameter 1 : (String) "UsageLimit"
+' Returned value : (Variant) (Long) 70
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository2.GetAttrInfo "UsageLimit", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "UsageLimit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

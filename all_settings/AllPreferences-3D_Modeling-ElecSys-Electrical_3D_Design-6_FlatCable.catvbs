@@ -1,0 +1,142 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ElectricalHarnessInstallation")
+
+long1 = settingRepository1.GetAttr("ChoixAlgo")
+'--------------------------------------------------
+' Parameter 1 : (String) "ChoixAlgo"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ChoixAlgo", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ChoixAlgo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("UseBCPProfileValuesState")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseBCPProfileValuesState"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "UseBCPProfileValuesState", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "UseBCPProfileValuesState"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("FoldAngleInterval")
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleInterval"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "FoldAngleInterval", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleInterval"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("DisableFoldWarningRepetition")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableFoldWarningRepetition"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DisableFoldWarningRepetition", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DisableFoldWarningRepetition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("FoldAngleInterval")
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleInterval"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "FoldAngleInterval", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleInterval"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("FoldAngleLowValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleLowValue"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "FoldAngleLowValue", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleLowValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("FoldAngleHighValue")
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleHighValue"
+' Returned value : (Variant) (Double) 3.141593
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "FoldAngleHighValue", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "FoldAngleHighValue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

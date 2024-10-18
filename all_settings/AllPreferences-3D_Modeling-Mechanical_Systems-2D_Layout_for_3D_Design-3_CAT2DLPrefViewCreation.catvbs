@@ -1,0 +1,1252 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CAT2DLToolsOptions")
+
+boolean1 = settingRepository1.GetAttr("HideIn3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideIn3D"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "HideIn3D", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "HideIn3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("CAT2DLActivate2DMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLActivate2DMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CAT2DLActivate2DMode", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLActivate2DMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("3DGridDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridDisplay"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "3DGridDisplay", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ClippingFrame")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClippingFrame"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ClippingFrame", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ClippingFrame"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("CAT2DLClipViewDisOut")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewDisOut"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "CAT2DLClipViewDisOut", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewDisOut"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("BackClippingPlane")
+'--------------------------------------------------
+' Parameter 1 : (String) "BackClippingPlane"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "BackClippingPlane", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "BackClippingPlane"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("ChangePrimaryViewPlaneSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ChangePrimaryViewPlaneSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ChangePrimaryViewPlaneSetting", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ChangePrimaryViewPlaneSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("ResizeViewBoxOn3DSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ResizeViewBoxOn3DSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ResizeViewBoxOn3DSetting", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ResizeViewBoxOn3DSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("Manage3DGridLabelDisplaySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "Manage3DGridLabelDisplaySetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "Manage3DGridLabelDisplaySetting", bSTR17, bSTR18, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "Manage3DGridLabelDisplaySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("DisplaySubViewsInSpecTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplaySubViewsInSpecTreeSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "DisplaySubViewsInSpecTreeSetting", bSTR19, bSTR20, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplaySubViewsInSpecTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean21 = settingRepository1.GetAttr("Boundaries2DLDisplaySetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLDisplaySetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "Boundaries2DLDisplaySetting", bSTR21, bSTR22, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLDisplaySetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("CalloutCreationInActiveViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutCreationInActiveViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "CalloutCreationInActiveViewSetting", bSTR23, bSTR24, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutCreationInActiveViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean25 = settingRepository1.GetAttr("NewViewFromActivateCreatedViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "NewViewFromActivateCreatedViewSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "NewViewFromActivateCreatedViewSetting", bSTR25, bSTR26, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "NewViewFromActivateCreatedViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("OffsetFromSheetSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetFromSheetSetting"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "OffsetFromSheetSetting", bSTR27, bSTR28, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetFromSheetSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("OffsetBetweenViewsSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetBetweenViewsSetting"
+' Returned value : (Variant) (Double) 30.000000
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "OffsetBetweenViewsSetting", bSTR29, bSTR30, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetBetweenViewsSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("MinReductionMultiplierSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "MinReductionMultiplierSetting"
+' Returned value : (Variant) (Double) 0.500000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "MinReductionMultiplierSetting", bSTR31, bSTR32, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "MinReductionMultiplierSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("MaxEnlargementMultiplierSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxEnlargementMultiplierSetting"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "MaxEnlargementMultiplierSetting", bSTR33, bSTR34, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "MaxEnlargementMultiplierSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean31 = settingRepository1.GetAttr("ViewLayoutDontApplyDefMultiplierToShrinkView")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutDontApplyDefMultiplierToShrinkView"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "ViewLayoutDontApplyDefMultiplierToShrinkView", bSTR35, bSTR36, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutDontApplyDefMultiplierToShrinkView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean33 = settingRepository1.GetAttr("ViewLayoutCreateCalloutSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutCreateCalloutSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "ViewLayoutCreateCalloutSetting", bSTR37, bSTR38, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutCreateCalloutSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean35 = settingRepository1.GetAttr("ViewLayoutCreateCalloutEvenItIntrsectsAnnot")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutCreateCalloutEvenItIntrsectsAnnot"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "ViewLayoutCreateCalloutEvenItIntrsectsAnnot", bSTR39, bSTR40, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutCreateCalloutEvenItIntrsectsAnnot"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean37 = settingRepository1.GetAttr("ViewLayoutCreateViewTextSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutCreateViewTextSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "ViewLayoutCreateViewTextSetting", bSTR41, bSTR42, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutCreateViewTextSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("ViewLayoutViewSpecificationMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutViewSpecificationMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "ViewLayoutViewSpecificationMode", bSTR43, bSTR44, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutViewSpecificationMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean40 = settingRepository1.GetAttr("ViewLayoutPlaceViewWithMinShtEmptySpc")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutPlaceViewWithMinShtEmptySpc"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "ViewLayoutPlaceViewWithMinShtEmptySpc", bSTR45, bSTR46, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutPlaceViewWithMinShtEmptySpc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean42 = settingRepository1.GetAttr("ViewLayoutOneViewPerSheetSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutOneViewPerSheetSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "ViewLayoutOneViewPerSheetSetting", bSTR47, bSTR48, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutOneViewPerSheetSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean44 = settingRepository1.GetAttr("ViewLayoutFitToSheetSizeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutFitToSheetSizeSetting"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "ViewLayoutFitToSheetSizeSetting", bSTR49, bSTR50, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutFitToSheetSizeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean46 = settingRepository1.GetAttr("ViewLayoutDeleteViewSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutDeleteViewSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "ViewLayoutDeleteViewSetting", bSTR51, bSTR52, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutDeleteViewSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ViewBackgroundMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewBackgroundMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "ViewBackgroundMode", bSTR53, bSTR54, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewBackgroundMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("FilterCreationModeForPrimaryView")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForPrimaryView"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "FilterCreationModeForPrimaryView", bSTR55, bSTR56, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForPrimaryView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean50 = settingRepository1.GetAttr("EditFilterDlgForPrimaryView")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForPrimaryView"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "EditFilterDlgForPrimaryView", bSTR57, bSTR58, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForPrimaryView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("FilterCreationModeForPrincipalView")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForPrincipalView"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "FilterCreationModeForPrincipalView", bSTR59, bSTR60, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForPrincipalView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean53 = settingRepository1.GetAttr("EditFilterDlgForPrincipalView")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForPrincipalView"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "EditFilterDlgForPrincipalView", bSTR61, bSTR62, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForPrincipalView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean55 = settingRepository1.GetAttr("FilterBodyOfSupportSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterBodyOfSupportSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean56
+settingRepository1.GetAttrInfo "FilterBodyOfSupportSetting", bSTR63, bSTR64, boolean56
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterBodyOfSupportSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean57 = settingRepository1.GetAttr("3DGridAutoGridSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridAutoGridSize"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean58
+settingRepository1.GetAttrInfo "3DGridAutoGridSize", bSTR65, bSTR66, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridAutoGridSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("CAT2DLClipViewOutCol")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewOutCol"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean59
+settingRepository1.GetAttrInfo "CAT2DLClipViewOutCol", bSTR67, bSTR68, boolean59
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewOutCol"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("CAT2DLClipViewOutLinety")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewOutLinety"
+' Returned value : (Variant) (Long) 4
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean60
+settingRepository1.GetAttrInfo "CAT2DLClipViewOutLinety", bSTR69, bSTR70, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewOutLinety"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("CAT2DLClipViewOutThick")
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewOutThick"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean61
+settingRepository1.GetAttrInfo "CAT2DLClipViewOutThick", bSTR71, bSTR72, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "CAT2DLClipViewOutThick"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("OffsetBetweenPrincipalViewsSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetBetweenPrincipalViewsSetting"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean62
+settingRepository1.GetAttrInfo "OffsetBetweenPrincipalViewsSetting", bSTR73, bSTR74, boolean62
+'--------------------------------------------------
+' Parameter 1 : (String) "OffsetBetweenPrincipalViewsSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("Boundaries2DLColorSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLColorSetting"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "Boundaries2DLColorSetting", bSTR75, bSTR76, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLColorSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("Boundaries2DLLineTypeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLLineTypeSetting"
+' Returned value : (Variant) (Long) 4
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean64
+settingRepository1.GetAttrInfo "Boundaries2DLLineTypeSetting", bSTR77, bSTR78, boolean64
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLLineTypeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("Boundaries2DLThicknessSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLThicknessSetting"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean65
+settingRepository1.GetAttrInfo "Boundaries2DLThicknessSetting", bSTR79, bSTR80, boolean65
+'--------------------------------------------------
+' Parameter 1 : (String) "Boundaries2DLThicknessSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean66 = settingRepository1.GetAttr("AlignOnFoldingDirectionForPerpRefSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnFoldingDirectionForPerpRefSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean67
+settingRepository1.GetAttrInfo "AlignOnFoldingDirectionForPerpRefSetting", bSTR81, bSTR82, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnFoldingDirectionForPerpRefSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean68 = settingRepository1.GetAttr("AlignOnPerpDirectionForPerpRefSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnPerpDirectionForPerpRefSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean69
+settingRepository1.GetAttrInfo "AlignOnPerpDirectionForPerpRefSetting", bSTR83, bSTR84, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnPerpDirectionForPerpRefSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean70 = settingRepository1.GetAttr("SetOrientAsActiveViewForPerpRefSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "SetOrientAsActiveViewForPerpRefSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean71
+settingRepository1.GetAttrInfo "SetOrientAsActiveViewForPerpRefSetting", bSTR85, bSTR86, boolean71
+'--------------------------------------------------
+' Parameter 1 : (String) "SetOrientAsActiveViewForPerpRefSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean72 = settingRepository1.GetAttr("AlignOnFoldingDirectionForNonPerRefSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnFoldingDirectionForNonPerRefSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean73
+settingRepository1.GetAttrInfo "AlignOnFoldingDirectionForNonPerRefSetting", bSTR87, bSTR88, boolean73
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnFoldingDirectionForNonPerRefSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean74 = settingRepository1.GetAttr("AlignOnPerpDirectionForNonPerpRefSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnPerpDirectionForNonPerpRefSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean75
+settingRepository1.GetAttrInfo "AlignOnPerpDirectionForNonPerpRefSetting", bSTR89, bSTR90, boolean75
+'--------------------------------------------------
+' Parameter 1 : (String) "AlignOnPerpDirectionForNonPerpRefSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean76 = settingRepository1.GetAttr("SetOrientAsActiveViewForNonPerpRefSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "SetOrientAsActiveViewForNonPerpRefSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR91
+bSTR91 = ""
+Dim bSTR92
+bSTR92 = ""
+Dim boolean77
+settingRepository1.GetAttrInfo "SetOrientAsActiveViewForNonPerpRefSetting", bSTR91, bSTR92, boolean77
+'--------------------------------------------------
+' Parameter 1 : (String) "SetOrientAsActiveViewForNonPerpRefSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR93 = settingRepository1.GetAttr("ViewLayoutScriptFrameAndTitle")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutScriptFrameAndTitle"
+' Returned value : (Variant) (String) "Dress-up_DS_1"
+'--------------------------------------------------
+
+Dim bSTR94
+bSTR94 = ""
+Dim bSTR95
+bSTR95 = ""
+Dim boolean78
+settingRepository1.GetAttrInfo "ViewLayoutScriptFrameAndTitle", bSTR94, bSTR95, boolean78
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewLayoutScriptFrameAndTitle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("FilterCreationModeForAuxViewFrom")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForAuxViewFrom"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR96
+bSTR96 = ""
+Dim bSTR97
+bSTR97 = ""
+Dim boolean79
+settingRepository1.GetAttrInfo "FilterCreationModeForAuxViewFrom", bSTR96, bSTR97, boolean79
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForAuxViewFrom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean80 = settingRepository1.GetAttr("EditFilterDlgForAuxViewFrom")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForAuxViewFrom"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR98
+bSTR98 = ""
+Dim bSTR99
+bSTR99 = ""
+Dim boolean81
+settingRepository1.GetAttrInfo "EditFilterDlgForAuxViewFrom", bSTR98, bSTR99, boolean81
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForAuxViewFrom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("FilterCreationModeForAxoViewFrom")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForAxoViewFrom"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR100
+bSTR100 = ""
+Dim bSTR101
+bSTR101 = ""
+Dim boolean82
+settingRepository1.GetAttrInfo "FilterCreationModeForAxoViewFrom", bSTR100, bSTR101, boolean82
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForAxoViewFrom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean83 = settingRepository1.GetAttr("EditFilterDlgForAxoViewFrom")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForAxoViewFrom"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR102
+bSTR102 = ""
+Dim bSTR103
+bSTR103 = ""
+Dim boolean84
+settingRepository1.GetAttrInfo "EditFilterDlgForAxoViewFrom", bSTR102, bSTR103, boolean84
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForAxoViewFrom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("FilterCreationModeForSectionViewFrom")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForSectionViewFrom"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR104
+bSTR104 = ""
+Dim bSTR105
+bSTR105 = ""
+Dim boolean85
+settingRepository1.GetAttrInfo "FilterCreationModeForSectionViewFrom", bSTR104, bSTR105, boolean85
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForSectionViewFrom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean86 = settingRepository1.GetAttr("EditFilterDlgForSectionViewFrom")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForSectionViewFrom"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR106
+bSTR106 = ""
+Dim bSTR107
+bSTR107 = ""
+Dim boolean87
+settingRepository1.GetAttrInfo "EditFilterDlgForSectionViewFrom", bSTR106, bSTR107, boolean87
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForSectionViewFrom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("FilterCreationModeForAuxProfileView")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForAuxProfileView"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR108
+bSTR108 = ""
+Dim bSTR109
+bSTR109 = ""
+Dim boolean88
+settingRepository1.GetAttrInfo "FilterCreationModeForAuxProfileView", bSTR108, bSTR109, boolean88
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForAuxProfileView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean89 = settingRepository1.GetAttr("EditFilterDlgForAuxProfileView")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForAuxProfileView"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR110
+bSTR110 = ""
+Dim bSTR111
+bSTR111 = ""
+Dim boolean90
+settingRepository1.GetAttrInfo "EditFilterDlgForAuxProfileView", bSTR110, bSTR111, boolean90
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForAuxProfileView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("FilterCreationModeForSectionProfileView")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForSectionProfileView"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR112
+bSTR112 = ""
+Dim bSTR113
+bSTR113 = ""
+Dim boolean91
+settingRepository1.GetAttrInfo "FilterCreationModeForSectionProfileView", bSTR112, bSTR113, boolean91
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterCreationModeForSectionProfileView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean92 = settingRepository1.GetAttr("EditFilterDlgForSectionProfileView")
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForSectionProfileView"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR114
+bSTR114 = ""
+Dim bSTR115
+bSTR115 = ""
+Dim boolean93
+settingRepository1.GetAttrInfo "EditFilterDlgForSectionProfileView", bSTR114, bSTR115, boolean93
+'--------------------------------------------------
+' Parameter 1 : (String) "EditFilterDlgForSectionProfileView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean94 = settingRepository1.GetAttr("3DGridLabelTop")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelTop"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR116
+bSTR116 = ""
+Dim bSTR117
+bSTR117 = ""
+Dim boolean95
+settingRepository1.GetAttrInfo "3DGridLabelTop", bSTR116, bSTR117, boolean95
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelTop"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean96 = settingRepository1.GetAttr("3DGridLabelLeft")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelLeft"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR118
+bSTR118 = ""
+Dim bSTR119
+bSTR119 = ""
+Dim boolean97
+settingRepository1.GetAttrInfo "3DGridLabelLeft", bSTR118, bSTR119, boolean97
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelLeft"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR120 = settingRepository1.GetAttr("3DGridFontName")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridFontName"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR121
+bSTR121 = ""
+Dim bSTR122
+bSTR122 = ""
+Dim boolean98
+settingRepository1.GetAttrInfo "3DGridFontName", bSTR121, bSTR122, boolean98
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridFontName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean99 = settingRepository1.GetAttr("3DGridLabelBottom")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelBottom"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR123
+bSTR123 = ""
+Dim bSTR124
+bSTR124 = ""
+Dim boolean100
+settingRepository1.GetAttrInfo "3DGridLabelBottom", bSTR123, bSTR124, boolean100
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelBottom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean101 = settingRepository1.GetAttr("3DGridLabelRight")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelRight"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR125
+bSTR125 = ""
+Dim bSTR126
+bSTR126 = ""
+Dim boolean102
+settingRepository1.GetAttrInfo "3DGridLabelRight", bSTR125, bSTR126, boolean102
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelRight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("3DGridFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridFontSize"
+' Returned value : (Variant) (Double) 3.500000
+'--------------------------------------------------
+
+Dim bSTR127
+bSTR127 = ""
+Dim bSTR128
+bSTR128 = ""
+Dim boolean103
+settingRepository1.GetAttrInfo "3DGridFontSize", bSTR127, bSTR128, boolean103
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("3DGridLabelPosReference")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelPosReference"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR129
+bSTR129 = ""
+Dim bSTR130
+bSTR130 = ""
+Dim boolean104
+settingRepository1.GetAttrInfo "3DGridLabelPosReference", bSTR129, bSTR130, boolean104
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridLabelPosReference"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("3DGridOverrun")
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridOverrun"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR131
+bSTR131 = ""
+Dim bSTR132
+bSTR132 = ""
+Dim boolean105
+settingRepository1.GetAttrInfo "3DGridOverrun", bSTR131, bSTR132, boolean105
+'--------------------------------------------------
+' Parameter 1 : (String) "3DGridOverrun"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

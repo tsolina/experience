@@ -1,0 +1,218 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("VPMNavigator")
+
+long1 = settingRepository1.GetAttr("UwpActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UwpActivation", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("LevelSelectorAvailability")
+'--------------------------------------------------
+' Parameter 1 : (String) "LevelSelectorAvailability"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "LevelSelectorAvailability", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "LevelSelectorAvailability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("exploreStrategy")
+'--------------------------------------------------
+' Parameter 1 : (String) "exploreStrategy"
+' Returned value : (Variant) (Long) 2
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "exploreStrategy", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "exploreStrategy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("expandStrategy")
+'--------------------------------------------------
+' Parameter 1 : (String) "expandStrategy"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "expandStrategy", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "expandStrategy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("DisplayDocuments")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayDocuments"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "DisplayDocuments", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayDocuments"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("UniversalExploreWrapDensityCV")
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalExploreWrapDensityCV"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "UniversalExploreWrapDensityCV", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalExploreWrapDensityCV"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong2 = settingRepository1.GetAttr("UniversalExploreWrapDensityCVCloud")
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalExploreWrapDensityCVCloud"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "UniversalExploreWrapDensityCVCloud", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalExploreWrapDensityCVCloud"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong3 = settingRepository1.GetAttr("UniversalWrapDensityCV")
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalWrapDensityCV"
+' Returned value : (Variant) (Unsigned Long) 5
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "UniversalWrapDensityCV", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalWrapDensityCV"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong4 = settingRepository1.GetAttr("UniversalWrapDensityCVCloud")
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalWrapDensityCVCloud"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "UniversalWrapDensityCVCloud", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "UniversalWrapDensityCVCloud"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("ProgressiveVisu")
+'--------------------------------------------------
+' Parameter 1 : (String) "ProgressiveVisu"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ProgressiveVisu", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ProgressiveVisu"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("UwpActivation")
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "UwpActivation", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "UwpActivation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

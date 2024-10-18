@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATPLMxNetwork")
+
+boolean1 = settingRepository1.GetAttr("FCSDataCompressionActivated")
+'--------------------------------------------------
+' Parameter 1 : (String) "FCSDataCompressionActivated"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "FCSDataCompressionActivated", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "FCSDataCompressionActivated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("FCSDataCompressionUploadActivated")
+'--------------------------------------------------
+' Parameter 1 : (String) "FCSDataCompressionUploadActivated"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "FCSDataCompressionUploadActivated", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "FCSDataCompressionUploadActivated"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,180 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("EV5VPMNOpen")
+
+boolean1 = settingRepository1.GetAttr("VPMNOpenLockMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenLockMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "VPMNOpenLockMode", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenLockMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("VPMNOpenEditabilityMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenEditabilityMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "VPMNOpenEditabilityMode", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenEditabilityMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("VPMNOpenNone3DSRepInSeparateEditorMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenNone3DSRepInSeparateEditorMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "VPMNOpenNone3DSRepInSeparateEditorMode", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenNone3DSRepInSeparateEditorMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("VPMNOpenDlgMaxNbElemBeforeWarningMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenDlgMaxNbElemBeforeWarningMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "VPMNOpenDlgMaxNbElemBeforeWarningMode", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenDlgMaxNbElemBeforeWarningMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("VPMNOpenMaxNbElemBeforeWarningMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenMaxNbElemBeforeWarningMode"
+' Returned value : (Variant) (Long) 1000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "VPMNOpenMaxNbElemBeforeWarningMode", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenMaxNbElemBeforeWarningMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("VPMNOpenMultiRoot")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenMultiRoot"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "VPMNOpenMultiRoot", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenMultiRoot"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("VPMNOpenForbidEditionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenForbidEditionMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "VPMNOpenForbidEditionMode", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenForbidEditionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("VPMNOpenWarnPessEditionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenWarnPessEditionMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "VPMNOpenWarnPessEditionMode", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenWarnPessEditionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("VPMNOpenWarningEditionMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenWarningEditionMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "VPMNOpenWarningEditionMode", bSTR17, bSTR18, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "VPMNOpenWarningEditionMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

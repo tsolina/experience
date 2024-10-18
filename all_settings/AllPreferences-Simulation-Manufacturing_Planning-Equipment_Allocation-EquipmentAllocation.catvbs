@@ -1,0 +1,68 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELMSDResUtilSettings")
+
+uLong1 = settingRepository1.GetAttr("ColorBalancingActivityBar")
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorBalancingActivityBar"
+' Returned value : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ColorBalancingActivityBar", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ColorBalancingActivityBar"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Set settingRepository2 = settingControllers1.Item("DELMSDSysEdSettings")
+
+boolean2 = settingRepository2.GetAttr("FilterOnSystemCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterOnSystemCheckButton"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository2.GetAttrInfo "FilterOnSystemCheckButton", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterOnSystemCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository2.GetAttr("FilterOnManufItemCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterOnManufItemCheckButton"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository2.GetAttrInfo "FilterOnManufItemCheckButton", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterOnManufItemCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,104 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SMAFeaUIActiveAssistantOptions")
+
+boolean1 = settingRepository1.GetAttr("HideActionStatus")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideActionStatus"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "HideActionStatus", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "HideActionStatus"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("HideActionDescription")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideActionDescription"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "HideActionDescription", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "HideActionDescription"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("HideCommandName")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideCommandName"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "HideCommandName", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "HideCommandName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("HideCommandDescription")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideCommandDescription"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "HideCommandDescription", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "HideCommandDescription"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("HideImages")
+'--------------------------------------------------
+' Parameter 1 : (String) "HideImages"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "HideImages", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "HideImages"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,503 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("MCMfgPreferences_Subtractive")
+
+boolean1 = settingRepository1.GetAttr("PartSize_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "PartSize_Availability", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("WallThick_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "WallThick_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "WallThick_Availability", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "WallThick_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("WallThick_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "WallThick_Parameter1"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "WallThick_Parameter1", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "WallThick_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("GapFaces_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "GapFaces_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "GapFaces_Availability", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "GapFaces_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("GapFaces_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "GapFaces_Parameter1"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "GapFaces_Parameter1", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "GapFaces_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ClosedCavity_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "ClosedCavity_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ClosedCavity_Availability", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ClosedCavity_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("DraftAngle_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "DraftAngle_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DraftAngle_Availability", bSTR13, bSTR14, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DraftAngle_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("DraftAngle_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "DraftAngle_Parameter1"
+' Returned value : (Variant) (Double) 5.000000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DraftAngle_Parameter1", bSTR15, bSTR16, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DraftAngle_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean14 = settingRepository1.GetAttr("Overhang_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "Overhang_Availability", bSTR17, bSTR18, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean16 = settingRepository1.GetAttr("BlindHole_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "BlindHole_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "BlindHole_Availability", bSTR19, bSTR20, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "BlindHole_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("BlindHole_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "BlindHole_Parameter1"
+' Returned value : (Variant) (Double) 3.000000
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "BlindHole_Parameter1", bSTR21, bSTR22, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "BlindHole_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("DeepHole_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "DeepHole_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "DeepHole_Availability", bSTR23, bSTR24, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "DeepHole_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("DeepHole_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "DeepHole_Parameter1"
+' Returned value : (Variant) (Double) 3.000000
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DeepHole_Parameter1", bSTR25, bSTR26, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DeepHole_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("FlatHole_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "FlatHole_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "FlatHole_Availability", bSTR27, bSTR28, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "FlatHole_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("HoleDiam_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "HoleDiam_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "HoleDiam_Availability", bSTR29, bSTR30, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "HoleDiam_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("HoleDiam_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "HoleDiam_Parameter1"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "HoleDiam_Parameter1", bSTR31, bSTR32, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "HoleDiam_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean27 = settingRepository1.GetAttr("ThroughDepth_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThroughDepth_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "ThroughDepth_Availability", bSTR33, bSTR34, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "ThroughDepth_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("ThroughDepth_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThroughDepth_Parameter1"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "ThroughDepth_Parameter1", bSTR35, bSTR36, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "ThroughDepth_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean30 = settingRepository1.GetAttr("NonThroughDepth_Availability")
+'--------------------------------------------------
+' Parameter 1 : (String) "NonThroughDepth_Availability"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "NonThroughDepth_Availability", bSTR37, bSTR38, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "NonThroughDepth_Availability"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double8 = settingRepository1.GetAttr("NonThroughDepth_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "NonThroughDepth_Parameter1"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "NonThroughDepth_Parameter1", bSTR39, bSTR40, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "NonThroughDepth_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double9 = settingRepository1.GetAttr("PartSize_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Parameter1"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "PartSize_Parameter1", bSTR41, bSTR42, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double10 = settingRepository1.GetAttr("PartSize_Parameter2")
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Parameter2"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "PartSize_Parameter2", bSTR43, bSTR44, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Parameter2"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double11 = settingRepository1.GetAttr("PartSize_Parameter3")
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Parameter3"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "PartSize_Parameter3", bSTR45, bSTR46, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "PartSize_Parameter3"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double12 = settingRepository1.GetAttr("Overhang_Parameter1")
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Parameter1"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "Overhang_Parameter1", bSTR47, bSTR48, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Parameter1"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double13 = settingRepository1.GetAttr("Overhang_Parameter2")
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Parameter2"
+' Returned value : (Variant) (Double) 45.000000
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "Overhang_Parameter2", bSTR49, bSTR50, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Parameter2"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double14 = settingRepository1.GetAttr("Overhang_Parameter3")
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Parameter3"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "Overhang_Parameter3", bSTR51, bSTR52, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "Overhang_Parameter3"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("HvcExperienceContent")
+
+long1 = settingRepository1.GetAttr("LogoCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogoCheckButton"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "LogoCheckButton", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "LogoCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("LogoPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "LogoPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "LogoPath", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "LogoPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DisclaimerCheckButton")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisclaimerCheckButton"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DisclaimerCheckButton", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DisclaimerCheckButton"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR8 = settingRepository1.GetAttr("DisclaimerString")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisclaimerString"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DisclaimerString", bSTR9, bSTR10, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DisclaimerString"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

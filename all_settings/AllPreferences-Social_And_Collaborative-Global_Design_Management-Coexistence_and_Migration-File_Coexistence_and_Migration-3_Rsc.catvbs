@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FbdiResourceSettingsRep")
+
+long1 = settingRepository1.GetAttr("FBDI_Resource_checkBox")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_Resource_checkBox"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "FBDI_Resource_checkBox", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_Resource_checkBox"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("FBDI_FlexStateLoc")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_FlexStateLoc"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "FBDI_FlexStateLoc", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_FlexStateLoc"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

@@ -1,0 +1,940 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("TreeParameters")
+'--------------------------------------------------
+' Parameter 1 : (String) "TreeParameters"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "TreeParameters", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "TreeParameters"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("TreeFormulas")
+'--------------------------------------------------
+' Parameter 1 : (String) "TreeFormulas"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "TreeFormulas", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "TreeFormulas"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("DisplayGenViewSpecTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayGenViewSpecTreeSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DisplayGenViewSpecTreeSetting", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayGenViewSpecTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("DisplayCalloutTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayCalloutTreeSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DisplayCalloutTreeSetting", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayCalloutTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("DisplayFixTogetherTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayFixTogetherTreeSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "DisplayFixTogetherTreeSetting", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayFixTogetherTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("DisplayDittoTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayDittoTreeSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DisplayDittoTreeSetting", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayDittoTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("DisplayReportTreeSetting")
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayReportTreeSetting"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "DisplayReportTreeSetting", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DisplayReportTreeSetting"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("DimDesignMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDesignMode"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DimDesignMode", bSTR15, bSTR16, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDesignMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("Drw_settings_DiagElts")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagElts"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "Drw_settings_DiagElts", bSTR17, bSTR18, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagElts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("Drw_settings_DiagOverDefinedEltsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagOverDefinedEltsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 255
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "Drw_settings_DiagOverDefinedEltsColor", bSTR19, bSTR20, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagOverDefinedEltsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("Drw_settings_DiagNotConsistentEltsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagNotConsistentEltsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "Drw_settings_DiagNotConsistentEltsColor", bSTR21, bSTR22, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagNotConsistentEltsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong3
+arrayOfVariantOfULong3 = settingRepository1.GetAttrArray("Drw_settings_DiagNotChangedEltsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagNotChangedEltsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 128
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "Drw_settings_DiagNotChangedEltsColor", bSTR23, bSTR24, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagNotChangedEltsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong4
+arrayOfVariantOfULong4 = settingRepository1.GetAttrArray("Drw_settings_DiagWellDefinedEltsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagWellDefinedEltsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 0
+'    Array[1] : (Variant) (Unsigned Long) 255
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "Drw_settings_DiagWellDefinedEltsColor", bSTR25, bSTR26, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DiagWellDefinedEltsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean23 = settingRepository1.GetAttr("DimNotUpToDate")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNotUpToDate"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "DimNotUpToDate", bSTR27, bSTR28, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNotUpToDate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("DimNotUpToDateColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNotUpToDateColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "DimNotUpToDateColor", bSTR29, bSTR30, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNotUpToDateColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean26 = settingRepository1.GetAttr("DimNonAssociative")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNonAssociative"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "DimNonAssociative", bSTR31, bSTR32, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNonAssociative"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository1.GetAttrArray("DimNonAssociativeColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNonAssociativeColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "DimNonAssociativeColor", bSTR33, bSTR34, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "DimNonAssociativeColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean29 = settingRepository1.GetAttr("CATDrwIsolatedDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwIsolatedDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "CATDrwIsolatedDim", bSTR35, bSTR36, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwIsolatedDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong3
+arrayOfVariantOfLong3 = settingRepository1.GetAttrArray("CATDrwIsolatedDimColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwIsolatedDimColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 160
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "CATDrwIsolatedDimColor", bSTR37, bSTR38, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwIsolatedDimColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean32 = settingRepository1.GetAttr("DimBroken")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimBroken"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "DimBroken", bSTR39, bSTR40, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "DimBroken"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong4
+arrayOfVariantOfLong4 = settingRepository1.GetAttrArray("DimBrokenColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimBrokenColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "DimBrokenColor", bSTR41, bSTR42, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "DimBrokenColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean35 = settingRepository1.GetAttr("DimFake")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFake"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "DimFake", bSTR43, bSTR44, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFake"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong5
+arrayOfVariantOfLong5 = settingRepository1.GetAttrArray("DimFakeColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFakeColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 64
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "DimFakeColor", bSTR45, bSTR46, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "DimFakeColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean38 = settingRepository1.GetAttr("DimDriving")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDriving"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "DimDriving", bSTR47, bSTR48, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDriving"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong6
+arrayOfVariantOfLong6 = settingRepository1.GetAttrArray("DimDrivingColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDrivingColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "DimDrivingColor", bSTR49, bSTR50, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "DimDrivingColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean41 = settingRepository1.GetAttr("Dim3DCst")
+'--------------------------------------------------
+' Parameter 1 : (String) "Dim3DCst"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean42
+settingRepository1.GetAttrInfo "Dim3DCst", bSTR51, bSTR52, boolean42
+'--------------------------------------------------
+' Parameter 1 : (String) "Dim3DCst"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong7
+arrayOfVariantOfLong7 = settingRepository1.GetAttrArray("Dim3DCstColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Dim3DCstColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 22
+'    Array[1] : (Variant) (Long) 222
+'    Array[2] : (Variant) (Long) 18
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "Dim3DCstColor", bSTR53, bSTR54, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "Dim3DCstColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean44 = settingRepository1.GetAttr("DrwTechFeatDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "DrwTechFeatDim", bSTR55, bSTR56, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong8
+arrayOfVariantOfLong8 = settingRepository1.GetAttrArray("DrwTechFeatDimColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDimColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean46
+settingRepository1.GetAttrInfo "DrwTechFeatDimColor", bSTR57, bSTR58, boolean46
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwTechFeatDimColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean47 = settingRepository1.GetAttr("DimTrue")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrue"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean48
+settingRepository1.GetAttrInfo "DimTrue", bSTR59, bSTR60, boolean48
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrue"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong9
+arrayOfVariantOfLong9 = settingRepository1.GetAttrArray("DimTrueColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrueColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "DimTrueColor", bSTR61, bSTR62, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "DimTrueColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean50 = settingRepository1.GetAttr("DrwDimOnNonVisGeom")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDimOnNonVisGeom"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "DrwDimOnNonVisGeom", bSTR63, bSTR64, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDimOnNonVisGeom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong10
+arrayOfVariantOfLong10 = settingRepository1.GetAttrArray("DrwDimOnNonVisGeomColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDimOnNonVisGeomColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 255
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean52
+settingRepository1.GetAttrInfo "DrwDimOnNonVisGeomColor", bSTR65, bSTR66, boolean52
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDimOnNonVisGeomColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean53 = settingRepository1.GetAttr("CATDrwClippedDim")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwClippedDim"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean54
+settingRepository1.GetAttrInfo "CATDrwClippedDim", bSTR67, bSTR68, boolean54
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwClippedDim"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong11
+arrayOfVariantOfLong11 = settingRepository1.GetAttrArray("CATDrwClippedDimColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwClippedDimColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 200
+'    Array[2] : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean55
+settingRepository1.GetAttrInfo "CATDrwClippedDimColor", bSTR69, bSTR70, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwClippedDimColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean56 = settingRepository1.GetAttr("FilterGeneratedElements")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterGeneratedElements"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "FilterGeneratedElements", bSTR71, bSTR72, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterGeneratedElements"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong12
+arrayOfVariantOfLong12 = settingRepository1.GetAttrArray("FilterGeneratedElementsColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterGeneratedElementsColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 128
+'    Array[1] : (Variant) (Long) 128
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean58
+settingRepository1.GetAttrInfo "FilterGeneratedElementsColor", bSTR73, bSTR74, boolean58
+'--------------------------------------------------
+' Parameter 1 : (String) "FilterGeneratedElementsColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean59 = settingRepository1.GetAttr("CalloutLastUpdateFailed")
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutLastUpdateFailed"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean60
+settingRepository1.GetAttrInfo "CalloutLastUpdateFailed", bSTR75, bSTR76, boolean60
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutLastUpdateFailed"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong13
+arrayOfVariantOfLong13 = settingRepository1.GetAttrArray("CalloutLastUpdateFailedColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutLastUpdateFailedColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean61
+settingRepository1.GetAttrInfo "CalloutLastUpdateFailedColor", bSTR77, bSTR78, boolean61
+'--------------------------------------------------
+' Parameter 1 : (String) "CalloutLastUpdateFailedColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean62 = settingRepository1.GetAttr("IsolatedCallout")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsolatedCallout"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean63
+settingRepository1.GetAttrInfo "IsolatedCallout", bSTR79, bSTR80, boolean63
+'--------------------------------------------------
+' Parameter 1 : (String) "IsolatedCallout"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong14
+arrayOfVariantOfLong14 = settingRepository1.GetAttrArray("IsolatedCalloutColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsolatedCalloutColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 160
+'--------------------------------------------------
+
+Dim bSTR81
+bSTR81 = ""
+Dim bSTR82
+bSTR82 = ""
+Dim boolean64
+settingRepository1.GetAttrInfo "IsolatedCalloutColor", bSTR81, bSTR82, boolean64
+'--------------------------------------------------
+' Parameter 1 : (String) "IsolatedCalloutColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean65 = settingRepository1.GetAttr("DrwWeldNotUpToDate")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwWeldNotUpToDate"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR83
+bSTR83 = ""
+Dim bSTR84
+bSTR84 = ""
+Dim boolean66
+settingRepository1.GetAttrInfo "DrwWeldNotUpToDate", bSTR83, bSTR84, boolean66
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwWeldNotUpToDate"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong15
+arrayOfVariantOfLong15 = settingRepository1.GetAttrArray("DrwWeldNotUpToDateColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwWeldNotUpToDateColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 255
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 128
+'--------------------------------------------------
+
+Dim bSTR85
+bSTR85 = ""
+Dim bSTR86
+bSTR86 = ""
+Dim boolean67
+settingRepository1.GetAttrInfo "DrwWeldNotUpToDateColor", bSTR85, bSTR86, boolean67
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwWeldNotUpToDateColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean68 = settingRepository1.GetAttr("PatternContourPitch")
+'--------------------------------------------------
+' Parameter 1 : (String) "PatternContourPitch"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR87
+bSTR87 = ""
+Dim bSTR88
+bSTR88 = ""
+Dim boolean69
+settingRepository1.GetAttrInfo "PatternContourPitch", bSTR87, bSTR88, boolean69
+'--------------------------------------------------
+' Parameter 1 : (String) "PatternContourPitch"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("PatternContourPitchThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "PatternContourPitchThickness"
+' Returned value : (Variant) (Long) 5
+'--------------------------------------------------
+
+Dim bSTR89
+bSTR89 = ""
+Dim bSTR90
+bSTR90 = ""
+Dim boolean70
+settingRepository1.GetAttrInfo "PatternContourPitchThickness", bSTR89, bSTR90, boolean70
+'--------------------------------------------------
+' Parameter 1 : (String) "PatternContourPitchThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

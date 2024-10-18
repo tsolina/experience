@@ -1,0 +1,161 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("Drw_FBDI_ImportNoShowInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportNoShowInstances"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Drw_FBDI_ImportNoShowInstances", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportNoShowInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("Drw_FBDI_ImportNoCutInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportNoCutInstances"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Drw_FBDI_ImportNoCutInstances", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportNoCutInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("Drw_FBDI_ImportNoUseInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportNoUseInstances"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "Drw_FBDI_ImportNoUseInstances", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportNoUseInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("Drw_FBDI_ImportHLInstances")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportHLInstances"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "Drw_FBDI_ImportHLInstances", bSTR7, bSTR8, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportHLInstances"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("Drw_FBDI_ImportMultiBodiesViews")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportMultiBodiesViews"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "Drw_FBDI_ImportMultiBodiesViews", bSTR9, bSTR10, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_ImportMultiBodiesViews"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean11 = settingRepository1.GetAttr("Drw_FBDI_DrawingAggregation")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_DrawingAggregation"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "Drw_FBDI_DrawingAggregation", bSTR11, bSTR12, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_DrawingAggregation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("Drw_FBDI_DrawingAggregation_Shared")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_DrawingAggregation_Shared"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "Drw_FBDI_DrawingAggregation_Shared", bSTR13, bSTR14, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_FBDI_DrawingAggregation_Shared"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("FBDI_FTA_ARM_IMPORT_OPTIONS")
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_FTA_ARM_IMPORT_OPTIONS"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "FBDI_FTA_ARM_IMPORT_OPTIONS", bSTR15, bSTR16, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "FBDI_FTA_ARM_IMPORT_OPTIONS"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

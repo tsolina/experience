@@ -1,0 +1,28 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("ElecWebPref")
+
+long1 = settingRepository1.GetAttr("OpenInRFLPCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "OpenInRFLPCheck"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "OpenInRFLPCheck", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "OpenInRFLPCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

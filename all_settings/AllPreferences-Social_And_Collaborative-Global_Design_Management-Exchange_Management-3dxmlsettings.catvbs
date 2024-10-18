@@ -1,0 +1,199 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATPLM3DXMLSettings")
+
+long1 = settingRepository1.GetAttr("GeometricFormats")
+'--------------------------------------------------
+' Parameter 1 : (String) "GeometricFormats"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "GeometricFormats", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "GeometricFormats"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("ConflictManagementOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConflictManagementOption"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ConflictManagementOption", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ConflictManagementOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("ConflictManagementDecision")
+'--------------------------------------------------
+' Parameter 1 : (String) "ConflictManagementDecision"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ConflictManagementDecision", bSTR5, bSTR6, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ConflictManagementDecision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("WaiveConflictManagementOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "WaiveConflictManagementOption"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "WaiveConflictManagementOption", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "WaiveConflictManagementOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("WaiveConflictManagementDecision")
+'--------------------------------------------------
+' Parameter 1 : (String) "WaiveConflictManagementDecision"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "WaiveConflictManagementDecision", bSTR9, bSTR10, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "WaiveConflictManagementDecision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("ReidentificationOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReidentificationOption"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "ReidentificationOption", bSTR11, bSTR12, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "ReidentificationOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("DownwardCompatibilityOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "DownwardCompatibilityOption"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DownwardCompatibilityOption", bSTR13, bSTR14, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DownwardCompatibilityOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("DownwardCompatibilityDecision")
+'--------------------------------------------------
+' Parameter 1 : (String) "DownwardCompatibilityDecision"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DownwardCompatibilityDecision", bSTR15, bSTR16, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DownwardCompatibilityDecision"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean13 = settingRepository1.GetAttr("ExportOfChangeActionOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportOfChangeActionOption"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "ExportOfChangeActionOption", bSTR17, bSTR18, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportOfChangeActionOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("ExportEnterpriseItemNumberOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportEnterpriseItemNumberOption"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "ExportEnterpriseItemNumberOption", bSTR19, bSTR20, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "ExportEnterpriseItemNumberOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

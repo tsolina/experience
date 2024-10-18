@@ -1,0 +1,203 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATLiveArchitectureSettings")
+
+long1 = settingRepository1.GetAttr("StructureGridLabelTextFontSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelTextFontSize"
+' Returned value : (Variant) (Long) 8
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "StructureGridLabelTextFontSize", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelTextFontSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("StructureGridLabelTextRotationAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelTextRotationAngle"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "StructureGridLabelTextRotationAngle", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelTextRotationAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("StructureGridLabelBubbleType")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelBubbleType"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "StructureGridLabelBubbleType", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelBubbleType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("StructureGridLabelLeaderLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelLeaderLength"
+' Returned value : (Variant) (Double) 10000.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "StructureGridLabelLeaderLength", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelLeaderLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("StructureGridLabelGapLength")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelGapLength"
+' Returned value : (Variant) (Double) 800.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "StructureGridLabelGapLength", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelGapLength"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("StructureGridLabelJogStartDistance")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelJogStartDistance"
+' Returned value : (Variant) (Double) 1500.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "StructureGridLabelJogStartDistance", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelJogStartDistance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("StructureGridLabelJogAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelJogAngle"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "StructureGridLabelJogAngle", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "StructureGridLabelJogAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("LabelAnnotationLineColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelAnnotationLineColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 248
+'    Array[1] : (Variant) (Long) 163
+'    Array[2] : (Variant) (Long) 241
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "LabelAnnotationLineColor", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelAnnotationLineColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+uLong1 = settingRepository1.GetAttr("LabelAnnotationLineType")
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelAnnotationLineType"
+' Returned value : (Variant) (Unsigned Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "LabelAnnotationLineType", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelAnnotationLineType"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("LabelParallelToScreen")
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelParallelToScreen"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "LabelParallelToScreen", bSTR19, bSTR20, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "LabelParallelToScreen"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

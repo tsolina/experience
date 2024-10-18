@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FstDrafting")
+
+double1 = settingRepository1.GetAttr("AngularTolerance")
+'--------------------------------------------------
+' Parameter 1 : (String) "AngularTolerance"
+' Returned value : (Variant) (Double) 90.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "AngularTolerance", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "AngularTolerance"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("ReverseDirection")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReverseDirection"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ReverseDirection", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ReverseDirection"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("FixedSpotSizeCheck")
+'--------------------------------------------------
+' Parameter 1 : (String) "FixedSpotSizeCheck"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "FixedSpotSizeCheck", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "FixedSpotSizeCheck"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("FixedSpotSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "FixedSpotSize"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "FixedSpotSize", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "FixedSpotSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

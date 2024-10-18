@@ -1,0 +1,70 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("FolderGeneral")
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("BackgroundColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgroundColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 212
+'    Array[1] : (Variant) (Unsigned Long) 212
+'    Array[2] : (Variant) (Unsigned Long) 223
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "BackgroundColor", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "BackgroundColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean2 = settingRepository1.GetAttr("ReferenceExpandMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReferenceExpandMode"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ReferenceExpandMode", bSTR3, bSTR4, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ReferenceExpandMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean4 = settingRepository1.GetAttr("Navigation3D")
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "Navigation3D", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "Navigation3D"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

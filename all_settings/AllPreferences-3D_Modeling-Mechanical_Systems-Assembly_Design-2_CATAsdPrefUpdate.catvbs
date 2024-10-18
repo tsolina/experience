@@ -1,0 +1,104 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("AssemblyDesign")
+
+long1 = settingRepository1.GetAttr("IsUpToDateAutoMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsUpToDateAutoMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "IsUpToDateAutoMode", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "IsUpToDateAutoMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("AsmPatternRepairMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "AsmPatternRepairMode"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "AsmPatternRepairMode", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "AsmPatternRepairMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("UpdateBehaviorOnWarningsMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateBehaviorOnWarningsMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "UpdateBehaviorOnWarningsMode", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateBehaviorOnWarningsMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("UpdateBehaviorOnErrorsMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateBehaviorOnErrorsMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "UpdateBehaviorOnErrorsMode", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateBehaviorOnErrorsMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("UpdateAskedAtSaveMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateAskedAtSaveMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "UpdateAskedAtSaveMode", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "UpdateAskedAtSaveMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

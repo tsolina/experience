@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("GlobeEngineSettings")
+
+long1 = settingRepository1.GetAttr("UseOnPremiseDataProvider")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseOnPremiseDataProvider"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "UseOnPremiseDataProvider", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "UseOnPremiseDataProvider"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("UseOnPremiseDataProviderOnly")
+'--------------------------------------------------
+' Parameter 1 : (String) "UseOnPremiseDataProviderOnly"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "UseOnPremiseDataProviderOnly", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "UseOnPremiseDataProviderOnly"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR5 = settingRepository1.GetAttr("DataStoreSourceFileSystem")
+'--------------------------------------------------
+' Parameter 1 : (String) "DataStoreSourceFileSystem"
+' Returned value : (Variant) (String) "-"
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DataStoreSourceFileSystem", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DataStoreSourceFileSystem"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("CloudDataAvailable")
+'--------------------------------------------------
+' Parameter 1 : (String) "CloudDataAvailable"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CloudDataAvailable", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CloudDataAvailable"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

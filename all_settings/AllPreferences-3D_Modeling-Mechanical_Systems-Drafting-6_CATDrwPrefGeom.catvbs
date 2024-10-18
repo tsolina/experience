@@ -1,0 +1,674 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("Drw_settings_CreateCenter")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CreateCenter"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Drw_settings_CreateCenter", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CreateCenter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("DrwEndPtsDuplGenGeom")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwEndPtsDuplGenGeom"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DrwEndPtsDuplGenGeom", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwEndPtsDuplGenGeom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("Drw_settings_SmartPickColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_SmartPickColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 67
+'    Array[1] : (Variant) (Unsigned Long) 102
+'    Array[2] : (Variant) (Unsigned Long) 85
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "Drw_settings_SmartPickColor", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_SmartPickColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean6 = settingRepository1.GetAttr("Drw_settings_ShowPosition")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_ShowPosition"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "Drw_settings_ShowPosition", bSTR7, bSTR8, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_ShowPosition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean8 = settingRepository1.GetAttr("Drw_settings_DragElts")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DragElts"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "Drw_settings_DragElts", bSTR9, bSTR10, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DragElts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean10 = settingRepository1.GetAttr("CstCreation")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstCreation"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "CstCreation", bSTR11, bSTR12, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "CstCreation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean12 = settingRepository1.GetAttr("CstVisu")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisu"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "CstVisu", bSTR13, bSTR14, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisu"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("CstColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 0
+'    Array[1] : (Variant) (Long) 0
+'    Array[2] : (Variant) (Long) 255
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "CstColor", bSTR15, bSTR16, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "CstColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean15 = settingRepository1.GetAttr("DrwDittoInvViewScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDittoInvViewScale"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DrwDittoInvViewScale", bSTR17, bSTR18, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwDittoInvViewScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean17 = settingRepository1.GetAttr("CATDrwPreventDittoDrag")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwPreventDittoDrag"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "CATDrwPreventDittoDrag", bSTR19, bSTR20, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwPreventDittoDrag"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean19 = settingRepository1.GetAttr("CATDrwPreventDittoScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwPreventDittoScale"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "CATDrwPreventDittoScale", bSTR21, bSTR22, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "CATDrwPreventDittoScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("CstRefSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstRefSize"
+' Returned value : (Variant) (Double) 2.000000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "CstRefSize", bSTR23, bSTR24, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "CstRefSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean22 = settingRepository1.GetAttr("Drw_settings_GridDisplay")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridDisplay"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "Drw_settings_GridDisplay", bSTR25, bSTR26, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridDisplay"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean24 = settingRepository1.GetAttr("Drw_settings_GridSnapPt")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridSnapPt"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "Drw_settings_GridSnapPt", bSTR27, bSTR28, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridSnapPt"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBoolean1
+arrayOfVariantOfBoolean1 = settingRepository1.GetAttrArray("Drw_settings_AllowDistortions")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_AllowDistortions"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Boolean) False
+'    Array[1] : (Variant) (Boolean) False
+'    Array[2] : (Variant) (Boolean) False
+'    Array[3] : (Variant) (Boolean) False
+'    Array[4] : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "Drw_settings_AllowDistortions", bSTR29, bSTR30, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_AllowDistortions"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble1
+arrayOfVariantOfDouble1 = settingRepository1.GetAttrArray("Drw_settings_GridPrimarySpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridPrimarySpacing"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 100.000000
+'    Array[1] : (Variant) (Double) 10000.000000
+'    Array[2] : (Variant) (Double) 1000000.000000
+'    Array[3] : (Variant) (Double) 1.000000
+'    Array[4] : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "Drw_settings_GridPrimarySpacing", bSTR31, bSTR32, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridPrimarySpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfDouble2
+arrayOfVariantOfDouble2 = settingRepository1.GetAttrArray("Drw_settings_GridVPrimarySpacing")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridVPrimarySpacing"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Double) 100.000000
+'    Array[1] : (Variant) (Double) 10000.000000
+'    Array[2] : (Variant) (Double) 1000000.000000
+'    Array[3] : (Variant) (Double) 1.000000
+'    Array[4] : (Variant) (Double) 0.010000
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "Drw_settings_GridVPrimarySpacing", bSTR33, bSTR34, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridVPrimarySpacing"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository1.GetAttrArray("Drw_settings_GridSecondaryStep")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridSecondaryStep"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 10
+'    Array[1] : (Variant) (Long) 10
+'    Array[2] : (Variant) (Long) 10
+'    Array[3] : (Variant) (Long) 10
+'    Array[4] : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "Drw_settings_GridSecondaryStep", bSTR35, bSTR36, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridSecondaryStep"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong3
+arrayOfVariantOfLong3 = settingRepository1.GetAttrArray("Drw_settings_GridVSecondaryStep")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridVSecondaryStep"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 10
+'    Array[1] : (Variant) (Long) 10
+'    Array[2] : (Variant) (Long) 10
+'    Array[3] : (Variant) (Long) 10
+'    Array[4] : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "Drw_settings_GridVSecondaryStep", bSTR37, bSTR38, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_GridVSecondaryStep"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean31 = settingRepository1.GetAttr("Drw_settings_DragWithEndPts")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DragWithEndPts"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "Drw_settings_DragWithEndPts", bSTR39, bSTR40, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DragWithEndPts"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean33 = settingRepository1.GetAttr("Drw_settings_CpltPosSupport")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltPosSupport"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "Drw_settings_CpltPosSupport", bSTR41, bSTR42, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltPosSupport"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean35 = settingRepository1.GetAttr("Drw_settings_CpltPosHorVertTo")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltPosHorVertTo"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "Drw_settings_CpltPosHorVertTo", bSTR43, bSTR44, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltPosHorVertTo"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean37 = settingRepository1.GetAttr("Drw_settings_CpltDirParPerpTan")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltDirParPerpTan"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "Drw_settings_CpltDirParPerpTan", bSTR45, bSTR46, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltDirParPerpTan"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean39 = settingRepository1.GetAttr("Drw_settings_CpltDirHorVert")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltDirHorVert"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "Drw_settings_CpltDirHorVert", bSTR47, bSTR48, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_CpltDirHorVert"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("Drw_settings_DragModeR14")
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DragModeR14"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean41
+settingRepository1.GetAttrInfo "Drw_settings_DragModeR14", bSTR49, bSTR50, boolean41
+'--------------------------------------------------
+' Parameter 1 : (String) "Drw_settings_DragModeR14"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean42 = settingRepository1.GetAttr("CstVisuHori")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuHori"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean43
+settingRepository1.GetAttrInfo "CstVisuHori", bSTR51, bSTR52, boolean43
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuHori"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean44 = settingRepository1.GetAttr("CstVisuVerti")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuVerti"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean45
+settingRepository1.GetAttrInfo "CstVisuVerti", bSTR53, bSTR54, boolean45
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuVerti"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean46 = settingRepository1.GetAttr("CstVisuPara")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuPara"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean47
+settingRepository1.GetAttrInfo "CstVisuPara", bSTR55, bSTR56, boolean47
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuPara"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean48 = settingRepository1.GetAttr("CstVisuPerpen")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuPerpen"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean49
+settingRepository1.GetAttrInfo "CstVisuPerpen", bSTR57, bSTR58, boolean49
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuPerpen"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean50 = settingRepository1.GetAttr("CstVisuConcen")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuConcen"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean51
+settingRepository1.GetAttrInfo "CstVisuConcen", bSTR59, bSTR60, boolean51
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuConcen"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean52 = settingRepository1.GetAttr("CstVisuCoinci")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuCoinci"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean53
+settingRepository1.GetAttrInfo "CstVisuCoinci", bSTR61, bSTR62, boolean53
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuCoinci"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean54 = settingRepository1.GetAttr("CstVisuTangen")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuTangen"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean55
+settingRepository1.GetAttrInfo "CstVisuTangen", bSTR63, bSTR64, boolean55
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuTangen"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean56 = settingRepository1.GetAttr("CstVisuSym")
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuSym"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean57
+settingRepository1.GetAttrInfo "CstVisuSym", bSTR65, bSTR66, boolean57
+'--------------------------------------------------
+' Parameter 1 : (String) "CstVisuSym"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

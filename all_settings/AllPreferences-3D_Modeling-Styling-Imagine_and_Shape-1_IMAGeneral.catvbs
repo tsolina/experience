@@ -1,0 +1,199 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATDesSettingGeneral")
+
+long1 = settingRepository1.GetAttr("DepthUpdateChilds")
+'--------------------------------------------------
+' Parameter 1 : (String) "DepthUpdateChilds"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DepthUpdateChilds", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DepthUpdateChilds"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("IsAttenuationOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsAttenuationOn"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "IsAttenuationOn", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "IsAttenuationOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("Attenuation")
+'--------------------------------------------------
+' Parameter 1 : (String) "Attenuation"
+' Returned value : (Variant) (Double) 0.500000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "Attenuation", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "Attenuation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("AutomaticWeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticWeight"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "AutomaticWeight", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "AutomaticWeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("PrimitiveCreationCenterMode")
+'--------------------------------------------------
+' Parameter 1 : (String) "PrimitiveCreationCenterMode"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "PrimitiveCreationCenterMode", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "PrimitiveCreationCenterMode"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("PrimitiveCreationBaseLocation")
+'--------------------------------------------------
+' Parameter 1 : (String) "PrimitiveCreationBaseLocation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "PrimitiveCreationBaseLocation", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "PrimitiveCreationBaseLocation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("IsQuitWithoutApplyOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsQuitWithoutApplyOn"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "IsQuitWithoutApplyOn", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "IsQuitWithoutApplyOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("IsExitCommandOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsExitCommandOn"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "IsExitCommandOn", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "IsExitCommandOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("IsRepeatLastOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsRepeatLastOn"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "IsRepeatLastOn", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "IsRepeatLastOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("IsKeyShortcutOn")
+'--------------------------------------------------
+' Parameter 1 : (String) "IsKeyShortcutOn"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "IsKeyShortcutOn", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "IsKeyShortcutOn"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

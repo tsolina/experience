@@ -1,0 +1,530 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("HvcLegendPlotOptions")
+
+long1 = settingRepository1.GetAttr("ShowDeformation")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowDeformation"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "ShowDeformation", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "ShowDeformation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("Position")
+'--------------------------------------------------
+' Parameter 1 : (String) "Position"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Position", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Position"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ShellStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "ShellStyle"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "ShellStyle", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "ShellStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ThicknessData")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessData"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ThicknessData", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessData"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("ThicknessScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessScale"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ThicknessScale", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ThicknessScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long5 = settingRepository1.GetAttr("BeamStyle")
+'--------------------------------------------------
+' Parameter 1 : (String) "BeamStyle"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "BeamStyle", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "BeamStyle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("BeamScale")
+'--------------------------------------------------
+' Parameter 1 : (String) "BeamScale"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "BeamScale", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "BeamScale"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long6 = settingRepository1.GetAttr("ExtrudePlanar")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExtrudePlanar"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ExtrudePlanar", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ExtrudePlanar"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long7 = settingRepository1.GetAttr("SweepAxisymmetric")
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetric"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "SweepAxisymmetric", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetric"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long8 = settingRepository1.GetAttr("Format")
+'--------------------------------------------------
+' Parameter 1 : (String) "Format"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "Format", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "Format"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long9 = settingRepository1.GetAttr("NumIntervals")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumIntervals"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "NumIntervals", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "NumIntervals"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long10 = settingRepository1.GetAttr("SmoothColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "SmoothColors"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "SmoothColors", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "SmoothColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long11 = settingRepository1.GetAttr("ReverseColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "ReverseColors"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "ReverseColors", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "ReverseColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long12 = settingRepository1.GetAttr("Orientation")
+'--------------------------------------------------
+' Parameter 1 : (String) "Orientation"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "Orientation", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "Orientation"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long13 = settingRepository1.GetAttr("VisibleEdges")
+'--------------------------------------------------
+' Parameter 1 : (String) "VisibleEdges"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "VisibleEdges", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "VisibleEdges"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("EdgeAngle")
+'--------------------------------------------------
+' Parameter 1 : (String) "EdgeAngle"
+' Returned value : (Variant) (Double) 44.000000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "EdgeAngle", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "EdgeAngle"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR33 = settingRepository1.GetAttr("OutputDirPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "OutputDirPath"
+' Returned value : (Variant) (String) "${HOMEDRIVE}${HOMEPATH}\DSYUserTemplates"
+'--------------------------------------------------
+
+Dim bSTR34
+bSTR34 = ""
+Dim bSTR35
+bSTR35 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "OutputDirPath", bSTR34, bSTR35, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "OutputDirPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR36 = settingRepository1.GetAttr("OutputFileName")
+'--------------------------------------------------
+' Parameter 1 : (String) "OutputFileName"
+' Returned value : (Variant) (String) "SMAUserTemplateDefinition.xml"
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "OutputFileName", bSTR37, bSTR38, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "OutputFileName"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long14 = settingRepository1.GetAttr("NumDigits")
+'--------------------------------------------------
+' Parameter 1 : (String) "NumDigits"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "NumDigits", bSTR39, bSTR40, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "NumDigits"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long15 = settingRepository1.GetAttr("OutOfRangeColors")
+'--------------------------------------------------
+' Parameter 1 : (String) "OutOfRangeColors"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "OutOfRangeColors", bSTR41, bSTR42, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "OutOfRangeColors"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("2DElementDepthStart")
+'--------------------------------------------------
+' Parameter 1 : (String) "2DElementDepthStart"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "2DElementDepthStart", bSTR43, bSTR44, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "2DElementDepthStart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("2DElementDepthEnd")
+'--------------------------------------------------
+' Parameter 1 : (String) "2DElementDepthEnd"
+' Returned value : (Variant) (Double) 10.000000
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "2DElementDepthEnd", bSTR45, bSTR46, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "2DElementDepthEnd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("SweepAxisymmetricAngleStart")
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetricAngleStart"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "SweepAxisymmetricAngleStart", bSTR47, bSTR48, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetricAngleStart"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("SweepAxisymmetricAngleEnd")
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetricAngleEnd"
+' Returned value : (Variant) (Double) 90.000000
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "SweepAxisymmetricAngleEnd", bSTR49, bSTR50, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetricAngleEnd"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long16 = settingRepository1.GetAttr("SweepAxisymmetricSegsCount")
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetricSegsCount"
+' Returned value : (Variant) (Long) 10
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "SweepAxisymmetricSegsCount", bSTR51, bSTR52, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "SweepAxisymmetricSegsCount"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong1
+arrayOfVariantOfLong1 = settingRepository1.GetAttrArray("AboveMaximumColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "AboveMaximumColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 98
+'    Array[1] : (Variant) (Long) 98
+'    Array[2] : (Variant) (Long) 98
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "AboveMaximumColor", bSTR53, bSTR54, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "AboveMaximumColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfLong2
+arrayOfVariantOfLong2 = settingRepository1.GetAttrArray("BelowMinimumColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "BelowMinimumColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Long) 98
+'    Array[1] : (Variant) (Long) 98
+'    Array[2] : (Variant) (Long) 98
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "BelowMinimumColor", bSTR55, bSTR56, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "BelowMinimumColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

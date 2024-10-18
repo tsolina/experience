@@ -1,0 +1,85 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("GeneralHelp")
+
+long1 = settingRepository1.GetAttr("OnlineHelp")
+'--------------------------------------------------
+' Parameter 1 : (String) "OnlineHelp"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "OnlineHelp", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "OnlineHelp"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("DocPath")
+'--------------------------------------------------
+' Parameter 1 : (String) "DocPath"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DocPath", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DocPath"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("DocLanguage")
+'--------------------------------------------------
+' Parameter 1 : (String) "DocLanguage"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DocLanguage", bSTR6, bSTR7, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DocLanguage"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("OnlineLanguagePolicy")
+'--------------------------------------------------
+' Parameter 1 : (String) "OnlineLanguagePolicy"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "OnlineLanguagePolicy", bSTR8, bSTR9, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "OnlineLanguagePolicy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

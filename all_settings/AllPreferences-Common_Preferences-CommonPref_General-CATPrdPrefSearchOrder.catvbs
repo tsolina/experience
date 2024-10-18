@@ -1,0 +1,47 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("SymbolicLinks")
+
+bSTR1 = settingRepository1.GetAttr("DocLocators")
+'--------------------------------------------------
+' Parameter 1 : (String) "DocLocators"
+' Returned value : (Variant) (String) "File_FeatCatalog:1;File_StorageName:1;File_CurrentDir:1;File_RelativeDir:1;File_SearchOrder:1;File_Startup:1;ENOVIA5_locator:1;DXPDocEnv_locator:1;XPDMXMLDocEnv_locator:1;CMODocEnv_locator:1;TestDocEnv_locator:1;VPMDocEnv_locator:1;IPDDocEnv_locator:1;PLM1DocEnv_locator:1;MX1DocEnv_locator:1;SMTDocEnv_locator:1;VP5DocEnv_locator:1;TstV5DocEnv_locator:1;CATSampleDocLoc:1;CATOmbSlavePointedLocator:1;CATOmbSlavePointingLocator:1;"
+'--------------------------------------------------
+
+Dim bSTR2
+bSTR2 = ""
+Dim bSTR3
+bSTR3 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DocLocators", bSTR2, bSTR3, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DocLocators"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR4 = settingRepository1.GetAttr("DocLocators")
+'--------------------------------------------------
+' Parameter 1 : (String) "DocLocators"
+' Returned value : (Variant) (String) "File_FeatCatalog:1;File_StorageName:1;File_CurrentDir:1;File_RelativeDir:1;File_SearchOrder:1;File_Startup:1;ENOVIA5_locator:1;DXPDocEnv_locator:1;XPDMXMLDocEnv_locator:1;CMODocEnv_locator:1;TestDocEnv_locator:1;VPMDocEnv_locator:1;IPDDocEnv_locator:1;PLM1DocEnv_locator:1;MX1DocEnv_locator:1;SMTDocEnv_locator:1;VP5DocEnv_locator:1;TstV5DocEnv_locator:1;CATSampleDocLoc:1;CATOmbSlavePointedLocator:1;CATOmbSlavePointingLocator:1;"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DocLocators", bSTR5, bSTR6, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DocLocators"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

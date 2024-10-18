@@ -1,0 +1,123 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DraftingOptions")
+
+boolean1 = settingRepository1.GetAttr("CopyFirstSheetBckg")
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyFirstSheetBckg"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "CopyFirstSheetBckg", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "CopyFirstSheetBckg"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("ViewFrame")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewFrame"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "ViewFrame", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewFrame"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double1 = settingRepository1.GetAttr("ViewAxisSize")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAxisSize"
+' Returned value : (Variant) (Double) 30.000000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "ViewAxisSize", bSTR5, bSTR6, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewAxisSize"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("DrwPaperLengthUnit")
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPaperLengthUnit"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DrwPaperLengthUnit", bSTR7, bSTR8, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DrwPaperLengthUnit"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("ViewReferential")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferential"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "ViewReferential", bSTR9, bSTR10, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewReferential"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean9 = settingRepository1.GetAttr("ViewRefZoom")
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewRefZoom"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "ViewRefZoom", bSTR11, bSTR12, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "ViewRefZoom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

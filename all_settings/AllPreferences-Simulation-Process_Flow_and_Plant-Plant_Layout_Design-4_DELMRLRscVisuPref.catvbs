@@ -1,0 +1,169 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("DELMrlRscVisuSetting")
+
+double1 = settingRepository1.GetAttr("RscPrdTextHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextHeight"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "RscPrdTextHeight", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR3 = settingRepository1.GetAttr("RscPrdTextFilter")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextFilter"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR4
+bSTR4 = ""
+Dim bSTR5
+bSTR5 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "RscPrdTextFilter", bSTR4, bSTR5, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextFilter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("RscPrdTextFilterEdition")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextFilterEdition"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR6
+bSTR6 = ""
+Dim bSTR7
+bSTR7 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "RscPrdTextFilterEdition", bSTR6, bSTR7, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextFilterEdition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("RscPortTextHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextHeight"
+' Returned value : (Variant) (Double) 1.000000
+'--------------------------------------------------
+
+Dim bSTR8
+bSTR8 = ""
+Dim bSTR9
+bSTR9 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "RscPortTextHeight", bSTR8, bSTR9, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+bSTR10 = settingRepository1.GetAttr("RscPortTextFilter")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextFilter"
+' Returned value : (Variant) (String) ""
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "RscPortTextFilter", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextFilter"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean7 = settingRepository1.GetAttr("RscPortTextFilterEdition")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextFilterEdition"
+' Returned value : (Variant) (Boolean) True
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "RscPortTextFilterEdition", bSTR13, bSTR14, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextFilterEdition"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong1
+arrayOfVariantOfULong1 = settingRepository1.GetAttrArray("RscPrdTextColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "RscPrdTextColor", bSTR15, bSTR16, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPrdTextColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfULong2
+arrayOfVariantOfULong2 = settingRepository1.GetAttrArray("RscPortTextColor")
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextColor"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (Unsigned Long) 255
+'    Array[1] : (Variant) (Unsigned Long) 0
+'    Array[2] : (Variant) (Unsigned Long) 0
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "RscPortTextColor", bSTR17, bSTR18, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "RscPortTextColor"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

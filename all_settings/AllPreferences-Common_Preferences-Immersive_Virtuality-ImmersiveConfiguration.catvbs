@@ -1,0 +1,66 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("IVImmersiveConfiguration")
+
+boolean1 = settingRepository1.GetAttr("Stereoscopy")
+'--------------------------------------------------
+' Parameter 1 : (String) "Stereoscopy"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "Stereoscopy", bSTR1, bSTR2, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "Stereoscopy"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean3 = settingRepository1.GetAttr("Synchronization")
+'--------------------------------------------------
+' Parameter 1 : (String) "Synchronization"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "Synchronization", bSTR3, bSTR4, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "Synchronization"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+boolean5 = settingRepository1.GetAttr("QuadView")
+'--------------------------------------------------
+' Parameter 1 : (String) "QuadView"
+' Returned value : (Variant) (Boolean) False
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "QuadView", bSTR5, bSTR6, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "QuadView"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

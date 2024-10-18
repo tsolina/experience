@@ -1,0 +1,109 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("PSMNavigatorSettings")
+
+Dim arrayOfVariantOfBSTR1
+arrayOfVariantOfBSTR1 = settingRepository1.GetAttrArray("SimulationNodeList")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationNodeList"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "SIMObjSimulationObjectGeneric"
+'    Array[1] : (Variant) (String) "dsc_Result_Category_Ref"
+'    Array[2] : (Variant) (String) "dsc_Scenario_Category_Ref"
+'    Array[3] : (Variant) (String) "dsc_Model_Category_Ref"
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "SimulationNodeList", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationNodeList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR2
+arrayOfVariantOfBSTR2 = settingRepository1.GetAttrArray("SimulationActiveNodeList")
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationActiveNodeList"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Activated"
+'    Array[1] : (Variant) (String) "Activated"
+'    Array[2] : (Variant) (String) "Activated"
+'    Array[3] : (Variant) (String) "Activated"
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "SimulationActiveNodeList", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "SimulationActiveNodeList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR3
+arrayOfVariantOfBSTR3 = settingRepository1.GetAttrArray("CategoryNodeList")
+'--------------------------------------------------
+' Parameter 1 : (String) "CategoryNodeList"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "SIMObjSimulationCategoryReference"
+'    Array[1] : (Variant) (String) "SIMObjSimulationV5RepReferenceGeneric"
+'    Array[2] : (Variant) (String) "FEM"
+'    Array[3] : (Variant) (String) "VPMRepReference"
+'    Array[4] : (Variant) (String) "SIMObjSimulationRepReferenceGeneric"
+'    Array[5] : (Variant) (String) "VPMReference"
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "CategoryNodeList", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "CategoryNodeList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+Dim arrayOfVariantOfBSTR4
+arrayOfVariantOfBSTR4 = settingRepository1.GetAttrArray("CategoryActiveNodeList")
+'--------------------------------------------------
+' Parameter 1 : (String) "CategoryActiveNodeList"
+' Returned value : (Array) 
+'    Array[0] : (Variant) (String) "Activated"
+'    Array[1] : (Variant) (String) "Activated"
+'    Array[2] : (Variant) (String) "Activated"
+'    Array[3] : (Variant) (String) "Activated"
+'    Array[4] : (Variant) (String) "Activated"
+'    Array[5] : (Variant) (String) "Activated"
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "CategoryActiveNodeList", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "CategoryActiveNodeList"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub

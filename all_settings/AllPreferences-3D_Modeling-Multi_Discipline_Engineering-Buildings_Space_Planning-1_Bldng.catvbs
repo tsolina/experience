@@ -1,0 +1,769 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set settingControllers1 = CATIA.SettingControllers
+
+Set settingRepository1 = settingControllers1.Item("CATLiveArchitectureSettings")
+
+double1 = settingRepository1.GetAttr("DefaultGrossStoryHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultGrossStoryHeight"
+' Returned value : (Variant) (Double) 3000.000000
+'--------------------------------------------------
+
+Dim bSTR1
+bSTR1 = ""
+Dim bSTR2
+bSTR2 = ""
+Dim boolean1
+settingRepository1.GetAttrInfo "DefaultGrossStoryHeight", bSTR1, bSTR2, boolean1
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultGrossStoryHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double2 = settingRepository1.GetAttr("DefaultGrossStoryHeightImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultGrossStoryHeightImperial"
+' Returned value : (Variant) (Double) 3149.600000
+'--------------------------------------------------
+
+Dim bSTR3
+bSTR3 = ""
+Dim bSTR4
+bSTR4 = ""
+Dim boolean2
+settingRepository1.GetAttrInfo "DefaultGrossStoryHeightImperial", bSTR3, bSTR4, boolean2
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultGrossStoryHeightImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double3 = settingRepository1.GetAttr("DefaultSlabThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabThicknessImperial"
+' Returned value : (Variant) (Double) 152.400000
+'--------------------------------------------------
+
+Dim bSTR5
+bSTR5 = ""
+Dim bSTR6
+bSTR6 = ""
+Dim boolean3
+settingRepository1.GetAttrInfo "DefaultSlabThicknessImperial", bSTR5, bSTR6, boolean3
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double4 = settingRepository1.GetAttr("DefaultSlabThicknessMetric")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabThicknessMetric"
+' Returned value : (Variant) (Double) 200.000000
+'--------------------------------------------------
+
+Dim bSTR7
+bSTR7 = ""
+Dim bSTR8
+bSTR8 = ""
+Dim boolean4
+settingRepository1.GetAttrInfo "DefaultSlabThicknessMetric", bSTR7, bSTR8, boolean4
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabThicknessMetric"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double5 = settingRepository1.GetAttr("DefaultSlabWidth")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabWidth"
+' Returned value : (Variant) (Double) 30000.000000
+'--------------------------------------------------
+
+Dim bSTR9
+bSTR9 = ""
+Dim bSTR10
+bSTR10 = ""
+Dim boolean5
+settingRepository1.GetAttrInfo "DefaultSlabWidth", bSTR9, bSTR10, boolean5
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabWidth"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double6 = settingRepository1.GetAttr("DefaultSlabWidthImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabWidthImperial"
+' Returned value : (Variant) (Double) 30480.000000
+'--------------------------------------------------
+
+Dim bSTR11
+bSTR11 = ""
+Dim bSTR12
+bSTR12 = ""
+Dim boolean6
+settingRepository1.GetAttrInfo "DefaultSlabWidthImperial", bSTR11, bSTR12, boolean6
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultSlabWidthImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double7 = settingRepository1.GetAttr("DefaultExternalWallThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultExternalWallThickness"
+' Returned value : (Variant) (Double) 250.000000
+'--------------------------------------------------
+
+Dim bSTR13
+bSTR13 = ""
+Dim bSTR14
+bSTR14 = ""
+Dim boolean7
+settingRepository1.GetAttrInfo "DefaultExternalWallThickness", bSTR13, bSTR14, boolean7
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultExternalWallThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double8 = settingRepository1.GetAttr("DefaultExternalWallThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultExternalWallThicknessImperial"
+' Returned value : (Variant) (Double) 355.600000
+'--------------------------------------------------
+
+Dim bSTR15
+bSTR15 = ""
+Dim bSTR16
+bSTR16 = ""
+Dim boolean8
+settingRepository1.GetAttrInfo "DefaultExternalWallThicknessImperial", bSTR15, bSTR16, boolean8
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultExternalWallThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double9 = settingRepository1.GetAttr("DefaultInternalWallThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultInternalWallThickness"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR17
+bSTR17 = ""
+Dim bSTR18
+bSTR18 = ""
+Dim boolean9
+settingRepository1.GetAttrInfo "DefaultInternalWallThickness", bSTR17, bSTR18, boolean9
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultInternalWallThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double10 = settingRepository1.GetAttr("DefaultInternalWallThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultInternalWallThicknessImperial"
+' Returned value : (Variant) (Double) 127.000000
+'--------------------------------------------------
+
+Dim bSTR19
+bSTR19 = ""
+Dim bSTR20
+bSTR20 = ""
+Dim boolean10
+settingRepository1.GetAttrInfo "DefaultInternalWallThicknessImperial", bSTR19, bSTR20, boolean10
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultInternalWallThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double11 = settingRepository1.GetAttr("DefaultVertCirWallThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultVertCirWallThickness"
+' Returned value : (Variant) (Double) 100.000000
+'--------------------------------------------------
+
+Dim bSTR21
+bSTR21 = ""
+Dim bSTR22
+bSTR22 = ""
+Dim boolean11
+settingRepository1.GetAttrInfo "DefaultVertCirWallThickness", bSTR21, bSTR22, boolean11
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultVertCirWallThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double12 = settingRepository1.GetAttr("DefaultVertCirWallThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultVertCirWallThicknessImperial"
+' Returned value : (Variant) (Double) 203.200000
+'--------------------------------------------------
+
+Dim bSTR23
+bSTR23 = ""
+Dim bSTR24
+bSTR24 = ""
+Dim boolean12
+settingRepository1.GetAttrInfo "DefaultVertCirWallThicknessImperial", bSTR23, bSTR24, boolean12
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultVertCirWallThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double13 = settingRepository1.GetAttr("DefaultColumnResWallThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultColumnResWallThickness"
+' Returned value : (Variant) (Double) 50.000000
+'--------------------------------------------------
+
+Dim bSTR25
+bSTR25 = ""
+Dim bSTR26
+bSTR26 = ""
+Dim boolean13
+settingRepository1.GetAttrInfo "DefaultColumnResWallThickness", bSTR25, bSTR26, boolean13
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultColumnResWallThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double14 = settingRepository1.GetAttr("DefaultColumnResWallThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultColumnResWallThicknessImperial"
+' Returned value : (Variant) (Double) 101.600000
+'--------------------------------------------------
+
+Dim bSTR27
+bSTR27 = ""
+Dim bSTR28
+bSTR28 = ""
+Dim boolean14
+settingRepository1.GetAttrInfo "DefaultColumnResWallThicknessImperial", bSTR27, bSTR28, boolean14
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultColumnResWallThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double15 = settingRepository1.GetAttr("DefaultStairMinUnitRise")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMinUnitRise"
+' Returned value : (Variant) (Double) 150.000000
+'--------------------------------------------------
+
+Dim bSTR29
+bSTR29 = ""
+Dim bSTR30
+bSTR30 = ""
+Dim boolean15
+settingRepository1.GetAttrInfo "DefaultStairMinUnitRise", bSTR29, bSTR30, boolean15
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMinUnitRise"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double16 = settingRepository1.GetAttr("DefaultStairMinUnitRiseImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMinUnitRiseImperial"
+' Returned value : (Variant) (Double) 101.600000
+'--------------------------------------------------
+
+Dim bSTR31
+bSTR31 = ""
+Dim bSTR32
+bSTR32 = ""
+Dim boolean16
+settingRepository1.GetAttrInfo "DefaultStairMinUnitRiseImperial", bSTR31, bSTR32, boolean16
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMinUnitRiseImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double17 = settingRepository1.GetAttr("DefaultStairMaxUnitRise")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMaxUnitRise"
+' Returned value : (Variant) (Double) 190.000000
+'--------------------------------------------------
+
+Dim bSTR33
+bSTR33 = ""
+Dim bSTR34
+bSTR34 = ""
+Dim boolean17
+settingRepository1.GetAttrInfo "DefaultStairMaxUnitRise", bSTR33, bSTR34, boolean17
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMaxUnitRise"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double18 = settingRepository1.GetAttr("DefaultStairMaxUnitRiseImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMaxUnitRiseImperial"
+' Returned value : (Variant) (Double) 196.850000
+'--------------------------------------------------
+
+Dim bSTR35
+bSTR35 = ""
+Dim bSTR36
+bSTR36 = ""
+Dim boolean18
+settingRepository1.GetAttrInfo "DefaultStairMaxUnitRiseImperial", bSTR35, bSTR36, boolean18
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairMaxUnitRiseImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double19 = settingRepository1.GetAttr("DefaultStairHeadroom")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairHeadroom"
+' Returned value : (Variant) (Double) 2000.000000
+'--------------------------------------------------
+
+Dim bSTR37
+bSTR37 = ""
+Dim bSTR38
+bSTR38 = ""
+Dim boolean19
+settingRepository1.GetAttrInfo "DefaultStairHeadroom", bSTR37, bSTR38, boolean19
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairHeadroom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double20 = settingRepository1.GetAttr("DefaultStairHeadroomImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairHeadroomImperial"
+' Returned value : (Variant) (Double) 2032.000000
+'--------------------------------------------------
+
+Dim bSTR39
+bSTR39 = ""
+Dim bSTR40
+bSTR40 = ""
+Dim boolean20
+settingRepository1.GetAttrInfo "DefaultStairHeadroomImperial", bSTR39, bSTR40, boolean20
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairHeadroomImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double21 = settingRepository1.GetAttr("DefaultCircularStairHeadroom")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultCircularStairHeadroom"
+' Returned value : (Variant) (Double) 2000.000000
+'--------------------------------------------------
+
+Dim bSTR41
+bSTR41 = ""
+Dim bSTR42
+bSTR42 = ""
+Dim boolean21
+settingRepository1.GetAttrInfo "DefaultCircularStairHeadroom", bSTR41, bSTR42, boolean21
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultCircularStairHeadroom"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double22 = settingRepository1.GetAttr("DefaultCircularStairHeadroomImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultCircularStairHeadroomImperial"
+' Returned value : (Variant) (Double) 2032.000000
+'--------------------------------------------------
+
+Dim bSTR43
+bSTR43 = ""
+Dim bSTR44
+bSTR44 = ""
+Dim boolean22
+settingRepository1.GetAttrInfo "DefaultCircularStairHeadroomImperial", bSTR43, bSTR44, boolean22
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultCircularStairHeadroomImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double23 = settingRepository1.GetAttr("DefaultStairPathOfTravelOffset")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairPathOfTravelOffset"
+' Returned value : (Variant) (Double) 300.000000
+'--------------------------------------------------
+
+Dim bSTR45
+bSTR45 = ""
+Dim bSTR46
+bSTR46 = ""
+Dim boolean23
+settingRepository1.GetAttrInfo "DefaultStairPathOfTravelOffset", bSTR45, bSTR46, boolean23
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairPathOfTravelOffset"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double24 = settingRepository1.GetAttr("DefaultStairPathOfTravelOffsetImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairPathOfTravelOffsetImperial"
+' Returned value : (Variant) (Double) 304.800000
+'--------------------------------------------------
+
+Dim bSTR47
+bSTR47 = ""
+Dim bSTR48
+bSTR48 = ""
+Dim boolean24
+settingRepository1.GetAttrInfo "DefaultStairPathOfTravelOffsetImperial", bSTR47, bSTR48, boolean24
+'--------------------------------------------------
+' Parameter 1 : (String) "DefaultStairPathOfTravelOffsetImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double25 = settingRepository1.GetAttr("CeilingsClearanceHeight")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsClearanceHeight"
+' Returned value : (Variant) (Double) 2500.000000
+'--------------------------------------------------
+
+Dim bSTR49
+bSTR49 = ""
+Dim bSTR50
+bSTR50 = ""
+Dim boolean25
+settingRepository1.GetAttrInfo "CeilingsClearanceHeight", bSTR49, bSTR50, boolean25
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsClearanceHeight"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double26 = settingRepository1.GetAttr("CeilingsClearanceHeightImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsClearanceHeightImperial"
+' Returned value : (Variant) (Double) 2438.400000
+'--------------------------------------------------
+
+Dim bSTR51
+bSTR51 = ""
+Dim bSTR52
+bSTR52 = ""
+Dim boolean26
+settingRepository1.GetAttrInfo "CeilingsClearanceHeightImperial", bSTR51, bSTR52, boolean26
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsClearanceHeightImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double27 = settingRepository1.GetAttr("CeilingsThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsThickness"
+' Returned value : (Variant) (Double) 15.000000
+'--------------------------------------------------
+
+Dim bSTR53
+bSTR53 = ""
+Dim bSTR54
+bSTR54 = ""
+Dim boolean27
+settingRepository1.GetAttrInfo "CeilingsThickness", bSTR53, bSTR54, boolean27
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double28 = settingRepository1.GetAttr("CeilingsThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsThicknessImperial"
+' Returned value : (Variant) (Double) 12.700000
+'--------------------------------------------------
+
+Dim bSTR55
+bSTR55 = ""
+Dim bSTR56
+bSTR56 = ""
+Dim boolean28
+settingRepository1.GetAttrInfo "CeilingsThicknessImperial", bSTR55, bSTR56, boolean28
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double29 = settingRepository1.GetAttr("CeilingsSideOffset")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsSideOffset"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR57
+bSTR57 = ""
+Dim bSTR58
+bSTR58 = ""
+Dim boolean29
+settingRepository1.GetAttrInfo "CeilingsSideOffset", bSTR57, bSTR58, boolean29
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsSideOffset"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double30 = settingRepository1.GetAttr("CeilingsSideOffsetImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsSideOffsetImperial"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR59
+bSTR59 = ""
+Dim bSTR60
+bSTR60 = ""
+Dim boolean30
+settingRepository1.GetAttrInfo "CeilingsSideOffsetImperial", bSTR59, bSTR60, boolean30
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsSideOffsetImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double31 = settingRepository1.GetAttr("CeilingsReservationOffset")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsReservationOffset"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR61
+bSTR61 = ""
+Dim bSTR62
+bSTR62 = ""
+Dim boolean31
+settingRepository1.GetAttrInfo "CeilingsReservationOffset", bSTR61, bSTR62, boolean31
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsReservationOffset"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double32 = settingRepository1.GetAttr("CeilingsReservationOffsetImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsReservationOffsetImperial"
+' Returned value : (Variant) (Double) 0.000000
+'--------------------------------------------------
+
+Dim bSTR63
+bSTR63 = ""
+Dim bSTR64
+bSTR64 = ""
+Dim boolean32
+settingRepository1.GetAttrInfo "CeilingsReservationOffsetImperial", bSTR63, bSTR64, boolean32
+'--------------------------------------------------
+' Parameter 1 : (String) "CeilingsReservationOffsetImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double33 = settingRepository1.GetAttr("SubfloorThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "SubfloorThickness"
+' Returned value : (Variant) (Double) 15.000000
+'--------------------------------------------------
+
+Dim bSTR65
+bSTR65 = ""
+Dim bSTR66
+bSTR66 = ""
+Dim boolean33
+settingRepository1.GetAttrInfo "SubfloorThickness", bSTR65, bSTR66, boolean33
+'--------------------------------------------------
+' Parameter 1 : (String) "SubfloorThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double34 = settingRepository1.GetAttr("SubfloorThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "SubfloorThicknessImperial"
+' Returned value : (Variant) (Double) 12.700000
+'--------------------------------------------------
+
+Dim bSTR67
+bSTR67 = ""
+Dim bSTR68
+bSTR68 = ""
+Dim boolean34
+settingRepository1.GetAttrInfo "SubfloorThicknessImperial", bSTR67, bSTR68, boolean34
+'--------------------------------------------------
+' Parameter 1 : (String) "SubfloorThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double35 = settingRepository1.GetAttr("FloorCoveringThickness")
+'--------------------------------------------------
+' Parameter 1 : (String) "FloorCoveringThickness"
+' Returned value : (Variant) (Double) 15.000000
+'--------------------------------------------------
+
+Dim bSTR69
+bSTR69 = ""
+Dim bSTR70
+bSTR70 = ""
+Dim boolean35
+settingRepository1.GetAttrInfo "FloorCoveringThickness", bSTR69, bSTR70, boolean35
+'--------------------------------------------------
+' Parameter 1 : (String) "FloorCoveringThickness"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+double36 = settingRepository1.GetAttr("FloorCoveringThicknessImperial")
+'--------------------------------------------------
+' Parameter 1 : (String) "FloorCoveringThicknessImperial"
+' Returned value : (Variant) (Double) 12.700000
+'--------------------------------------------------
+
+Dim bSTR71
+bSTR71 = ""
+Dim bSTR72
+bSTR72 = ""
+Dim boolean36
+settingRepository1.GetAttrInfo "FloorCoveringThicknessImperial", bSTR71, bSTR72, boolean36
+'--------------------------------------------------
+' Parameter 1 : (String) "FloorCoveringThicknessImperial"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long1 = settingRepository1.GetAttr("NoOfStoriesAbove")
+'--------------------------------------------------
+' Parameter 1 : (String) "NoOfStoriesAbove"
+' Returned value : (Variant) (Long) 3
+'--------------------------------------------------
+
+Dim bSTR73
+bSTR73 = ""
+Dim bSTR74
+bSTR74 = ""
+Dim boolean37
+settingRepository1.GetAttrInfo "NoOfStoriesAbove", bSTR73, bSTR74, boolean37
+'--------------------------------------------------
+' Parameter 1 : (String) "NoOfStoriesAbove"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long2 = settingRepository1.GetAttr("NoOfStoriesBelow")
+'--------------------------------------------------
+' Parameter 1 : (String) "NoOfStoriesBelow"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR75
+bSTR75 = ""
+Dim bSTR76
+bSTR76 = ""
+Dim boolean38
+settingRepository1.GetAttrInfo "NoOfStoriesBelow", bSTR75, bSTR76, boolean38
+'--------------------------------------------------
+' Parameter 1 : (String) "NoOfStoriesBelow"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long3 = settingRepository1.GetAttr("ExternalOffsetOption")
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalOffsetOption"
+' Returned value : (Variant) (Long) 0
+'--------------------------------------------------
+
+Dim bSTR77
+bSTR77 = ""
+Dim bSTR78
+bSTR78 = ""
+Dim boolean39
+settingRepository1.GetAttrInfo "ExternalOffsetOption", bSTR77, bSTR78, boolean39
+'--------------------------------------------------
+' Parameter 1 : (String) "ExternalOffsetOption"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+long4 = settingRepository1.GetAttr("ComponentsShareReps")
+'--------------------------------------------------
+' Parameter 1 : (String) "ComponentsShareReps"
+' Returned value : (Variant) (Long) 1
+'--------------------------------------------------
+
+Dim bSTR79
+bSTR79 = ""
+Dim bSTR80
+bSTR80 = ""
+Dim boolean40
+settingRepository1.GetAttrInfo "ComponentsShareReps", bSTR79, bSTR80, boolean40
+'--------------------------------------------------
+' Parameter 1 : (String) "ComponentsShareReps"
+' Parameter 2 : (String) "Default value"
+' Parameter 3 : (String) "Unlocked"
+' Parameter 4 : (Boolean) False
+'--------------------------------------------------
+
+End Sub
