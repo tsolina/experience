@@ -19,7 +19,7 @@ class VOCSilhouetteService(AnyObject):
         super().__init__(com)
         self.voc_silhouette_service = com
 
-    def create_a_silhouette(self, i_products_to_treat: list, i_product_reference: VPMReference, i_list_of_view_points: list, i_silhouette_acc: float,
+    def create_a_silhouette(self, i_products_to_treat: list, i_product_reference: 'VPMReference', i_list_of_view_points: list, i_silhouette_acc: float,
                             i_accuracy_for_simplification: float) -> 'VOCSilhouetteService':
         '''
         Deprecated: 

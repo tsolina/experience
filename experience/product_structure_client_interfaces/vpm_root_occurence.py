@@ -29,7 +29,7 @@ class VPMRootOccurrence(PLMOccurrence):
         from experience.product_structure_client_interfaces import VPMReference
         return VPMReference(self.vpm_root_occurrence.ReferenceRootOccurrenceOf)
     
-    def reference_root_occurrence_of(self) -> 'VPMRepOccurrences':
+    def rep_occurrences(self) -> 'VPMRepOccurrences':
         from experience.product_structure_client_interfaces import VPMRepOccurrences
         return VPMRepOccurrences(self.vpm_root_occurrence.RepOccurrences)
 

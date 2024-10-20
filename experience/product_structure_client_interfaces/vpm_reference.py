@@ -4,6 +4,7 @@ from experience.plm_modeler_base_interfaces import PLMEntity
 
 if TYPE_CHECKING:
     from experience.product_structure_client_interfaces import VPMInstances, VPMPublications, VPMRepInstances
+    from experience.cat_eng_connection_interfaces.eng_connections import EngConnections
 
 class VPMReference(PLMEntity):
     """
@@ -34,6 +35,10 @@ class VPMReference(PLMEntity):
     
     def plm_id(self) -> str:
         return self.get_attribute_value("PLM_ExternalID") # its settable too
+    
+    def eng_connections(self) -> 'EngConnections':
+        from experience.cat_eng_connection_interfaces.eng_connections import EngConnections
+        return self.get_item("CATEngConnections", EngConnections)
 
     def __repr__(self):
         return f'VPMReference(name="{self.name()}")'

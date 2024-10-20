@@ -22,7 +22,7 @@ def layout_2d():
 
     print(root.layout_services() is None)
 
-def expert_rule():
+def expert_rulex():
     part = app.active_editor().active_object(Part)
     rbs = part.get_item("KnowledgeObjects", KnowledgeObjects).get_knowledge_root_set(True, KnowledgeSetType.kweRuleBasesType).as_pyclass(ExpertRuleBasesSet)
     rbf = rbs.factory().as_pyclass(ExpertRuleBasesFactory)
@@ -34,7 +34,7 @@ def expert_rule():
 
     print(rbr.comment)
 
-def section():
+def sectionx():
     # - no such interface available anymore -
     ssec = app.active_editor().services().section_service()
     print(ssec.count())
@@ -52,6 +52,20 @@ def settings():
     print(ctrl.get_attr("SectionMode"))
     print(ctrl.get_attr_info("SectionMode"))
 
+def access_part():
+    rref = app.active_editor().active_object(VPMRootOccurrence).occurrences().item(1).instance_occurrence_of().reference_instance_of().rep_instances().item(1).reference_instance_of()
+    p = rref.part()
+    print(p.main_body().name("reference").name())
+    print(rref.is_machanism())
 
+ec  = app.active_editor().active_object(VPMRootOccurrence).reference_root_occurrence_of()
+conn = ec.get_item("CATEngConnections", EngConnections)
+print(conn.count())
+
+print(ec.eng_connections().count())
+print(ec.eng_connections().item(1).type())
+
+#Dim myEngConnections As EngConnections. 
+#set myEngConnections = myPLMProductReference.GetItem("CATEngConnections").
 
 print("ok")

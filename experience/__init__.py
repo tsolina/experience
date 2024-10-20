@@ -35,6 +35,9 @@ from .cat_digitized_morphing_interfaces import *
 from .drafting_2d_interfaces import *
 from .know_how_interfaces import *
 
+from .cat_eng_connection_interfaces import *
+from .cat_kin_mechanism_interfaces import *
+
 # from cat_logger import create_logger
 # except Exception as e:
 #     print(f"Top: {e}" )
