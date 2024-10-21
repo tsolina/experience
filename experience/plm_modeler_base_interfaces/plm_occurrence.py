@@ -4,6 +4,7 @@ from experience.system import AnyObject
 
 if TYPE_CHECKING:
     from experience.plm_modeler_base_interfaces import PLMEntity, PLMOccurrences
+    from experience.cat_behavior_interfaces.dpc_operations import DPCOperations
 
 class PLMOccurrence(AnyObject):
     """
@@ -18,6 +19,10 @@ class PLMOccurrence(AnyObject):
     def __init__(self, com):
         super().__init__(com)
         self.plm_occurrence = com
+
+    def get_dpc_operations(self) -> 'DPCOperations':
+        from experience.cat_behavior_interfaces.dpc_operations import DPCOperations
+        return self.get_item("CATGetDPCOperations", DPCOperations)
 
     def plm_entity(self) -> 'PLMEntity':
         from experience.plm_modeler_base_interfaces import PLMEntity
