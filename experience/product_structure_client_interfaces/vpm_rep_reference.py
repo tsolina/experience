@@ -1,6 +1,5 @@
 from typing import Union, Optional, TYPE_CHECKING
 
-
 from experience.plm_modeler_base_interfaces import PLMEntity
 
 if TYPE_CHECKING:
@@ -8,6 +7,7 @@ if TYPE_CHECKING:
     from experience.mecmod_interfaces import Part
     from experience.knowledge_interfaces import KnowledgeObjects
     from experience.cat_kin_mechanism_interfaces.kin_mechanism import KinMechanism
+    from experience.cat_sim_rep_interfaces.sim_rep_initialization import SimRepInitialization
 
 class VPMRepReference(PLMEntity):
     """
@@ -46,6 +46,10 @@ class VPMRepReference(PLMEntity):
     
     def is_machanism(self) -> bool:
         return self.get_attribute_value("V_discipline") == "Mechanism"
+    
+    def sim_rep_initialization(self) -> 'SimRepInitialization':
+        from experience.cat_sim_rep_interfaces.sim_rep_initialization import SimRepInitialization
+        return self.get_item('SimRepInitialization', SimRepInitialization)        
 
     def __repr__(self):
         return f'{self.__class__.__name__}(name="{self.name()}")'
