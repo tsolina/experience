@@ -10,6 +10,7 @@ if TYPE_CHECKING:
     from experience.plm_validation_interfaces import VALValidationService
     from experience.cat_opns_inertia_interfaces import InertiaService, InertiaBoxService
     from experience.cat_opns_section_interfaces.section_service import SectionService
+    from experience.plm_interference_interfaces.interference_services import InterferenceServices
 
 class EditorServices():
     def __init__(self, com):
@@ -26,6 +27,10 @@ class EditorServices():
     def inertia_service(self) -> 'InertiaService':
         from experience.cat_opns_inertia_interfaces import InertiaService
         return InertiaService(self.editor_services.GetService("InertiaService"))
+    
+    def interference_service(self) -> 'InterferenceServices':
+        from experience.plm_interference_interfaces.interference_services import InterferenceServices
+        return InterferenceServices(self.editor_services.GetService("InterferenceServices"))
 
     def measure_service(self) -> 'MeasureService':
         '''
