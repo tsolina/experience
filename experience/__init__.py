@@ -39,6 +39,7 @@ from .cat_sim_rep_interfaces import *
 from .cat_eng_connection_interfaces import *
 from .cat_kin_mechanism_interfaces import *
 from .electrical_interfaces import *
+from .optimization_interfaces import *
 
 # from cat_logger import create_logger
 # except Exception as e:
