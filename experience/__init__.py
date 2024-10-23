@@ -41,6 +41,7 @@ from .cat_kin_mechanism_interfaces import *
 from .electrical_interfaces import *
 from .optimization_interfaces import *
 from .plm_interference_interfaces import *
+from .plm_simulation_engine_interfaces import *
 
 # from cat_logger import create_logger
 # except Exception as e:

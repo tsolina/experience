@@ -171,6 +171,38 @@ class AnyObject(Experience):
         #print(vba_code)
         # print(dir(self))
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
+    
+    def _get_multi_with_result(self, params, ins, outs, rval) -> tuple:
+        """
+        _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference"), "Long")
+        """ 
+        
+        com_type = ins[0]
+        method = ins[1]
+        str_ins = ins[2:]
+        # dim_in = ", ".join([f"in{i} As {value}" for i, value in enumerate(str_ins)]).replace(" As ()", "() As ")
+        # dim_out = ", ".join([f"out{i} As {value}" for i, value in enumerate(outs)]).replace(" As ()", "() As ")
+        dim_in = self._replace_args(", ".join([f"in{i} As {value}" for i, value in enumerate(str_ins)]))
+        dim_out = self._replace_args(", ".join([f"out{i} As {value}" for i, value in enumerate(outs)]))
+        args_in = ", ".join([f"in{i}" for i, _ in enumerate(str_ins)])
+        args_out = ", ".join([f"out{i}" for i, _ in enumerate(outs)])
+        if len(str_ins) == 0:
+            args = args_out
+            dim_in = ""
+        else:
+            args = ", ".join((args_in, args_out))
+            dim_in = ", " + dim_in
+        vba_function_name = "func"
+        vba_code = f"""
+            Public Function {vba_function_name}(obj As {com_type}{dim_in}) As Variant
+                Dim {dim_out}, {rval}
+                {rval} = obj.{method}({args})
+                {vba_function_name} = Array({rval}, {args_out})
+            End Function
+        """
+        #print(vba_code)
+        # print(dir(self))
+        return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
 
     def __repr__(self):
         return f'{self.__class__.__name__}(name="{self.name()}")'
