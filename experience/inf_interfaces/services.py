@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING
+
 from experience.system.any_object import AnyObject
 
 if TYPE_CHECKING:
@@ -10,6 +11,7 @@ if TYPE_CHECKING:
     from experience.plm_application_context_interfaces import PLMRefreshService
     from experience.plm_application_context_interfaces import PnOService
     from experience.cat_material_interfaces import MATPLMService
+    from experience.cat_sim_plm_interfaces.sim_simulation_service import SimSimulationService
 
 class Services():
     def __init__(self, com):
@@ -68,7 +70,11 @@ class Services():
 
     def mat_plm_service(self) -> 'MATPLMService':
         from experience.cat_material_interfaces import MATPLMService
-        return MATPLMService(self.services.Application.GetSessionService("MATPLMService"))    
+        return MATPLMService(self.services.Application.GetSessionService("MATPLMService"))
+
+    def sim_simulation_service(self) -> 'SimSimulationService':
+        from experience.cat_sim_plm_interfaces.sim_simulation_service import SimSimulationService
+        return MATPLMService(self.services.Application.GetSessionService("SimSimulationService"))
 
     def __repr__(self):
         return f'Services()'
