@@ -168,7 +168,7 @@ class AnyObject(Experience):
                 {vba_function_name} = Array({args_out})
             End Function
         """
-        #print(vba_code)
+        # print(vba_code)
         # print(dir(self))
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, params)
     

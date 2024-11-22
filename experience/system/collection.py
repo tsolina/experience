@@ -58,18 +58,24 @@ class Collection(Experience):
     def get_item_by_name(self, name):
         for i in range(self._com.Count):
             if self._com.Item(i + 1).Name == name:
-                return self.child_object(self._com.Item(i + 1))
+                return self._child(self._com.Item(i + 1))
 
         return None
 
     def items(self):
-        items_list = []
+        """
+        - list comprehension added -
+        - com collectoin starts at 1 -
+        """
+        return [self._child(self._com.Item(i + 1)) for i in range(self._com.Count)]
+    
+        # items_list = []
 
-        for i in range(self._com.Count):
-            item = self._child(self._com.Item(i + 1))
-            items_list.append(item)
+        # for i in range(self._com.Count):
+        #     item = self._child(self._com.Item(i + 1))
+        #     items_list.append(item)
 
-        return items_list
+        # return items_list
 
     def __len__(self):
         return self.count
@@ -83,6 +89,43 @@ class Collection(Experience):
     def __iter__(self) -> Iterator[AnyObject]:
         for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
+
+    def empty(self) -> bool:
+        if self.count() == 0:
+            return True
+        else:
+            return False
+
+    def first(self, as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+        '''
+        - returns first item of collection -
+        '''
+        if as_type is not None:
+            return self.get_item(1, as_type)
+        return self.get_item(1)
+
+    def last(self,  as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+        '''
+        - returns last item of collection -
+        '''
+        if as_type is not None:
+            return self.get_item(self.count(), as_type)
+        return self.get_item(self.count())
+    
+    def contains(self, name:str) -> bool:
+        '''
+        returns true if item with specified name exists
+        '''
+        return any(item.name() == name for item in self.items())
+    
+    def com_type(self) -> str:
+        vba_function_name = "com_type"
+        vba_code = f"""
+        Public Function {vba_function_name}(obj As AnyObject) as String
+            {vba_function_name} = typename(obj)
+        End Function
+        """
+        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [self._com])
 
     def __repr__(self):
         return f'{self.__class__.__name__}(name="{self.name()}")'

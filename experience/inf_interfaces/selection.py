@@ -1,4 +1,4 @@
-from typing import Iterator, TYPE_CHECKING
+from typing import Callable, Iterator, TYPE_CHECKING
 from experience.system import AnyObject
 from experience.inf_interfaces.inf_types import *
 from experience.inf_interfaces import SelectedElement
@@ -78,7 +78,7 @@ class Selection(AnyObject):
         End Function
         '''
 
-        system_service = self.application.system_service
+        system_service = self.application().system_service()
         result = system_service.evaluate(vba_code,
                                          0,
                                          vba_function_name,
@@ -175,3 +175,32 @@ class Selection(AnyObject):
 
     def __repr__(self):
         return f'{self.__class__.__name__}(name="{self.name()}")'
+    
+    def first(self) -> SelectedElement:
+        return self.item(1)
+
+    def last(self) -> SelectedElement:
+        return self.item(self.count())
+
+    def for_each(self, cb:Callable[[SelectedElement], None]) -> 'Selection':
+        for i in range(1, self.count() + 1):
+            cb(self.item(i))
+
+        return self
+    
+    def for_each_reverse(self, cb:Callable[[SelectedElement], None]) -> 'Selection':
+        for i in range(self.count(), 0, -1):
+            cb(self.item(i))
+
+
+    def for_each_value(self, cb:Callable[[AnyObject], None]) -> 'Selection':
+        for i in range(1, self.count() + 1):
+            cb(self.item(i).value())
+
+        return self
+    
+    def for_each_reverse_value(self, cb:Callable[[AnyObject], None])  -> 'Selection':
+        for i in range(self.count(), 0, -1):
+            cb(self.item(i).value())
+
+        return self

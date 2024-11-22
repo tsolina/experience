@@ -42,11 +42,10 @@ class Services():
     def propagate_service(self) -> 'PLMPropagateService':
         from experience.plm_session_builder_interfaces import PLMPropagateService
         return PLMPropagateService(self.services.Application.GetSessionService("PLMPropagateService"))  
-      
     
-    # def product_service(self) -> 'PLMProductService':
-    #     from experience.vpm_editor_context_interfaces import PLMProductService
-    #     return PLMProductService(self.services.Application.GetSessionService("PLMProductService"))
+    def product_service(self) -> 'PLMProductService':
+        from experience.vpm_editor_context_interfaces import PLMProductService
+        return PLMProductService(self.services.Application.GetSessionService("PLMProductService"))
 
     def product_session_service(self) -> 'ProductSessionService':
         from experience.vpm_editor_context_interfaces import ProductSessionService

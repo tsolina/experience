@@ -255,8 +255,8 @@ class HybridShapeFactory(Factory):
     def add_new_extrapol_until(self, i_boundary: Reference, i_to_extrapol: Reference, i_until: Reference) -> HybridShapeExtrapol:
         return HybridShapeExtrapol(self.hybrid_shape_factory.AddNewExtrapolUntil(i_boundary.com, i_to_extrapol.com, i_until.com))
 
-    def add_new_extremum(self, i_objet: Reference, i_dir: HybridShapeDirection, i_min_max: int) -> HybridShapeExtremum:
-        return HybridShapeExtremum(self.hybrid_shape_factory.AddNewExtremum(i_objet._com, i_dir._com, i_min_max))
+    def add_new_extremum(self, i_object: Reference, i_dir: HybridShapeDirection, i_min_max: int) -> HybridShapeExtremum:
+        return HybridShapeExtremum(self.hybrid_shape_factory.AddNewExtremum(i_object._com, i_dir._com, i_min_max))
 
     def add_new_extremum_polar(self, i_type: int, ip_ia_contour: Reference) -> HybridShapeExtremumPolar:
         return HybridShapeExtremumPolar(self.hybrid_shape_factory.AddNewExtremumPolar(i_type, ip_ia_contour._com))

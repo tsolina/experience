@@ -11,6 +11,7 @@ if TYPE_CHECKING:
     from experience.cat_opns_inertia_interfaces import InertiaService, InertiaBoxService
     from experience.cat_opns_section_interfaces.section_service import SectionService
     from experience.plm_interference_interfaces.interference_services import InterferenceServices
+    from experience.plm_simulation_engine_interfaces.sim_dyn_clash_services import SIMDynClashServices
 
 class EditorServices():
     def __init__(self, com):
@@ -55,6 +56,10 @@ class EditorServices():
         '''
         from experience.cat_opns_section_interfaces.section_service import SectionService
         return SectionService(self.editor_services.GetService("SectionService"))
+    
+    def sim_dyn_clash_services(self) -> 'SIMDynClashServices':
+        from experience.plm_simulation_engine_interfaces.sim_dyn_clash_services import SIMDynClashServices
+        return SIMDynClashServices(self.editor_services.GetService("SIMDynClashServices"))
     
     def validation_service(self) -> 'VALValidationService':
         from experience.plm_validation_interfaces import VALValidationService

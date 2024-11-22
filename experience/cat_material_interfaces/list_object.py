@@ -33,6 +33,9 @@ class ListObject(Collection):
     def remove(self, i_index: 'cat_variant') -> 'ListObject':
         self.list_object.Remove(i_index)
         return self
+    
+    def name(self) -> str:
+        return "ListObject"
 
     def __getitem__(self, n: int) -> PLMEntity:
         if (n + 1) > self.count():
@@ -43,3 +46,6 @@ class ListObject(Collection):
     def __iter__(self) -> Iterator[PLMEntity]:
         for i in range(self.count()):
             yield self._child(self._com.item(i + 1))
+
+    def __repr__(self):
+        return f'{self.__class__.__name__}(name="{self.name()}")'

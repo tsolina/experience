@@ -39,8 +39,22 @@ class PLMEntity(AnyObject):
         self.plm_entity.SetAttributeValue(i_attr_name, i_attr_value)
         return self
     
-    def title(self, value: str = None) -> 'PLMEntity':
+    def title(self, value: str = None) -> Union['PLMEntity', str]:
         if value is not None:
-            self.set_attribute_value("Name", value) # "PLM_ExternalID"
+            self.set_attribute_value("V_Name", value) # "PLM_ExternalID"
             return self
-        return self.get_attribute_value("Name")
+        return self.get_attribute_value("V_Name")
+    
+    def id(self, value: str = None) -> Union['PLMEntity', str]:
+        if value is not None:
+            self.set_attribute_value("PLM_ExternalID", value)
+            return self
+        return self.get_attribute_value("PLM_ExternalID")
+    
+    def revision(self, value: str = None) -> Union['PLMEntity', str]:
+        if value is not None:
+            self.set_attribute_value("revision", value)
+            return self
+        return self.get_attribute_value("revision")
+    
+    
