@@ -70,6 +70,12 @@ class AnyObject(Experience):
     #     if as_type is not None:
     #         return as_type(self._com.GetItem(id_name))
     #     return AnyObject(self._com.GetItem(id_name))
+
+    @overload
+    def get_item(self, id_name:str, cast_to:Type[T]) -> T: ...
+    
+    @overload
+    def get_item(self, id_name:str, cast_to: None = None) -> "AnyObject": ...
     
     def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
         com_item = self._com.GetItem(id_name)
