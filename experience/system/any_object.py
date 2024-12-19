@@ -1,5 +1,5 @@
 import re
-from typing import TYPE_CHECKING, Type, TypeVar, Union, Optional
+from typing import TYPE_CHECKING, Type, TypeVar, Union, Optional, overload
 from experience.base_interfaces.experience import Experience
 from experience.system.system_types import CATScriptLanguage
 
@@ -23,48 +23,84 @@ class AnyObject(Experience):
         from experience.inf_interfaces.application import Application
         return  Application(self._com.Application)
 
+    @overload
+    def name(self, value:str) -> 'Application': ...
+
+    @overload
+    def name(self, value:None=None) -> str: ...
+
     def name(self, value: str = None) -> Union['Application', str]:
         if value is not None:
             self._com.Name = value
             return self
         return self._com.Name
-
-    # def parent(self) -> 'AnyObject':
-    #     return AnyObject(self._com.Parent)
-
-    def parent(self, value: Optional[Type[U]] = None) -> Union[U, 'AnyObject']:
-        if value is not None:
-            return value(self._com.Parent)
-        return AnyObject(self._com.Parent)
     
-    # def testF(self) -> Type[T]:
-    #     rVal = AnyObject(self._com.Parent)
-    #     T = globals()[rVal.com_type()]
-    #     return T(rVal._com)
+    # def parent(self, value: Optional[Type[U]] = None) -> Union[U, 'AnyObject']:        
+    #     if value is not None:
+    #         return value(self._com.Parent)
+    #     return AnyObject(self._com.Parent)
+    
+    @overload
+    def parent(self, cast_to: Type[T]) -> T: ...
+    
+    @overload
+    def parent(self, cast_to: None = None) -> "AnyObject": ...
 
-    def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
-        if as_type is not None:
-            return as_type(self._com.GetItem(id_name))
-        return AnyObject(self._com.GetItem(id_name))
-
-    def com_type(self) -> str:
-        vba_function_name = "com_type"
-        vba_code = f"""
-        Public Function {vba_function_name}(obj As AnyObject) as String
-            {vba_function_name} = typename(obj)
-        End Function
+    def parent(self, value: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
         """
-        return self.application().system_service().evaluate(vba_code, 1, vba_function_name, [self._com])
+        Returns the parent object of the current COM object.
+        If `value` is provided, casts the parent to the specified type.
+        If `value` is not provided, dynamically infers the type from COM metadata.
+        """
+        parent_com = self._com.Parent
+
+        if value is not None:
+            # Return the parent cast to the explicitly specified type
+            return value(parent_com)
+
+        # Dynamically infer the type name
+        inferred_type_name = parent_com._oleobj_.GetTypeInfo(0).GetDocumentation(-1)[0]
+
+        # Map the inferred type name to a Python class (type registry)
+        inferred_type = globals().get(inferred_type_name, AnyObject)  # Replace `globals()` with your type registry
+        return inferred_type(parent_com)
+    
+
+    # def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+    #     if as_type is not None:
+    #         return as_type(self._com.GetItem(id_name))
+    #     return AnyObject(self._com.GetItem(id_name))
+    
+    def get_item(self, id_name: str, as_type: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+        com_item = self._com.GetItem(id_name)
+        if as_type is not None:
+            return as_type(com_item)
+        
+        inferred_type_name = com_item._oleobj_.GetTypeInfo(0).GetDocumentation(-1)[0]
+        inferred_type = globals().get(inferred_type_name, AnyObject)
+        return inferred_type(com_item)
+
+
+    # def com_type(self) -> str:
+    #     vba_function_name = "com_type"
+    #     vba_code = f"""
+    #     Public Function {vba_function_name}(obj As AnyObject) as String
+    #         {vba_function_name} = typename(obj)
+    #     End Function
+    #     """
+    #     # print(__name__, "com_type", self.name())
+    #     return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [self._com])
+    
+    def com_type(self) -> str:
+        return self._com._oleobj_.GetTypeInfo(0).GetDocumentation(-1)[0]
 
     def _vba_cast(self, com_object, vba_class_name):
         vba_function_name = 'generalizedCastToVBA'
         vba_code = f"""
         Public Function generalizedCastToVBA(obj as AnyObject) as {vba_class_name}
             set generalizedCastToVBA = obj
-            'MsgBox(typename(generalizedCastToVBA) + " " + typename(x))
         End Function
         """
-        # print(vba_code)
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [com_object])
 
     def as_pyclass(self, target_class: Type[T], vba_class_name: str = None) -> T:
