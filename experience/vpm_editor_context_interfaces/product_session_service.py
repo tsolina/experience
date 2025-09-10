@@ -26,4 +26,4 @@ class ProductSessionService(Service):
         return Shape3Ds(self.product_session_service.Shape3Ds)
 
     def compare_root_occurrences(self, i_first_root_occurrence: 'VPMRootOccurrence', i_second_root_occurrence: 'VPMRootOccurrence') -> CatCompareOccurrenceResult:
-        return CatCompareOccurrenceResult.item(self.product_session_service.CatCompareOccurrenceResult(i_first_root_occurrence, i_second_root_occurrence))
+        return CatCompareOccurrenceResult.item(self.product_session_service.CatCompareOccurrenceResult(i_first_root_occurrence._com, i_second_root_occurrence._com))

@@ -50,7 +50,7 @@ class HybridShapePointBetween(Point):
     def support(self, value: Reference = None) -> Union['HybridShapePointBetween', Reference]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.hybrid_shape_point_between.SecondPoint = value._com
+            self.hybrid_shape_point_between.Support = value._com
             return self
         return Reference(self.hybrid_shape_point_between.Support)
 

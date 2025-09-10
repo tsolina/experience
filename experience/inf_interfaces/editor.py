@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Type, TypeVar, Optional
+from typing import TYPE_CHECKING, Type, TypeVar, Optional, overload
 from experience.system import AnyObject
 
 T = TypeVar('T', bound=AnyObject)
@@ -20,7 +20,12 @@ class Editor(AnyObject):
         super().__init__(com)
         self.editor = com
 
-
+    @overload
+    def active_object(self, cast_to: Type[T]) -> T: ...
+    
+    @overload
+    def active_object(self, cast_to: None = None) -> "AnyObject": ...
+    
     def active_object(self, value: Optional[Type[T]] = None) -> T:
         if value is not None:
             return value(self.editor.ActiveObject)

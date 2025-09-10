@@ -146,7 +146,7 @@ class HybridShapeFactory(Factory):
         return HybridShapeBoundary(self.hybrid_shape_factory.AddNewBoundaryOfSurface(surface._com))
 
     def add_new_bump(self, i_body_to_bump: Reference) -> HybridShapeBump:
-        return HybridShapeBump(self.hybrid_shape_factory.AddNewBump(i_body_to_bump.com))
+        return HybridShapeBump(self.hybrid_shape_factory.AddNewBump(i_body_to_bump._com))
 
     def add_new_circle2_points_rad( self, i_point1: Reference, i_point2: Reference, i_support: Reference, i_geodesic: bool, i_radius: float, i_ori: int ) -> HybridShapeCircle2PointsRad:
         return HybridShapeCircle2PointsRad( self.hybrid_shape_factory.AddNewCircle2PointsRad( i_point1._com, i_point2._com, i_support._com, i_geodesic, i_radius, i_ori))
@@ -211,7 +211,7 @@ class HybridShapeFactory(Factory):
         return HybridShapeCurvePar(self.hybrid_shape_factory.AddNewCurvePar(curve._com, support._com, distance, invert_direction, geodesic))
 
     def add_new_curve_smooth(self, ip_ia_curve: Reference) -> HybridShapeCurveSmooth:
-        return HybridShapeCurveSmooth(self.hybrid_shape_factory.AddNewCurveSmooth(ip_ia_curve.com))
+        return HybridShapeCurveSmooth(self.hybrid_shape_factory.AddNewCurveSmooth(ip_ia_curve._com))
 
     def add_new_cylinder(self, i_center: Reference, i_radius: float, i_first_length: float, i_second_length: float, i_direction: HybridShapeDirection) -> HybridShapeCylinder:
         return HybridShapeCylinder(self.hybrid_shape_factory.AddNewCylinder(i_center._com, i_radius, i_first_length, i_second_length, i_direction._com))
@@ -220,7 +220,7 @@ class HybridShapeFactory(Factory):
         # return self.hybrid_shape_factory.AddNewDatums(i_elem.com)
         from experience.mecmod_interfaces import HybridShape
 
-        com_shapes = self.hybrid_shape_factory.AddNewDatums(i_elem.com)
+        com_shapes = self.hybrid_shape_factory.AddNewDatums(i_elem._com)
 
         hybrid_shapes = []
         for com in com_shapes:
@@ -250,10 +250,10 @@ class HybridShapeFactory(Factory):
         return HybridShapeExtractMulti(self.hybrid_shape_factory.AddNewExtractMulti(element._com))
 
     def add_new_extrapol_length(self, i_boundary: Reference, i_to_extrapol: Reference, i_length: float) -> HybridShapeExtrapol:
-        return HybridShapeExtrapol(self.hybrid_shape_factory.AddNewExtrapolLength(i_boundary.com, i_to_extrapol.com, i_length))
+        return HybridShapeExtrapol(self.hybrid_shape_factory.AddNewExtrapolLength(i_boundary._com, i_to_extrapol._com, i_length))
 
     def add_new_extrapol_until(self, i_boundary: Reference, i_to_extrapol: Reference, i_until: Reference) -> HybridShapeExtrapol:
-        return HybridShapeExtrapol(self.hybrid_shape_factory.AddNewExtrapolUntil(i_boundary.com, i_to_extrapol.com, i_until.com))
+        return HybridShapeExtrapol(self.hybrid_shape_factory.AddNewExtrapolUntil(i_boundary._com, i_to_extrapol._com, i_until._com))
 
     def add_new_extremum(self, i_object: Reference, i_dir: HybridShapeDirection, i_min_max: int) -> HybridShapeExtremum:
         return HybridShapeExtremum(self.hybrid_shape_factory.AddNewExtremum(i_object._com, i_dir._com, i_min_max))
@@ -385,7 +385,7 @@ class HybridShapeFactory(Factory):
         return HybridShapePlaneBetween(i_plane1, i_plane2, i_ratio, i_orientation)
 
     def add_new_plane_datum(self, i_object: Reference) -> HybridShapePlaneExplicit:
-        return HybridShapePlaneExplicit(self.hybrid_shape_factory.AddNewPlaneDatum(i_object.com))
+        return HybridShapePlaneExplicit(self.hybrid_shape_factory.AddNewPlaneDatum(i_object._com))
 
     def add_new_plane_equation(self, i_a_coeff: float, i_b_coeff: float, i_c_coeff: float, i_d_coeff: float) -> HybridShapePlaneEquation:
         return HybridShapePlaneEquation(self.hybrid_shape_factory.AddNewPlaneEquation(i_a_coeff, i_b_coeff, i_c_coeff, i_d_coeff))
@@ -394,7 +394,7 @@ class HybridShapeFactory(Factory):
         return HybridShapePlaneMean(self.hybrid_shape_factory.AddNewPlaneMean(i_list_of_points, nb_point))
 
     def add_new_plane_normal(self, i_curve: Reference, i_pt: Reference) -> HybridShapePlaneNormal:
-        return HybridShapePlaneNormal(self.hybrid_shape_factory.AddNewPlaneNormal(i_curve.com, i_pt.com))
+        return HybridShapePlaneNormal(self.hybrid_shape_factory.AddNewPlaneNormal(i_curve._com, i_pt._com))
 
     def add_new_plane_offset(self, i_plane: Reference, i_offset: float, i_orientation: bool) -> HybridShapePlaneOffset:
         return HybridShapePlaneOffset(self.hybrid_shape_factory.AddNewPlaneOffset(i_plane._com, i_offset, i_orientation))
@@ -409,7 +409,7 @@ class HybridShapeFactory(Factory):
         return HybridShapePointBetween(self.hybrid_shape_factory.AddNewPointBetween(i_point1._com,i_point2._com,i_ratio,i_orientation))
 
     def add_new_point_center(self, i_curve: Reference) -> HybridShapePointCenter:
-        return HybridShapePointCenter(self.hybrid_shape_factory.AddNewPointCenter(i_curve.com))
+        return HybridShapePointCenter(self.hybrid_shape_factory.AddNewPointCenter(i_curve._com))
 
     def add_new_point_coord(self, i_x: float, i_y: float, i_z: float) -> HybridShapePointCoord:
         return HybridShapePointCoord(self.hybrid_shape_factory.AddNewPointCoord(i_x, i_y, i_z))
@@ -431,7 +431,7 @@ class HybridShapeFactory(Factory):
         return HybridShapePointCoord(self.hybrid_shape_factory.AddNewPointCoordWithReference(i_x, i_y, i_z, i_pt._com))
 
     def add_new_point_datum(self, i_object: Reference) -> HybridShapePointExplicit:
-        return HybridShapePointExplicit(self.hybrid_shape_factory.AddNewPointDatum(i_object.com))
+        return HybridShapePointExplicit(self.hybrid_shape_factory.AddNewPointDatum(i_object._com))
 
     def add_new_point_on_curve_along_direction(self, i_crv: Reference, i_long: float, i_orientation: bool, i_direction: HybridShapeDirection) -> HybridShapePointOnCurve:
         return HybridShapePointOnCurve(self.hybrid_shape_factory.AddNewPointOnCurveAlongDirection(i_crv._com, i_long, i_orientation, i_direction._com))
@@ -452,7 +452,7 @@ class HybridShapeFactory(Factory):
         return HybridShapePointOnCurve(self.hybrid_shape_factory.AddNewPointOnCurveWithReferenceFromPercent(i_crv._com, i_pt._com, i_long, i_orientation))
 
     def add_new_point_on_plane(self, i_plane: Reference, i_x: float, i_y: float) -> HybridShapePointOnPlane:
-        return HybridShapePointOnPlane(self.hybrid_shape_factory.AddNewPointOnPlane(i_plane.com, i_x, i_y))
+        return HybridShapePointOnPlane(self.hybrid_shape_factory.AddNewPointOnPlane(i_plane._com, i_x, i_y))
 
     def add_new_point_on_plane_with_reference(self, i_plane: Reference, i_pt: Reference, i_x: float, i_y: float) -> HybridShapePointOnPlane:
         return HybridShapePointOnPlane(self.hybrid_shape_factory.AddNewPointOnPlaneWithReference(i_plane._com, i_pt._com, i_x, i_y))

@@ -58,7 +58,7 @@ class Part(AnyObject):
     def in_work_object(self, value: AnyObject = None) -> Union['Part', AnyObject]:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.part.InWorkObject = value
+            self.part.InWorkObject = value._com
             return self
         return AnyObject(self.part.InWorkObject)
     
@@ -75,7 +75,7 @@ class Part(AnyObject):
     def main_body(self, value: Body = None) -> Union[Body, 'Part']:
         """ set value if provided and return self, otherwise reads the value """
         if value is not None:
-            self.part.MainBody = value
+            self.part.MainBody = value._com
             return self
         return Body(self.part.MainBody)
 

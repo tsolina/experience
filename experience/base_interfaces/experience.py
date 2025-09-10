@@ -1,9 +1,12 @@
 import logging
+from typing import Generic, TypeVar
 
 # from experience.experience.cat_logger import create_logger
 from experience.cat_logger import create_logger
 
-class Experience():
+T = TypeVar("T", bound="Experience")
+
+class Experience(Generic[T]):
     """ base class for 3Dx application """
 
     def __init__(self):

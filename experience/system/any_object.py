@@ -1,5 +1,5 @@
 import re
-from typing import TYPE_CHECKING, Type, TypeVar, Union, Optional, overload
+from typing import TYPE_CHECKING, Any, Type, TypeVar, Union, Optional, overload, cast
 from experience.base_interfaces.experience import Experience
 from experience.system.system_types import CATScriptLanguage
 
@@ -9,44 +9,48 @@ if TYPE_CHECKING:
     from experience.mecmod_interfaces.part import Part
     from experience.product_structure_client_interfaces.vpm_reference import VPMReference
 
-T = TypeVar('T')
-U = TypeVar('U')
+T = TypeVar('T', bound="AnyObject")
+U = TypeVar("U", bound="Experience")
 
-class AnyObject(Experience):
+class AnyObject(Experience['AnyObject']):
     """docstring for AnyObject."""
 
     def __init__(self, com):
         super().__init__()
-        self._com = com
+        self._com:Any = com
 
     def application(self) -> 'Application':
         from experience.inf_interfaces.application import Application
-        return  Application(self._com.Application)
+        return Application(self._com.Application)
 
     @overload
-    def name(self, value:str) -> 'Application': ...
+    def name(self:T, value:str) -> T: ...
 
     @overload
     def name(self, value:None=None) -> str: ...
 
-    def name(self, value: str = None) -> Union['Application', str]:
+    def name(self:T, value: str = None) -> Union['T', str]:
         if value is not None:
             self._com.Name = value
             return self
         return self._com.Name
     
-    # def parent(self, value: Optional[Type[U]] = None) -> Union[U, 'AnyObject']:        
-    #     if value is not None:
-    #         return value(self._com.Parent)
-    #     return AnyObject(self._com.Parent)
+    @overload
+    def parent(self:T, cast_to: Type[U]) -> U: ...
     
     @overload
-    def parent(self, cast_to: Type[T]) -> T: ...
-    
-    @overload
-    def parent(self, cast_to: None = None) -> "AnyObject": ...
+    def parent(self:T, cast_to: None = None) -> 'AnyObject': ...
 
-    def parent(self, value: Optional[Type[T]] = None) -> Union[T, 'AnyObject']:
+    # def parent(self, cast_to: Optional[Type[U]]=None) -> Union[U, 'AnyObject']:
+    #     parent_com:AnyObject = AnyObject(self._com.Parent)
+
+    #     if cast_to is not None:
+    #         obj:U = cast_to(parent_com._com)
+    #         return obj
+        
+    #     return parent_com
+
+    def parent(self:T, value: Optional[Type[U]] = None) -> Union[T, U]:
         """
         Returns the parent object of the current COM object.
         If `value` is provided, casts the parent to the specified type.
@@ -98,9 +102,15 @@ class AnyObject(Experience):
     #     return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [self._com])
     
     def com_type(self) -> str:
+        """
+        - returns real com type instead wrapper type -
+        """
         return self._com._oleobj_.GetTypeInfo(0).GetDocumentation(-1)[0]
 
     def _vba_cast(self, com_object, vba_class_name):
+        """
+        - com casting, done through external call -
+        """
         vba_function_name = 'generalizedCastToVBA'
         vba_code = f"""
         Public Function generalizedCastToVBA(obj as AnyObject) as {vba_class_name}
@@ -110,6 +120,9 @@ class AnyObject(Experience):
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [com_object])
 
     def as_pyclass(self, target_class: Type[T], vba_class_name: str = None) -> T:
+        """
+        - wrapper class converted to a target class, with matching com type -
+        """
         if vba_class_name is None:
             vba_class_name = target_class.__name__
 
@@ -120,12 +133,11 @@ class AnyObject(Experience):
         End Function
         """
 
-        # TODO: at least verify that target_class is instance of AnyObject
-        #return target_class(self._com.Application.SystemService.Evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [self._com]))
         return target_class(self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBALanguage, vba_function_name, [self._com]))
 
-    def _get_safe_array(self, com_obj: 'AnyObject', method: str, tuple_length: int, i_pos: Union[float, int, bool, str] = None) -> tuple:
+    def _get_safe_array(self, com_obj: Any, method: str, tuple_length: int, i_pos: Union[float, int, bool, str] = None) -> tuple:
         """
+            - internal method that automatically returns "output" arguments from method without return type -
             _get_safe_array(self._com, "Method", 2)
             _get_safe_array(self._com, "Method", 2, .5)
             _get_safe_array(self._com, "Method", 2, True)
@@ -145,7 +157,11 @@ class AnyObject(Experience):
         #print(vba_code)
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_obj])
     
-    def _get_safe_array_multi(self, com_obj: 'AnyObject', method: str, lengths: tuple, i_pos: any = None) -> tuple:
+    def _get_safe_array_multi(self, com_obj: Any, method: str, lengths: tuple, i_pos: any = None) -> tuple:
+        """
+            - internal method similar to _get_safe_array with possibility to return multiple arrays of results -
+            _get_safe_array(self._com, "Method", 2, 2)
+        """
         if isinstance(lengths, int):
             return self._get_safe_array(com_obj, method, lengths, i_pos)
 
@@ -172,6 +188,9 @@ class AnyObject(Experience):
         return self.application().system_service().evaluate(vba_code, CATScriptLanguage.CATVBScriptLanguage, vba_function_name, [com_obj])
     
     def _replace_args(self, i_string: str) -> str:
+        """
+            - internal method to correctly group arguments for com call -
+        """
         pattern = r'\b(\w+)\b\s+As\s+\((\d*)\)\s*(\w*)'
 
         def replace_match(match):
@@ -184,6 +203,7 @@ class AnyObject(Experience):
 
     def _get_multi(self, params, ins, outs) -> tuple:
         """
+        - internal method to handle methods with multiple immutable output argurments in com calls -
         _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference"))
         """ 
         
@@ -216,6 +236,7 @@ class AnyObject(Experience):
     
     def _get_multi_with_result(self, params, ins, outs, rval) -> tuple:
         """
+        - similar to _get_multi, but here even result will be returned as first argument -
         _get_multi([shape, 1],("HybridShapeLoft", "GetSectionFromLoft", "Integer"),("Reference", "Long", "Reference"), "Long")
         """ 
         
